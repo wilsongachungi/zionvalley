@@ -12,7 +12,7 @@
         {{-- Css --}}
         @include('layouts.partials.links')
 
-        {{-- <script src="https://kit.fontawesome.com/e4203622a6.js" crossorigin="anonymous"></script> --}}
+        <script src="https://kit.fontawesome.com/e4203622a6.js" crossorigin="anonymous"></script>
     </head>
 
     <body>

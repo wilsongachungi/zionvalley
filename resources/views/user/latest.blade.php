@@ -72,7 +72,7 @@
             </div>
 
             <div class="col-12 text-center mt-4 wow zoomIn">
-                <a href="{{ route('accomodation') }}" class="btn btn-primary site-color">Read More</a>
+                <a href="{{ route('accomodation') }}" class="btn btn-primary readmore">Read More</a>
             </div>
         </div>
     </div>
