@@ -1,6 +1,6 @@
 <x-base-layout>
     <section>
-        <h3 style="color: greenyellow">Our Team</h3>
+        <h3 class="text-center" style="color: greenyellow">Our Team</h3>
         <div class="team-row">
             <div class="team-col">
                 <div class="user" style="margin-bottom: 1px">
@@ -51,7 +51,7 @@
             </div>
             <div class="team-col">
                 <div class="user" style="margin-bottom: 1px">
-                    <img style="" src="../assets/img/wilson.jpg" alt="">
+                    <img style="" src="../assets/img/19 slope.jpg" alt="">
                     <div class="user-info">
                         <h5 style="color: greenyellow">Developer</h5>
                     </div>

@@ -34,7 +34,7 @@ class HomeController extends Controller
 
 	public function index()
 	{
-		return view('user.home');
+		return view('pages.index');
 	}
 
 	public function appointment(Request $request)
@@ -88,7 +88,7 @@ class HomeController extends Controller
 
 	public function home()
 	{
-		return view('pages.home');
+		return view('pages.index');
 	}
 
 	public function community()
