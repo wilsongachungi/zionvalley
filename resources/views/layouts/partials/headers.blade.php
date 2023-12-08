@@ -31,25 +31,25 @@
 
             <div class="collapse navbar-collapse" id="navbarSupport">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item {{ Request::is('index') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('index') }}">Home</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {{ Request::is('community') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('community') }}">Community Environment</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {{ Request::is('project') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('project') }}">Projects</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {{ Request::is('accomodation') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('accomodation') }}">Accomodation</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {{ Request::is('harambee') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('harambee') }}">Harambee's Structure</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {{ Request::is('contactzion') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('contactzion') }}">Connect</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {{ Request::is('team') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('team') }}">Team</a>
                     </li>
                 </ul>
