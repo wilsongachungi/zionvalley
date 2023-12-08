@@ -1,6 +1,6 @@
 <div class="services pb-5">
     <div class="container">
-        <h2 class="text-center mb-5 wow fadeInUp h1">Our services</h2>
+        <h2 class="text-center wow fadeInUp h1 title">Our services</h2>
 
         <div class="owl-carousel wow fadeInUp" id="doctorSlideshow">
             <div class="item">

@@ -1,25 +1,18 @@
 <x-base-layout>
-    <div id="carouselExample" class="carousel slide" data-ride="carousel">
+    <div id="carouselExample" class="carousel slide bg-warning" data-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="img1" src="../assets/img/IMG_20181226_140601.jpg" class="d-block w-100" alt="Image 1">
-                <div class="carousel-caption">
-                    <h5></h5>
-
-                </div>
+            <div class="carousel-item active text-center">
+                <img class="img1 pb-0 mb-0" src="../assets/img/IMG_20181226_140601.jpg" alt="Image 1">
+                <div class="carousel-caption mx-auto px-5 text-xl">Community River</div>
             </div>
             <div class="carousel-item">
-                <img class="img1" src="../assets/img/INursery_MG_5866-scaled.jpg" class="d-block w-100"
+                <img class="img1 pb-0 mb-0" src="../assets/img/INursery_MG_5866-scaled.jpg" class="d-block w-100"
                     alt="Image 1">
-                <div class="carousel-caption">
-                    <h5>Indeginous tree preservation</h5>
-                </div>
+                <div class="carousel-caption mx-auto px-5 text-xl">Indeginous tree preservation</div>
             </div>
-            <div class="carousel-item">
-                <img class="img1" src="../assets/img/safari.jpg" class="d-block w-100" alt="Image 1">
-                <div class="carousel-caption">
-                    <h5 style="color:green">Nature Walk</h5>
-                </div>
+            <div class="carousel-item flex">
+                <img class="img1 pb-0 mb-0" src="../assets/img/safari.jpg" class="d-block w-100" alt="Image 1">
+                <div class="carousel-caption mx-auto px-5 text-xl">Nature Walk</div>
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
@@ -32,11 +25,11 @@
         </a>
     </div>
 
-    <div class="container-fluid page-section">
-        <h1 class="text-center mb-5 h2">Zion Valley: A Nature Oasis for Relaxation and Adventure</h1>
+    <div class="container-fluid">
+        <h1 class="text-center title h2">Zion Valley: A Nature Oasis for Relaxation and Adventure</h1>
         <div class="row px-5">
             <div class="col-4">
-                <img class="img-fluid w-100" src="../assets/img/HandRail Tree Branches Best.JPG" alt="">
+                <img class="img-fluid w-100 pb-0" src="../assets/img/HandRail Tree Branches Best.JPG" alt="">
             </div>
             <div class="col-8 pl-5">
                 <div class="text-justify line-height-2">

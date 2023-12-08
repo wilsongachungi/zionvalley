@@ -4,7 +4,6 @@
             <div class="container text-center wow zoomIn">
                 <span class="subhead" style="color:  black; text-size:25px"></span>
                 <h1 class="display-4"><strong style="color:  black"></strong></h1>
-
             </div>
         </div>
     </div>
