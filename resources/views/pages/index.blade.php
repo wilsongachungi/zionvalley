@@ -25,7 +25,7 @@
         </a>
     </div>
 
-    <div class="container-fluid">
+    <div class="container">
         <h1 class="text-center title h2">Zion Valley: A Nature Oasis for Relaxation and Adventure</h1>
         <div class="row px-5">
             <div class="col-4">
