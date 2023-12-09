@@ -5,17 +5,6 @@
 <script src="../assets/js/theme.js"></script>
 
 <script>
-    let modelBox = document.getElementById("model-box");
-    document.onmouseleave = function() {
-        modelBox.style.display = "lock";
-    }
-
-    function closeModel() {
-        modelBox.style.display = "none";
-    }
-</script>
-
-<script>
     document.addEventListener('DOMContentLoaded', function() {
         var myCarousel = new bootstrap.Carousel(document.getElementById('imageCarousel'), {
             interval: false, // diseble the automatic sliding

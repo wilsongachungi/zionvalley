@@ -551,7 +551,8 @@ img{
 		height: 400px;
 	}
 }
-.harambee .content {
+.harambee .content,
+.projects .content {
 	margin-top: 2rem;
 	margin-bottom: 5rem;
 
@@ -569,5 +570,19 @@ img{
 	@media (max-width: 767px) {
 		margin-top: 2rem;
 	}
+}
+/* End Harambee page */
+
+/* Projects page */
+.projects .page-hero {
+	background-image: url('../../assets/img/projects.jpg');
+	opacity: 0.8;
+
+	@media (max-width: 767px) {
+		height: 400px;
+	}
+}
+.projects .carousel-item .img-box {
+	height: 300px;
 }
 /* End Harambee page */
