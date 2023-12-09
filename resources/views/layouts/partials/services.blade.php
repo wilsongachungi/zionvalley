@@ -2,8 +2,8 @@
     <div class="container">
         <h2 class="text-center wow fadeInUp h1 title">Our services</h2>
 
-        <div class="owl-carousel wow fadeInUp" id="doctorSlideshow">
-            <div class="item">
+        <div class="row owl-carousel wow fadeInUp" id="doctorSlideshow">
+            <div class="item col">
                 <div class="card-doctor">
                     <div class="header">
                         <img class="owl-img" src="../assets/img/17 slope.jpg" alt="">
@@ -14,7 +14,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div class="item col">
                 <div class="card-doctor">
                     <div class="header">
                         <img class="owl-img" src="../assets/img/14 slope.jpg" alt="">
@@ -25,7 +25,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div class="item col">
                 <div class="card-doctor">
                     <div class="header">
                         <img class="owl-img" src="../assets/img/10 slope.jpg" alt="">
@@ -36,7 +36,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div class="item col">
                 <div class="card-doctor">
                     <div class="header">
                         <img class="owl-img" src="../assets/img/21 slope.jpg" alt="">
@@ -47,7 +47,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div class="item col">
                 <div class="card-doctor">
                     <div class="header">
                         <img class="owl-img" src="../assets/img/13 slope.jpg" alt="">

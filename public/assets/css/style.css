@@ -416,6 +416,30 @@ img{
 	color: greenyellow;
 }
 
+.homepage .content h1 {
+	@media (max-width: 767px) {
+		text-align: left !important;
+	}
+}
+.homepage .content .section-1 {
+	padding-right: 3rem;
+	padding-left: 3rem;
+
+	@media (max-width: 767px) {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+.homepage .content .desc {
+	padding-right: 3rem;
+	padding-left: 3rem;
+
+	@media (max-width: 767px) {
+		margin-top: 3rem;
+		padding-right: 1rem;
+		padding-left: 1rem;
+	}
+}
 .owl-carousel .owl-nav > button {
 	outline: none;
 }
@@ -433,13 +457,22 @@ img{
 	padding-right: 15px !important;
 }
 
-.services .owl-img {
+.services .card-doctor,
+.accomodation .card-blog {
+	max-width: none;
+}
+.services .owl-img,
+.accomodation .card-blog img {
 	height: 300px;
 }
 
 .title {
 	padding-top: 3rem;
 	padding-bottom: 3rem;
+
+	@media (max-width: 767px) {
+		padding-bottom: 1.5rem;
+	}
 }
 
 .accomodation {
@@ -452,9 +485,14 @@ img{
 }
 
 .readmore {
+	margin-top: 5rem;
+	font-size: 1.5rem;
 	color: white;
-	background-color: #89d416;
+	background-color: #6fab13;
 	padding: 10px 26px;
+}
+.readmore:hover, .readmore:focus {
+	background-color: #226a22 !important;
 }
 
 .site-color:hover {
