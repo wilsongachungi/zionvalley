@@ -1,31 +1,30 @@
 <x-base-layout>
-    <div class="page-hero bg-image " style="background-image: url(../assets/img/INursery_MG_5866-scaled.jpg);">
-        <div class="hero-section">
-            <div class="container text-center wow zoomIn">
-                <span class="subhead" style="color:  black; text-size:25px"></span>
-                <p class="display-4"><strong style="color:  black"></strong></p>
+    <div class="community">
+        <div class="page-hero bg-image">
+            <div class="hero-section">
+                <div class="container text-center wow zoomIn">
+                    <span class="subhead" style="color:  black; text-size:25px"></span>
+                    <p class="display-4"><strong style="color:  black"></strong></p>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="container community">
-        <h1 class="pb-3">Community-based organizations</h1>
-        <div class="text-justify line-height-2">
-            <p class="text-justify line-height-2">
-                Community-based organizations (CBOs) will play role in dealing with significantly
-                benefit nature preservation. This organization have a vested interest in preserving natural
-                surroundings. CBOs will act as a powerful advocate for sustainable resort development and responsible
-                land use practices.
-            </p>
-            <p>
-                They will help ensure that the resort is designed and operated in a way that
-                minimizes the impact on the environment, such as by promoting eco-friendly construction, waste
-                reduction, and energy efficiency.
-            </p>
-        </div>
-
-        <div class="accordions">
-            <div>
+        <div class="container content">
+            <h1 class="pb-3">Community-based organizations</h1>
+            <div class="text-justify line-height-2">
+                <p class="text-justify line-height-2">
+                    Community-based organizations (CBOs) will play role in dealing with significantly
+                    benefit nature preservation. This organization have a vested interest in preserving natural
+                    surroundings. CBOs will act as a powerful advocate for sustainable resort development and
+                    responsible
+                    land use practices.
+                </p>
+                <p>
+                    They will help ensure that the resort is designed and operated in a way that
+                    minimizes the impact on the environment, such as by promoting eco-friendly construction, waste
+                    reduction, and energy efficiency.
+                </p>
+            </div>
+            <div class="accordions">
                 <div class="accordion" onclick="toggleDiv('div1')">
                     <h3 class="float-left text-lg">
                         Nature Preservation
@@ -46,8 +45,6 @@
                         reduction, and energy efficiency.
                     </p>
                 </div>
-            </div>
-            <div>
                 <div class="accordion" onclick="toggleDiv('div2')">
                     <h3 class="float-left text-lg">
                         Job Opportunity
@@ -68,8 +65,6 @@
                         reduction, and energy efficiency.
                     </p>
                 </div>
-            </div>
-            <div>
                 <div class="accordion" onclick="toggleDiv('div3')">
                     <h3 class="float-left text-lg">
                         Mutual benefit
@@ -91,8 +86,7 @@
                     </p>
                 </div>
             </div>
+            <button class="btn btn-primary">More Info</button>
         </div>
-
-        <button class="btn btn-primary">More Info</button>
     </div>
 </x-base-layout>
