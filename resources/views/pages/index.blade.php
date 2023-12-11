@@ -55,6 +55,6 @@
         </div>
     </div>
 
-    @include('layouts.partials.services')
-    @include('layouts.partials.latest')
+    @include('layouts.user.partials.services')
+    @include('layouts.user.partials.latest')
 </x-base-layout>

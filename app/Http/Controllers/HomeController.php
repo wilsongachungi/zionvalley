@@ -2,17 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use App\Models\contact;
-use App\Models\Involves;
 use App\Models\Appointment;
 use Illuminate\Http\Request;
-use App\Models\job_application;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Mail\Events\MessageSent;
 use Illuminate\Support\Facades\Validator;
+use App\Models\Involve;
+use App\Models\JobApplication;
 
 class HomeController extends Controller
 {
@@ -78,7 +74,7 @@ class HomeController extends Controller
 		if (Auth::id()) {
 			$userid = Auth::user()->id;
 
-			$appoint = appointment::where('user_id', $userid)->get();
+			$appoint = Appointment::where('user_id', $userid)->get();
 
 			return view('user.message', compact('appoint'));
 		} else {
@@ -134,16 +130,11 @@ class HomeController extends Controller
 
 	public function cancel_message($id)
 	{
-		$data = appointment::find($id);
+		$data = Appointment::find($id);
 		$data->delete();
 
 		return redirect()->back();
 	}
-
-
-
-
-
 
 	public function involved(Request $request)
 	{
@@ -188,7 +179,7 @@ class HomeController extends Controller
 		}
 
 		// Create a new record in the database
-		involves::create([
+		Involve::create([
 			'name' => $request->input('name'),
 			'email' => $request->input('email'),
 			'phone' => $request->input('phone'),
@@ -246,7 +237,7 @@ class HomeController extends Controller
 		}
 
 		// Create a new record in the database
-		job_application::create([
+		JobApplication::create([
 			'name' => $request->input('name'),
 			'email' => $request->input('email'),
 			'phone' => $request->input('phone'),
@@ -283,9 +274,9 @@ class HomeController extends Controller
 	public function show()
 	{
 
-		$name = involves::all();
+		$involves = Involve::all();
 
 
-		return view('dashboard', compact('name'));
+		return view('dashboard', compact('involves'));
 	}
 }

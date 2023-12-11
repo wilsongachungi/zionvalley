@@ -10,9 +10,7 @@
         <title>zion valley </title>
 
         {{-- Css --}}
-        @include('layouts.partials.links')
-
-        <script src="https://kit.fontawesome.com/e4203622a6.js" crossorigin="anonymous"></script>
+        @include('layouts.user.partials.links')
     </head>
 
     <body>
@@ -26,17 +24,17 @@
         <div class="back-to-top"></div>
 
         {{-- Navs --}}
-        @include('layouts.partials.headers')
+        @include('layouts.user.partials.headers')
 
         <main>
             {{ $slot }}
         </main>
 
         {{-- Footer --}}
-        @include('layouts.partials.footer')
+        @include('layouts.user.partials.footer')
 
         {{-- Scripts --}}
-        @include('layouts.partials.scripts')
+        @include('layouts.user.partials.scripts')
 
     </body>
 
