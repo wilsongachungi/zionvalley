@@ -94,7 +94,6 @@
 </head>
 <body>
 
-
   <header>
     <h1>Involve</h1>
   </header>
@@ -106,7 +105,8 @@
     <!-- Add more navigation links as needed -->
   </nav>
 
- <div class="container">
+  <div class="container">
+
     <main>
       <h2>Main Content</h2>
       <table>
@@ -120,11 +120,13 @@
             <th>IDnumber</th>
             <th>Age</th>
             <th>Category</th>
+            <th>IDphoto</th>
             <th>Passport</th>
+            <!-- Add more table headers as needed -->
           </tr>
         </thead>
         <tbody>
-
+          <!-- Add more rows as needed -->
           @foreach ($name as $record)
             <tr>
                 <td>{{ $record->id }}</td>
@@ -134,10 +136,12 @@
                 <td>{{ $record->country }}</td>
                 <td>{{ $record->idnumber }}</td>
                 <td>{{ $record->age }}</td>
+                <td>{{ $record->idphoto }}</td>
                 <td>{{ $record->select }}</td>
-                <td>{{ $record->passport }}</td>
+                <td>{{ $record->passport}}</td>
+                <td>{{ $record->name }}</td>
             </tr>
-           @endforeach
+          @endforeach
         </tbody>
       </table>
 
@@ -148,8 +152,6 @@
       </div>
     </main>
   </div>
-
-
 
   <script>
     function changePage(pageNumber) {

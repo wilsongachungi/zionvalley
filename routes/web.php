@@ -17,18 +17,18 @@ use App\Http\Controllers\AdminController;
 
 
 
-Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/', [HomeController::class, 'index']);
 Route::get('/home', [HomeController::class, 'redirect']);
 // Route::get('/admin.add_image_view', [HomeController::class, 'redirect']);
 
 Route::middleware([
-	'auth:sanctum',
-	config('jetstream.auth_session'),
-	'verified',
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
 ])->group(function () {
-	Route::get('/dashboard', function () {
-		return view('dashboard');
-	})->name('dashboard');
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 });
 
 Route::get('/add_member_view', [AdminController::class, 'addview']);
@@ -37,7 +37,7 @@ Route::post('/upload_members', [AdminController::class, 'upload']);
 Route::get('/home_view', [AdminController::class, 'homeview']);
 Route::post('appointment', [HomeController::class, 'appointment'])->name('appointment');
 Route::get('message', [HomeController::class, 'message'])->name('message');
-// Route::get('home', [HomeController::class, 'home'])->name('home');
+Route::get('home', [HomeController::class, 'home'])->name('home');
 Route::get('community', [HomeController::class, 'community'])->name('community');
 Route::get('project', [HomeController::class, 'project'])->name('project');
 Route::get('cancel_message/{id}', [HomeController::class, 'cancel_message'])->name('cancel_message');

@@ -94,9 +94,8 @@
 </head>
 <body>
 
-
   <header>
-    <h1>Involve</h1>
+    <h1>Job</h1>
   </header>
 
   <nav>
@@ -106,7 +105,21 @@
     <!-- Add more navigation links as needed -->
   </nav>
 
- <div class="container">
+  <div class="container">
+    <aside>
+      <h2>Sidebar</h2>
+      <!-- Sidebar content goes here -->
+
+    <ul style="padding-top: 20px">
+        <li><a href="{{ route('involve') }}">Get involved</a></li>
+        <li><a href="{{ route('job_application') }}">Job application</a></li>
+        <li><a href="{{ route('contact') }}">Contact Us</a></li>
+    </ul>
+
+    <!-- Add more navigation links as needed -->
+
+    </aside>
+
     <main>
       <h2>Main Content</h2>
       <table>
@@ -115,29 +128,23 @@
             <th>ID</th>
             <th>Name</th>
             <th>Email</th>
-            <th>Phone</th>
-            <th>Country</th>
-            <th>IDnumber</th>
-            <th>Age</th>
-            <th>Category</th>
-            <th>Passport</th>
+            <th>Email</th>
+            <th>Email</th>
+            <th>Email</th>
+            <!-- Add more table headers as needed -->
           </tr>
         </thead>
         <tbody>
-
-          @foreach ($name as $record)
-            <tr>
-                <td>{{ $record->id }}</td>
-                <td>{{ $record->name }}</td>
-                <td>{{ $record->email }}</td>
-                <td>{{ $record->phone }}</td>
-                <td>{{ $record->country }}</td>
-                <td>{{ $record->idnumber }}</td>
-                <td>{{ $record->age }}</td>
-                <td>{{ $record->select }}</td>
-                <td>{{ $record->passport }}</td>
-            </tr>
-           @endforeach
+          <!-- Add more rows as needed -->
+          <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td>john@example.com</td>
+            <td>john@example.com</td>
+            <td>john@example.com</td>
+            <td>john@example.com</td>
+            <!-- Add more table data as needed -->
+          </tr>
         </tbody>
       </table>
 
@@ -145,11 +152,10 @@
         <button class="active" onclick="changePage(1)">1</button>
         <button onclick="changePage(2)">2</button>
         <button onclick="changePage(3)">3</button>
+        <!-- Add more pagination buttons as needed -->
       </div>
     </main>
   </div>
-
-
 
   <script>
     function changePage(pageNumber) {
@@ -169,4 +175,3 @@
 
 </body>
 </html>
-
