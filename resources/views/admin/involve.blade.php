@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h1>Involve</h1>
+        <h1 class="text-3xl">Involve</h1>
     </x-slot>
 
     <div class="container">
