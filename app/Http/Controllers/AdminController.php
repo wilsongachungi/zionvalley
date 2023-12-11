@@ -11,7 +11,7 @@ class AdminController extends Controller
 {
 	public function addview()
 	{
-		return view('admin.add_member');
+		return view('user.add_member');
 	}
 
 	public function upload(Request $request)
@@ -39,21 +39,16 @@ class AdminController extends Controller
 	public function involve()
 	{
 		$involves = Involve::paginate(1);
-		return view('admin.involve', compact('involves'));
+		return view('user.involve', compact('involves'));
 	}
-
 
 	public function job_application()
 	{
-		return view('admin.job_application');
+		return view('user.job_application');
 	}
-
 
 	public function contact()
 	{
-		return view('admin.contact');
+		return view('user.contact');
 	}
-
-
-
 }
