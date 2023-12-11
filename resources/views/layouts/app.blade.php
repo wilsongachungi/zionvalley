@@ -19,7 +19,7 @@
     <body class="font-sans antialiased">
         <x-banner />
 
-        {{-- @livewire('navigation-menu') --}}
+        @livewire('navigation-menu')
 
         <!-- Page Heading -->
         <header class="shadow mt-4">
