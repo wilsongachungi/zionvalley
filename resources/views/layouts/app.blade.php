@@ -9,7 +9,7 @@
         <title>ZionValley</title>
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/js/app.js'])
 
         <!-- Styles -->
 
@@ -19,23 +19,22 @@
     <body class="font-sans antialiased">
         <x-banner />
 
-        <div class="">
-            @livewire('navigation-menu')
+        {{-- @livewire('navigation-menu') --}}
 
-            <!-- Page Heading -->
-            <header class="shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                    {{-- Navs --}}
-                    @include('layouts.admin.partials.headers')
-                </div>
-            </header>
+        <!-- Page Heading -->
+        <header class="shadow mt-4">
+            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                {{ $header }}
+                {{-- Navs --}}
+            </div>
+        </header>
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
-        </div>
+        @include('layouts.admin.partials.headers')
+
+        <!-- Page Content -->
+        <main>
+            {{ $slot }}
+        </main>
 
         @stack('modals')
 
