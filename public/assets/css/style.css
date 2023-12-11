@@ -6,6 +6,10 @@ body {
 	font-size: 1.1rem;
 }
 
+.line-height-1-5 {
+	line-height: 1.5rem;
+}
+
 .line-height-2 {
 	line-height: 2rem;
 }
