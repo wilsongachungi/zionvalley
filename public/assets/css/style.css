@@ -440,9 +440,6 @@ textarea {
 }
 
 .homepage .content .section-1 {
-	padding-right: 3rem;
-	padding-left: 3rem;
-
 	@media (max-width: 767px) {
 		padding-right: 0;
 		padding-left: 0;
@@ -450,13 +447,10 @@ textarea {
 }
 
 .homepage .content .desc {
-	padding-right: 3rem;
 	padding-left: 3rem;
 
 	@media (max-width: 767px) {
 		margin-top: 3rem;
-		padding-right: 1rem;
-		padding-left: 1rem;
 	}
 }
 
