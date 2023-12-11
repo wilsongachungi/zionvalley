@@ -1,181 +1,184 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Dashboard</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
 
-    header {
-      background-color: #000;
-      color: #fff;
-      padding: 15px;
-      text-align: center;
-    }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin Dashboard</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
 
-    nav {
-      background-color: #000;
-      color: #fff;
-      padding: 15px;
-      text-align: center;
-    }
+            header {
+                background-color: #000;
+                color: #fff;
+                padding: 15px;
+                text-align: center;
+            }
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px;
-      margin: 0 10px;
-    }
+            nav {
+                background-color: #000;
+                color: #fff;
+                padding: 15px;
+                text-align: center;
+            }
 
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-    }
+            nav a {
+                color: #fff;
+                text-decoration: none;
+                padding: 10px;
+                margin: 0 10px;
+            }
 
-    aside {
-      width: 250px;
-      background-color: #ddd;
-      padding: 20px;
-    }
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+            }
 
-    main {
-      flex: 1;
-      padding: 20px;
-    }
+            aside {
+                width: 250px;
+                background-color: #ddd;
+                padding: 20px;
+            }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
+            main {
+                flex: 1;
+                padding: 20px;
+            }
 
-    th, td {
-      border: 1px solid #ddd;
-      padding: 10px;
-      text-align: left;
-    }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
 
-    th {
-      background-color: #000;
-      color: #fff;
-    }
+            th,
+            td {
+                border: 1px solid #ddd;
+                padding: 10px;
+                text-align: left;
+            }
 
-    .pagination {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
+            th {
+                background-color: #000;
+                color: #fff;
+            }
 
-    .pagination button {
-      padding: 10px;
-      margin: 0 5px;
-      cursor: pointer;
-      background-color: #fff;
-      border: 1px solid #ddd;
-    }
+            .pagination {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
 
-    .pagination button.active {
-      background-color: #555;
-      color: #fff;
-    }
+            .pagination button {
+                padding: 10px;
+                margin: 0 5px;
+                cursor: pointer;
+                background-color: #fff;
+                border: 1px solid #ddd;
+            }
 
-    @media (max-width: 768px) {
-      aside {
-        width: 100%;
-      }
-    }
-  </style>
-</head>
-<body>
+            .pagination button.active {
+                background-color: #555;
+                color: #fff;
+            }
 
-  <header>
-    <h1>Contact</h1>
-  </header>
+            @media (max-width: 768px) {
+                aside {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
 
-  <nav>
-    <a href="{{ route('involve') }}">Get involved</a>
-    <a href="{{ route('job_application') }}">Job application</a>
-   <a href="{{ route('contact') }}">Contact Us</a>
-    <!-- Add more navigation links as needed -->
-  </nav>
+    <body>
 
-  <div class="container">
-    <aside>
-      <h2>Sidebar</h2>
-      <!-- Sidebar content goes here -->
+        <header>
+            <h1>Contact</h1>
+        </header>
 
-    <ul style="padding-top: 20px">
-        <li><a href="{{ route('involve') }}">Get involved</a></li>
-        <li><a href="{{ route('job_application') }}">Job application</a></li>
-        <li><a href="{{ route('contact') }}">Contact Us</a></li>
-    </ul>
+        <nav>
+            <a href="{{ route('involve') }}">Get involved</a>
+            <a href="{{ route('job_application') }}">Job application</a>
+            <a href="{{ route('contact') }}">Contact Us</a>
+            <!-- Add more navigation links as needed -->
+        </nav>
 
-    <!-- Add more navigation links as needed -->
+        <div class="container">
+            <aside>
+                <h2>Sidebar</h2>
+                <!-- Sidebar content goes here -->
 
-    </aside>
+                <ul style="padding-top: 20px">
+                    <li><a href="{{ route('involve') }}">Get involved</a></li>
+                    <li><a href="{{ route('job_application') }}">Job application</a></li>
+                    <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                </ul>
 
-    <main>
-      <h2>Main Content</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>phone</th>
-            <th>Country</th>
-            <th>IDnumber</th>
-            <th>Age</th>
-            <th>Category</th>
-            <th>IDphoto</th>
-            <th>Passport</th>
-            <!-- Add more table headers as needed -->
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Add more rows as needed -->
-          <tr>
-            <td>1</td>
-            <td>John Doe</td>
-            <td>john@example.com</td>
-            <td>john@example.com</td>
-            <td>john@example.com</td>
-            <td>john@example.com</td>
-            <!-- Add more table data as needed -->
-          </tr>
-        </tbody>
-      </table>
+                <!-- Add more navigation links as needed -->
 
-      <div class="pagination">
-        <button class="active" onclick="changePage(1)">1</button>
-        <button onclick="changePage(2)">2</button>
-        <button onclick="changePage(3)">3</button>
-        <!-- Add more pagination buttons as needed -->
-      </div>
-    </main>
-  </div>
+            </aside>
 
-  <script>
-    function changePage(pageNumber) {
-      // Reset active class for all buttons
-      var buttons = document.querySelectorAll('.pagination button');
-      buttons.forEach(function(button) {
-        button.classList.remove('active');
-      });
+            <main>
+                <h2>Main Content</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>phone</th>
+                            <th>Country</th>
+                            <th>IDnumber</th>
+                            <th>Age</th>
+                            <th>Category</th>
+                            <th>IDphoto</th>
+                            <th>Passport</th>
+                            <!-- Add more table headers as needed -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Add more rows as needed -->
+                        <tr>
+                            <td>1</td>
+                            <td>John Doe</td>
+                            <td>john@example.com</td>
+                            <td>john@example.com</td>
+                            <td>john@example.com</td>
+                            <td>john@example.com</td>
+                            <!-- Add more table data as needed -->
+                        </tr>
+                    </tbody>
+                </table>
 
-      // Set active class for the clicked button
-      var selectedButton = document.querySelector('.pagination button:nth-child(' + pageNumber + ')');
-      selectedButton.classList.add('active');
+                <div class="pagination">
+                    <button class="active" onclick="changePage(1)">1</button>
+                    <button onclick="changePage(2)">2</button>
+                    <button onclick="changePage(3)">3</button>
+                    <!-- Add more pagination buttons as needed -->
+                </div>
+            </main>
+        </div>
 
-      // You can add logic here to fetch and display data for the selected page
-    }
-  </script>
+        <script>
+            function changePage(pageNumber) {
+                // Reset active class for all buttons
+                var buttons = document.querySelectorAll('.pagination button');
+                buttons.forEach(function(button) {
+                    button.classList.remove('active');
+                });
 
-</body>
+                // Set active class for the clicked button
+                var selectedButton = document.querySelector('.pagination button:nth-child(' + pageNumber + ')');
+                selectedButton.classList.add('active');
+
+                // You can add logic here to fetch and display data for the selected page
+            }
+        </script>
+
+    </body>
+
 </html>
