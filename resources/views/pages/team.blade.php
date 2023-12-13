@@ -1,70 +1,98 @@
 <x-base-layout>
-	<section class="my-4">
-		<h1 class="text-center mb-3">Our Team</h1>
-		<div class="team-row">
-			<div class="team-col row">
-				<div class="user d-flex flex-column col">
-					<img src="../assets/img/chairman.jpeg" alt="">
-					<div class="user-info site-color">Chairman</div>
-				</div>
-				<p class="px-2 line-height-1-5">
-					Representing the organization to external stakeholders, ensuring strategic
-					direction, effective decision-making, and compliance with ethical and
-					legal standards.
-				</p>
-			</div>
-			<div class="team-col">
-				<div class="user d-flex flex-column col">
-					<img src="../assets/img/secretary.jpeg" alt="">
-					<div class="user-info site-color">Secretary</div>
-				</div>
-				<p class="px-2 line-height-1-5">
-					Administrative tasks, maintaining accurate records, and facilitating
-					communication within an organization, ensuring that meetings are
-					well-documented and information is disseminated efficiently..
-				</p>
-			</div>
-			<div class="team-col">
-				<div class="user d-flex flex-column col">
-					<img src="../assets/img/treasurer-removebg-preview (1).png" alt="">
-					<div class="user-info site-color">Treasurer</div>
-				</div>
-				<p class="px-2 line-height-1-5">
-					Managing an organization's financial matters, overseeing budgets, financial
-					planning, and reporting, as well as ensuring accurate record-keeping and
-					compliance with financial regulations.
-				</p>
-			</div>
-			<div class="team-col">
-				<div class="user d-flex flex-column col">
-					<img src="../assets/img/19 slope.jpg" alt="">
-					<div class="user-info site-color">Architect</div>
-				</div>
-				<p class="px-2 line-height-1-5">
-					Designs and plans the construction of buildings and structures, combining artistic
-					and technical expertise to create functional, aesthetically pleasing, and safe spaces.
-				</p>
-			</div>
-			<div class="team-col">
-				<div class="user d-flex flex-column col">
-					<img src="../assets/img/19 slope.jpg" alt="">
-					<div class="user-info site-color">Developer</div>
-				</div>
-				<p class="px-2 line-height-1-5">
-					Creating and Maintaining website.
-				</p>
-			</div>
-			<div class="team-col">
-				<div class="user d-flex flex-column col">
-					<img src="../assets/img/19 slope.jpg" alt="">
-					<div class="user-info site-color">Member Rep</div>
-				</div>
-				<p class="px-2 line-height-1-5">
-					delegate on behalf of an organization's members. This role involves advocating
-					for the interests, concerns, and preferences of the members during discussions,
-					decision-making , and interactions with other stakeholders.
-				</p>
-			</div>
-		</div>
-	</section>
+    <section class="my-4">
+        <h1 class="text-center mb-3">Our Team</h1>
+        <div class="team-row">
+            <div class="team-col row">
+                <div class="user d-flex flex-column col">
+                    <img src="../assets/img/chairman.jpeg" alt="">
+                    <div class="user-info site-color">Chairman</div>
+                </div>
+                <p class="px-2 line-height-1-5">
+                    Presiding over CBO meetings and working for the interests of the Zion Valley project,
+                    its land supporters, the Harambee owners and the local community.
+                </p>
+            </div>
+            <div class="team-col">
+                <div class="user d-flex flex-column col">
+                    <img src="../assets/img/secretary.jpeg" alt="">
+                    <div class="user-info site-color">Secretary</div>
+                </div>
+                <p class="px-2 line-height-1-5">
+                    Administrative tasks in relation to the CBO and to ensure that all CBO meetings and minutes are
+                    well documented and recorde
+                </p>
+            </div>
+            <div class="team-col">
+                <div class="user d-flex flex-column col">
+                    <img src="../assets/img/treasurer-removebg-preview (1).png" alt="">
+                    <div class="user-info site-color">Treasurer</div>
+                </div>
+                <p class="px-2 line-height-1-5">
+                    To perform the financial duties of the CBO in concert with the Accounts Executive to ensure correct
+                    record keeping and reporting.
+                </p>
+            </div>
+            <div class="team-col">
+                <div class="user d-flex flex-column col">
+                    <img src="../assets/img/19 slope.jpg" alt="">
+                    <div class="user-info site-color">Chief Executive</div>
+                </div>
+                <p class="px-2 line-height-1-5">
+                    The office to create and steward the rules regulations, procedures, HR matters and internal
+                    relationships between the arms of Zion Valley and the CBO
+                </p>
+            </div>
+            <div class="team-col">
+                <div class="user d-flex flex-column col">
+                    <img src="../assets/img/19 slope.jpg" alt="">
+                    <div class="user-info site-color">Chief Architect</div>
+                </div>
+                <p class="px-2 line-height-1-5">
+                    A member of the Executive office to provide the strategic planning, design and direction of the
+                    Zion Valley project
+                </p>
+            </div>
+            <div class="team-col">
+                <div class="user d-flex flex-column col">
+                    <img src="../assets/img/19 slope.jpg" alt="">
+                    <div class="user-info site-color">Accounts Executive</div>
+                </div>
+                <p class="px-2 line-height-1-5">
+                    A member of the Executive office and sitting alongside the Treasurer to ensure full transparency,
+                    smooth inter relations and accountability between the Executive, the Implementers, Harambee members
+                    and the CBO
+                </p>
+            </div>
+            <div class="team-col">
+                <div class="user d-flex flex-column col">
+                    <img src="../assets/img/19 slope.jpg" alt="">
+                    <div class="user-info site-color">Harambee Advocate</div>
+                </div>
+                <p class="px-2 line-height-1-5">
+                    A member of the Executive office to ensure representation and reporting to all Harambee owners
+                </p>
+            </div>
+            <div class="team-col">
+                <div class="user d-flex flex-column col">
+                    <img src="../assets/img/19 slope.jpg" alt="">
+                    <div class="user-info site-color">Implementors</div>
+                </div>
+                <p class="px-2 line-height-1-5">
+                    Head supervisor of the team tasked to carry out practical and physical construction projects as
+                    overseen by the Architects and CBO representative. This team to include the Social and community
+                    support groups
+                </p>
+            </div>
+            <div class="team-col">
+                <div class="user d-flex flex-column col">
+                    <img src="../assets/img/19 slope.jpg" alt="">
+                    <div class="user-info site-color">IT Developments</div>
+                </div>
+                <p class="px-2 line-height-1-5">
+                    A member of the Executive office providing seamless integration and information transfer between
+                    the various subgroups, to the customer and the Harambee membership
+                </p>
+            </div>
+        </div>
+    </section>
 </x-base-layout>

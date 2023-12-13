@@ -4,18 +4,7 @@
     </x-slot>
 
     <div class="container">
-        <aside>
-            <h2>Sidebar</h2>
-            <!-- Sidebar content goes here -->
-
-            <ul style="padding-top: 20px">
-                <li><a href="{{ route('involve') }}">Get involved</a></li>
-                <li><a href="{{ route('job_application') }}">Job application</a></li>
-                <li><a href="{{ route('contact') }}">Contact Us</a></li>
-            </ul>
-        </aside>
-
-        <main>
+        <div class="container">
             <h2>Main Content</h2>
             <table>
                 <thead>
@@ -23,27 +12,25 @@
                         <th>ID</th>
                         <th>Name</th>
                         <th>Email</th>
-                        <th>phone</th>
-                        <th>Country</th>
-                        <th>IDnumber</th>
-                        <th>Age</th>
-                        <th>Category</th>
-                        <th>IDphoto</th>
-                        <th>Passport</th>
-                        <!-- Add more table headers as needed -->
+                        <th>Phone</th>
+                        <th>Message</th>
                     </tr>
                 </thead>
                 <tbody>
                     <!-- Add more rows as needed -->
-                    <tr>
-                        <td>1</td>
-                        <td>John Doe</td>
-                        <td>john@example.com</td>
-                        <td>john@example.com</td>
-                        <td>john@example.com</td>
-                        <td>john@example.com</td>
-                        <!-- Add more table data as needed -->
-                    </tr>
+                    @forelse ($involves as $record)
+                        <tr>
+                            <td>{{ $record->id }}</td>
+                            <td>{{ $record->name }}</td>
+                            <td>{{ $record->email }}</td>
+                            <td>{{ $record->phone }}</td>
+                            <td>{{ $record->message }}</td>
+                        </tr>
+                    @empty
+                        <tr>
+                            <td colspan="10">There is no data</td>
+                        </tr>
+                    @endforelse
                 </tbody>
             </table>
 
@@ -53,6 +40,6 @@
                 <button onclick="changePage(3)">3</button>
                 <!-- Add more pagination buttons as needed -->
             </div>
-        </main>
-    </div>
+            </main>
+        </div>
 </x-app-layout>

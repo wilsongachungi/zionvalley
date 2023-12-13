@@ -8,7 +8,7 @@
             </div>
         </div>
 
-        <div class="container content wxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxow zoomIn slow">
+        <div class="container content wow zoomIn slow">
             <div class="row" id="harambee">
                 <div class="col-md-8 text-justify line-height-2 articles-1">
                     <article>

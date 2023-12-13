@@ -148,7 +148,7 @@
                                             <option value="" selected disabled>--Select--</option>
                                             <option value="Fainancial_supporter">Financial supporter</option>
                                             <option value="Fainancial_supporter">Financial supporter</option>
-                                            <option value="Land_ownwe">Others</option>
+                                            <option value="Land_owner">Others</option>
                                             <!-- Add more options as needed -->
                                         </select>
                                     </div>

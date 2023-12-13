@@ -4,44 +4,46 @@
     </x-slot>
 
     <div class="container">
-        <aside>
-            <h2>Sidebar</h2>
-            <!-- Sidebar content goes here -->
 
-            <ul style="padding-top: 20px">
-                <li><a href="{{ route('involve') }}">Get involved</a></li>
-                <li><a href="{{ route('job_application') }}">Job application</a></li>
-                <li><a href="{{ route('contact') }}">Contact Us</a></li>
-            </ul>
-        </aside>
-
-        <main>
-            <h2>Main Content</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Email</th>
-                        <th>Email</th>
-                        <th>Email</th>
-                        <!-- Add more table headers as needed -->
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Add more rows as needed -->
-                    <tr>
-                        <td>1</td>
-                        <td>John Doe</td>
-                        <td>john@example.com</td>
-                        <td>john@example.com</td>
-                        <td>john@example.com</td>
-                        <td>john@example.com</td>
-                        <!-- Add more table data as needed -->
-                    </tr>
-                </tbody>
-            </table>
+		<div class="container">
+			<h2>Main Content</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Phone</th>
+						<th>Country</th>
+						<th>IDnumber</th>
+						<th>Age</th>
+						<th>Category</th>
+						<th>IDphoto</th>
+						<th>Passport</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- Add more rows as needed -->
+					@forelse ($involves as $record)
+						<tr>
+							<td>{{ $record->id }}</td>
+							<td>{{ $record->name }}</td>
+							<td>{{ $record->email }}</td>
+							<td>{{ $record->phone }}</td>
+							<td>{{ $record->country }}</td>
+							<td>{{ $record->idnumber }}</td>
+							<td>{{ $record->age }}</td>
+							<td>{{ $record->idphoto }}</td>
+							<td>{{ $record->select }}</td>
+							<td>{{ $record->passport }}</td>
+						</tr>
+					@empty
+						<tr>
+							<td colspan="10">There is no data</td>
+						</tr>
+					@endforelse
+				</tbody>
+			</table>
 
             <div class="pagination">
                 <button class="active" onclick="changePage(1)">1</button>

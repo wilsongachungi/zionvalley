@@ -44,11 +44,14 @@ class AdminController extends Controller
 
 	public function job_application()
 	{
-		return view('user.job_application');
+		$involves = Involve::paginate(1);
+		return view('user.job_application', compact('involves'));
+
 	}
 
 	public function contact()
 	{
-		return view('user.contact');
+		$involves = Involve::paginate(1);
+		return view('user.contact', compact('involves'));
 	}
 }
