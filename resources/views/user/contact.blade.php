@@ -24,6 +24,7 @@
                             <td>{{ $record->name }}</td>
                             <td>{{ $record->email }}</td>
                             <td>{{ $record->phone }}</td>
+                            <td>{{ $record->phone }}</td>
                             <td>{{ $record->message }}</td>
                         </tr>
                     @empty
