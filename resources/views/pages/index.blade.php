@@ -24,31 +24,87 @@
             <h1 class="text-center title h2">Zion Valley: A Nature Oasis for Relaxation and Adventure</h1>
             <div class="row section-1">
                 <div class="col-12 col-md-4">
-                    <img class="img-fluid w-100 pb-0" src="../assets/img/HandRail Tree Branches Best.JPG"
+                    <img class="img-fluid w-100 pb-0" src="../assets/img/HandRail.JPG"
                         alt="">
                 </div>
                 <div class="col-md-8 desc">
                     <div class="text-justify line-height-2">
                         <p>
-                            Welcome to Zion Valley Resort, a serene escape enveloped in the natural beauty of majestic
-                            mountains and lush greenery. Immerse yourself in a plethora of activities, from
-                            invigorating hiking trails and leisurely nature walks to breathtaking waterfall views.
+							The decision now made – We are leaving the Nairobi concrete hustle and heading north to the
+							Mount Kenya foothills - The excitement begins!
                         </p>
                         <p>
-                            Our accommodations range from cozy cabins to spacious suites, each providing a
-                            comfortable retreat with unparalleled scenery. Thrill-seekers can indulge in rock
-                            climbing and zip-lining, while those seeking relaxation can unwind in our wellness
-                            center or savor locally sourced cuisine at our restaurant with panoramic views.
+							With the road gradually rising then twisting curving, right and left like a meandering river.
+							 Rising forever through valleys and ever steeper hills, surrounded by lush green verdant growth
+							  everywhere!
+							Now and then the steepest drops - a truly exhilarating journey
                         </p>
                         <p>
-                            Zion Valley Resort invites you to embark on a harmonious journey of enjoyment and
-                            rejuvenation in the heart of nature.
+                            Twilight descending and a golden glow appearing from behind the far mountain. Dawn arrives just outside
+							 Nyeri town, then like a time and long forgotten world, we find ourselves inside Zion Valley – Sitting
+							 right there beside an amazing waterfall – WOW
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+	<div class="text-justify line-height-2 mt-4">
+		<div class="accordions">
+			<div class="accordion" onclick="toggleDiv('div1')">
+				<h3 class="float-left text-lg">
+					Community Needs Assessment
+				</h3>
+				<i class="text-md float-right">&#9660;</i>
+			</div>
+			<div id="div1" class="text-justify line-height-2 desc">
+				<p class="text-justify line-height-2">
+					Soothing roars from crashing waters and the world of traffic soon becomes a distant memory. -
+					Peace at last.
+
+					Energized by lungful’s of pure clean air, we find ourselves wandering down the meandering river side
+					 path. Enchanted by the birds, the bees, the flowers and trees, the incredible sceneries bursting with
+					 forth with life and abundant growth.
+					Artistic living sofas carved from nature are everywhere, we sit and soak up the sounds and boundless
+					joys of nature.
+				</p>
+			</div>
+			<div class="accordion" onclick="toggleDiv('div2')">
+				<h3 class="float-left text-lg">
+					Skills Training Programs
+				</h3>
+				<i class="text-md float-right">&#9660;</i>
+			</div>
+			<div id="div2" class="myDiv" style="display: none ;transition: opacity 0.6s ease;">
+				<p>Develop skills training programs based on the identified needs of the community.
+					Offer training in areas such as hospitality, eco-tourism, trail guiding, customer
+					service, and other skills relevant to the local economy and the objectives
+					of the CBO.</p>
+			</div>
+			<div class="accordion" onclick="toggleDiv('div3')">
+				<h3 class="float-left text-lg">
+					Mutual benefit
+				</h3>
+				<i class="text-md float-right">&#9660;</i>
+			</div>
+			<div id="div3" class="myDiv" style="display: none ;transition: opacity 0.6s ease;">
+				<p>Foster partnerships with existing local businesses to expand their operations or create
+					new ventures. This could include collaborations with restaurants, shops, and service
+					providers, leading to increased employment opportunities</p>
+			</div>
+			<div class="accordion" onclick="toggleDiv('div4')">
+				<h3 class="float-left text-lg">
+					Community-Based Conservation Projects
+				</h3>
+				<i class="text-md float-right">&#9660;</i>
+			</div>
+			<div id="div4" class="myDiv" style="display: none ;transition: opacity 0.6s ease;">
+				<p>Engage in conservation projects that not only protect the natural environment but also
+					create jobs. This might include initiatives like reforestation programs, wildlife
+					monitoring, and sustainable resource management</p>
+			</div>
+		</div>
+	</div>
 
     @include('layouts.user.partials.services')
     @include('layouts.user.partials.latest')
