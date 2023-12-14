@@ -146,9 +146,9 @@
                                         <label style="color: greenyellow" for="selectOption">Category</label>
                                         <select class="form-control" id="selectOption" name="select">
                                             <option value="" selected disabled>--Select--</option>
+                                            <option value="land_owner">Land Owner</option>
                                             <option value="Fainancial_supporter">Financial supporter</option>
-                                            <option value="Fainancial_supporter">Financial supporter</option>
-                                            <option value="Land_owner">Others</option>
+                                            <option value="other">Others</option>
                                             <!-- Add more options as needed -->
                                         </select>
                                     </div>

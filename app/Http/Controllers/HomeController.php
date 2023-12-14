@@ -17,12 +17,10 @@ class HomeController extends Controller
 
 		if (Auth::id()) {
 			if (Auth::user()->usertype == '0') {
-				return view('user.home');
+				return view('pages.index');
 			} else {
-
-				return view('user.dashboard');
-				// $involves = Involve::all();
-				// return view('user.dashboard', compact('involves'));
+				$involves = Involve::all();
+				return view('user.dashboard', compact('involves'));
 			}
 		} else {
 			return redirect()->back();

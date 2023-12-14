@@ -1,5 +1,10 @@
 <x-app-layout>
     <x-slot name="header">
+		<style>
+			*{
+				background-color: #000;
+			}
+		</style>
         <h1 class="text-3xl">Job</h1>
     </x-slot>
 
@@ -10,32 +15,32 @@
 			<table>
 				<thead>
 					<tr>
-						<th>ID</th>
-						<th>Name</th>
-						<th>Email</th>
-						<th>Phone</th>
-						<th>Country</th>
-						<th>IDnumber</th>
-						<th>Age</th>
-						<th>Category</th>
-						<th>IDphoto</th>
-						<th>Passport</th>
+						<th style="color:green">ID</th>
+						<th style="color:green">Name</th>
+						<th style="color:green">Email</th>
+						<th style="color:green">Phone</th>
+						<th style="color:green">Country</th>
+						<th style="color:green">IDnumber</th>
+						<th style="color:green">Age</th>
+						<th style="color:green">Category</th>
+						<th style="color:green">IDphoto</th>
+						<th style="color:green">Passport</th>
 					</tr>
 				</thead>
 				<tbody>
 					<!-- Add more rows as needed -->
-					@forelse ($involves as $record)
+					@forelse ($job as $record)
 						<tr>
-							<td>{{ $record->id }}</td>
-							<td>{{ $record->name }}</td>
-							<td>{{ $record->email }}</td>
-							<td>{{ $record->phone }}</td>
-							<td>{{ $record->country }}</td>
-							<td>{{ $record->idnumber }}</td>
-							<td>{{ $record->age }}</td>
-							<td>{{ $record->idphoto }}</td>
-							<td>{{ $record->select }}</td>
-							<td>{{ $record->passport }}</td>
+							<td style="color: #fff">{{ $record->id }}</td>
+							<td style="color: #fff">{{ $record->name }}</td>
+							<td style="color: #fff">{{ $record->email }}</td>
+							<td style="color: #fff">{{ $record->phone }}</td>
+							<td style="color: #fff">{{ $record->country }}</td>
+							<td style="color: #fff">{{ $record->idnumber }}</td>
+							<td style="color: #fff">{{ $record->age }}</td>
+							<td style="color: #fff">{{ $record->idphoto }}</td>
+							<td style="color: #fff">{{ $record->select }}</td>
+							<td style="color: #fff">{{ $record->passport }}</td>
 						</tr>
 					@empty
 						<tr>

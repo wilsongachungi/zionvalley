@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Models\Members;
 use App\Models\Involve;
+use App\Models\Contact;
+use App\Models\JobApplication;
 
 class AdminController extends Controller
 {
@@ -38,20 +40,19 @@ class AdminController extends Controller
 
 	public function involve()
 	{
-		$involves = Involve::paginate(1);
+		$involves = Involve::all();
 		return view('user.involve', compact('involves'));
 	}
 
 	public function job_application()
 	{
-		$involves = Involve::paginate(1);
-		return view('user.job_application', compact('involves'));
-
+		$job = JobApplication::all();
+		return view('user.job_application', compact('job'));
 	}
 
 	public function contact()
 	{
-		$involves = Involve::paginate(1);
-		return view('user.contact', compact('involves'));
+		$contacts = Contact::all();
+		return view('user.contact', compact('contacts'));
 	}
 }

@@ -1,5 +1,10 @@
 <x-app-layout>
     <x-slot name="header">
+		<style>
+			*{
+				background-color: #000;
+			}
+		</style>
         <h1 class="text-3xl">Contact</h1>
     </x-slot>
 
@@ -9,23 +14,22 @@
             <table>
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Message</th>
+                        <th style="color:green">ID</th>
+                        <th style="color:green">Name</th>
+                        <th style="color:green">Email</th>
+                        <th style="color:green">Phone</th>
+                        <th style="color:green">Message</th>
                     </tr>
                 </thead>
                 <tbody>
                     <!-- Add more rows as needed -->
-                    @forelse ($involves as $record)
+                    @forelse ($contacts as $record)
                         <tr>
-                            <td>{{ $record->id }}</td>
-                            <td>{{ $record->name }}</td>
-                            <td>{{ $record->email }}</td>
-                            <td>{{ $record->phone }}</td>
-                            <td>{{ $record->phone }}</td>
-                            <td>{{ $record->message }}</td>
+                            <td style="color: #fff">{{ $record->id }}</td>
+                            <td style="color: #fff">{{ $record->name }}</td>
+                            <td style="color: #fff">{{ $record->email }}</td>
+                            <td style="color: #fff">{{ $record->phone }}</td>
+                            <td style="color: #fff">{{ $record->message }}</td>
                         </tr>
                     @empty
                         <tr>

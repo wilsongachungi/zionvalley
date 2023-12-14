@@ -52,8 +52,12 @@
                     <li class="nav-item {{ Request::is('team') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('team') }}">Team</a>
                     </li>
+					<li class="nav-item {{ Request::is('team') ? 'active' : '' }}">
+                        <a style="color:green" class="nav-link" href="{{ route('login') }}">login</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+	
 </header>
