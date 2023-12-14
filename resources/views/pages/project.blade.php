@@ -10,7 +10,7 @@
             display: flex;
             align-items: center;
             gap: 20px;
-			margin-left: 30px;
+            margin-left: 30px;
         }
 
         button {
@@ -93,21 +93,21 @@
                 <p class="card1-text">Lorem ipsum dolor ..</p>
             </div> --}}
         </div>
-		<div class="card1" data-name="underground">
+        <div class="card1" data-name="underground">
             <img src="../assets/img/3 cottage UG.jpg" alt="Image 1">
             {{-- <div class="card1-body">
                 <h6 class="card1-title">Underground</h6>
                 <p class="card1-text">Lorem ipsum dolor ..</p>
             </div> --}}
         </div>
-		<div class="card1" data-name="underground">
+        <div class="card1" data-name="underground">
             <img src="../assets/img/26 cottage.jpg" alt="Image 1">
             {{-- <div class="card1-body">
                 <h6 class="card1-title">Underground</h6>
                 <p class="card1-text">Lorem ipsum dolor ..</p>
             </div> --}}
         </div>
-		<div class="card1" data-name="underground">
+        <div class="card1" data-name="underground">
             <img src="../assets/img/25 cottage.jpg" alt="Image 1">
             {{-- <div class="card1-body">
                 <h6 class="card1-title">Underground</h6>
@@ -121,21 +121,21 @@
                 <p class="card1-text">Lorem ipsum dolor ..</p>
             </div> --}}
         </div>
-		<div class="card1" data-name="river">
+        <div class="card1" data-name="river">
             <img src="../assets/img/31 cottage.jpg" alt="river">
             {{-- <div class="card1-body">
                 <h6 class="card1-title">Underground</h6>
                 <p class="card1-text">Lorem ipsum dolor ..</p>
             </div> --}}
         </div>
-		<div class="card1" data-name="river">
+        <div class="card1" data-name="river">
             <img src="../assets/img/29 cottage.jpg" alt="river">
             {{-- <div class="card1-body">
                 <h6 class="card1-title">Underground</h6>
                 <p class="card1-text">Lorem ipsum dolor ..</p>
             </div> --}}
         </div>
-		<div class="card1" data-name="river">
+        <div class="card1" data-name="river">
             <img src="../assets/img/12 cottage.jpg" alt="river">
             {{-- <div class="card1-body">
                 <h6 class="card1-title">Underground</h6>
@@ -149,21 +149,21 @@
                 <p class="card1-text">Lorem ipsum dolor ..</p>
             </div> --}}
         </div>
-		<div class="card1" data-name="slopes">
+        <div class="card1" data-name="slopes">
             <img src="../assets/img/26 slope.jpg" alt="slopes">
             {{-- <div class="card1-body">
                 <h6 class="card1-title">Underground</h6>
                 <p class="card1-text">Lorem ipsum dolor ..</p>
             </div> --}}
         </div>
-		<div class="card1" data-name="slopes">
+        <div class="card1" data-name="slopes">
             <img src="../assets/img/28 slope.jpg" alt="slopes">
             {{-- <div class="card1-body">
                 <h6 class="card1-title">Underground</h6>
                 <p class="card1-text">Lorem ipsum dolor ..</p>
             </div> --}}
         </div>
-		<div class="card1" data-name="slopes">
+        <div class="card1" data-name="slopes">
             <img src="../assets/img/10 slope.jpg" alt="slopes">
             {{-- <div class="card1-body">
                 <h6 class="card1-title">Underground</h6>
@@ -205,21 +205,21 @@
                 <p class="card1-text">Lorem ipsum dolor ..</p>
             </div> --}}
         </div>
-		<div class="card1" data-name="cave">
+        <div class="card1" data-name="cave">
             <img src="../assets/img/10 slope.jpg" alt="cave">
             {{-- <div class="card1-body">
                 <h6 class="card1-title">Underground</h6>
                 <p class="card1-text">Lorem ipsum dolor ..</p>
             </div> --}}
         </div>
-		<div class="card1" data-name="cave">
+        <div class="card1" data-name="cave">
             <img src="../assets/img/10 slope.jpg" alt="cave">
             {{-- <div class="card1-body">
                 <h6 class="card1-title">Underground</h6>
                 <p class="card1-text">Lorem ipsum dolor ..</p>
             </div> --}}
         </div>
-		<div class="card1" data-name="cave">
+        <div class="card1" data-name="cave">
             <img src="../assets/img/10 slope.jpg" alt="cave">
             {{-- <div class="card1-body">
                 <h6 class="card1-title">Underground</h6>
@@ -240,9 +240,9 @@
             filterbleCards.forEach(card1 => {
                 card1.classList.add("hide");
 
-				if(card1.dataset.name === e.target.dataset.name || e.target.dataset.name === "all"){
-					card1.classList.remove("hide");
-				}
+                if (card1.dataset.name === e.target.dataset.name || e.target.dataset.name === "all") {
+                    card1.classList.remove("hide");
+                }
             })
         };
 

@@ -19,8 +19,10 @@ class HomeController extends Controller
 			if (Auth::user()->usertype == '0') {
 				return view('user.home');
 			} else {
-				$involves = Involve::all();
-				return view('user.dashboard', compact('involves'));
+
+				return view('user.dashboard');
+				// $involves = Involve::all();
+				// return view('user.dashboard', compact('involves'));
 			}
 		} else {
 			return redirect()->back();
@@ -278,6 +280,6 @@ class HomeController extends Controller
 		$involves = Involve::all();
 
 
-		return view('dashboard', compact('involves'));
+		return view('user.dashboard', compact('involves'));
 	}
 }
