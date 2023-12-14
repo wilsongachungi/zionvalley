@@ -1,5 +1,122 @@
 <x-base-layout>
-    <div class="projects">
+    <style>
+		.container{
+			align-items: center;
+			align-content: center;
+		}
+        .filter-button {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background: #fff;
+            border: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+        }
+
+        .active1 {
+            background-color: #4070f4;
+        }
+
+        .filterble-cards1 {
+            display: flex;
+			margin-top: 25px;
+			align-items: center;
+			align-content: center;
+        }
+
+        .card1 {
+            flex-basis: 300px;
+            padding: 3px;
+            border-radius: 8px;
+			align-items: center;
+			align-content: center;
+			margin-left: 10px;
+
+        }
+
+        .card1 img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .card1-body {
+            padding: 15px 20px 20px;
+        }
+		.card1-title{
+			font-size:20px;
+			font-weight:500;
+			color:#fff;
+		}
+		.card1-text{
+			font-size: 18px;
+			color: #fff;
+		}
+    </style>
+
+    <div class="page-hero bg-image">
+        <div class="hero-section">
+            <div class="container text-center wow zoomIn">
+                <span class="subhead" style="color:  black; text-size:25px"></span>
+                <h2 class="display-4"><strong style="color:  white">Projects</strong></h2>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="filter-button">
+            <button class="active1" data-name="all">Show all</button>
+            <button data-name="underground">Underground</button>
+            <button data-name="river">River</button>
+            <button data-name="slopes">Slopes</button>
+        </div>
+    </div>
+
+    <div class="filterble-cards1">
+        <div class="card1" data-name="underground">
+            <img src="../assets/img/10 slope.jpg" alt="Image 1">
+            {{-- <div class="card1-body">
+                <h6 class="card1-title">Underground</h6>
+                <p class="card1-text">Lorem ipsum dolor ..</p>
+            </div> --}}
+        </div>
+		<div class="card1" data-name="underground">
+            <img src="../assets/img/10 slope.jpg" alt="Image 1">
+            {{-- <div class="card1-body">
+                <h6 class="card1-title">Underground</h6>
+                <p class="card1-text">Lorem ipsum dolor ..</p>
+            </div> --}}
+        </div>
+		<div class="card1" data-name="underground">
+            <img src="../assets/img/10 slope.jpg" alt="Image 1">
+            {{-- <div class="card1-body">
+                <h6 class="card1-title">Underground</h6>
+                <p class="card1-text">Lorem ipsum dolor ..</p>
+            </div> --}}
+        </div>
+		<div class="card1" data-name="underground">
+            <img src="../assets/img/10 slope.jpg" alt="Image 1">
+            {{-- <div class="card1-body">
+                <h6 class="card1-title">Underground</h6>
+                <p class="card1-text">Lorem ipsum dolor ..</p>
+            </div> --}}
+        </div>
+    </div>
+
+
+
+
+
+
+    {{-- <div class="projects">
         <div class="page-hero bg-image">
             <div class="hero-section">
                 <div class="container text-center wow zoomIn">
@@ -92,5 +209,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </x-base-layout>

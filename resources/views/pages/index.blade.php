@@ -6,11 +6,6 @@
                     <img class="img1 pb-0 mb-0" src="../assets/img/IMG_20181226_140601.jpg" alt="Image 1">
                     <div class="carousel-caption mx-auto px-5 text-xl">Community River</div>
                 </div>
-                <div class="carousel-item">
-                    <img class="img1 pb-0 mb-0" src="../assets/img/INursery_MG_5866-scaled.jpg" class="d-block w-100"
-                        alt="Image 1">
-                    <div class="carousel-caption mx-auto px-5 text-xl">Indeginous tree preservation</div>
-                </div>
                 <div class="carousel-item flex">
                     <img class="img1 pb-0 mb-0" src="../assets/img/safari.jpg" class="d-block w-100" alt="Image 1">
                     <div class="carousel-caption mx-auto px-5 text-xl">Nature Walk</div>
