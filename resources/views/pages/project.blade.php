@@ -5,13 +5,14 @@
 			align-content: center;
 		}
         .filter-button {
+			flex-wrap: wrap;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
         button {
-            padding: 10px 20px;
+            padding: 4px 14px;
             font-size: 18px;
             background: #fff;
             border: none;
@@ -28,15 +29,19 @@
 			margin-top: 25px;
 			align-items: center;
 			align-content: center;
+			gap:20px;
+			flex-wrap: wrap;
         }
 
         .card1 {
+			flex-grow:1;
             flex-basis: 300px;
             padding: 3px;
             border-radius: 8px;
 			align-items: center;
 			align-content: center;
 			margin-left: 10px;
+			margin-right: 10px;
 
         }
 
@@ -61,14 +66,14 @@
 		}
     </style>
 
-    <div class="page-hero bg-image">
+    {{-- <div class="page-hero bg-image">
         <div class="hero-section">
             <div class="container text-center wow zoomIn">
                 <span class="subhead" style="color:  black; text-size:25px"></span>
                 <h2 class="display-4"><strong style="color:  white">Projects</strong></h2>
             </div>
         </div>
-    </div>
+    </div> --}}
 
 
     <div class="container">
@@ -77,6 +82,7 @@
             <button data-name="underground">Underground</button>
             <button data-name="river">River</button>
             <button data-name="slopes">Slopes</button>
+            <button data-name="cave">Caves</button>
         </div>
     </div>
 
@@ -88,22 +94,50 @@
                 <p class="card1-text">Lorem ipsum dolor ..</p>
             </div> --}}
         </div>
-		<div class="card1" data-name="underground">
-            <img src="../assets/img/10 slope.jpg" alt="Image 1">
+		<div class="card1" data-name="river">
+            <img src="../assets/img/10 slope.jpg" alt="river">
             {{-- <div class="card1-body">
                 <h6 class="card1-title">Underground</h6>
                 <p class="card1-text">Lorem ipsum dolor ..</p>
             </div> --}}
         </div>
-		<div class="card1" data-name="underground">
-            <img src="../assets/img/10 slope.jpg" alt="Image 1">
+		<div class="card1" data-name="slopes">
+            <img src="../assets/img/10 slope.jpg" alt="slopes">
             {{-- <div class="card1-body">
                 <h6 class="card1-title">Underground</h6>
                 <p class="card1-text">Lorem ipsum dolor ..</p>
             </div> --}}
         </div>
-		<div class="card1" data-name="underground">
-            <img src="../assets/img/10 slope.jpg" alt="Image 1">
+		<div class="card1" data-name="cave">
+            <img src="../assets/img/10 slope.jpg" alt="cave">
+            {{-- <div class="card1-body">
+                <h6 class="card1-title">Underground</h6>
+                <p class="card1-text">Lorem ipsum dolor ..</p>
+            </div> --}}
+        </div>
+		<div class="card1" data-name="cave">
+            <img src="../assets/img/10 slope.jpg" alt="cave">
+            {{-- <div class="card1-body">
+                <h6 class="card1-title">Underground</h6>
+                <p class="card1-text">Lorem ipsum dolor ..</p>
+            </div> --}}
+        </div>
+		<div class="card1" data-name="cave">
+            <img src="../assets/img/10 slope.jpg" alt="cave">
+            {{-- <div class="card1-body">
+                <h6 class="card1-title">Underground</h6>
+                <p class="card1-text">Lorem ipsum dolor ..</p>
+            </div> --}}
+        </div>
+		<div class="card1" data-name="cave">
+            <img src="../assets/img/10 slope.jpg" alt="cave">
+            {{-- <div class="card1-body">
+                <h6 class="card1-title">Underground</h6>
+                <p class="card1-text">Lorem ipsum dolor ..</p>
+            </div> --}}
+        </div>
+		<div class="card1" data-name="cave">
+            <img src="../assets/img/10 slope.jpg" alt="cave">
             {{-- <div class="card1-body">
                 <h6 class="card1-title">Underground</h6>
                 <p class="card1-text">Lorem ipsum dolor ..</p>
@@ -112,7 +146,9 @@
     </div>
 
 
-
+	<script>
+		const filterButtons = document.querySelectorAll(".filter_button")
+	</script>
 
 
 
