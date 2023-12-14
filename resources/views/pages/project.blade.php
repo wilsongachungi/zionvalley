@@ -1,11 +1,12 @@
 <x-base-layout>
     <style>
-		.container{
-			align-items: center;
-			align-content: center;
-		}
-        .filter-button {
-			flex-wrap: wrap;
+        .container {
+            align-items: center;
+            align-content: center;
+        }
+
+        .filter-buttons {
+            flex-wrap: wrap;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -20,29 +21,33 @@
             cursor: pointer;
         }
 
-        .active1 {
+        .active {
             background-color: #4070f4;
         }
 
         .filterble-cards1 {
             display: flex;
-			margin-top: 25px;
-			align-items: center;
-			align-content: center;
-			gap:20px;
-			flex-wrap: wrap;
+            margin-top: 25px;
+            align-items: center;
+            align-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         .card1 {
-			flex-grow:1;
+            flex-grow: 1;
             flex-basis: 300px;
             padding: 3px;
             border-radius: 8px;
-			align-items: center;
-			align-content: center;
-			margin-left: 10px;
-			margin-right: 10px;
+            align-items: center;
+            align-content: center;
+            margin-left: 10px;
+            margin-right: 10px;
 
+        }
+
+        .card1.hide {
+            display: none;
         }
 
         .card1 img {
@@ -55,30 +60,25 @@
         .card1-body {
             padding: 15px 20px 20px;
         }
-		.card1-title{
-			font-size:20px;
-			font-weight:500;
-			color:#fff;
-		}
-		.card1-text{
-			font-size: 18px;
-			color: #fff;
-		}
+
+        .card1-title {
+            font-size: 20px;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .card1-text {
+            font-size: 18px;
+            color: #fff;
+        }
     </style>
 
-    {{-- <div class="page-hero bg-image">
-        <div class="hero-section">
-            <div class="container text-center wow zoomIn">
-                <span class="subhead" style="color:  black; text-size:25px"></span>
-                <h2 class="display-4"><strong style="color:  white">Projects</strong></h2>
-            </div>
-        </div>
-    </div> --}}
+
 
 
     <div class="container">
-        <div class="filter-button">
-            <button class="active1" data-name="all">Show all</button>
+        <div class="filter-buttons">
+            <button class="active" data-name="all">Show all</button>
             <button data-name="underground">Underground</button>
             <button data-name="river">River</button>
             <button data-name="slopes">Slopes</button>
@@ -94,8 +94,57 @@
                 <p class="card1-text">Lorem ipsum dolor ..</p>
             </div> --}}
         </div>
+		<div class="card1" data-name="underground">
+            <img src="../assets/img/10 slope.jpg" alt="Image 1">
+            {{-- <div class="card1-body">
+                <h6 class="card1-title">Underground</h6>
+                <p class="card1-text">Lorem ipsum dolor ..</p>
+            </div> --}}
+        </div>
+		<div class="card1" data-name="underground">
+            <img src="../assets/img/10 slope.jpg" alt="Image 1">
+            {{-- <div class="card1-body">
+                <h6 class="card1-title">Underground</h6>
+                <p class="card1-text">Lorem ipsum dolor ..</p>
+            </div> --}}
+        </div>
+		<div class="card1" data-name="underground">
+            <img src="../assets/img/10 slope.jpg" alt="Image 1">
+            {{-- <div class="card1-body">
+                <h6 class="card1-title">Underground</h6>
+                <p class="card1-text">Lorem ipsum dolor ..</p>
+            </div> --}}
+        </div>
+        <div class="card1" data-name="river">
+            <img src="../assets/img/10 slope.jpg" alt="river">
+            {{-- <div class="card1-body">
+                <h6 class="card1-title">Underground</h6>
+                <p class="card1-text">Lorem ipsum dolor ..</p>
+            </div> --}}
+        </div>
 		<div class="card1" data-name="river">
             <img src="../assets/img/10 slope.jpg" alt="river">
+            {{-- <div class="card1-body">
+                <h6 class="card1-title">Underground</h6>
+                <p class="card1-text">Lorem ipsum dolor ..</p>
+            </div> --}}
+        </div>
+		<div class="card1" data-name="river">
+            <img src="../assets/img/10 slope.jpg" alt="river">
+            {{-- <div class="card1-body">
+                <h6 class="card1-title">Underground</h6>
+                <p class="card1-text">Lorem ipsum dolor ..</p>
+            </div> --}}
+        </div>
+		<div class="card1" data-name="river">
+            <img src="../assets/img/10 slope.jpg" alt="river">
+            {{-- <div class="card1-body">
+                <h6 class="card1-title">Underground</h6>
+                <p class="card1-text">Lorem ipsum dolor ..</p>
+            </div> --}}
+        </div>
+        <div class="card1" data-name="slopes">
+            <img src="../assets/img/HandRail.JPG" alt="slopes">
             {{-- <div class="card1-body">
                 <h6 class="card1-title">Underground</h6>
                 <p class="card1-text">Lorem ipsum dolor ..</p>
@@ -108,14 +157,49 @@
                 <p class="card1-text">Lorem ipsum dolor ..</p>
             </div> --}}
         </div>
-		<div class="card1" data-name="cave">
+		<div class="card1" data-name="slopes">
+            <img src="../assets/img/10 slope.jpg" alt="slopes">
+            {{-- <div class="card1-body">
+                <h6 class="card1-title">Underground</h6>
+                <p class="card1-text">Lorem ipsum dolor ..</p>
+            </div> --}}
+        </div>
+		<div class="card1" data-name="slopes">
+            <img src="../assets/img/10 slope.jpg" alt="slopes">
+            {{-- <div class="card1-body">
+                <h6 class="card1-title">Underground</h6>
+                <p class="card1-text">Lorem ipsum dolor ..</p>
+            </div> --}}
+        </div>
+        <div class="card1" data-name="cave">
             <img src="../assets/img/10 slope.jpg" alt="cave">
             {{-- <div class="card1-body">
                 <h6 class="card1-title">Underground</h6>
                 <p class="card1-text">Lorem ipsum dolor ..</p>
             </div> --}}
         </div>
-		<div class="card1" data-name="cave">
+        <div class="card1" data-name="cave">
+            <img src="../assets/img/10 slope.jpg" alt="cave">
+            {{-- <div class="card1-body">
+                <h6 class="card1-title">Underground</h6>
+                <p class="card1-text">Lorem ipsum dolor ..</p>
+            </div> --}}
+        </div>
+        <div class="card1" data-name="cave">
+            <img src="../assets/img/10 slope.jpg" alt="cave">
+            {{-- <div class="card1-body">
+                <h6 class="card1-title">Underground</h6>
+                <p class="card1-text">Lorem ipsum dolor ..</p>
+            </div> --}}
+        </div>
+        <div class="card1" data-name="cave">
+            <img src="../assets/img/10 slope.jpg" alt="cave">
+            {{-- <div class="card1-body">
+                <h6 class="card1-title">Underground</h6>
+                <p class="card1-text">Lorem ipsum dolor ..</p>
+            </div> --}}
+        </div>
+        <div class="card1" data-name="cave">
             <img src="../assets/img/10 slope.jpg" alt="cave">
             {{-- <div class="card1-body">
                 <h6 class="card1-title">Underground</h6>
@@ -146,9 +230,25 @@
     </div>
 
 
-	<script>
-		const filterButtons = document.querySelectorAll(".filter_button")
-	</script>
+    <script>
+        const filterButtons = document.querySelectorAll(".filter-buttons button");
+        const filterbleCards = document.querySelectorAll(".filterble-cards1 .card1");
+
+        const filterCards = e => {
+            document.querySelector(".active").classList.remove("active");
+            e.target.classList.add("active");
+
+            filterbleCards.forEach(card1 => {
+                card1.classList.add("hide");
+
+				if(card1.dataset.name === e.target.dataset.name || e.target.dataset.name === "all"){
+					card1.classList.remove("hide");
+				}
+            })
+        };
+
+        filterButtons.forEach(button => button.addEventListener("click", filterCards));
+    </script>
 
 
 
