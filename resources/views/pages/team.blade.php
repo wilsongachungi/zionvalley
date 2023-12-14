@@ -44,7 +44,7 @@
             </div>
             <div class="team-col">
                 <div class="user d-flex flex-column col">
-                    <img src="../assets/img/19 slope.jpg" alt="">
+                    <img src="../assets/img/daidai.jpg" alt="">
                     <div class="user-info site-color">Chief Architect</div>
                 </div>
                 <p class="px-2 line-height-1-5">
@@ -74,7 +74,7 @@
             </div>
             <div class="team-col">
                 <div class="user d-flex flex-column col">
-                    <img src="../assets/img/19 slope.jpg" alt="">
+                    <img src="../assets/img/vice chair.jpeg" alt="">
                     <div class="user-info site-color">Implementors</div>
                 </div>
                 <p class="px-2 line-height-1-5">
@@ -85,7 +85,7 @@
             </div>
             <div class="team-col">
                 <div class="user d-flex flex-column col">
-                    <img src="../assets/img/19 slope.jpg" alt="">
+                    <img src="../assets/img/wilson.jpg" alt="">
                     <div class="user-info site-color">IT Developments</div>
                 </div>
                 <p class="px-2 line-height-1-5">
