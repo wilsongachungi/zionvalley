@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Contact;
-
-use App\Models\Involve;
-use App\Models\Members;
 use Illuminate\Http\Request;
+
+use App\Models\Members;
+use App\Models\Involve;
+use App\Models\Contact;
 use App\Models\JobApplication;
-use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -53,13 +52,7 @@ class AdminController extends Controller
 
 	public function contact()
 	{
-		if(Auth::id()){
-			return redirect('user.index');
-		}
-		else{
-			$contacts = Contact::all();
-		    return view('user.contact', compact('contacts'));
-		}
-
+		$contacts = Contact::all();
+		return view('user.contact', compact('contacts'));
 	}
 }

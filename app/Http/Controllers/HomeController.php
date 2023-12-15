@@ -197,6 +197,9 @@ class HomeController extends Controller
 
 	public function job(Request $request)
 	{
+		if (!auth()->check()) {
+			return redirect()->route('login'); // Redirect to the login page
+		}
 
 		$validator = Validator::make($request->all(), [
 			'name' => 'required|string',
@@ -274,7 +277,6 @@ class HomeController extends Controller
 
 	public function show()
 	{
-		
 
 		$involves = Involve::all();
 
