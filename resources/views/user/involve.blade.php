@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h1 class="text-3xl">Involve</h1>
+        <h1 style="color:green" class="text-3xl">Involve</h1>
 		<style>
 			*{
 				background-color: #000;

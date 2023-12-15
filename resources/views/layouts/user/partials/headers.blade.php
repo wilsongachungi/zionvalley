@@ -52,12 +52,21 @@
                     <li class="nav-item {{ Request::is('team') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('team') }}">Team</a>
                     </li>
-					<li class="nav-item {{ Request::is('team') ? 'active' : '' }}">
-                        <a style="color:green" class="nav-link" href="{{ route('login') }}">login</a>
-                    </li>
-                </ul>
-            </div>
+                    @if (Route::has('login'))
+                        @auth
+						{{-- <li class="nav-item">
+                            <x-app-layout></x-app-layout>
+                        </li> --}}
+
+                    @else
+                        <li class="nav-item {{ Request::is('') ? 'active' : '' }}">
+                            <a style="color:green" class="nav-link" href="{{ route('login') }}">login</a>
+                        </li>
+                    @endauth
+                @endif
+            </ul>
         </div>
-    </nav>
-	
+    </div>
+</nav>
+
 </header>

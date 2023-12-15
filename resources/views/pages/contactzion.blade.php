@@ -52,6 +52,14 @@
                 <div class="modal-body">
                     <div class="row mt-5">
                         <div class="col-12 wow fadeInLeft">
+							@if(Route::has('login'))
+
+							@auth
+
+							@else{
+
+							}
+
 
                             <form class="modal-form" action="{{ route('involved') }}" method="POST"
                                 enctype="multipart/form-data">
@@ -176,12 +184,15 @@
                                 <!-- Submit Button -->
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
+							@endauth
+							@endif
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div><br>
+
 
     <button style="margin-left: 30px" type="button" class="btn btn-primary" data-toggle="modal"
         data-target="#modal4">

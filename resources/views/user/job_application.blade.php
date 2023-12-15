@@ -5,7 +5,7 @@
 				background-color: #000;
 			}
 		</style>
-        <h1 class="text-3xl">Job</h1>
+        <h1 style="color:green" class="text-3xl">Job</h1>
     </x-slot>
 
     <div class="container">

@@ -274,6 +274,7 @@ class HomeController extends Controller
 
 	public function show()
 	{
+		
 
 		$involves = Involve::all();
 

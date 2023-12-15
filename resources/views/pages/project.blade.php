@@ -14,8 +14,8 @@
         }
 
         button {
-            padding: 4px 14px;
-            font-size: 18px;
+            padding: 2px 8px;
+            font-size: 15px;
             background: #fff;
             border: none;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
