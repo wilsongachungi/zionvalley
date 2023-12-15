@@ -1,4 +1,11 @@
 <x-base-layout>
+    <style>
+        @media screen and (max-width:770px) {
+            .below-team img {
+                height: 100%;
+            }
+        }
+    </style>
     <section class="my-4">
         <h1 class="text-center mb-3">Our Team</h1>
         <div class="team-row">
@@ -32,6 +39,8 @@
                     record keeping and reporting.
                 </p>
             </div>
+            <img class="below-team" style="width: 100%; height:30%; margin-left:10px" src="../assets/img/chat.png"
+                alt="">
             <div class="team-col">
                 <div class="user d-flex flex-column col">
                     <img src="../assets/img/19 slope.jpg" alt="">
@@ -59,8 +68,8 @@
                 </div>
                 <p class="px-2 line-height-1-5">
                     A member of the Executive office and sitting alongside the Treasurer.
-					To ensure smooth inter relations, accountability and transparency between all
-					departments and members
+                    To ensure smooth inter relations, accountability and transparency between all
+                    departments and members
                 </p>
             </div>
             <div class="team-col">
@@ -94,6 +103,5 @@
                 </p>
             </div>
         </div>
-		<img  style="width: 97%; height:30%; margin-left:10px" src="../assets/img/chat.png" alt="">
     </section>
 </x-base-layout>
