@@ -14,7 +14,6 @@
             <table>
                 <thead>
                     <tr>
-                        <th style="color:green">ID</th>
                         <th style="color:green">Name</th>
                         <th style="color:green">Email</th>
                         <th style="color:green">Phone</th>
@@ -25,7 +24,6 @@
                     <!-- Add more rows as needed -->
                     @forelse ($contacts as $record)
                         <tr>
-                            <td style="color: #fff">{{ $record->id }}</td>
                             <td style="color: #fff">{{ $record->name }}</td>
                             <td style="color: #fff">{{ $record->email }}</td>
                             <td style="color: #fff">{{ $record->phone }}</td>

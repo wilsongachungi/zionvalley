@@ -52,14 +52,6 @@
                 <div class="modal-body">
                     <div class="row mt-5">
                         <div class="col-12 wow fadeInLeft">
-							@if(Route::has('login'))
-
-							@auth
-
-							@else{
-
-							}
-
 
                             <form class="modal-form" action="{{ route('involved') }}" method="POST"
                                 enctype="multipart/form-data">
@@ -184,8 +176,6 @@
                                 <!-- Submit Button -->
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
-							@endauth
-							@endif
                         </div>
                     </div>
                 </div>
@@ -309,12 +299,12 @@
                                         <label style="color: greenyellow" for="selectOption"> Job Category</label>
                                         <select class="form-control" id="selectOption" name="select">
                                             <option value="" selected disabled>--Select--</option>
-                                            <option value="option1">Masonry</option>
-                                            <option value="option2">Carpentry</option>
-                                            <option value="option2">Security</option>
-                                            <option value="option2">Store Keeping</option>
-                                            <option value="option2">Chef</option>
-                                            <option value="option2"></option>
+                                            <option value=">Masonry">Masonry</option>
+                                            <option value="Carpentry">Carpentry</option>
+                                            <option value="Security">Security</option>
+                                            <option value="Store Keeping">Store Keeping</option>
+                                            <option value="Chef">Chef</option>
+                                            <option value="Tree_Preservation">Tree Preservation</option>
                                             <!-- Add more options as needed -->
                                         </select>
                                     </div>

@@ -77,7 +77,7 @@ class HomeController extends Controller
 
 			$appoint = Appointment::where('user_id', $userid)->get();
 
-			return view('user.message', compact('appoint'));
+			return view('pages.message', compact('appoint'));
 		} else {
 			return redirect()->back();
 		}
@@ -139,6 +139,9 @@ class HomeController extends Controller
 
 	public function involved(Request $request)
 	{
+		if (!auth()->check()) {
+			return redirect()->route('login'); // Redirect to the login page
+		}
 
 		$validator = Validator::make($request->all(), [
 			'name' => 'required|string',
@@ -192,7 +195,7 @@ class HomeController extends Controller
 			'passport_image' => isset($passportImageName) ? $passportImageName : null,
 		]);
 
-		return redirect()->back()->with('message', 'Thank you! Message sent successfully.');
+		return redirect()->back()->with('message', 'Thank you! uploaded successfully.');
 	}
 
 	public function job(Request $request)
@@ -253,7 +256,7 @@ class HomeController extends Controller
 			'passport_image' => isset($passportImageName) ? $passportImageName : null,
 		]);
 
-		return redirect()->back()->with('message', 'Thank you! Message sent successfully.');
+		return redirect()->back()->with('message', 'Thank you! uploaded successfully.');
 	}
 
 	public function contact_us(Request $request)

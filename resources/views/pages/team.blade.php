@@ -58,9 +58,9 @@
                     <div class="user-info site-color">Accounts Executive</div>
                 </div>
                 <p class="px-2 line-height-1-5">
-                    A member of the Executive office and sitting alongside the Treasurer to ensure full transparency,
-                    smooth inter relations and accountability between the Executive, the Implementers, Harambee members
-                    and the CBO
+                    A member of the Executive office and sitting alongside the Treasurer.
+					To ensure smooth inter relations, accountability and transparency between all
+					departments and members
                 </p>
             </div>
             <div class="team-col">
@@ -94,5 +94,6 @@
                 </p>
             </div>
         </div>
+		<img  style="width: 97%; height:30%; margin-left:10px" src="../assets/img/chat.png" alt="">
     </section>
 </x-base-layout>

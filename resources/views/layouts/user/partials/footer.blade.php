@@ -42,7 +42,7 @@
 
         <hr>
 
-        <p id="copyright" class="text-center">Copyright &copy; 2023 <a href="#" target="_blank">wigitech</a>. All
+        <p id="copyright" class="text-center">Copyright &copy; 2023 <a href="#" target="_blank">zionvalley</a>. All
             right reserved</p>
     </div>
 </footer>
