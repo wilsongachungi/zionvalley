@@ -20,10 +20,17 @@
             border: none;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
             cursor: pointer;
+            color: green;
+            border-radius: 2px;
+        }
+
+        button:hover {
+            color: purple;
+            transition: 0.5s ease-in;
         }
 
         .active {
-            background-color: #4070f4;
+            background-color: rgb(215, 212, 212);
         }
 
         .filterble-cards1 {
@@ -33,6 +40,7 @@
             align-content: center;
             gap: 20px;
             flex-wrap: wrap;
+
         }
 
         .card1 {
@@ -44,7 +52,13 @@
             align-content: center;
             margin-left: 10px;
             margin-right: 10px;
+            box-shadow: 0 4px -1px rgba(0, 0, 0, 0.5);
 
+        }
+
+        .card1:hover {
+            transform: scale(1.1);
+            transition: .5s ease-in-out;
         }
 
         .card1.hide {
@@ -56,6 +70,7 @@
             height: 210px;
             object-fit: cover;
             border-radius: 8px 8px 0 0;
+
         }
 
         .card1-body {
@@ -77,11 +92,11 @@
 
     <div class="container">
         <div class="filter-buttons">
-            <button class="active" data-name="all">Show all</button>
             <button data-name="underground">Underground</button>
             <button data-name="river">Cottage</button>
             <button data-name="slopes">Slopes</button>
             <button data-name="cave">Tree Planting</button>
+            <button class="active" data-name="all">Show all</button>
         </div>
     </div>
 

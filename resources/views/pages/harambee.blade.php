@@ -1,9 +1,14 @@
 <x-base-layout>
+	<style>
+		p{
+			color:rgb(179, 178, 176);
+		}
+	</style>
     <div class="harambee">
         <div class="page-hero bg-image">
             <div class="hero-section">
                 <div class="container text-center wow zoomIn slow">
-                    <h1 class="display-4">Harambee</h1>
+                    <h2 class="display-4">Harambee</h2>
                 </div>
             </div>
         </div>
@@ -40,7 +45,7 @@
             </div>
 
             <div class="text-justify line-height-2 mt-4">
-                <h2>Community-based organization</h2>
+                <h3>Community-based organization</h3>
                 <p>
                     Community-based organizations (CBOs) will play role in dealing with
                     significantly benefit nature preservation. This organization have a vested interest in

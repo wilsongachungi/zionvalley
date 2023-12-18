@@ -1,11 +1,11 @@
 <x-app-layout>
     <x-slot name="header">
         <h1 style="color:green" class="text-3xl">Involve</h1>
-		<style>
-			*{
-				background-color: #000;
-			}
-		</style>
+        <style>
+            * {
+                background-color: #000;
+            }
+        </style>
     </x-slot>
 
     <div class="container">
@@ -34,8 +34,9 @@
                         <td style="color:#fff;">{{ $record->country }}</td>
                         <td style="color:#fff;">{{ $record->idnumber }}</td>
                         <td style="color:#fff;">{{ $record->age }}</td>
-                        <td style="color:#fff;">{{ $record->idphoto }}</td>
                         <td style="color:#fff;">{{ $record->select }}</td>
+                        <td style="color:#fff;">{{ $record->idphoto }}</td>
+
                         <td style="color:#fff;">{{ $record->passport_image }}</td>
                     </tr>
                 @empty

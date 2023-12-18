@@ -7,7 +7,7 @@
         }
     </style>
     <section class="my-4">
-        <h1 class="text-center mb-3">Our Team</h1>
+        <h3 class="text-center mb-3">Our Team</h3>
         <div class="team-row">
             <div class="team-col row">
                 <div class="user d-flex flex-column col">
@@ -39,11 +39,10 @@
                     record keeping and reporting.
                 </p>
             </div>
-            <img class="below-team" style="width: 100%; height:30%; margin-left:10px" src="../assets/img/chat.png"
-                alt="">
+            <img class="below-team" style="width: 100%; height:30%; " src="../assets/img/unnamed.png" alt="">
             <div class="team-col">
                 <div class="user d-flex flex-column col">
-                    <img src="../assets/img/19 slope.jpg" alt="">
+                    <img src="../assets/img/chiefexecutive.png" alt="">
                     <div class="user-info site-color">Chief Executive</div>
                 </div>
                 <p class="px-2 line-height-1-5">
@@ -63,7 +62,7 @@
             </div>
             <div class="team-col">
                 <div class="user d-flex flex-column col">
-                    <img src="../assets/img/19 slope.jpg" alt="">
+                    <img src="../assets/img/ras.png" alt="">
                     <div class="user-info site-color">Accounts Executive</div>
                 </div>
                 <p class="px-2 line-height-1-5">

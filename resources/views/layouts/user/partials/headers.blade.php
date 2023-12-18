@@ -53,11 +53,10 @@
                         <a class="nav-link" href="{{ route('team') }}">Team</a>
                     </li>
                     @if (Route::has('login'))
-					
                         @auth
 
                             <li class="nav-item {{ Request::is('') ? 'active' : '' }}">
-                                <a style="color:green" class="nav-link" href="{{ route('message') }}">Account</a>
+                                <a style="color:green" class="nav-link" href="{{ route('message') }}">Profile</a>
                             </li>
                         @else
                             <li class="nav-item {{ Request::is('') ? 'active' : '' }}">

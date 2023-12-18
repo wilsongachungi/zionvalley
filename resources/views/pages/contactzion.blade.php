@@ -1,4 +1,9 @@
 <x-base-layout>
+    <style>
+        .modal-content {
+            background-color: rgb(2, 56, 2);
+        }
+    </style>
     <!-- Button to trigger the first modal -->
     <button style="margin-left: 30px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">
         Get Connected
@@ -33,6 +38,11 @@
             </div>
         </div>
     </div><br>
+    <!---->
+    <button style="margin-left: 30px" type="button" class="btn btn-primary">
+
+        <a style="color:black; padding:1px 28px" class="nav-link" href="{{ route('login') }}"> register</a>
+    </button><br>
 
     <!-- Button to trigger the second modal -->
     <button style="margin-left: 30px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal2">
@@ -93,9 +103,9 @@
                                 <div class="form-row">
                                     <div class="form-group col-12 col-sm-6">
                                         <label style="color: greenyellow" for="phone">Phone</label>
-                                        <input type="text" class="form-control @error('phone') is-invalid @enderror"
-                                            id="phone" name="phone" placeholder="Phone.."
-                                            value="{{ old('phone') }}">
+                                        <input type="text"
+                                            class="form-control @error('phone') is-invalid @enderror" id="phone"
+                                            name="phone" placeholder="Phone.." value="{{ old('phone') }}">
                                         @error('phone')
                                             <p class="alert alert-danger">{{ $message }}</p>
                                         @enderror
@@ -304,7 +314,7 @@
                                             <option value="Security">Security</option>
                                             <option value="Store Keeping">Store Keeping</option>
                                             <option value="Chef">Chef</option>
-                                            <option value="Tree_Preservation">Tree Preservation</option>
+                                            <option value="Tree_php artisan sPreservation">Tree Preservation</option>
                                             <!-- Add more options as needed -->
                                         </select>
                                     </div>
