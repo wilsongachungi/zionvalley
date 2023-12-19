@@ -39,17 +39,30 @@ class AdminController extends Controller
 	}
 
 	public function involve()
-	{
-		$involves = Involve::all();
-		return view('user.involve', compact('involves'));
-	}
+{
+    // Check if the user is authenticated
+    if (auth()->check()) {
+        // Check if the user is of the appropriate type
+        if (auth()->user()->usertype === '0') {
+            // Redirect or show an error page for unauthorized access
+            return redirect()->route('index')->with('error', 'Unauthorized access');
+        }
+
+        // If the user is not an admin, fetch involves and return the view
+        $involves = Involve::all();
+        return view('user.involve', compact('involves'));
+    }
+
+    // If the user is not authenticated, redirect back
+    return redirect()->back();
+}
 
 	public function job_application()
 	{
 
 		// Check if the user is authenticated
 		if (auth()->check()) {
-			// Check if the user is of the appropriate type (replace 'admin' with the correct usertype)
+			// Check if the user is of the appropriate type 
 			if (auth()->user()->usertype === '0') {
 				// Redirect or show an error page for unauthorized access
 				return redirect()->route('index')->with('error', 'Unauthorized access');
