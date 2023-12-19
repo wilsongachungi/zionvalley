@@ -46,8 +46,22 @@ class AdminController extends Controller
 
 	public function job_application()
 	{
-		$job = JobApplication::all();
-		return view('user.job_application', compact('job'));
+
+		// Check if the user is authenticated
+		if (auth()->check()) {
+			// Check if the user is of the appropriate type (replace 'admin' with the correct usertype)
+			if (auth()->user()->usertype === '0') {
+				// Redirect or show an error page for unauthorized access
+				return redirect()->route('index')->with('error', 'Unauthorized access');
+			}
+
+			// If the user is not an admin, fetch job applications and return the view
+			$job = JobApplication::all();
+			return view('user.job_application', compact('job'));
+		}
+
+		// If the user is not authenticated, redirect back
+		return redirect()->back();
 	}
 
 	public function contact()
