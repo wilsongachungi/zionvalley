@@ -58,6 +58,29 @@
                             <li class="nav-item {{ Request::is('') ? 'active' : '' }}">
                                 <a style="color:green" class="nav-link" href="{{ route('message') }}">Profile</a>
                             </li>
+                            @auth
+                                @php
+                                    $fullName = Auth::user()->name;
+                                    $firstName = explode(' ', $fullName)[0];
+                                @endphp
+
+                                <div
+                                    style="position: absolute; top: 3px; right: 2px; padding: 8px; background-color: display: flex; align-items: center;">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            {{ $firstName }}
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <form method="POST" action="{{ route('logout') }}">
+                                                @csrf
+                                                <button type="submit" class="dropdown-item">Logout</button>
+                                            </form>
+                                            <a href="{{ route('profile.show') }}" class="dropdown-item">Profile</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endauth
                         @else
                             <li class="nav-item {{ Request::is('') ? 'active' : '' }}">
                                 <a style="color:green" class="nav-link" href="{{ route('login') }}">login</a>

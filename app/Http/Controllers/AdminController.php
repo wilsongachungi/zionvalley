@@ -39,30 +39,30 @@ class AdminController extends Controller
 	}
 
 	public function involve()
-{
-    // Check if the user is authenticated
-    if (auth()->check()) {
-        // Check if the user is of the appropriate type
-        if (auth()->user()->usertype === '0') {
-            // Redirect or show an error page for unauthorized access
-            return redirect()->route('index')->with('error', 'Unauthorized access');
-        }
+	{
+		// Check if the user is authenticated
+		if (auth()->check()) {
+			// Check if the user is of the appropriate type
+			if (auth()->user()->usertype === '0') {
+				// Redirect or show an error page for unauthorized access
+				return redirect()->route('index')->with('error', 'Unauthorized access');
+			}
 
-        // If the user is not an admin, fetch involves and return the view
-        $involves = Involve::all();
-        return view('user.involve', compact('involves'));
-    }
+			// If the user is not an admin, fetch involves and return the view
+			$involves = Involve::all();
+			return view('user.involve', compact('involves'));
+		}
 
-    // If the user is not authenticated, redirect back
-    return redirect()->back();
-}
+		// If the user is not authenticated, redirect back
+		return redirect()->back();
+	}
 
 	public function job_application()
 	{
 
 		// Check if the user is authenticated
 		if (auth()->check()) {
-			// Check if the user is of the appropriate type 
+			// Check if the user is of the appropriate type
 			if (auth()->user()->usertype === '0') {
 				// Redirect or show an error page for unauthorized access
 				return redirect()->route('index')->with('error', 'Unauthorized access');
@@ -79,7 +79,21 @@ class AdminController extends Controller
 
 	public function contact()
 	{
-		$contacts = Contact::all();
-		return view('user.contact', compact('contacts'));
+		// Check if the user is authenticated
+		if (auth()->check()) {
+			// Check if the user is of the appropriate type
+			if (auth()->user()->usertype === '0') {
+				// Redirect or show an error page for unauthorized access
+				return redirect()->route('index')->with('error', 'Unauthorized access');
+			}
+
+			// If the user is an admin, fetch job applications and return the view
+
+			$contacts = Contact::all();
+			return view('user.contact', compact('contacts'));
+		}
+
+		// If the user is not authenticated, redirect back
+		return redirect()->back();
 	}
 }
