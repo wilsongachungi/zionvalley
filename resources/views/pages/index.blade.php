@@ -1,4 +1,14 @@
 <x-base-layout>
+	@auth
+    <p style="color: antiquewhite;">Welcome, {{ Auth::user()->name }}!</p>
+    <form method="POST" action="{{ route('logout') }}">
+        @csrf
+        <button type="submit" class="btn btn-primary">Logout</button>
+    </form>
+	<a href="{{ route('profile.show') }}" style="color: antiquewhite;">Change Password</a>
+@else
+    <!-- Add login or register links here if needed -->
+@endauth
     <style>
         p {
             color: antiquewhite;

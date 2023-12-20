@@ -172,7 +172,7 @@ class HomeController extends Controller
 		if ($request->hasFile('idphoto')) {
 			$idphoto = $request->file('idphoto');
 			$idphotoName = time() . '_idphoto.' . $idphoto->getClientOriginalExtension();
-			$idphoto->storeAs('images', $idphotoName, 'public'); 
+			$idphoto->storeAs('images', $idphotoName, 'public');
 		}
 
 		// Handle file upload for 'passport_image'
