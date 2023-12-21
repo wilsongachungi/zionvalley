@@ -39,9 +39,20 @@
         </div>
     </div><br>
     <!---->
-    <button style="margin-left: 30px" type="button" class="btn btn-primary">
-        <a style="color:black; padding:1px 28px" class="nav-link" href="{{ route('register') }}"> register</a>
-    </button><br>
+    <!-- Your other HTML code -->
+
+    @if (Auth::check())
+        {{-- This section will be displayed if the user is logged in --}}
+        <!-- The button will not be rendered for authenticated users -->
+    @else
+        {{-- This section will be displayed if the user is not logged in --}}
+        <button style="margin-left: 30px" type="button" class="btn btn-primary">
+            <a style="color:black; padding:1px 28px" class="nav-link" href="{{ route('register') }}"> register</a>
+        </button><br>
+    @endif
+
+    <!-- Your other HTML code -->
+
 
     <!-- Button to trigger the second modal -->
     <button style="margin-left: 30px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal2">
@@ -191,6 +202,13 @@
             </div>
         </div>
     </div><br>
+
+    @if (Auth::check())
+        {{-- This section will be displayed if the user is logged in --}}
+        <!-- The button will not be rendered for authenticated users -->
+    @else
+        {{-- This section will be displayed if the user is not logged in --}}
+    @endif
 
 
     <button style="margin-left: 30px" type="button" class="btn btn-primary" data-toggle="modal"
