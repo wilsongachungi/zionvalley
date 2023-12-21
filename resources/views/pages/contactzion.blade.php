@@ -40,8 +40,7 @@
     </div><br>
     <!---->
     <button style="margin-left: 30px" type="button" class="btn btn-primary">
-
-        <a style="color:black; padding:1px 28px" class="nav-link" href="{{ route('login') }}"> register</a>
+        <a style="color:black; padding:1px 28px" class="nav-link" href="{{ route('register') }}"> register</a>
     </button><br>
 
     <!-- Button to trigger the second modal -->
