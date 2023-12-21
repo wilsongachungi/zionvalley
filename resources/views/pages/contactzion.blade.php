@@ -1,7 +1,7 @@
 <x-base-layout>
     <style>
         .modal-content {
-            background-color: rgb(2, 56, 2);
+            background-color: rgb(1, 37, 1);
         }
     </style>
     <!-- Button to trigger the first modal -->
@@ -203,12 +203,9 @@
         </div>
     </div><br>
 
-    @if (Auth::check())
-        {{-- This section will be displayed if the user is logged in --}}
-        <!-- The button will not be rendered for authenticated users -->
-    @else
-        {{-- This section will be displayed if the user is not logged in --}}
-    @endif
+	<button id="afterSubmitButton" style="display: none;" type="button" class="btn btn-success">
+		This button appears after submission
+	</button>
 
 
     <button style="margin-left: 30px" type="button" class="btn btn-primary" data-toggle="modal"
@@ -387,4 +384,9 @@
             </div>
         </div>
     </div>
+
+
+
+
+	
 </x-base-layout>
