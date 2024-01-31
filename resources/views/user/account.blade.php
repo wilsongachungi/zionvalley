@@ -116,6 +116,7 @@
                                                     <th>Deposit</th>
                                                     <th>Withdrawn</th>
                                                     <th>Harambees</th>
+                                                    <th>Created at</th>
                                                     <th>Status</th>
                                                 </tr>
                                             </thead>
@@ -126,6 +127,7 @@
                                                         <td>{{ $harambee->deposit }} </td>
                                                         <td>{{ $harambee->withdrawn }}</td>
                                                         <td>{{ $harambee->harambees }} </td>
+                                                        <td>{{ $harambee->created_at }} </td>
                                                         <td>
                                                             <div class="badge badge-outline-success">Dormant</div>
                                                         </td>
