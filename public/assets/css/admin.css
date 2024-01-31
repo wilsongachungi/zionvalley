@@ -46,6 +46,10 @@ main {
 .bg-black {
 	background-color: black;
 }
+.project{
+	background-image: url('../assets/img/Capture11.JPG');;
+}
+
 
 
 @media (max-width: 768px) {
