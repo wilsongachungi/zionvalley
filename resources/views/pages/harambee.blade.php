@@ -37,9 +37,9 @@
                     <div class="container text-center wow zoomIn"
                         style="background-color:  rgba(3, 79, 3, 0.5); padding: 10px;">
                         <div class=" line-height-1.5" style="text-align: center">
-                            <p>Zion Valley Harambee Village <br>
+                            <h4>Zion Valley Harambee Village <br>
                                 Join for as little as 1k
-                            </p>
+                            </h4>
                         </div>
                     </div>
                 </div>
