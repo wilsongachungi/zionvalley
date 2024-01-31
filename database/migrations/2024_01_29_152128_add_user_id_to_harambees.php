@@ -18,6 +18,7 @@ class AddUserIdToHarambees extends Migration
 	public function down()
 	{
 		Schema::table('harambees', function (Blueprint $table) {
+			$table->dropForeign(['user_id']);
 			$table->dropColumn('user_id');
 		});
 	}
