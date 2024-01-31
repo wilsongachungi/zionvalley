@@ -9,6 +9,7 @@
 
         <title>zion valley </title>
 
+        @yield('css')
         {{-- Css --}}
         @include('layouts.user.partials.links')
     </head>
