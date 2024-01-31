@@ -127,7 +127,7 @@
                                                         <td>{{ $harambee->deposit }} </td>
                                                         <td>{{ $harambee->withdrawn }}</td>
                                                         <td>{{ $harambee->harambees }} </td>
-                                                        <td>{{ $harambee->created_at }} </td>
+                                                        <td>{{ $harambee->created_at->format('Y-m-d H:i:') }}</td>
                                                         <td>
                                                             <div class="badge badge-outline-success">Dormant</div>
                                                         </td>
