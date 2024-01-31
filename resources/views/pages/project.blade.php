@@ -1,4 +1,5 @@
 <x-base-layout>
+
     <style>
         .container {
             align-items: center;
@@ -107,23 +108,6 @@
             margin-bottom: 10px;
         }
     </style>
-
-        <div class="container">
-        <div class="page-hero bg-image">
-            <div class="hero-section">
-                <div class="container text-center wow zoomIn slow">
-                    <div class="container text-center wow zoomIn"
-                        style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
-                        <div class="text-justify line-height-1.5" style="text-align: center">
-                            <p style="font-weight:bold; text-align: center">You are invited to join and buy certificates.
-                                Harambee tree certificates which can grow and bear fruits.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
 
     <div class="intro-container"
         style="background-image: url('../assets/img/Capture11.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: antiquewhite;">

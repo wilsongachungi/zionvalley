@@ -4,3 +4,4 @@
 
 @livewireStyles
 <link rel="stylesheet" href="../assets/css/admin.css">
+<link rel="stylesheet" href="admin/assets/css/custom.css">

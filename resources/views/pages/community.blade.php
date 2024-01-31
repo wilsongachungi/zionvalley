@@ -5,21 +5,21 @@
             line-height: 1.5;
             text-align: left;
         }
-		.banner-container {
+
+        .banner-container {
             text-align: center;
             padding: 50px;
             background-color: #021e32;
             color: antiquewhite;
             margin-top: 20px;
         }
-
     </style>
     <div class="community">
         <div class="page-hero bg-image">
             <div class="hero-section">
                 <div class="container text-center wow zoomIn slow">
                     <div class="container text-center wow zoomIn"
-                        style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
+                        style="background-color: rgba(3, 79, 3, 0.5); padding: 20px;">
                         <div class="text-justify line-height-1.5" style="text-align: center">
                             <p style="font-weight:bold; text-align: center">You are invited to join and buy certificates.
                                 Harambee tree certificates which can grow and bear fruits.
@@ -30,17 +30,23 @@
                 </div>
             </div>
         </div>
-		<div class="banner-container" style="position: relative; color: antiquewhite;; padding: 20px; text-align: center; margin-top:20px; background-image: url('../assets/img/banner1.jpeg'); background-size: cover; background-position: center; ">
-			<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);">
-				<!-- Adjust the rgba values to change the color and opacity -->
-			</div>
-			<p class="line-height-1.5" style="font-size: 1.2em;
+        <div class="banner-container"
+            style="position: relative; color: antiquewhite;; padding: 20px; text-align: center; margin-top:20px; background-image: url('../assets/img/banner1.jpeg'); background-size: cover; background-position: center; ">
+            <div
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);">
+                <!-- Adjust the rgba values to change the color and opacity -->
+            </div>
+            <p class="line-height-1.5"
+                style="font-size: 1.2em;
             margin-bottom: 10px; position: relative; text-align: center; ">
-				By coming together as a Harambee Village Community - Zion Valley is a living working example to demonstrate that land which is otherwise low value and providing little sustenance to its owners, can now be transformed into an income-generating project that serves the community, the environment, and all its Harambee members.
-				<br>
-				We shall also represent the community in providing solutions to such problems as the lack of a bridge.
-			</p>
-		</div>
+                By coming together as a Harambee Village Community - Zion Valley is a living working example to
+                demonstrate that land which is otherwise low value and providing little sustenance to its owners, can
+                now be transformed into an income-generating project that serves the community, the environment, and all
+                its Harambee members.
+                <br>
+                We shall also represent the community in providing solutions to such problems as the lack of a bridge.
+            </p>
+        </div>
 
 
 

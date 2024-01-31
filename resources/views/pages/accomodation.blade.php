@@ -3,10 +3,12 @@
         img {
             border-radius: 4px;
         }
-		p{
-			color:antiquewhite;
-		}
-		.intro-container {
+
+        p {
+            color: antiquewhite;
+        }
+
+        .intro-container {
             text-align: center;
             padding: 50px;
             background-color: #021e32;
@@ -28,24 +30,28 @@
     <div class="accomodation">
         <div class="page-hero bg-image">
             <div class="hero-section">
-                <div class="container text-center wow zoomIn">
-                    <h3 class="">Accommodation</h3>
-                    <span class="subhead">Coming soon..!!</span>
+                <div class="container text-center wow zoomIn"
+                    style="background-color:  rgba(3, 79, 3, 0.5); padding: 10px;">
+                    <div class=" line-height-2" style="text-align: center">
+                        <h4>Zion Valley Harambee Village <br>
+                            Join for as little as 1k
+                        </h4>
+                    </div>
                 </div>
             </div>
         </div>
 
-		<div class="intro-container"
-        style="background-image: url('../assets/img/Capture13.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: antiquewhite;">
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);">
+        <div class="intro-container"
+            style="background-image: url('../assets/img/Capture13.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: antiquewhite;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);">
+            </div>
+            <ul style="position: relative; z-index: 1;">
+                <li>A unique and sustainable development growth project.</li>
+                <li>A leisure and nature park, activity center, and resort destination.</li>
+                <li>Education Training and exhibit demonstrations of eco engineering technologies.</li>
+                <li>Like a permanent showground, Smaller and with accommodations.</li>
+            </ul>
         </div>
-        <ul style="position: relative; z-index: 1;">
-            <li>A unique and sustainable development growth project.</li>
-            <li>A leisure and nature park, activity center, and resort destination.</li>
-            <li>Education Training and exhibit demonstrations of eco engineering technologies.</li>
-            <li>Like a permanent showground, Smaller and with accommodations.</li>
-        </ul>
-    </div>
         <div class="container">
             <section id="accommodation" class="content">
                 <div class="row">
