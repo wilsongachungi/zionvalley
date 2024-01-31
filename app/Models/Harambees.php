@@ -7,5 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Harambees extends Model
 {
-    use HasFactory;
+	use HasFactory;
+
+	/**
+	 * Get the user that owns the harambee.
+	 */
+	public function user()
+	{
+		return $this->belongsTo(User::class);
+	}
 }

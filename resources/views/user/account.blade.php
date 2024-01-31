@@ -17,7 +17,7 @@
 
 <body>
     <div class="container-scroller">
-		@include('user.sub-nav')
+        @include('user.sub-nav')
         <div class="container-fluid page-body-wrapper">
             <nav class="navbar p-0 fixed-top d-flex flex-row">
                 <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
@@ -120,18 +120,20 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-													<tr>
-														<td>
-															<span class="ps-2">{{ Auth::user()->name }}</span>
-														</td>
-														<td>Deposit </td>
-														<td>phone </td>
-														<td>Amount/date </td>
-														<td>
-															<div class="badge badge-outline-success">Dormant</div>
-														</td>
-													</tr>
-                                           </tbody>
+                                                {{-- @foreach ($harambees as $harambee)
+                                                    <tr>
+                                                        <td>
+                                                            <span class="ps-2">{{ $name->$harambees }}</span>
+                                                        </td>
+                                                        <td>{{ $deposit->$harambees }} </td>
+                                                        <td>{{ $withdrawn->$harambees }}</td>
+                                                        <td>{{ $harambee->$harambees }} </td>
+                                                        <td>
+                                                            <div class="badge badge-outline-success">Dormant</div>
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+                                            </tbody> --}}
                                         </table>
                                         <br>
                                     </div>
