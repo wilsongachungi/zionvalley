@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\Harambees;
+use App\Models\Harambee;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,7 +16,7 @@ class AccountController extends Controller
 
 	public function account()
 	{
-		$harambees =  Harambees::with('user')->where('sent_to', Auth::id())->get();
+		$harambees = Harambee::with('user')->where('sent_to', Auth::id())->get();
 
 		return view('user.account', compact('harambees'));
 	}
@@ -37,7 +37,7 @@ class AccountController extends Controller
 			'sent_to' => 'required|string',
 		]);
 
-		$harambee = new harambees;
+		$harambee = new Harambee();
 		$harambee->deposit = $request->deposit;
 		$harambee->withdrawn = $request->withdrawn;
 		$harambee->harambees = $request->harambees;

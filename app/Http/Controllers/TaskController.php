@@ -26,13 +26,13 @@ class TaskController extends Controller
 
 	public function see_list()
 	{
-		return view('user.tasks');
+		$tasks = Task::all();
+		return view('user.tasks', ['tasks' => $tasks]);
 	}
 
 	public function task()
 	{
 		$tasks = Task::all();
-
 		return view('user.tasks', ['tasks' => $tasks]);
 	}
 }
