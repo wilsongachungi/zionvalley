@@ -1,5 +1,4 @@
-<x-base-layout>
-
+@section('css')
     <style>
         .container {
             align-items: center;
@@ -108,7 +107,9 @@
             margin-bottom: 10px;
         }
     </style>
+@endsection
 
+<x-base-layout>
     <div class="intro-container"
         style="background-image: url('../assets/img/Capture11.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: antiquewhite;">
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);">

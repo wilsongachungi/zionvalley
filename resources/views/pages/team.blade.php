@@ -1,4 +1,4 @@
-<x-base-layout>
+@section('css')
     <style>
         @media screen and (max-width:770px) {
             .below-team img {
@@ -6,6 +6,8 @@
             }
         }
     </style>
+@endsection
+<x-base-layout>
     <section class="my-4">
         <h3 class="text-center mb-3">Our Team</h3>
         <div class="team-row">

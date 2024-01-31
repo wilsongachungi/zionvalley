@@ -1,4 +1,4 @@
-<x-base-layout>
+@section('css')
     <style>
         img {
             border-radius: 4px;
@@ -27,6 +27,9 @@
             margin-bottom: 10px;
         }
     </style>
+@endsection
+
+<x-base-layout>
     <div class="accomodation">
         <div class="page-hero bg-image">
             <div class="hero-section">

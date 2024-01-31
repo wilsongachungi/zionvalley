@@ -11,6 +11,7 @@
 
         {{-- Css --}}
         @include('layouts.user.partials.links')
+        @yield('css')
     </head>
 
     <body>

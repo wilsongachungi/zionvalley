@@ -1,4 +1,4 @@
-<x-base-layout>
+@section('css')
     <style>
         p {
             color: antiquewhite;
@@ -30,6 +30,8 @@
             color: antiquewhite;
         }
     </style>
+@endsection
+<x-base-layout>
     <div class="harambee">
         <div class="page-hero bg-image">
             <div class="hero-section">

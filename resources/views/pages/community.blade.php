@@ -1,4 +1,4 @@
-<x-base-layout>
+@section('css')
     <style>
         p {
             color: antiquewhite;
@@ -14,6 +14,9 @@
             margin-top: 20px;
         }
     </style>
+@endsection
+
+<x-base-layout>
     <div class="community">
         <div class="page-hero bg-image">
             <div class="hero-section">

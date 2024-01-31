@@ -1,5 +1,4 @@
-<x-base-layout>
-
+@section('css')
     <style>
         p {
             color: antiquewhite;
@@ -45,6 +44,9 @@
             margin-bottom: 10px;
         }
     </style>
+@endsection
+
+<x-base-layout>
     <div class="homepage">
         <div id="carouselExample" class="carousel slide bg-warning" data-ride="carousel">
             <div class="carousel-inner">

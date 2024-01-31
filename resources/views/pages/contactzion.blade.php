@@ -1,9 +1,12 @@
-<x-base-layout>
+@section('css')
     <style>
         .modal-content {
             background-color: rgb(1, 37, 1);
         }
     </style>
+@endsection
+
+<x-base-layout>
     <!-- Button to trigger the first modal -->
     <button style="margin-left: 30px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">
         Get Connected
