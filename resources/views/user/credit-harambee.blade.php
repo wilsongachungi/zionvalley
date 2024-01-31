@@ -1,4 +1,4 @@
-<x-base-layout>
+<x-admin-layout>
     <div class="flex justify-center w-full">
         <div class="flex justiffy-center w-1/2 p-4 rounded bg-gray-800">
             <form class="w-full" action="{{ route('upload_harambee') }}" method="POST" enctype="multipart/form-data">
@@ -35,4 +35,4 @@
             </form>
         </div>
     </div>
-</x-base-layout>
+</x-admin-layout>

@@ -1,4 +1,4 @@
-<x-base-layout>
+<x-admin-layout>
     <table class="table table-dark">
         <thead>
             <tr>
@@ -22,4 +22,4 @@
             @endforeach
         </tbody>
     </table>
-</x-base-layout>
+</x-admin-layout>

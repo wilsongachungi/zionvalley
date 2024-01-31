@@ -113,7 +113,7 @@
     </style>
 @endsection
 
-<x-base-layout>
+<x-admin-layout>
     <div class="form-container" style="margin-left: 40px">
         <h1>Message and Comment</h1>
 
@@ -138,4 +138,4 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
-</x-base-layout>
+</x-admin-layout>

@@ -1,4 +1,4 @@
-<x-base-layout>
+<x-admin-layout>
     <table class="table table-dark">
         <thead>
             <tr style="margin-top: 10px; background-color: #87CEEB; color: white; padding: 10px; border-radius: 5px;">
@@ -22,4 +22,4 @@
             @endforelse
         </tbody>
     </table>
-</x-base-layout>
+</x-admin-layout>

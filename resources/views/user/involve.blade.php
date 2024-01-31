@@ -1,4 +1,4 @@
-<x-base-layout>
+<x-admin-layout>
     <table class="table table-dark">
         <thead>
             <tr>
@@ -32,4 +32,4 @@
 
         </tbody>
     </table>
-</x-base-layout>
+</x-admin-layout>
