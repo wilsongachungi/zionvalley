@@ -120,20 +120,18 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                {{-- @foreach ($harambees as $harambee)
+                                                @foreach ($harambees as $harambee)
                                                     <tr>
-                                                        <td>
-                                                            <span class="ps-2">{{ $name->$harambees }}</span>
-                                                        </td>
-                                                        <td>{{ $deposit->$harambees }} </td>
-                                                        <td>{{ $withdrawn->$harambees }}</td>
-                                                        <td>{{ $harambee->$harambees }} </td>
+                                                        <td>{{ $harambee->user->name }} </td>
+                                                        <td>{{ $harambee->deposit }} </td>
+                                                        <td>{{ $harambee->withdrawn }}</td>
+                                                        <td>{{ $harambee->harambees }} </td>
                                                         <td>
                                                             <div class="badge badge-outline-success">Dormant</div>
                                                         </td>
                                                     </tr>
                                                 @endforeach
-                                            </tbody> --}}
+                                            </tbody>
                                         </table>
                                         <br>
                                     </div>
@@ -151,6 +149,8 @@
                             zionvalleycbo</span>
                     </div>
                 </footer>
+
+
             </div>
         </div>
     </div>

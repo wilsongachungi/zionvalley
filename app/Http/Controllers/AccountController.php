@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Harambees;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AccountController extends Controller
 {
@@ -15,7 +16,9 @@ class AccountController extends Controller
 
 	public function account()
 	{
-		return view('user.account');
+		$harambees =  Harambees::with('user')->where('sent_to', Auth::id())->get();
+
+		return view('user.account', compact('harambees'));
 	}
 
 	public function credit_harambee()
