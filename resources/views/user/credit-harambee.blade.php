@@ -173,7 +173,6 @@
 
 
                     <div class="container-fluid page-body-wrapper">
-
                         <form action="{{ route('upload_harambee') }}" method="POST" enctype="multipart/form-data">
                             @csrf
 
@@ -208,11 +207,8 @@
                                     @endforeach
                                 </select>
                             </div>
-
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
-
-
                     </div>
                 </div>
             </div>

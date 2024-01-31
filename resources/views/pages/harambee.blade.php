@@ -4,6 +4,31 @@
             color: antiquewhite;
             line-height: 1.5;
         }
+
+        p {
+            color: antiquewhite;
+        }
+
+        .intro-container {
+            text-align: center;
+            padding: 50px;
+
+            color: antiquewhite;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        li {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: antiquewhite;
+        }
     </style>
     <div class="harambee">
         <div class="page-hero bg-image">
@@ -30,8 +55,8 @@
             margin-bottom: 10px; position: relative; ">
                 As neighboring land owners and cash supporters - you are invited to join the Zion Valley
                 Harambee Village. <br>
-                To share in both the ownership and project rewards. <br> 
-				To also take ownership of romantic
+                To share in both the ownership and project rewards. <br>
+                To also take ownership of romantic
                 accommodation
                 nights
             </p>
@@ -135,6 +160,18 @@
                             <span style="color: greenyellow; cursor:pointer">Rules & Regulations</span>
                         </p>
                     </div>
+                    <div class="intro-container"
+                        style="background-image: url('../assets/img/4 Capture3.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: rgb(235, 234, 236);">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; ;">
+                        </div>
+                        <p class="line-height-1.5" style="font-size: 1.2em; margin-bottom: 10px; position: relative; ">
+                            Zion Valley Structure <br>
+                            A new community based business model.<br>
+                            A shared ownership sustainable enterprise.<br>
+                            Environment and Nature focused.<br>
+                            Success by making people happy
+                        </p>
+                    </div>
                     <div class="accordions">
                         <div class="accordion" onclick="toggleDiv('div4')">
                             <h3 class="float-left text-lg">
@@ -169,7 +206,7 @@
                         </div>
                         <div class="accordion" onclick="toggleDiv('div2')">
                             <h3 class="float-left text-lg">
-                                Executives
+                                Facilitators
                             </h3>
                             <i class="text-md float-right">&#9660;</i>
                         </div>
@@ -198,7 +235,7 @@
 
                         <div class="accordion" onclick="toggleDiv('div3')">
                             <h3 class="float-left text-lg">
-                                Implementers
+                                Project Implementers
                             </h3>
                             <i class="text-md float-right">&#9660;</i>
                         </div>
@@ -232,9 +269,6 @@
                                 town office
                             </p>
                         </div>
-
-
-
                     </div>
                 </div>
             </div>
