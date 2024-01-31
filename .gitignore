@@ -18,9 +18,5 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-*.png
-*.jpg
-*.jpeg
-*.gif
 
 # /.vscode
