@@ -140,6 +140,27 @@
                         </div>
                     </div>
 
+                    <div id="photo-passport-upload" class="row">
+                        <div class="col-md-6">
+                            <!-- Photo Upload -->
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Photo Upload</h4>
+                                    <!-- Your photo upload form or input elements go here -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Passport Upload -->
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Passport Upload</h4>
+                                    <!-- Your passport upload form or input elements go here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="content-wrapper">
                     <div class="row ">
