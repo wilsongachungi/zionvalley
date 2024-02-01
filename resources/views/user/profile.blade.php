@@ -140,6 +140,25 @@
                         </div>
                     </div>
 
+                    <div id="photo-passport-upload" class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Photo Upload</h4>
+                                    <input type="file">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Passport Upload</h4>
+                                    <input type="file">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="content-wrapper">
                     <div class="row ">
@@ -175,13 +194,6 @@
         <script src="admin/assets/js/settings.js"></script>
         <script src="admin/assets/js/todolist.js"></script>
         <script src="admin/assets/js/dashboard.js"></script>
-</body>
-
-</html>
-</nav>
-
-
-
 </body>
 
 </html>
