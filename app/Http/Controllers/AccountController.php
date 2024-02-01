@@ -42,6 +42,7 @@ class AccountController extends Controller
 		$harambee->withdrawn = $request->withdrawn;
 		$harambee->harambees = $request->harambees;
 		$harambee->sent_to = $request->sent_to;
+		$harambee->status = false;
 
 		$harambee->save();
 

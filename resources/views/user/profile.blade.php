@@ -61,24 +61,9 @@
                                 <h6 class="p-3 mb-0"></h6>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item preview-item">
-                                    {{-- <div class="preview-thumbnail">
-                                        <div class="preview-icon bg-dark rounded-circle">
-                                            <i class="mdi mdi-settings text-success"></i>
-                                        </div>
-                                    </div> --}}
                                     <div class="preview-item-content">
-                                        {{-- <a class="nav-link" href="{{ route('profile.show') }}">
-										<h6 class="preview-subject mb-1">Settings</h6>
-								</a> --}}
-                                    </div>
                                 </a>
-                                {{-- <div class="dropdown-divider"></div> --}}
                                 <a class="dropdown-item preview-item">
-                                    {{-- <div class="preview-thumbnail">
-                                        <div class="preview-icon bg-dark rounded-circle">
-                                            <i class="mdi mdi-logout text-danger"></i>
-                                        </div>
-                                    </div> --}}
                                     <div class="preview-item-content">
                                         <p class="preview-subject mb-1">
                                         <form action="{{ route('logout') }}" method="POST">
@@ -195,13 +180,6 @@
         <script src="admin/assets/js/settings.js"></script>
         <script src="admin/assets/js/todolist.js"></script>
         <script src="admin/assets/js/dashboard.js"></script>
-</body>
-
-</html>
-</nav>
-
-
-
 </body>
 
 </html>

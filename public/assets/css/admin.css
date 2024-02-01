@@ -50,6 +50,9 @@ main {
 	background-image: url('../assets/img/Capture11.JPG');;
 }
 
+.modal-content{
+	background-color: rgb(1, 37, 1)  !important;
+}
 
 
 @media (max-width: 768px) {
