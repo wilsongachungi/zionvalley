@@ -16,7 +16,7 @@ return new class extends Migration
 			$table->float('deposit');
 			$table->float('withdrawn');
 			$table->unsignedBigInteger('harambees');
-			$table->boolean('status')->default(true);
+			$table->boolean('status');
 			$table->timestamps();
 		});
 	}
