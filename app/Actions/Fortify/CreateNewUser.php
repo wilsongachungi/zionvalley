@@ -49,8 +49,7 @@ class CreateNewUser implements CreatesNewUsers
 			$passport = request()->file('passport')->getClientOriginalName();
 			request()->file('passport')->storeAs('passport', $user->id . '/' . $passport);
 			$user->update(['passport' => $passport]);
-
-		$user->save();
+		}
 
 		return $user;
 	}
