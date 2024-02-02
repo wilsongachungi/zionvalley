@@ -125,24 +125,31 @@
                         </div>
                     </div>
 
-                    <div id="photo-passport-upload" class="row">
-                        <div class="col-md-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h6 class="card-title">Photo Upload</h6>
-                                    <input type="file">
+                    <form action="" method="post" enctype="multipart/form-data">
+                        @csrf
+
+                        <div id="photo-passport-upload" class="row">
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Photo Upload</h6>
+                                        <input type="file" name="photo_file">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Passport Upload</h6>
+                                        <input type="file" name="passport_file">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h6 class="card-title">Passport Upload</h6>
-                                    <input type="file">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                    </form>
+
 
                 </div>
                 <div class="content-wrapper">
