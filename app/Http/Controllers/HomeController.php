@@ -38,7 +38,6 @@ class HomeController extends Controller
 			'name' => 'required',
 			'email' => 'required|email',
 			'date' => 'required|after:yesterday',
-			//'bookfor' => 'required',
 			'phone' => 'required',
 			'message' => 'required',
 		]);
@@ -49,18 +48,16 @@ class HomeController extends Controller
 		$data->email = $request->email;
 		$data->date = $request->date;
 		$data->phone = $request->phone;
-		// $data->bookfor = $request->bookfor;
 		$data->message = $request->message;
 		$data->status = 'In progress';
 
-		// $request['status'] = 'In progress';
 
 		if (Auth::id()) {
-			//$request['user_id'] = Auth::user()->id;
+
 			$data->user_id = Auth::user()->id;
 		}
 
-		// $appointment = Appointment::create($request->all());
+
 
 		$data->save();
 
@@ -196,60 +193,60 @@ class HomeController extends Controller
 	}
 
 	public function job(Request $request)
-{
-    if (!auth()->check()) {
-        return redirect()->route('login');
-    }
+	{
+		if (!auth()->check()) {
+			return redirect()->route('login');
+		}
 
-    $validator = Validator::make($request->all(), [
-        'name' => 'required|string',
-        'email' => 'required|email',
-    ]);
+		$validator = Validator::make($request->all(), [
+			'name' => 'required|string',
+			'email' => 'required|email',
+		]);
 
-    if ($validator->fails()) {
-        return redirect()->back()
-            ->withErrors($validator)
-            ->withInput();
-    }
+		if ($validator->fails()) {
+			return redirect()->back()
+				->withErrors($validator)
+				->withInput();
+		}
 
-    $request->validate([
-        'name' => 'required|string',
-        'email' => 'required|email',
-        'phone' => 'required|string',
-        'country' => 'required|string',
-        'idnumber' => 'required|string',
-        'age' => 'required|integer',
-        // 'idphoto' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-        'select' => 'required|string',
-        // 'passport_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-    ]);
+		$request->validate([
+			'name' => 'required|string',
+			'email' => 'required|email',
+			'phone' => 'required|string',
+			'country' => 'required|string',
+			'idnumber' => 'required|string',
+			'age' => 'required|integer',
+			// 'idphoto' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+			'select' => 'required|string',
+			// 'passport_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+		]);
 
-    if ($request->hasFile('idphoto')) {
-        $idphoto = $request->file('idphoto');
-        $idphotoName = time() . '_idphoto.' . $idphoto->getClientOriginalExtension();
-        $idphoto->storeAs('images', $idphotoName, 'public');
-    }
+		if ($request->hasFile('idphoto')) {
+			$idphoto = $request->file('idphoto');
+			$idphotoName = time() . '_idphoto.' . $idphoto->getClientOriginalExtension();
+			$idphoto->storeAs('images', $idphotoName, 'public');
+		}
 
-    if ($request->hasFile('passport_image')) {
-        $passportImage = $request->file('passport_image');
-        $passportImageName = time() . '_passport_image.' . $passportImage->getClientOriginalExtension();
-        $passportImage->storeAs('images', $passportImageName, 'public');
-    }
+		if ($request->hasFile('passport_image')) {
+			$passportImage = $request->file('passport_image');
+			$passportImageName = time() . '_passport_image.' . $passportImage->getClientOriginalExtension();
+			$passportImage->storeAs('images', $passportImageName, 'public');
+		}
 
-    JobApplication::create([
-        'name' => $request->input('name'),
-        'email' => $request->input('email'),
-        'phone' => $request->input('phone'),
-        'country' => $request->input('country'),
-        'idnumber' => $request->input('idnumber'),
-        'age' => $request->input('age'),
-        // 'idphoto' => isset($idphotoName) ? $idphotoName : null,
-        'select' => $request->input('select'),
-        // 'passport_image' => isset($passportImageName) ? $passportImageName : null,
-    ]);
+		JobApplication::create([
+			'name' => $request->input('name'),
+			'email' => $request->input('email'),
+			'phone' => $request->input('phone'),
+			'country' => $request->input('country'),
+			'idnumber' => $request->input('idnumber'),
+			'age' => $request->input('age'),
+			// 'idphoto' => isset($idphotoName) ? $idphotoName : null,
+			'select' => $request->input('select'),
+			// 'passport_image' => isset($passportImageName) ? $passportImageName : null,
+		]);
 
-    return redirect()->back()->with('message', 'Thank you! uploaded successfully.');
-}
+		return redirect()->back()->with('message', 'Thank you! uploaded successfully.');
+	}
 
 
 	public function contact_us(Request $request)

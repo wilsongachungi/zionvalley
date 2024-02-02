@@ -125,7 +125,7 @@
                         </div>
                     </div>
 
-                    <form action="" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('register') }}" method="post" enctype="multipart/form-data">
                         @csrf
 
                         <div id="photo-passport-upload" class="row">
@@ -133,7 +133,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <h6 class="card-title">Photo Upload</h6>
-                                        <input type="file" name="photo_file">
+                                        <input type="file" name="passport" accept="image/*">
                                     </div>
                                 </div>
                             </div>
@@ -141,7 +141,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <h6 class="card-title">Passport Upload</h6>
-                                        <input type="file" name="passport_file">
+                                        <input type="file" name="idimage" accept="image/*">
                                     </div>
                                 </div>
                             </div>

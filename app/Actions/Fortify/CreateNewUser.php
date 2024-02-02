@@ -10,31 +10,48 @@ use Laravel\Jetstream\Jetstream;
 
 class CreateNewUser implements CreatesNewUsers
 {
-    use PasswordValidationRules;
+	use PasswordValidationRules;
 
-    /**
-     * Validate and create a newly registered user.
-     *
-     * @param  array<string, string>  $input
-     */
-    public function create(array $input): User
-    {
-        Validator::make($input, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => $this->passwordRules(),
-            'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
-        ])->validate();
+	/**
+	 * Validate and create a newly registered user.
+	 *
+	 * @param  array<string, string>  $input
+	 */
+	public function create(array $input): User
+	{
+		Validator::make($input, [
+			'name' => ['required', 'string', 'max:255'],
+			'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+			'password' => $this->passwordRules(),
+			'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
+			'idimage' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
+			'passport' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
+		])->validate();
 
-        return User::create([
-            'name' => $input['name'],
-            'email' => $input['email'],
-            'phone' => $input['phone'],
-            'country' => $input['country'],
-            'area_of_residence' => $input['area_of_residence'],
-            'date_of_birth' => $input['date_of_birth'],
-            'email' => $input['email'],
-            'password' => Hash::make($input['password']),
-        ]);
-    }
+		$user = User::create([
+			'name' => $input['name'],
+			'email' => $input['email'],
+			'phone' => $input['phone'],
+			'country' => $input['country'],
+			'area_of_residence' => $input['area_of_residence'],
+			'date_of_birth' => $input['date_of_birth'],
+			'email' => $input['email'],
+			'password' => Hash::make($input['password']),
+		]);
+
+		if (request()->hasFile('idimage')) {
+			$idimage = request()->file('idimage')->getClientOriginalName();
+			request()->file('idimage')->storeAs('idimage', $user->id . '/' . $idimage);
+			$user->update(['idimage' => $idimage]);
+		}
+
+		if (request()->hasFile('passport')) {
+			$passport = request()->file('passport')->getClientOriginalName();
+			request()->file('passport')->storeAs('passport', $user->id . '/' . $passport);
+			$user->update(['passport' => $passport]);
+
+		$user->save();
+
+		return $user;
+	}
 }
