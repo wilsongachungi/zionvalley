@@ -1,11 +1,12 @@
 <?php
 
+use Doctrine\DBAL\Schema\View;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\ViewController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AccountController;
-
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/home', [HomeController::class, 'redirect']);
@@ -48,9 +49,9 @@ Route::get('/see_list', [TaskController::class, 'see_list'])->name('see_list');
 Route::post('/storeTask', [TaskController::class, 'storeTask'])->name('storeTask');
 Route::get('/task', [TaskController::class, 'task'])->name('task');
 Route::get('/account', [AccountController::class, 'account'])->name('account');
-Route::get('/account', [AccountController::class, 'account'])->name('account');
 Route::get('/users', [AdminController::class, 'users'])->name('users');
 Route::get('/info', [AccountController::class, 'info'])->name('info');
 Route::get('/credit_harambee', [AccountController::class, 'credit_harambee'])->name('credit_harambee');
 Route::post('/upload_harambee', [AccountController::class, 'upload_harambee'])->name('upload_harambee');
-
+Route::post('/update_image', [AccountController::class, 'update_image'])->name('update_image');
+Route::get('/user_comment', [ViewController::class, 'user_comment'])->name('user_comment');
