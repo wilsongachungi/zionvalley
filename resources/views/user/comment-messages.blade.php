@@ -91,7 +91,7 @@
                         <div class="col-12 grid-margin">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Status</h4>
+                                    <h4 class="card-title">Get in touch</h4>
                                     <div class="table-responsive">
 
                                         <button type="button" class="btn btn-primary" data-toggle="modal"
@@ -104,30 +104,33 @@
                                             aria-labelledby="messageModalLabel" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="messageModalLabel">Enter Your
-                                                            Message</h5>
-                                                        <button type="button" class="close" data-dismiss="modal"
-                                                            aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <div class="form-group">
-                                                            <label for="messageTextarea">Your Message:</label>
-                                                            <textarea class="form-control" id="messageTextarea" rows="4"></textarea>
+                                                    <form id="messageForm" action="{{ route('send_comment') }}"
+                                                        method="post" enctype="multipart/form-data">
+                                                        @csrf
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="messageModalLabel">Enter Your
+                                                                Message</h5>
+                                                            <button type="button" class="close"
+                                                                data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
                                                         </div>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary"
-                                                            data-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary">Save
-                                                            Message</button>
-                                                    </div>
+                                                        <div class="modal-body">
+                                                            <div class="form-group">
+                                                                <label for="messageTextarea">Your Message:</label>
+                                                                <textarea class="form-control text-white" id="messageTextarea" name="message" rows="4"></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                            <button type="submit" class="btn btn-primary">Send
+                                                                Message</button>
+                                                        </div>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
-
 
                                     </div>
                                 </div>
@@ -135,44 +138,33 @@
                         </div>
                     </div>
                 </div>
-                <div class="content-wrapper">
-                    <div class="row ">
-                        <div class="col-12 grid-margin">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Downloads</h4>
 
-                                </div>
-                            </div>
-                        </div>
+                <footer class="footer">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ©
+                            zionvalleycbo</span>
                     </div>
+                </footer>
 
-                    <footer class="footer">
-                        <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ©
-                                zionvalleycbo</span>
-                        </div>
-                    </footer>
-
-                </div>
             </div>
         </div>
-        <script src="admin/assets/vendors/js/vendor.bundle.base.js"></script>
-        <script src="admin/assets/vendors/chart.js/Chart.min.js"></script>
-        <script src="admin/assets/vendors/progressbar.js/progressbar.min.js"></script>
-        <script src="admin/assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
-        <script src="admin/assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-        <script src="admin/assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
-        <script src="admin/assets/js/jquery.cookie.js" type="text/javascript"></script>
-        <script src="admin/assets/js/off-canvas.js"></script>
-        <script src="admin/assets/js/hoverable-collapse.js"></script>
-        <script src="admin/assets/js/misc.js"></script>
-        <script src="admin/assets/js/settings.js"></script>
-        <script src="admin/assets/js/todolist.js"></script>
-        <script src="admin/assets/js/dashboard.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </div>
+    <script src="admin/assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="admin/assets/vendors/chart.js/Chart.min.js"></script>
+    <script src="admin/assets/vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="admin/assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
+    <script src="admin/assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="admin/assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
+    <script src="admin/assets/js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="admin/assets/js/off-canvas.js"></script>
+    <script src="admin/assets/js/hoverable-collapse.js"></script>
+    <script src="admin/assets/js/misc.js"></script>
+    <script src="admin/assets/js/settings.js"></script>
+    <script src="admin/assets/js/todolist.js"></script>
+    <script src="admin/assets/js/dashboard.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>

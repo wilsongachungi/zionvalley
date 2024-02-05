@@ -7,6 +7,7 @@ use App\Http\Controllers\TaskController;
 use App\Http\Controllers\ViewController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\MessageController;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/home', [HomeController::class, 'redirect']);
@@ -55,3 +56,4 @@ Route::get('/credit_harambee', [AccountController::class, 'credit_harambee'])->n
 Route::post('/upload_harambee', [AccountController::class, 'upload_harambee'])->name('upload_harambee');
 Route::post('/update_image', [AccountController::class, 'update_image'])->name('update_image');
 Route::get('/user_comment', [ViewController::class, 'user_comment'])->name('user_comment');
+Route::post('/send_comment', [MessageController::class, 'send_comment'])->name('send_comment');
