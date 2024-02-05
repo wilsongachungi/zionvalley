@@ -10,4 +10,9 @@ class ViewController extends Controller
 	{
 		return  view('user.comment-messages');
 	}
+
+	public function reply_message()
+	{
+		return  view('user.reply');
+	}
 }

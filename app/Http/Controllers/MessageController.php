@@ -13,10 +13,8 @@ class MessageController extends Controller
 			'message' => 'required|string',
 		]);
 
-		// Access the currently authenticated user
 		$user = auth()->user();
 
-		// Create a new message associated with the authenticated user
 		$message = $user->messages()->create([
 			'message' => $validatedData['message'],
 		]);
