@@ -9,7 +9,9 @@ class ViewController extends Controller
 {
 	public function user_comment()
 	{
-		return  view('user.comment-messages');
+		$userMessages = Message::all();
+
+		return view('user.comment-messages', compact('userMessages'));
 	}
 
 	public function reply_message()

@@ -24,7 +24,7 @@
                                                     method="post">
                                                     @csrf
                                                     <div class="form-group">
-                                                        <textarea name="admin_reply" rows="3" class="form-control" placeholder="Enter admin reply"></textarea>
+                                                        <textarea name="admin_reply" rows="3" class="form-control text-white" placeholder="Enter admin reply"></textarea>
                                                     </div>
                                                     <button type="submit" class="btn btn-primary btn-sm">Reply</button>
                                                 </form>

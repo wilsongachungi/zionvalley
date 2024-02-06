@@ -147,16 +147,25 @@
                                             <thead>
                                                 <tr>
                                                     <th>Message</th>
+                                                    <th>Admin Feedback</th>
                                                     <!-- Add more columns if needed -->
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                {{-- @foreach ($adminFeedback as $feedback)
+                                                @foreach ($userMessages as $message)
                                                     <tr>
-                                                        <td>{{ $feedback->message }}</td>
-                                                        <!-- Add more columns if needed -->
+                                                        <td>{{ $message->message }}</td>
+                                                        <td>
+                                                            @if (!empty($message->admin_reply))
+                                                                {{ $message->admin_reply }}
+                                                            @else
+                                                                <span>No feedback yet</span>
+                                                            @endif
+                                                        </td>
+                                                        <td>
+                                                      
                                                     </tr>
-                                                @endforeach --}}
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>
@@ -164,6 +173,7 @@
                             </div>
                         </div>
                     </div>
+
 
 
                     <footer class="footer">

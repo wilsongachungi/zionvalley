@@ -17,7 +17,8 @@ class MessageController extends Controller
 
 		$user = auth()->user();
 
-		$message = $user->messages()->create([
+		$message = Message::create([
+			'user_id' => $user->id,
 			'message' => $validatedData['message'],
 		]);
 
@@ -28,7 +29,7 @@ class MessageController extends Controller
 	{
 		$request->validate([
 			'admin_reply' => 'required|string',
-		]); 
+		]);
 
 		$message = Message::findOrFail($messageId);
 		$message->admin_reply = $request->input('admin_reply');
