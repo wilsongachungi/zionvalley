@@ -148,7 +148,7 @@
                                                 <tr>
                                                     <th>Message</th>
                                                     <th>Admin Feedback</th>
-                                                    <!-- Add more columns if needed -->
+                                                    <th>Date of Admin Reply</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -160,6 +160,13 @@
                                                                 {{ $message->admin_reply }}
                                                             @else
                                                                 <span>No feedback yet</span>
+                                                            @endif
+                                                        </td>
+                                                        <td>
+                                                            @if (!empty($message->admin_reply))
+                                                                {{ $message->created_at->format('Y-m-d') }}
+                                                            @else
+                                                                <span>No reply date available</span>
                                                             @endif
                                                         </td>
                                                         <td>
