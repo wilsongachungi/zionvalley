@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Message;
+use App\Models\User;
+
 
 class MessageController extends Controller
 {
@@ -20,5 +22,18 @@ class MessageController extends Controller
 		]);
 
 		return redirect()->back()->with('success', 'Message saved successfully.');
+	}
+
+	public function feedback(Request $request, $messageId)
+	{
+		$request->validate([
+			'admin_reply' => 'required|string',
+		]); 
+
+		$message = Message::findOrFail($messageId);
+		$message->admin_reply = $request->input('admin_reply');
+		$message->save();
+
+		return redirect()->back()->with('success', 'Admin reply added successfully.');
 	}
 }

@@ -19,7 +19,18 @@
                                         <td>{{ $message->user->name }}</td>
                                         <td>{{ $message->message }}</td>
                                         <td>
-                                            <!-- Add your reply form or button here -->
+                                            @if (empty($message->admin_reply))
+                                                <form action="{{ route('feedback', ['messageId' => $message->id]) }}"
+                                                    method="post">
+                                                    @csrf
+                                                    <div class="form-group">
+                                                        <textarea name="admin_reply" rows="3" class="form-control" placeholder="Enter admin reply"></textarea>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary btn-sm">Reply</button>
+                                                </form>
+                                            @else
+                                                {{ $message->admin_reply }}
+                                            @endif
                                         </td>
                                     </tr>
                                 @endforeach

@@ -12,7 +12,9 @@ class Message extends Model
 {
 	// ... Other code ...
 	protected $fillable = [
+		'user_id',
 		'message',
+		'admin_reply',
 	];
 	/**
 	 * Get the user that owns the message.

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Message;
 use Illuminate\Http\Request;
 
 class ViewController extends Controller
@@ -13,6 +14,8 @@ class ViewController extends Controller
 
 	public function reply_message()
 	{
-		return  view('user.reply');
+		$userMessages = Message::all();
+
+		return view('user.reply', compact('userMessages'));
 	}
 }
