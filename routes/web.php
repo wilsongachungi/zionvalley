@@ -59,3 +59,4 @@ Route::get('/user_comment', [ViewController::class, 'user_comment'])->name('user
 Route::post('/send_comment', [MessageController::class, 'send_comment'])->name('send_comment');
 Route::get('/reply_message', [ViewController::class, 'reply_message'])->name('reply_message');
 Route::post('/feedback/{messageId}', [MessageController::class, 'feedback'])->name('feedback');
+Route::delete('/delete_message/{id}', [MessageController::class, 'delete_message'])->name('delete_message');
