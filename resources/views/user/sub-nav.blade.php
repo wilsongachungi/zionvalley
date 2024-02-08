@@ -41,5 +41,12 @@
                 <span class="menu-title">Downloads</span>
             </a>
         </li>
+        <a class="nav-link" href="{{ route('logout') }}">
+                <form method="POST" action="{{ route('logout') }}">
+                     @csrf
+                    <button type="submit" class="dropdown-item">Logout</button>
+                </form>
+            </a>
+        </li>
     </ul>
 </nav>

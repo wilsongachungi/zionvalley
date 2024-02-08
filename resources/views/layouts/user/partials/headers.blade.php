@@ -84,7 +84,8 @@
                                                 @csrf
                                                 <button type="submit" class="dropdown-item">Logout</button>
                                             </form>
-                                            <a href="{{ route('profile.show') }}" class="dropdown-item">Profile</a>
+                                            <a href="{{ route('info') }}" class="dropdown-item">Profile</a>
+                                            <a href="{{ route('profile.show') }}" class="dropdown-item">Change Password</a>
                                         </div>
                                     </div>
                                 </div>
