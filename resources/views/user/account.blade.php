@@ -117,6 +117,7 @@
                                                     <th>Withdrawn</th>
                                                     <th>Harambees</th>
                                                     <th>Created at</th>
+                                                    <th>Todays Rate</th>
                                                     <th>Status</th>
                                                 </tr>
                                             </thead>
@@ -128,6 +129,7 @@
                                                         <td>{{ $harambee->withdrawn }}</td>
                                                         <td>{{ $harambee->harambees }} </td>
                                                         <td>{{ $harambee->created_at->format('Y-m-d H:i:') }}</td>
+                                                        <td>{{ $harambee->harambees }} </td>
                                                         <td>
                                                             <div class="badge badge-outline-success">Dormant</div>
                                                         </td>
