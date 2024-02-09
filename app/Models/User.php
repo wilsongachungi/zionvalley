@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\Task;
+use App\Models\Message;
 use Laravel\Sanctum\HasApiTokens;
 use Carbon\Carbon; // Import Carbon
 use Laravel\Jetstream\HasProfilePhoto;
@@ -11,7 +13,6 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use App\Models\Message;
 
 
 class User extends Authenticatable
@@ -83,5 +84,10 @@ class User extends Authenticatable
 	public function messages(): HasMany
 	{
 		return $this->hasMany(Message::class);
+	}
+
+	public function tasks(): HasMany
+	{
+		return $this->hasMany(Task::class);
 	}
 }

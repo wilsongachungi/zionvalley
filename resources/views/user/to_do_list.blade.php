@@ -59,6 +59,13 @@
         <form action="{{ route('storeTask') }}" method="post" enctype="multipart/form-data">
             @csrf
 
+            <label for="userSelect">Assign Task To:</label>
+            <select id="userSelect" name="user_id" class="text-black">
+                @foreach ($users as $user)
+                    <option value="{{ $user->id }}">{{ $user->name }}</option>
+                @endforeach
+            </select>
+
             <label for="commentInput">Tasks:</label>
             <textarea type="text" id="commentInput" name="description" class="input-field text-black" placeholder="Add a comment"
                 required></textarea>
@@ -69,5 +76,6 @@
 
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+
     </div>
 </x-admin-layout>
