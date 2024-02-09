@@ -1,78 +1,8 @@
 @section('css')
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #000;
-            color: #fff;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav {
-            background-color: #000;
-            color: #fff;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px;
-            margin: 0 10px;
-        }
-
         .container {
             display: flex;
             flex-wrap: wrap;
-        }
-
-        aside {
-            width: 250px;
-            background-color: #ddd;
-            padding: 20px;
-        }
-
-        main {
-            flex: 1;
-            padding: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #000;
-            color: #fff;
-        }
-
-        .pagination {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .pagination button {
-            padding: 10px;
-            margin: 0 5px;
-            cursor: pointer;
-            background-color: #fff;
-            border: 1px solid #ddd;
         }
 
         .form-container {
@@ -130,10 +60,12 @@
             @csrf
 
             <label for="commentInput">Tasks:</label>
-            <textarea type="text" id="commentInput" name="description" class="input-field" placeholder="Add a comment" required></textarea>
+            <textarea type="text" id="commentInput" name="description" class="input-field text-black" placeholder="Add a comment"
+                required></textarea>
 
             <label for="messageInput">Message:</label>
-            <textarea type="text" id="messageInput" name="message" class="input-field" placeholder="Type your message" required></textarea>
+            <textarea type="text" id="messageInput" name="message" class="input-field text-black" placeholder="Type your message"
+                required></textarea>
 
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

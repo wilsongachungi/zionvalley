@@ -30,9 +30,9 @@ class TaskController extends Controller
 		return view('user.tasks', ['tasks' => $tasks]);
 	}
 
-	public function task()
-	{
-		$tasks = Task::all();
-		return view('user.tasks', ['tasks' => $tasks]);
-	}
+	// public function task()
+	// {
+	// 	$tasks = Task::all();
+	// 	return view('user.tasks', ['tasks' => $tasks]);
+	// }
 }

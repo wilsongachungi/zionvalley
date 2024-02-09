@@ -7,7 +7,7 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Add more rows as needed -->
+            
             @forelse ($tasks as $record)
                 <tr style="margin-top: 10px; display:flex; flex-wrap: wrap;">
                     <td style="color: #fff; flex-basis: 50%; box-sizing: border-box; padding: 5px;">
