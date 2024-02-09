@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -11,22 +10,30 @@ class LoginController extends Controller
 	public function username()
 	{
 		$login = request()->input('login');
-		$field = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'phone_number';
+		$field = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'phone';
 		request()->merge([$field => $login]);
 		return $field;
 	}
 
 	public function login(Request $request)
 	{
+
+		$request->validate([
+			$this->username() => 'required|string',
+			'password' => 'required|string',
+		]);
+
+
 		$credentials = $request->only($this->username(), 'password');
 
 		if (Auth::attempt($credentials)) {
-			// Authentication passed...
-			return redirect()->intended('/dashboard');
-		}
 
-		return back()->withErrors([
-			'login' => __('The provided credentials do not match our records.'),
-		]);
+			return redirect()->intended('/home');
+		} else {
+
+			return back()->withErrors([
+				'login' => __('These credentials do not match our records.'),
+			]);
+		}
 	}
 }
