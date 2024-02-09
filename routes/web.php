@@ -61,3 +61,4 @@ Route::get('/reply_message', [ViewController::class, 'reply_message'])->name('re
 Route::post('/feedback/{messageId}', [MessageController::class, 'feedback'])->name('feedback');
 Route::delete('/delete_message/{id}', [MessageController::class, 'delete_message'])->name('delete_message');
 Route::get('/assignment', [TaskController::class, 'assignment'])->name('assignment');
+Route::delete('/delete_task/{task}', [TaskController::class, 'delete_task'])->name('delete_task');

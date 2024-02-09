@@ -24,22 +24,6 @@
         label {
             margin-top: 10px;
         }
-
-        .input-field {
-            width: 100%;
-            min-height: 100px;
-            padding: 8px;
-            margin: 5px 0;
-            box-sizing: border-box;
-        }
-
-        .submit-button {
-            padding: 8px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
     </style>
 @endsection
 
@@ -56,15 +40,18 @@
             </div>
         @endif
 
-        <form action="{{ route('storeTask') }}" method="post" enctype="multipart/form-data">
+        <form action="{{ route('storeTask') }}" method="post" enctype="multipart/form-data"
+            class="bg-dark shadow p-3 mb-5 rounded">
             @csrf
 
             <label for="userSelect">Assign Task To:</label>
             <select id="userSelect" name="user_id" class="text-black">
+                <option value="" disabled selected>Select User</option>
                 @foreach ($users as $user)
                     <option value="{{ $user->id }}">{{ $user->name }}</option>
                 @endforeach
             </select>
+
 
             <label for="commentInput">Tasks:</label>
             <textarea type="text" id="commentInput" name="description" class="input-field text-black" placeholder="Add a comment"

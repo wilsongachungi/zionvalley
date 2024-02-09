@@ -97,8 +97,9 @@
                                         <table class="table">
                                             <thead>
                                                 <tr>
-                                                    <th>Description</th>
+                                                    <th>Tasks</th>
                                                     <th>Message</th>
+                                                    <th>Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -106,10 +107,20 @@
                                                     <tr>
                                                         <td>{{ $task->description }}</td>
                                                         <td>{{ $task->message }}</td>
+                                                        <td>
+                                                            <form action="{{ route('delete_task', $task->id) }}"
+                                                                method="post">
+                                                                @csrf
+                                                                @method('DELETE')
+                                                                <button type="submit"
+                                                                    class="btn btn-danger">Delete</button>
+                                                            </form>
+                                                        </td>
                                                     </tr>
                                                 @endforeach
                                             </tbody>
                                         </table>
+
                                     </div>
                                 </div>
                             </div>

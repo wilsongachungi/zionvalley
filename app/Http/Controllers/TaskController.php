@@ -46,4 +46,11 @@ class TaskController extends Controller
 
 		return view('user.assignments', ['tasks' => $tasks]);
 	}
+
+	public function delete_task(Task $task)
+	{
+		$task->delete();
+
+		return redirect()->back()->with('success', 'Task deleted successfully');
+	}
 }
