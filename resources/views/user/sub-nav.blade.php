@@ -34,6 +34,14 @@
             </a>
         </li>
         <li class="nav-item menu-items">
+            <a class="nav-link" href="{{ route('assignment') }}">
+                <span class="menu-icon">
+                    <i class="mdi mdi-download"></i>
+                </span>
+                <span class="menu-title">Tasks</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
             <a class="nav-link" href="#">
                 <span class="menu-icon">
                     <i class="mdi mdi-download"></i>
@@ -42,11 +50,11 @@
             </a>
         </li>
         <a class="nav-link" href="{{ route('logout') }}">
-                <form method="POST" action="{{ route('logout') }}">
-                     @csrf
-                    <button type="submit" class="dropdown-item">Logout</button>
-                </form>
-            </a>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit" class="dropdown-item">Logout</button>
+            </form>
+        </a>
         </li>
     </ul>
 </nav>

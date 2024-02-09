@@ -60,3 +60,4 @@ Route::post('/send_comment', [MessageController::class, 'send_comment'])->name('
 Route::get('/reply_message', [ViewController::class, 'reply_message'])->name('reply_message');
 Route::post('/feedback/{messageId}', [MessageController::class, 'feedback'])->name('feedback');
 Route::delete('/delete_message/{id}', [MessageController::class, 'delete_message'])->name('delete_message');
+Route::get('/assignment', [TaskController::class, 'assignment'])->name('assignment');

@@ -10,13 +10,18 @@ class TaskController extends Controller
 {
 	public function storeTask(Request $request)
 	{
-		$data = $request->validate([
-			'user_id' => 'required|exists:users,id',
+		$request->validate([
 			'description' => 'required|string',
 			'message' => 'nullable|string',
+			'user_id' => 'required|exists:users,id', // Validate user_id
 		]);
 
-		$task = Task::create($data);
+		$task = new Task();
+		$task->description = $request->description;
+		$task->message = $request->message;
+		$task->user_id = $request->user_id; // Assign the provided user_id
+
+		$task->save();
 
 		return redirect()->back()->with('success', 'Task added successfully!');
 	}
@@ -32,5 +37,13 @@ class TaskController extends Controller
 	{
 		$tasks = Task::all();
 		return view('user.tasks', ['tasks' => $tasks]);
+	}
+
+	public function assignment()
+	{
+		// Retrieve the tasks assigned to the currently authenticated user
+		$tasks = auth()->user()->tasks;
+
+		return view('user.assignments', ['tasks' => $tasks]);
 	}
 }
