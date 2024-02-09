@@ -8,6 +8,7 @@ use App\Http\Controllers\ViewController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\DownloadController;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/home', [HomeController::class, 'redirect']);
@@ -62,3 +63,6 @@ Route::post('/feedback/{messageId}', [MessageController::class, 'feedback'])->na
 Route::delete('/delete_message/{id}', [MessageController::class, 'delete_message'])->name('delete_message');
 Route::get('/assignment', [TaskController::class, 'assignment'])->name('assignment');
 Route::delete('/delete_task/{task}', [TaskController::class, 'delete_task'])->name('delete_task');
+Route::get('/downloads', [DownloadController::class, 'downloads'])->name('downloads');
+Route::get('/view_downloads', [DownloadController::class, 'view_downloads'])->name('view_downloads');
+Route::post('/add_downloads', [DownloadController::class, 'add_downloads'])->name('add_downloads');
