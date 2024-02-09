@@ -47,55 +47,58 @@
                         <a class="nav-link" href="{{ route('harambee') }}">Harambee</a>
                     </li>
                     <li class="nav-item {{ Request::is('contactzion') ? 'active' : '' }}">
-						<a class="nav-link" href="{{ route('contactzion') }}">Connect</a>
+                        <a class="nav-link" href="{{ route('contactzion') }}">Connect</a>
 
-						@guest
+                        @guest
 
-							<li class="nav-item {{ Request::is('login') ? 'active' : '' }}">
-								<a style="color:green" class="nav-link" href="{{ route('login') }}">Login</a>
-							</li>
-						@endguest
-					</li>
+                        <li class="nav-item {{ Request::is('login') ? 'active' : '' }}">
+                            <a style="color:green" class="nav-link" href="{{ route('login') }}">Login</a>
+                        </li>
+                    @endguest
+                    </li>
 
                     <li class="nav-item {{ Request::is('team') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('team') }}">Team</a>
                     </li>
-                    @if (Route::has('login'))
-                        @auth
+                    <li>
+                        @if (Route::has('login'))
+                            @auth
 
-                            {{-- <li class="nav-item {{ Request::is('') ? 'active' : '' }}">
+                                {{-- <li class="nav-item {{ Request::is('') ? 'active' : '' }}">
                                 <a style="color:green" class="nav-link" href="{{ route('message') }}">Profile</a>
                             </li> --}}
-                            @auth
-                                @php
-                                    $fullName = Auth::user()->name;
-                                    $firstName = explode(' ', $fullName)[0];
-                                @endphp
+                                @auth
+                                    @php
+                                        $fullName = Auth::user()->name;
+                                        $firstName = explode(' ', $fullName)[0];
+                                    @endphp
 
-                                <div
-                                    style="position: absolute; top: 3px; right: 2px; padding: 8px; background-color: display: flex; align-items: center;">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">
-                                            {{ $firstName }}
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <form method="POST" action="{{ route('logout') }}">
-                                                @csrf
-                                                <button type="submit" class="dropdown-item">Logout</button>
-                                            </form>
-                                            <a href="{{ route('info') }}" class="dropdown-item">Profile</a>
-                                            <a href="{{ route('profile.show') }}" class="dropdown-item">Change Password</a>
+                                    <div
+                                        style="position: absolute; top: 3px; right: 2px; padding: 8px; background-color: display: flex; align-items: center;">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-secondary dropdown-toggle"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                {{ $firstName }}
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <form method="POST" action="{{ route('logout') }}">
+                                                    @csrf
+                                                    <button type="submit" class="dropdown-item">Logout</button>
+                                                </form>
+                                                <a href="{{ route('info') }}" class="dropdown-item">Profile</a>
+                                                <a href="{{ route('profile.show') }}" class="dropdown-item">Change Password</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            @endauth
-                        @else
-                            {{-- <li class="nav-item {{ Request::is('') ? 'active' : '' }}">
+                                @endauth
+                            @else
+                                {{-- <li class="nav-item {{ Request::is('') ? 'active' : '' }}">
                                 <a style="color:green" class="nav-link" href="{{ route('login') }}">login</a>
                             </li> --}}
-                        @endauth
-                    @endif
+                            @endauth
+                        @endif
+                    </li>
+
                 </ul>
             </div>
         </div>
