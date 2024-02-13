@@ -25,20 +25,20 @@
                 <span class="menu-title">Account</span>
             </a>
         </li>
-        <li class="nav-item menu-items">
+        {{-- <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('user_comment') }}">
                 <span class="menu-icon">
                     <i class="mdi mdi-comment"></i>
                 </span>
                 <span class="menu-title">Comments</span>
             </a>
-        </li>
+        </li> --}}
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('assignment') }}">
                 <span class="menu-icon">
                     <i class="mdi mdi-download"></i>
                 </span>
-                <span class="menu-title">Tasks</span>
+                <span class="menu-title">Message</span>
             </a>
         </li>
         <li class="nav-item menu-items">

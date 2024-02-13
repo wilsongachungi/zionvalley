@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="admin/assets/vendors/flag-icon-css/css/flag-icon.min.css">
     <link rel="stylesheet" href="admin/assets/vendors/owl-carousel-2/owl.carousel.min.css">
     <link rel="stylesheet" href="admin/assets/vendors/owl-carousel-2/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+z5vIOI3q5z8ePUEzI3qVsq2F+965k68aZ9ZJ4H" crossorigin="anonymous">
     <link rel="stylesheet" href="admin/assets/css/style.css">
     <link rel="shortcut icon" href="admin/assets/images/favicon.png" />
 </head>
@@ -90,40 +92,61 @@
                 <div class="content-wrapper">
                     <div class="row">
                         <div class="col-12 grid-margin">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Tasks</h4>
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Tasks</th>
-                                                    <th>Message</th>
-                                                    <th>Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                @foreach ($tasks as $task)
-                                                    <tr>
-                                                        <td>{{ $task->description }}</td>
-                                                        <td>{{ $task->message }}</td>
-                                                        <td>
-                                                            <form action="{{ route('delete_task', $task->id) }}"
-                                                                method="post">
-                                                                @csrf
-                                                                @method('DELETE')
-                                                                <button type="submit"
-                                                                    class="btn btn-danger">Delete</button>
-                                                            </form>
-                                                        </td>
-                                                    </tr>
-                                                @endforeach
-                                            </tbody>
-                                        </table>
 
+
+                            <div class="container">
+                                <div class="row mt-5">
+                                    <div class="col-md-6 mx-auto chat-container">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Chat Interface
+                                            </div>
+                                            <div class="card-body chat-messages">
+                                                <!-- Messages will be displayed here -->
+                                                <div class="message sender">
+                                                    <p>Hello there!</p>
+                                                </div>
+                                                <div class="message receiver">
+                                                    <tbody>
+                                                        @foreach ($tasks as $task)
+                                                            <tr>
+                                                                {{-- <td>{{ $task->description }}</td> --}}
+                                                                <td>{{ $task->message }}</td>
+                                                                <td>
+                                                                    <form action="{{ route('delete_task', $task->id) }}"
+                                                                        method="post">
+                                                                        @csrf
+                                                                        @method('DELETE')
+                                                                        <button type="submit" class="btn btn-danger">
+                                                                            <i class="fas fa-trash-alt">delete</i>
+
+                                                                        </button>
+                                                                    </form>
+                                                                </td>
+                                                            </tr>
+                                                        @endforeach
+                                                    </tbody>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <!-- Message input form -->
+                                                <form id="messageForm" action="{{ route('communication') }}" method="post">
+													@csrf
+													<input type="hidden" name="sender_id" value="{{ auth()->id() }}">
+													<div class="input-group">
+														<input type="text" class="form-control text-white" name="message" placeholder="Type your message...">
+														<div class="input-group-append">
+															<button class="btn btn-primary" type="submit">Send</button>
+														</div>
+													</div>
+												</form>
+
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>

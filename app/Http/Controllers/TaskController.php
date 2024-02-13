@@ -44,7 +44,7 @@ class TaskController extends Controller
 		// Retrieve the tasks assigned to the currently authenticated user
 		$tasks = auth()->user()->tasks;
 
-		return view('user.assignments', ['tasks' => $tasks]);
+		return view('user.assignments', ['tasks' => $tasks],);
 	}
 
 	public function delete_task(Task $task)

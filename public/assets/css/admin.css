@@ -59,4 +59,36 @@ main {
 	aside {
 		width: 100%;
 	}
+	.conversation-container {
+        max-height: 400px; /* Adjust as needed */
+        overflow-y: auto;
+        padding: 10px;
+    }
+
+    .message {
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    .message-content {
+        border-radius: 10px;
+        max-width: 70%;
+    }
+
+    .message-actions {
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    .admin-reply {
+        margin-top: 20px;
+    }
+
+    .admin-reply .message-content {
+        background-color: #E5E5EA;
+    }
+
+    .card-title {
+        margin-bottom: 20px;
+    }
 }

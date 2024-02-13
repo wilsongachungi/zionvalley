@@ -11,6 +11,7 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\Auth\AuthController;
+use App\Models\Message;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/home', [HomeController::class, 'redirect']);
@@ -69,3 +70,4 @@ Route::get('/downloads', [DownloadController::class, 'downloads'])->name('downlo
 Route::get('/view_downloads', [DownloadController::class, 'view_downloads'])->name('view_downloads');
 Route::post('/add_downloads', [DownloadController::class, 'add_downloads'])->name('add_downloads');
 Route::post('login', [LoginController::class, 'login'])->name('login');
+Route::post('communication', [MessageController::class, 'communication'])->name('communication');

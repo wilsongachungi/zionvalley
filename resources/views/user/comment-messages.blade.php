@@ -96,7 +96,7 @@
 
                                         <button type="button" class="btn btn-primary" data-toggle="modal"
                                             data-target="#messageModal">
-                                            Open Message Area
+                                            Message
                                         </button>
 
                                         <!-- Modal -->

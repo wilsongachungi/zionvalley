@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Message;
 use App\Models\User;
+use App\Models\Communication;
 
 
 class MessageController extends Controller
@@ -50,5 +51,21 @@ class MessageController extends Controller
 		$message->delete();
 
 		return redirect()->back()->with('success', 'Message deleted successfully.');
+	}
+
+	public function communication(Request $request)
+	{
+		$request->validate([
+			'sender_id' => 'required|exists:users,id',
+			'message' => 'required|string|max:255',
+		]);
+
+		communication::create([
+			'sender_id' => $request->sender_id,
+			'message' => $request->message,
+			'recipient_id' => 12,
+		]);
+
+		return redirect()->back()->with('success', 'Message sent successfully!');
 	}
 }
