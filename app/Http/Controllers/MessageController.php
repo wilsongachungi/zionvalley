@@ -68,4 +68,11 @@ class MessageController extends Controller
 
 		return redirect()->back()->with('success', 'Message sent successfully!');
 	}
+
+	// public function get_message()
+	// {
+	// 	$comm = Communication::all();
+
+	// 	return view('user.assignments', compact('comm'));
+	// }
 }

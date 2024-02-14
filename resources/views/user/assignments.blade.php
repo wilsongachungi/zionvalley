@@ -103,44 +103,46 @@
                                             </div>
                                             <div class="card-body chat-messages">
                                                 <!-- Messages will be displayed here -->
-                                                <div class="message sender">
-                                                    <p>Hello there!</p>
-                                                </div>
-                                                <div class="message receiver">
-                                                    <tbody>
-                                                        @foreach ($tasks as $task)
-                                                            <tr>
-                                                                {{-- <td>{{ $task->description }}</td> --}}
-                                                                <td>{{ $task->message }}</td>
-                                                                <td>
-                                                                    <form action="{{ route('delete_task', $task->id) }}"
-                                                                        method="post">
-                                                                        @csrf
-                                                                        @method('DELETE')
-                                                                        <button type="submit" class="btn btn-danger">
-                                                                            <i class="fas fa-trash-alt">delete</i>
+                                                <div class="message-container">
+                                                    @foreach ($comm as $communication)
+                                                        <!-- Sender message -->
+                                                        <div class="message sender">
+                                                            <p style="color:aqua">{{ $communication->message }}</p>
+                                                        </div>
+                                                    @endforeach
 
-                                                                        </button>
-                                                                    </form>
-                                                                </td>
-                                                            </tr>
-                                                        @endforeach
-                                                    </tbody>
+                                                    @foreach ($tasks as $task)
+                                                        <!-- Receiver message -->
+                                                        <div class="message receiver">
+                                                            <p>{{ $task->message }}</p>
+                                                            <form action="{{ route('delete_task', $task->id) }}"
+                                                                method="post">
+                                                                @csrf
+                                                                @method('DELETE')
+                                                                <button type="submit" class="btn btn-danger">
+                                                                    <i class="fas fa-trash-alt">delete</i>
+                                                                </button>
+                                                            </form>
+                                                        </div>
+                                                    @endforeach
                                                 </div>
                                             </div>
                                             <div class="card-footer">
                                                 <!-- Message input form -->
-                                                <form id="messageForm" action="{{ route('communication') }}" method="post">
-													@csrf
-													<input type="hidden" name="sender_id" value="{{ auth()->id() }}">
-													<div class="input-group">
-														<input type="text" class="form-control text-white" name="message" placeholder="Type your message...">
-														<div class="input-group-append">
-															<button class="btn btn-primary" type="submit">Send</button>
-														</div>
-													</div>
-												</form>
-
+                                                <form id="messageForm" action="{{ route('communication') }}"
+                                                    method="post">
+                                                    @csrf
+                                                    <input type="hidden" name="sender_id"
+                                                        value="{{ auth()->id() }}">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control text-white"
+                                                            name="message" placeholder="Type your message...">
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-primary"
+                                                                type="submit">Send</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>

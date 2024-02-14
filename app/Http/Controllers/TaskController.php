@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Task;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Models\Communication;
 
 class TaskController extends Controller
 {
@@ -44,7 +45,9 @@ class TaskController extends Controller
 		// Retrieve the tasks assigned to the currently authenticated user
 		$tasks = auth()->user()->tasks;
 
-		return view('user.assignments', ['tasks' => $tasks],);
+		$comm = Communication::all();
+
+		return view('user.assignments', compact('tasks', 'comm'));
 	}
 
 	public function delete_task(Task $task)

@@ -69,5 +69,6 @@ Route::delete('/delete_task/{task}', [TaskController::class, 'delete_task'])->na
 Route::get('/downloads', [DownloadController::class, 'downloads'])->name('downloads');
 Route::get('/view_downloads', [DownloadController::class, 'view_downloads'])->name('view_downloads');
 Route::post('/add_downloads', [DownloadController::class, 'add_downloads'])->name('add_downloads');
-Route::post('login', [LoginController::class, 'login'])->name('login');
+Route::post('login', [LoginController::class, 'login']);
 Route::post('communication', [MessageController::class, 'communication'])->name('communication');
+// Route::get('get_message', [MessageController::class, 'get_message'])->name('get_message');
