@@ -17,3 +17,10 @@ jobs:
         server: ftp.zionvalleycbo.org
         username: gitsample@zionvalleycbo.org
         password: T3stFtp@123456
+				server-dir: /staging/
+				exclude: |
+          **/.git*
+          **/.git*/**
+          **/.vite/**
+          **/public/**
+          **/storage/public/**
