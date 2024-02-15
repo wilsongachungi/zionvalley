@@ -1,18 +1,17 @@
-name: Deploy Private GitHub repository to cPanel
 on:
   push:
     branches:
       - main
 jobs:
-  FTP-Deploy-Action:
+  web-deploy:
     name: Deploy website
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-      with:
-        fetch-depth: 2
+		# Checkout the repository
+		- name: 🚚 Get latest code
+			uses: actions/checkout@v4
 
-		- name: Install Dependencies
+		- name: Install composer Dependencies
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
     - name: Sync files via FTP
