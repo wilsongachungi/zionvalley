@@ -20,6 +20,6 @@ jobs:
     - name: Sync files to staging
       uses: SamKirkland/FTP-Deploy-Action@4.3.4
       with:
-      	server: ${{ secrets.FTP_SERVER }}
+        server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.STAGING_FTP_USER }}
         password: ${{ secrets.STAGING_FTP_PASS }}
