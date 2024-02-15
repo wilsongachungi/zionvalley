@@ -20,7 +20,3 @@ jobs:
 				server-dir: /staging/
 				exclude: |
           **/.git*
-          **/.git*/**
-          **/.vite/**
-          **/public/**
-          **/storage/public/**
