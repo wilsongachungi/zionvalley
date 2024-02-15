@@ -14,6 +14,6 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
-        server: ftp@zionvalleycbo.org
+        server: pld110.truehost.cloud
         username: gitsample@zionvalleycbo.org
         password: T3stFtp@123456
