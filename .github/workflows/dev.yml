@@ -38,4 +38,3 @@ jobs:
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASS }}
         server-dir: staging/
-        dangerous-clean-slate: true
