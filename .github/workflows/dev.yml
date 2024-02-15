@@ -38,4 +38,4 @@ jobs:
         username: ${{ secrets.STAGING_FTP_USER }}
         password: ${{ secrets.STAGING_FTP_PASS }}
         server-dir: staging/
-				args: --delete
+        args: --delete
