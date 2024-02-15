@@ -106,7 +106,6 @@
                                                 <div class="message-container">
                                                     @foreach ($comm as $communication)
                                                         @if ($communication->sender_id == auth()->id())
-
                                                             <div class="message sender">
                                                                 <p style="color:aqua">{{ $communication->message }}</p>
                                                             </div>
@@ -136,13 +135,13 @@
                                                     <input type="hidden" name="sender_id"
                                                         value="{{ auth()->id() }}">
                                                     <div class="input-group">
-                                                        <input type="text" class="form-control text-white"
-                                                            name="message" placeholder="Type your message...">
+                                                        <textarea class="form-control text-white" name="message" placeholder="Type your message..."></textarea>
                                                         <div class="input-group-append">
                                                             <button class="btn btn-primary"
                                                                 type="submit">Send</button>
                                                         </div>
                                                     </div>
+
                                                 </form>
                                             </div>
                                         </div>
