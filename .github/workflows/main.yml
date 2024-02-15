@@ -14,8 +14,8 @@ jobs:
       with:
         fetch-depth: 2
 
-    - name: Install composer Dependencies
-      run: composer install --ignore-platform-reqs -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+    # - name: Install composer Dependencies
+    #   run: composer install --ignore-platform-reqs -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
     - name: Sync files to production
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
