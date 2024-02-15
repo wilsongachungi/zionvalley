@@ -105,14 +105,15 @@
                                                 <!-- Messages will be displayed here -->
                                                 <div class="message-container">
                                                     @foreach ($comm as $communication)
-                                                        <!-- Sender message -->
-                                                        <div class="message sender">
-                                                            <p style="color:aqua">{{ $communication->message }}</p>
-                                                        </div>
+                                                        @if ($communication->sender_id == auth()->id())
+
+                                                            <div class="message sender">
+                                                                <p style="color:aqua">{{ $communication->message }}</p>
+                                                            </div>
+                                                        @endif
                                                     @endforeach
 
                                                     @foreach ($tasks as $task)
-                                                        <!-- Receiver message -->
                                                         <div class="message receiver">
                                                             <p>{{ $task->message }}</p>
                                                             <form action="{{ route('delete_task', $task->id) }}"
@@ -153,15 +154,12 @@
                     </div>
                 </div>
 
-
-
                 <footer class="footer">
                     <div class="d-sm-flex justify-content-center justify-content-sm-between">
                         <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ©
                             zionvalleycbo</span>
                     </div>
                 </footer>
-
 
             </div>
         </div>
