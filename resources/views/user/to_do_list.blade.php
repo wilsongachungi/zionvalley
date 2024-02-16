@@ -30,11 +30,10 @@
 <x-admin-layout>
     <div class="message-container">
         @foreach ($comm as $communication)
-            @if ($communication->sender_id == auth()->id())
-                <div class="message sender">
-                    <p style="color:aqua">{{ $communication->message }}</p>
-                </div>
-            @endif
+            <div class="message">
+                <p style="color:aqua">{{ $communication->message }}</p>
+                <p>From: {{ $communication->sender->name }}</p>
+            </div>
         @endforeach
     </div>
 

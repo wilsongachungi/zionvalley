@@ -29,4 +29,9 @@ class Communication extends Model
 
 		return redirect()->back()->with('success', 'Message sent successfully!');
 	}
+
+	public function sender()
+    {
+        return $this->belongsTo(User::class, 'sender_id');
+    }
 }
