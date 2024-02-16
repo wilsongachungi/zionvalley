@@ -33,9 +33,9 @@ jobs:
       run: composer install --ignore-platform-reqs -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
     - name: Sync files to staging
-      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USER }}
-        password: ${{ secrets.FTP_PASS }}
+        username: ${{ secrets.STAGING_FTP_PASS }}
+        password: ${{ secrets.STAGING_FTP_PASS }}
         server-dir: staging/
