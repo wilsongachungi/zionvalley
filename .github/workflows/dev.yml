@@ -36,6 +36,6 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.STAGING_FTP_PASS }}
+        username: ${{ secrets.STAGING_FTP_USER }}
         password: ${{ secrets.STAGING_FTP_PASS }}
         server-dir: staging/
