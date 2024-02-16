@@ -2,6 +2,7 @@ on:
   push:
     branches:
       - main
+
 name: Deploy website on push
 jobs:
   FTP-Deploy-Action:
@@ -30,7 +31,7 @@ jobs:
     - name: Install composer Dependencies
       run: composer install --ignore-platform-reqs -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
-    - name: Sync files to staging
+    - name: Sync files to main
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: ${{ secrets.FTP_SERVER }}
