@@ -2,8 +2,7 @@ on:
   push:
     branches:
       - dev
-      - star
-      - robert
+
 name: Deploy website on push
 jobs:
   FTP-Deploy-Action:
