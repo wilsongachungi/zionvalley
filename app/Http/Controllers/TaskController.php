@@ -31,9 +31,7 @@ class TaskController extends Controller
 	{
 		$users = User::all();
 
-		$comm = Communication::all();
-
-		return view('user.to_do_list', compact('users', 'comm'));
+		return view('user.to_do_list', compact('users'));
 	}
 
 	public function see_list()

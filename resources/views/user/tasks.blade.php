@@ -23,4 +23,3 @@
         </tbody>
     </table>
 </x-admin-layout>
-

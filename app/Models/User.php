@@ -90,11 +90,4 @@ class User extends Authenticatable
 	{
 		return $this->hasMany(Task::class);
 	}
-
-	public function communications(): HasMany
-    {
-        return $this->hasMany(Communication::class, 'sender_id');
-    }
-
-
 }

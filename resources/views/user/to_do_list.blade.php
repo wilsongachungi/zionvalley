@@ -28,15 +28,6 @@
 @endsection
 
 <x-admin-layout>
-    <div class="message-container">
-        @foreach ($comm as $communication)
-            <div class="message">
-                <p style="color:aqua">{{ $communication->message }}</p>
-                <p>From: {{ $communication->sender->name }}</p>
-            </div>
-        @endforeach
-    </div>
-
     <div class="form-container" style="margin-left: 40px">
         <h1>Message and Comment</h1>
 
@@ -52,6 +43,7 @@
         <form action="{{ route('storeTask') }}" method="post" enctype="multipart/form-data"
             class="bg-dark shadow p-3 mb-5 rounded">
             @csrf
+
             <label for="userSelect">Assign Task To:</label>
             <select id="userSelect" name="user_id" class="text-black">
                 <option value="" disabled selected>Select User</option>
@@ -59,6 +51,7 @@
                     <option value="{{ $user->id }}">{{ $user->name }}</option>
                 @endforeach
             </select>
+
 
             <label for="commentInput">Tasks:</label>
             <textarea type="text" id="commentInput" name="description" class="input-field text-black" placeholder="Add a comment"
@@ -70,5 +63,6 @@
 
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+
     </div>
 </x-admin-layout>
