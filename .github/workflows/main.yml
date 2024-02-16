@@ -1,0 +1,40 @@
+on:
+  push:
+    branches:
+      - main
+
+name: Deploy website on push
+jobs:
+  FTP-Deploy-Action:
+    name: Deploy website
+    runs-on: ubuntu-latest
+    steps:
+    # Checkout the repository
+    - name: Get latest code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 2
+
+    - name: Setup node
+      uses: actions/setup-node@v4
+      with:
+        path: node_modules
+        node-version: '20'
+        cache: 'npm'
+
+    - name: Install npm Dependencies
+      run: npm install
+
+    - name: Build assets
+      run: npm run build
+
+    - name: Install composer Dependencies
+      run: composer install --ignore-platform-reqs -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+
+    - name: Sync files to main
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.PROD_FTP_USER }}
+        password: ${{ secrets.PROD_FTP_PASS }}
+        server-dir: public_html/

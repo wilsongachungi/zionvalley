@@ -106,33 +106,35 @@
                         <div class="col-12 grid-margin">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Status</h4>
                                     <div class="table-responsive">
                                         <table class="table">
                                             @csrf
                                             <thead>
                                                 <tr>
-                                                    <th>Name</th>
-                                                    <th>Deposit</th>
-                                                    <th>Withdrawn</th>
-                                                    <th>Harambees</th>
-                                                    <th>Created at</th>
-                                                    <th>Todays Rate</th>
-                                                    <th>Status</th>
+                                                    {{-- <th>Name</th> --}}
+                                                    <th>Total <br> Harambees</th>
+                                                    <th>Rate</th>
+                                                    <th>Ksh in/out</th>
+                                                    {{-- <th>Withdrawn</th> --}}
+                                                    {{-- <th>Created at</th> --}}
+
+                                                    {{-- <th>Status</th> --}}
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 @foreach ($harambees as $harambee)
                                                     <tr>
-                                                        <td>{{ $harambee->user->name }} </td>
+                                                        {{-- <td>{{ $harambee->user->name }} </td> --}}
+                                                        <td>{{ $harambee->harambees }} </td>
+                                                        <td> 1:1 </td>
                                                         <td>{{ $harambee->deposit }} </td>
-                                                        <td>{{ $harambee->withdrawn }}</td>
-                                                        <td>{{ $harambee->harambees }} </td>
-                                                        <td>{{ $harambee->created_at->format('Y-m-d H:i:') }}</td>
-                                                        <td>{{ $harambee->harambees }} </td>
-                                                        <td>
+                                                        {{-- <td>{{ $harambee->withdrawn }}</td> --}}
+
+                                                        {{-- <td>{{ $harambee->created_at->format('Y-m-d H:i:') }}</td> --}}
+
+                                                        {{-- <td>
                                                             <div class="badge badge-outline-success">Dormant</div>
-                                                        </td>
+                                                        </td> --}}
                                                     </tr>
                                                 @endforeach
                                             </tbody>
@@ -175,9 +177,6 @@
 
 </html>
 </nav>
-
-
-
 </body>
 
 </html>
