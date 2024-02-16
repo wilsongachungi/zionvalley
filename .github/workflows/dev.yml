@@ -38,4 +38,3 @@ jobs:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.STAGING_FTP_USER }}
         password: ${{ secrets.STAGING_FTP_PASS }}
-        server-dir: staging/
