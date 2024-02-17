@@ -24,11 +24,17 @@
         label {
             margin-top: 10px;
         }
+
+        .message {
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
     </style>
 @endsection
 
 <x-admin-layout>
-    <div class="message-container">
+    <div class="message-container overflow-auto" style="max-height: 400px;">
         @foreach ($comm as $communication)
             <div class="message">
                 <p style="color:aqua">{{ $communication->message }}</p>
@@ -52,8 +58,8 @@
         <form action="{{ route('storeTask') }}" method="post" enctype="multipart/form-data"
             class="bg-dark shadow p-3 mb-5 rounded">
             @csrf
-            <label for="userSelect">Assign Task To:</label>
-            <select id="userSelect" name="user_id" class="text-black">
+            <label for="userSelect">Chat with:</label>
+            <select id="userSelect" name="user_id" class="text-white form-control">
                 <option value="" disabled selected>Select User</option>
                 @foreach ($users as $user)
                     <option value="{{ $user->id }}">{{ $user->name }}</option>
@@ -61,12 +67,12 @@
             </select>
 
             <label for="commentInput">Tasks:</label>
-            <textarea type="text" id="commentInput" name="description" class="input-field text-black" placeholder="Add a comment"
-                required></textarea>
+            <textarea type="text" id="commentInput" name="description" class="input-field text-black form-control"
+                placeholder="Add a comment" required></textarea>
 
             <label for="messageInput">Message:</label>
-            <textarea type="text" id="messageInput" name="message" class="input-field text-black" placeholder="Type your message"
-                required></textarea>
+            <textarea type="text" id="messageInput" name="message" class="input-field text-black form-control"
+                placeholder="Type your message" required></textarea>
 
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
