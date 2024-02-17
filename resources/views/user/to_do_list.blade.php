@@ -39,9 +39,11 @@
             <div class="message">
                 <p style="color:aqua">{{ $communication->message }}</p>
                 <p>From: {{ $communication->sender->name }}</p>
+                <p>Date: {{ $communication->created_at->format('Y-m-d H:i:s') }}</p>
             </div>
         @endforeach
     </div>
+
 
     <div class="form-container" style="margin-left: 40px">
         <h1>Message and Comment</h1>
@@ -66,15 +68,13 @@
                 @endforeach
             </select>
 
-            <label for="commentInput">Tasks:</label>
-            <textarea type="text" id="commentInput" name="description" class="input-field text-black form-control"
-                placeholder="Add a comment" required></textarea>
-
             <label for="messageInput">Message:</label>
             <textarea type="text" id="messageInput" name="message" class="input-field text-black form-control"
                 placeholder="Type your message" required></textarea>
 
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+
+
     </div>
 </x-admin-layout>

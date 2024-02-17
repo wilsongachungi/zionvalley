@@ -12,13 +12,12 @@ class TaskController extends Controller
 	public function storeTask(Request $request)
 	{
 		$request->validate([
-			'description' => 'required|string',
+
 			'message' => 'nullable|string',
 			'user_id' => 'required|exists:users,id', // Validate user_id
 		]);
 
 		$task = new Task();
-		$task->description = $request->description;
 		$task->message = $request->message;
 		$task->user_id = $request->user_id; // Assign the provided user_id
 
@@ -33,7 +32,9 @@ class TaskController extends Controller
 
 		$comm = Communication::all();
 
-		return view('user.to_do_list', compact('users', 'comm'));
+		$tasks = Task::all();
+
+		return view('user.to_do_list', compact('users', 'comm', 'tasks'));
 	}
 
 	public function see_list()

@@ -115,6 +115,7 @@
                                                     @foreach ($tasks as $task)
                                                         <div class="message receiver">
                                                             <p>{{ $task->message }}</p>
+                                                            <p>Date: {{ $task->created_at->format('Y-m-d H:i:s') }}</p>
                                                             <form action="{{ route('delete_task', $task->id) }}"
                                                                 method="post">
                                                                 @csrf
