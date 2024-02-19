@@ -22,7 +22,4 @@ jobs:
         username: ${{ secrets.CPANEL_USERNAME }}
         key: ${{ secrets.CPANEL_SSH_PRIVATE_KEY }}
         port: ${{ secrets.CPANEL_PORT }}
-        run: |
-          cd ~/zionvalley
-          git pull origin robert
-          composer install --ignore-platform-reqs -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+        scripts: sh ../deploy.sh
