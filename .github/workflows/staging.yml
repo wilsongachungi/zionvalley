@@ -8,7 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    name: Build & Deploy Assets
+    name: Deploy Assets to Staging
 
     steps:
     - name: Checkout code
