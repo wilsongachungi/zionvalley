@@ -22,7 +22,7 @@ jobs:
         key: ${{ secrets.CPANEL_SSH_PRIVATE_KEY }}
         port: ${{ secrets.CPANEL_PORT }}
         script: |
-          cd ~/zionvalley
+          cd ~/staging
           git pull origin robert
           /opt/cpanel/composer/bin/composer install --ignore-platform-reqs -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
           php artisan migrate --force
