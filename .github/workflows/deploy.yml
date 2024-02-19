@@ -22,4 +22,4 @@ jobs:
         username: ${{ secrets.CPANEL_USERNAME }}
         key: ${{ secrets.CPANEL_SSH_PRIVATE_KEY }}
         port: ${{ secrets.CPANEL_PORT }}
-        script: sh ../deploy.sh
+        script: sh ./deploy.sh
