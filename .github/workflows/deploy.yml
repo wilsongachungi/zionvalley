@@ -27,4 +27,4 @@ jobs:
           git pull origin robert
           pwd
           echo $PATH
-          /usr/bin/composer install -d zionvalley --ignore-platform-reqs -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+          /usr/local/bin:/usr/bin composer install --ignore-platform-reqs -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
