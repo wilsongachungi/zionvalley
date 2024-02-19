@@ -24,5 +24,11 @@ jobs:
         port: ${{ secrets.CPANEL_PORT }}
         script: |
           cd ~/zionvalley
-          composer install --ignore-platform-reqs -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
-
+          git pull origin robert
+          /opt/cpanel/composer/bin/composer install --ignore-platform-reqs -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+          php artisan migrate --force
+          php artisan config:cache
+          php artisan cache:clear
+          php artisan optimize:clear
+          php artisan optimize
+          php storage:link
