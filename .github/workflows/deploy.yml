@@ -14,26 +14,12 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Install Composer
-      run: |
-        php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-        php composer-setup.php --install-dir=/usr/local/bin --filename=composer
-        php -r "unlink('composer-setup.php');"
-
     - name: SSH and deploy to robert
-      uses: appleboy/ssh-action@master
+      uses: webfactory/ssh-agent@v0.5.3
       with:
-        host: ${{ secrets.CPANEL_SERVER_IP }}
-        username: ${{ secrets.CPANEL_USERNAME }}
-        key: ${{ secrets.CPANEL_SSH_PRIVATE_KEY }}
-        port: ${{ secrets.CPANEL_PORT }}
-        script: |
-          cd ~/zionvalley
-          git pull origin robert
-          composer install --ignore-platform-reqs -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
-          php artisan migrate --force
-          php artisan config:cache
-          php artisan cache:clear
-          php artisan optimize:clear
-          php artisan optimize
-          ln -sfn storage/app/public public/storage
+        ssh-private-key: ${{ secrets.CPANEL_SSH_PRIVATE_KEY }}
+        uses: webfactory/ssh-agent@v0.5.3
+
+    - name: Deploy to cPanel
+      run: |
+        ssh -p ${{ secrets.CPANEL_PORT }} ${{ secrets.CPANEL_USERNAME }}@${{ secrets.CPANEL_SERVER_IP }} "cd ~/public_html && git pull origin main && composer install --no-dev --optimize-autoloader && php artisan migrate --force && php artisan optimize && php artisan route:cache"
