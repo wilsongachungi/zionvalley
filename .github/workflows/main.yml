@@ -22,7 +22,7 @@ jobs:
         key: ${{ secrets.CPANEL_SSH_PRIVATE_KEY }}
         port: ${{ secrets.CPANEL_PORT }}
         script: |
-          cd ~/main
+          cd ~/public_html
           mkdir -p storage/framework/cache/data
           git pull origin main
           /opt/cpanel/composer/bin/composer install --ignore-platform-reqs -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
