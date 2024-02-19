@@ -3,6 +3,10 @@
 # Change to the project directory.
 cd ~/zionvalley
 
+pwd
+
+echo $PATH
+
 git pull origin robert
 
 

@@ -23,8 +23,6 @@ jobs:
         key: ${{ secrets.CPANEL_SSH_PRIVATE_KEY }}
         port: ${{ secrets.CPANEL_PORT }}
         script: |
+          exec bash \-l
           cd ~/zionvalley
-          git pull origin robert
-          pwd
-          echo $PATH
-          /opt/cpanel/composer/bin/composer install --ignore-platform-reqs -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+          ./deploy.sh
