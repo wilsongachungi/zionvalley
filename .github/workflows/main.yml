@@ -14,7 +14,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: SSH and deploy to prodution
+    - name: Deploy to prodution
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.CPANEL_SERVER_IP }}
@@ -25,6 +25,7 @@ jobs:
           cd ~/public_html
           mkdir -p storage/framework/cache/data
           git pull origin main
+          git reset --hard
           /opt/cpanel/composer/bin/composer install --ignore-platform-reqs -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
           php artisan migrate --force
           php artisan config:cache
