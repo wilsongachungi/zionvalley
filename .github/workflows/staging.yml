@@ -3,8 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - robert
-
+      - staging
 
 jobs:
   deploy:
@@ -31,4 +30,4 @@ jobs:
           php artisan cache:clear
           php artisan optimize:clear
           php artisan optimize
-          php storage:link
+          ln -sfn storage/app/public public/storage

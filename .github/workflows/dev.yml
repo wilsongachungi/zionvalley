@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - staging
+      - staging_old
 
 name: Deploy website on push
 jobs:
