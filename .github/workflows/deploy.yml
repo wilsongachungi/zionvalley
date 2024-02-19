@@ -23,5 +23,6 @@ jobs:
         port: ${{ secrets.CPANEL_PORT }}
         script: |
           cd ~/zionvalley
+          git pull origin robert
           pwd
           whoami
