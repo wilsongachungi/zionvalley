@@ -22,6 +22,5 @@ jobs:
         key: ${{ secrets.CPANEL_SSH_PRIVATE_KEY }}
         port: ${{ secrets.CPANEL_PORT }}
         script: |
-          cd ~/zionvalley
           git branch
           composer install
