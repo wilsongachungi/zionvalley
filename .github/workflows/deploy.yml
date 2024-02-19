@@ -24,4 +24,7 @@ jobs:
         port: ${{ secrets.CPANEL_PORT }}
         script: |
           cd ~/zionvalley
+          git pull origin robert
+          pwd
           echo $PATH
+          /usr/bin/composer install -d zionvalley --ignore-platform-reqs -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
