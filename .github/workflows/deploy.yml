@@ -1,24 +1,24 @@
 name: Deploy
-
 on:
   push:
-    branches:
-      - robert
 
 jobs:
-  deploy:
+  tests:
     runs-on: ubuntu-latest
     name: Build & Deploy Assets
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: SSH and deploy to robert
-      uses: webfactory/ssh-agent@v0.5.3
-      with:
-        ssh-private-key: ${{ secrets.CPANEL_SSH_PRIVATE_KEY }}
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.CPANEL_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PUBLIC_KEY }}" > ~/.ssh/id_rsa.pub
+          chmod 600 ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa.pub
+          ssh-keyscan -H ${{ secrets.CPANEL_SERVER_IP }} >> ~/.ssh/known_hosts
 
-    - name: Deploy to cPanel
-      run: |
-        ssh -p ${{ secrets.CPANEL_PORT }} ${{ secrets.CPANEL_USERNAME }}@${{ secrets.CPANEL_SERVER_IP }} "cd ~/zionvalley && git pull origin main && composer install --no-dev --optimize-autoloader && php artisan migrate --force && php artisan optimize && php artisan route:cache"
+      - name: Deploy
+        run: |
+          ssh syncflux@${{ secrets.CPANEL_SERVER_IP }} 'bash -s' < ${{ github.workspace }}/.github/workflows/deploy.sh
