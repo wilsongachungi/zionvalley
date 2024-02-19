@@ -24,5 +24,10 @@ jobs:
         script: |
           cd ~/zionvalley
           git pull origin robert
-          pwd
-          whoami
+          composer install --ignore-platform-reqs -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+          php artisan migrate --force
+          php artisan config:cache
+          php artisan cache:clear
+          php artisan optimize:clear
+          php artisan optimize
+          ln -sfn storage/app/public public/storage
