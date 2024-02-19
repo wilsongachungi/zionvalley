@@ -25,4 +25,4 @@ jobs:
         script: |
           exec bash \-l
           cd ~/zionvalley
-          ./deploy.sh
+          ./.github/workflows/deploy.sh
