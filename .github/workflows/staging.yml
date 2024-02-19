@@ -14,7 +14,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: SSH and deploy to robert
+    - name: SSH and deploy to staging
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.CPANEL_SERVER_IP }}
@@ -23,7 +23,7 @@ jobs:
         port: ${{ secrets.CPANEL_PORT }}
         script: |
           cd ~/staging
-          git pull origin robert
+          git pull origin staging
           /opt/cpanel/composer/bin/composer install --ignore-platform-reqs -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
           php artisan migrate --force
           php artisan config:cache
