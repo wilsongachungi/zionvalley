@@ -125,7 +125,7 @@
                         </div>
                     </div>
 
-                    <form action="{{ route('register') }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('upload_profile_image')}}" method="post" enctype="multipart/form-data">
                         @csrf
 
                         <div id="photo-passport-upload" class="row">
