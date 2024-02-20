@@ -3,18 +3,18 @@ name: Deploy
 on:
   push:
     branches:
-      - main
+      - staging
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    name: Deploy Assets to Production
+    name: Deploy Assets to Staging
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Deploy to prodution
+    - name: Deploy to staging
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.CPANEL_SERVER_IP }}
@@ -22,10 +22,10 @@ jobs:
         key: ${{ secrets.CPANEL_SSH_PRIVATE_KEY }}
         port: ${{ secrets.CPANEL_PORT }}
         script: |
-          cd ~/public_html
+          cd ~/staging
           mkdir -p storage/framework/cache/data
-          git pull origin main
           git reset --hard
+          git pull origin staging
           /opt/cpanel/composer/bin/composer install --ignore-platform-reqs -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
           php artisan migrate --force
           php artisan config:cache
