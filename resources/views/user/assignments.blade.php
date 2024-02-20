@@ -93,7 +93,6 @@
                     <div class="row">
                         <div class="col-12 grid-margin">
 
-
                             <div class="container">
                                 <div class="row mt-5">
                                     <div class="col-md-6 mx-auto chat-container">
@@ -102,67 +101,69 @@
                                                 Chat Interface
                                             </div>
                                             <div class="card-body chat-messages">
-                                                <!-- Messages will be displayed here -->
                                                 <div class="message-container">
-                                                    @foreach ($comm as $communication)
-                                                        @if ($communication->sender_id == auth()->id())
-                                                            <div class="message sender">
-                                                                <p style="color:aqua">{{ $communication->message }}</p>
-                                                            </div>
-                                                        @endif
-                                                    @endforeach
+                                                    @php
+                                                        $userIndex = 0;
+                                                        $adminIndex = 0;
+                                                        $commCount = count($comm);
+                                                        $tasksCount = count($tasks);
+                                                    @endphp
 
-                                                    @foreach ($tasks as $task)
-                                                        <div class="message receiver">
-                                                            <p>{{ $task->message }}</p>
-                                                            <p>Date: {{ $task->created_at->format('Y-m-d H:i:s') }}</p>
-                                                            <form action="{{ route('delete_task', $task->id) }}"
-                                                                method="post">
-                                                                @csrf
-                                                                @method('DELETE')
-                                                                <button type="submit" class="btn btn-danger">
-                                                                    <i class="fas fa-trash-alt">delete</i>
-                                                                </button>
-                                                            </form>
-                                                        </div>
-                                                    @endforeach
+                                                    @while ($userIndex < $commCount || $adminIndex < $tasksCount)
+                                                        @if ($adminIndex < $tasksCount)
+                                                            <div class="message receiver">
+                                                                <p>{{ $tasks[$adminIndex]->message }}</p>
+                                                                <p>Date:
+                                                                    {{ $tasks[$adminIndex]->created_at->format('Y-m-d H:i:s') }}
+                                                                </p>
+                                                                <form
+                                                                    action="{{ route('delete_task', $tasks[$adminIndex]->id) }}"
+                                                                    method="post">
+                                                                    @csrf
+                                                                    @method('DELETE')
+                                                                    <button type="submit" class="btn btn-danger">
+                                                                        <i class="fas fa-trash-alt"></i> Delete
+                                                                    </button>
+                                                                </form>
+                                                            </div>
+                                                            @php $adminIndex++; @endphp
+                                                        @endif
+
+                                                        @if ($userIndex < $commCount)
+                                                            <div class="message sender">
+                                                                <p style="color: aqua">{{ $comm[$userIndex]->message }}
+                                                                </p>
+                                                            </div>
+                                                            @php $userIndex++; @endphp
+                                                        @endif
+                                                    @endwhile
                                                 </div>
                                             </div>
-                                            <div class="card-footer">
-                                                <!-- Message input form -->
-                                                <form id="messageForm" action="{{ route('communication') }}"
-                                                    method="post">
-                                                    @csrf
-                                                    <input type="hidden" name="sender_id"
-                                                        value="{{ auth()->id() }}">
-                                                    <div class="input-group">
-                                                        <textarea class="form-control text-white" name="message" placeholder="Type your message..."></textarea>
-                                                        <div class="input-group-append">
-                                                            <button class="btn btn-primary"
-                                                                type="submit">Send</button>
-                                                        </div>
-                                                    </div>
+                                        </div>
 
-                                                </form>
-                                            </div>
+                                        <div class="card-footer">
+                                            <form id="messageForm" action="{{ route('communication') }}" method="post">
+                                                @csrf
+                                                <input type="hidden" name="sender_id" value="{{ auth()->id() }}">
+                                                <div class="input-group">
+                                                    <textarea class="form-control text-white" name="message" placeholder="Type your message..."></textarea>
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-primary" type="submit">Send</button>
+                                                    </div>
+                                                </div>
+
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
+
                     </div>
                 </div>
-
-                <footer class="footer">
-                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ©
-                            zionvalleycbo</span>
-                    </div>
-                </footer>
-
             </div>
         </div>
+    </div>
     </div>
     <script src="admin/assets/vendors/js/vendor.bundle.base.js"></script>
     <script src="admin/assets/vendors/chart.js/Chart.min.js"></script>
@@ -178,12 +179,4 @@
     <script src="admin/assets/js/todolist.js"></script>
     <script src="admin/assets/js/dashboard.js"></script>
 </body>
-
-</html>
-</nav>
-
-
-
-</body>
-
 </html>
