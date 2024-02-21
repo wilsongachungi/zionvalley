@@ -12,8 +12,11 @@ class AccountController extends Controller
 {
 	public function info()
 	{
-		$profile = Image::all();
-		
+		$user = Auth::user();
+
+		// Fetch images associated with the authenticated user
+		$profile = Image::where('user_id', $user->id)->get();
+
 		return view('user.profile', ['profile' => $profile]);
 	}
 
@@ -42,12 +45,18 @@ class AccountController extends Controller
 			'sent_to' => 'required|string',
 		]);
 
+
+		$total = $request->deposit - $request->withdrawn;
+
+
 		$harambee = new Harambee();
 		$harambee->deposit = $request->deposit;
 		$harambee->withdrawn = $request->withdrawn;
 		$harambee->harambees = $request->harambees;
 		$harambee->sent_to = $request->sent_to;
 		$harambee->status = false;
+
+		$harambee->total = $total;
 
 		$harambee->save();
 
