@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Image;
 use App\Models\Harambee;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -11,8 +12,12 @@ class AccountController extends Controller
 {
 	public function info()
 	{
-		return view('user.profile');
+		$profile = Image::all();
+		
+		return view('user.profile', ['profile' => $profile]);
 	}
+
+
 
 	public function account()
 	{
