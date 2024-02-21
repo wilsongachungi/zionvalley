@@ -1,9 +1,10 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-        <a class="sidebar-brand brand-logo" href="#"><img style="height: 70px" src="assets/img/logo1.png"
-                alt="logo" /></a>
-        <a class="sidebar-brand brand-logo-mini" href="#"><img src="assets/img/logo1.png" alt="logo" /></a>
+        <a class="sidebar-brand brand-logo" href="#"><img style="height: 70px" src="{{ $passportImagePath }}"
+                alt="Passport" /></a>
+        <a class="sidebar-brand brand-logo-mini" href="#"><img src="{{ $passportImagePath }}" alt="Passport" /></a>
     </div>
+
     <ul class="nav">
 
         <li class="nav-item nav-category">
