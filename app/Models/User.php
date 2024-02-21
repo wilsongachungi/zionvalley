@@ -92,9 +92,12 @@ class User extends Authenticatable
 	}
 
 	public function communications(): HasMany
-    {
-        return $this->hasMany(Communication::class, 'sender_id');
-    }
+	{
+		return $this->hasMany(Communication::class, 'sender_id');
+	}
 
-
+	public function images()
+	{
+		return $this->hasMany(Image::class);
+	}
 }
