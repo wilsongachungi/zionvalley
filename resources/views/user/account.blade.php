@@ -167,13 +167,13 @@
                                                     </tr>
 
                                                     <div id="detailsModal" class="modal">
-                                                        <div class="modal-content">
+                                                        <div class="modal-content" style="color:green">
                                                             <span class="close"
                                                                 onclick="hideDetailsPopup()">&times;</span>
                                                             <p>Withdrawn:{{ $harambee->withdrawn }}</p>
                                                             <p>Time:{{ $harambee->created_at->format('Y-m-d H:i:') }}
                                                             </p>
-                                                            <p>Total: {{ $harambee->total }} KSH</p>v
+                                                            <p>Total: {{ $harambee->total }} KSH</p>
                                                         </div>
                                                     </div>
                                                     </tr>
