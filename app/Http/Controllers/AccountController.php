@@ -12,8 +12,11 @@ class AccountController extends Controller
 {
 	public function info()
 	{
-		$profile = Image::all();
-		
+		$user = Auth::user();
+
+		// Fetch images associated with the authenticated user
+		$profile = Image::where('user_id', $user->id)->get();
+
 		return view('user.profile', ['profile' => $profile]);
 	}
 
