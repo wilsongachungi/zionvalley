@@ -45,7 +45,10 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
                                 <div class="navbar-profile">
-                                    <img class="img-xs rounded-circle" src="assets/img/logo1.png" alt="">
+                                    @foreach ($profile as $profiles)
+                                        <img class="img-xs rounded-circle" src="profileimage/{{ $profiles->passport }}" alt="image">
+                                    @endforeach
+
                                     <p class="mb-0 d-none d-sm-block navbar-profile-name">
                                         @if (Auth::check())
                                             {{ Auth::user()->name }}
@@ -125,7 +128,7 @@
                         </div>
                     </div>
 
-                    <form action="{{ route('register') }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('upload_profile_image') }}" method="post" enctype="multipart/form-data">
                         @csrf
 
                         <div id="photo-passport-upload" class="row">

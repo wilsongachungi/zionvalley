@@ -2,6 +2,43 @@
 <html lang="en">
 
 <head>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 100, 0);
+            background-color: rgba(0, 100, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 10px;
+            border: 1px solid #888;
+            width: 60%;
+            max-width: 300px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: green;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>User Account</title>
@@ -111,30 +148,34 @@
                                             @csrf
                                             <thead>
                                                 <tr>
-                                                    {{-- <th>Name</th> --}}
                                                     <th>Total <br> Harambees</th>
                                                     <th>Rate</th>
                                                     <th>Ksh in/out</th>
-                                                    {{-- <th>Withdrawn</th> --}}
-                                                    {{-- <th>Created at</th> --}}
-
-                                                    {{-- <th>Status</th> --}}
+                                                    <th>Actions</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 @foreach ($harambees as $harambee)
                                                     <tr>
-                                                        {{-- <td>{{ $harambee->user->name }} </td> --}}
                                                         <td>{{ $harambee->harambees }} </td>
                                                         <td> 1:1 </td>
                                                         <td>{{ $harambee->deposit }} </td>
-                                                        {{-- <td>{{ $harambee->withdrawn }}</td> --}}
 
-                                                        {{-- <td>{{ $harambee->created_at->format('Y-m-d H:i:') }}</td> --}}
+                                                        <td><span style="cursor: pointer; color:green"
+                                                                class="details-link"
+                                                                onclick="showDetailsPopup()">Details</span></td>
+                                                    </tr>
 
-                                                        {{-- <td>
-                                                            <div class="badge badge-outline-success">Dormant</div>
-                                                        </td> --}}
+                                                    <div id="detailsModal" class="modal">
+                                                        <div class="modal-content" style="color:green">
+                                                            <span class="close"
+                                                                onclick="hideDetailsPopup()">&times;</span>
+                                                            <p>Withdrawn:{{ $harambee->withdrawn }}</p>
+                                                            <p>Time:{{ $harambee->created_at->format('Y-m-d H:i:') }}
+                                                            </p>
+                                                            <p>Total: {{ $harambee->total }} KSH</p>
+                                                        </div>
+                                                    </div>
                                                     </tr>
                                                 @endforeach
                                             </tbody>
@@ -173,6 +214,17 @@
     <script src="admin/assets/js/settings.js"></script>
     <script src="admin/assets/js/todolist.js"></script>
     <script src="admin/assets/js/dashboard.js"></script>
+    <script>
+        function showDetailsPopup() {
+            var modal = document.getElementById('detailsModal');
+            modal.style.display = 'block';
+        }
+
+        function hideDetailsPopup() {
+            var modal = document.getElementById('detailsModal');
+            modal.style.display = 'none';
+        }
+    </script>
 </body>
 
 </html>
