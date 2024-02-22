@@ -148,7 +148,7 @@
                                                 <div class="input-group">
                                                     <textarea class="form-control text-white" name="message" placeholder="Type your message..."></textarea>
                                                     <div class="input-group-append">
-                                                        <button class="btn btn-primary" type="submit">Send</button>
+                                                        <button class="btn btn-primary p" type="submit">Send</button>
                                                     </div>
                                                 </div>
 
@@ -158,7 +158,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
