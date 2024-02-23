@@ -135,7 +135,7 @@
                             <div class="col-md-6">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h6 class="card-title">Photo Upload</h6>
+                                        <h6 class="card-title">ID Upload</h6>
                                         <input type="file" name="passport" accept="image/*">
                                     </div>
                                 </div>

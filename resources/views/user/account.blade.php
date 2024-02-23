@@ -157,7 +157,7 @@
                                             <tbody>
                                                 @foreach ($harambees as $harambee)
                                                     <tr>
-                                                        <td>{{ $harambee->harambees }} </td>
+                                                        <td>{{ $harambee->total }} </td>
                                                         <td> 1:1 </td>
                                                         <td>{{ $harambee->deposit }} </td>
 
@@ -170,6 +170,7 @@
                                                         <div class="modal-content" style="color:green">
                                                             <span class="close"
                                                                 onclick="hideDetailsPopup()">&times;</span>
+                                                            <p>Deposit:{{ $harambee->deposit }}</p>
                                                             <p>Withdrawn:{{ $harambee->withdrawn }}</p>
                                                             <p>Time:{{ $harambee->created_at->format('Y-m-d H:i:') }}
                                                             </p>
@@ -186,9 +187,7 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
 
                 <footer class="footer">
                     <div class="d-sm-flex justify-content-center justify-content-sm-between">
@@ -196,11 +195,10 @@
                             zionvalleycbo</span>
                     </div>
                 </footer>
-
-
             </div>
         </div>
     </div>
+
     <script src="admin/assets/vendors/js/vendor.bundle.base.js"></script>
     <script src="admin/assets/vendors/chart.js/Chart.min.js"></script>
     <script src="admin/assets/vendors/progressbar.js/progressbar.min.js"></script>
