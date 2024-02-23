@@ -150,35 +150,42 @@
                                                 <tr>
                                                     <th>Total <br> Harambees</th>
                                                     <th>Rate</th>
-                                                    <th>Ksh in/out</th>
+                                                    <th>Deposit</th>
                                                     <th>Actions</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 @foreach ($harambees as $harambee)
                                                     <tr>
-                                                        <td>{{ $harambee->harambees }} </td>
+                                                        <td>{{ $harambee->total }}</td>
                                                         <td> 1:1 </td>
-                                                        <td>{{ $harambee->deposit }} </td>
-
-                                                        <td><span style="cursor: pointer; color:green"
+                                                        <td>{{ $harambee->deposit }}</td>
+                                                        <td>
+                                                            <span style="cursor: pointer; color:green"
                                                                 class="details-link"
-                                                                onclick="showDetailsPopup()">Details</span></td>
+                                                                onclick="showDetailsPopup({{ $harambee->id }})">Details</span>
+                                                        </td>
                                                     </tr>
-
-                                                    <div id="detailsModal" class="modal">
-                                                        <div class="modal-content" style="color:green">
-                                                            <span class="close"
-                                                                onclick="hideDetailsPopup()">&times;</span>
-                                                            <p>Withdrawn:{{ $harambee->withdrawn }}</p>
-                                                            <p>Time:{{ $harambee->created_at->format('Y-m-d H:i:') }}
-                                                            </p>
-                                                            <p>Total: {{ $harambee->total }} KSH</p>
-                                                        </div>
-                                                    </div>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            <div id="detailsModal{{ $harambee->id }}" class="modal"
+                                                                style="display: none;">
+                                                                <div class="modal-content" style="color:green">
+                                                                    <span class="close"
+                                                                        onclick="hideDetailsPopup({{ $harambee->id }})">&times;</span>
+                                                                    <p>Deposit: {{ $harambee->deposit }}</p>
+                                                                    <p>Withdrawn: {{ $harambee->withdrawn }}</p>
+                                                                    <p>Time:
+                                                                        {{ $harambee->created_at->format('Y-m-d H:i') }}
+                                                                    </p>
+                                                                    <p>Balance: {{ $harambee->total }} KSH</p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
                                                     </tr>
                                                 @endforeach
                                             </tbody>
+
                                         </table>
                                         <br>
                                     </div>
@@ -186,9 +193,7 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
 
                 <footer class="footer">
                     <div class="d-sm-flex justify-content-center justify-content-sm-between">
@@ -196,11 +201,10 @@
                             zionvalleycbo</span>
                     </div>
                 </footer>
-
-
             </div>
         </div>
     </div>
+
     <script src="admin/assets/vendors/js/vendor.bundle.base.js"></script>
     <script src="admin/assets/vendors/chart.js/Chart.min.js"></script>
     <script src="admin/assets/vendors/progressbar.js/progressbar.min.js"></script>
@@ -215,14 +219,18 @@
     <script src="admin/assets/js/todolist.js"></script>
     <script src="admin/assets/js/dashboard.js"></script>
     <script>
-        function showDetailsPopup() {
-            var modal = document.getElementById('detailsModal');
-            modal.style.display = 'block';
+        function showDetailsPopup(id) {
+            var modal = document.getElementById('detailsModal' + id);
+            if (modal) {
+                modal.style.display = 'block';
+            }
         }
 
-        function hideDetailsPopup() {
-            var modal = document.getElementById('detailsModal');
-            modal.style.display = 'none';
+        function hideDetailsPopup(id) {
+            var modal = document.getElementById('detailsModal' + id);
+            if (modal) {
+                modal.style.display = 'none';
+            }
         }
     </script>
 </body>

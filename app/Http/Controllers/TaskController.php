@@ -45,7 +45,7 @@ class TaskController extends Controller
 
 	public function assignment()
 	{
-		// Retrieve the tasks assigned to the currently authenticated user
+		
 		$tasks = auth()->user()->tasks;
 
 		$comm = Communication::all();
