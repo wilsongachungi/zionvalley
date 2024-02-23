@@ -150,7 +150,7 @@
                                                 <tr>
                                                     <th>Total <br> Harambees</th>
                                                     <th>Rate</th>
-                                                    <th>Ksh in/out</th>
+                                                    <th>Deposit</th>
                                                     <th>Actions</th>
                                                 </tr>
                                             </thead>
@@ -218,21 +218,21 @@
     <script src="admin/assets/js/settings.js"></script>
     <script src="admin/assets/js/todolist.js"></script>
     <script src="admin/assets/js/dashboard.js"></script>
-	<script>
-		function showDetailsPopup(id) {
-			var modal = document.getElementById('detailsModal' + id);
-			if (modal) {
-				modal.style.display = 'block';
-			}
-		}
+    <script>
+        function showDetailsPopup(id) {
+            var modal = document.getElementById('detailsModal' + id);
+            if (modal) {
+                modal.style.display = 'block';
+            }
+        }
 
-		function hideDetailsPopup(id) {
-			var modal = document.getElementById('detailsModal' + id);
-			if (modal) {
-				modal.style.display = 'none';
-			}
-		}
-	</script>
+        function hideDetailsPopup(id) {
+            var modal = document.getElementById('detailsModal' + id);
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 
 </html>
