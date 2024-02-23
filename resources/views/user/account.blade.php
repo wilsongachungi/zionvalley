@@ -157,29 +157,35 @@
                                             <tbody>
                                                 @foreach ($harambees as $harambee)
                                                     <tr>
-                                                        <td>{{ $harambee->total }} </td>
+                                                        <td>{{ $harambee->total }}</td>
                                                         <td> 1:1 </td>
-                                                        <td>{{ $harambee->deposit }} </td>
-
-                                                        <td><span style="cursor: pointer; color:green"
+                                                        <td>{{ $harambee->deposit }}</td>
+                                                        <td>
+                                                            <span style="cursor: pointer; color:green"
                                                                 class="details-link"
-                                                                onclick="showDetailsPopup()">Details</span></td>
+                                                                onclick="showDetailsPopup({{ $harambee->id }})">Details</span>
+                                                        </td>
                                                     </tr>
-
-                                                    <div id="detailsModal" class="modal">
-                                                        <div class="modal-content" style="color:green">
-                                                            <span class="close"
-                                                                onclick="hideDetailsPopup()">&times;</span>
-                                                            <p>Deposit:{{ $harambee->deposit }}</p>
-                                                            <p>Withdrawn:{{ $harambee->withdrawn }}</p>
-                                                            <p>Time:{{ $harambee->created_at->format('Y-m-d H:i:') }}
-                                                            </p>
-                                                            <p>Total: {{ $harambee->total }} KSH</p>
-                                                        </div>
-                                                    </div>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            <div id="detailsModal{{ $harambee->id }}" class="modal"
+                                                                style="display: none;">
+                                                                <div class="modal-content" style="color:green">
+                                                                    <span class="close"
+                                                                        onclick="hideDetailsPopup({{ $harambee->id }})">&times;</span>
+                                                                    <p>Deposit: {{ $harambee->deposit }}</p>
+                                                                    <p>Withdrawn: {{ $harambee->withdrawn }}</p>
+                                                                    <p>Time:
+                                                                        {{ $harambee->created_at->format('Y-m-d H:i') }}
+                                                                    </p>
+                                                                    <p>Balance: {{ $harambee->total }} KSH</p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
                                                     </tr>
                                                 @endforeach
                                             </tbody>
+
                                         </table>
                                         <br>
                                     </div>
@@ -212,17 +218,21 @@
     <script src="admin/assets/js/settings.js"></script>
     <script src="admin/assets/js/todolist.js"></script>
     <script src="admin/assets/js/dashboard.js"></script>
-    <script>
-        function showDetailsPopup() {
-            var modal = document.getElementById('detailsModal');
-            modal.style.display = 'block';
-        }
+	<script>
+		function showDetailsPopup(id) {
+			var modal = document.getElementById('detailsModal' + id);
+			if (modal) {
+				modal.style.display = 'block';
+			}
+		}
 
-        function hideDetailsPopup() {
-            var modal = document.getElementById('detailsModal');
-            modal.style.display = 'none';
-        }
-    </script>
+		function hideDetailsPopup(id) {
+			var modal = document.getElementById('detailsModal' + id);
+			if (modal) {
+				modal.style.display = 'none';
+			}
+		}
+	</script>
 </body>
 
 </html>
