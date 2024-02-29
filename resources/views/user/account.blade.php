@@ -55,7 +55,7 @@
 <body>
     <div class="container-scroller">
         @include('user.sub-nav')
-        <div class="container-fluid page-body-wrapper">
+        <div class="container-fluid page-body-wrapper" style="background: rgb(1, 75, 1)">
             <nav class="navbar p-0 fixed-top d-flex flex-row">
                 <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
                     <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg"
@@ -137,8 +137,8 @@
                 </div>
             </nav>
 
-            <div class="main-panel">
-                <div class="content-wrapper">
+            <div class="main-panel" style="background: rgb(0, 63, 0)">
+                <div class="content-wrapper" style="background: rgb(1, 63, 1)">
                     <div class="row ">
                         <div class="col-12 grid-margin">
                             <div class="card">

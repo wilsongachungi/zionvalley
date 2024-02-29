@@ -94,7 +94,7 @@
                         <div class="col-12 grid-margin">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Status</h4>
+                                    <h4 class="card-title">Profile</h4>
                                     <div class="table-responsive">
                                         <table class="table">
                                             @csrf
@@ -143,7 +143,7 @@
                             <div class="col-md-6">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h6 class="card-title">Passport Upload</h6>
+                                        <h6 class="card-title">Facial Picture</h6>
                                         <input type="file" name="idimage" accept="image/*">
                                     </div>
                                 </div>
