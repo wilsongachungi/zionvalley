@@ -31,8 +31,14 @@ class ImageController extends Controller
 		$passportname = 'passport_' . time() . '.' . $passport->getClientOriginalExtension();
 		$passport->move($directory, $passportname);
 
+
+		$idimageback = $request->file('idimageback');
+		$idimagebackname = 'idimageback_' . time() . '.' . $idimageback->getClientOriginalExtension();
+		$idimageback->move($directory, $idimagebackname);
+
 		$profile->idimage = $idimagename;
 		$profile->passport = $passportname;
+		$profile->idimageback = $idimagebackname;
 
 		$profile->user_id = $user->id;
 

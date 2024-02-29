@@ -46,7 +46,8 @@
                             <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
                                 <div class="navbar-profile">
                                     @foreach ($profile as $profiles)
-                                        <img class="img-xs rounded-circle" src="profileimage/{{ $profiles->passport }}" alt="image">
+                                        <img class="img-xs rounded-circle" src="profileimage/{{ $profiles->passport }}"
+                                            alt="image">
                                     @endforeach
 
                                     <p class="mb-0 d-none d-sm-block navbar-profile-name">
@@ -135,7 +136,7 @@
                             <div class="col-md-6">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h6 class="card-title">ID Upload</h6>
+                                        <h6 class="card-title">Upload Facial Picture</h6>
                                         <input type="file" name="passport" accept="image/*">
                                     </div>
                                 </div>
@@ -143,8 +144,12 @@
                             <div class="col-md-6">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h6 class="card-title">Facial Picture</h6>
+                                        <h6 class="card-title">Front ID Upload </h6>
                                         <input type="file" name="idimage" accept="image/*">
+                                    </div>
+                                    <div class="card-body">
+                                        <h6 class="card-title">Back ID Upload </h6>
+                                        <input type="file" name="idimageback" accept="image/*">
                                     </div>
                                 </div>
                             </div>
