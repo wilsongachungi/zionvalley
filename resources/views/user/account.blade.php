@@ -55,7 +55,7 @@
 <body>
     <div class="container-scroller">
         @include('user.sub-nav')
-        <div class="container-fluid page-body-wrapper">
+        <div class="container-fluid page-body-wrapper" style="background: rgb(1, 75, 1)">
             <nav class="navbar p-0 fixed-top d-flex flex-row">
                 <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
                     <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg"
@@ -137,8 +137,8 @@
                 </div>
             </nav>
 
-            <div class="main-panel">
-                <div class="content-wrapper">
+            <div class="main-panel" style="background: rgb(0, 63, 0)">
+                <div class="content-wrapper" style="background: rgb(1, 63, 1)">
                     <div class="row ">
                         <div class="col-12 grid-margin">
                             <div class="card">
@@ -150,36 +150,42 @@
                                                 <tr>
                                                     <th>Total <br> Harambees</th>
                                                     <th>Rate</th>
-                                                    <th>Ksh in/out</th>
+                                                    <th>Deposit</th>
                                                     <th>Actions</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 @foreach ($harambees as $harambee)
                                                     <tr>
-                                                        <td>{{ $harambee->total }} </td>
+                                                        <td>{{ $harambee->total }}</td>
                                                         <td> 1:1 </td>
-                                                        <td>{{ $harambee->deposit }} </td>
-
-                                                        <td><span style="cursor: pointer; color:green"
+                                                        <td>{{ $harambee->deposit }}</td>
+                                                        <td>
+                                                            <span style="cursor: pointer; color:green"
                                                                 class="details-link"
-                                                                onclick="showDetailsPopup()">Details</span></td>
+                                                                onclick="showDetailsPopup({{ $harambee->id }})">Details</span>
+                                                        </td>
                                                     </tr>
-
-                                                    <div id="detailsModal" class="modal">
-                                                        <div class="modal-content" style="color:green">
-                                                            <span class="close"
-                                                                onclick="hideDetailsPopup()">&times;</span>
-                                                            <p>Deposit:{{ $harambee->deposit }}</p>
-                                                            <p>Withdrawn:{{ $harambee->withdrawn }}</p>
-                                                            <p>Time:{{ $harambee->created_at->format('Y-m-d H:i:') }}
-                                                            </p>
-                                                            <p>Total: {{ $harambee->total }} KSH</p>
-                                                        </div>
-                                                    </div>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            <div id="detailsModal{{ $harambee->id }}" class="modal"
+                                                                style="display: none;">
+                                                                <div class="modal-content" style="color:green">
+                                                                    <span class="close"
+                                                                        onclick="hideDetailsPopup({{ $harambee->id }})">&times;</span>
+                                                                    <p>Deposit: {{ $harambee->deposit }}</p>
+                                                                    <p>Withdrawn: {{ $harambee->withdrawn }}</p>
+                                                                    <p>Time:
+                                                                        {{ $harambee->created_at->format('Y-m-d H:i') }}
+                                                                    </p>
+                                                                    <p>Balance: {{ $harambee->total }} KSH</p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
                                                     </tr>
                                                 @endforeach
                                             </tbody>
+
                                         </table>
                                         <br>
                                     </div>
@@ -213,14 +219,18 @@
     <script src="admin/assets/js/todolist.js"></script>
     <script src="admin/assets/js/dashboard.js"></script>
     <script>
-        function showDetailsPopup() {
-            var modal = document.getElementById('detailsModal');
-            modal.style.display = 'block';
+        function showDetailsPopup(id) {
+            var modal = document.getElementById('detailsModal' + id);
+            if (modal) {
+                modal.style.display = 'block';
+            }
         }
 
-        function hideDetailsPopup() {
-            var modal = document.getElementById('detailsModal');
-            modal.style.display = 'none';
+        function hideDetailsPopup(id) {
+            var modal = document.getElementById('detailsModal' + id);
+            if (modal) {
+                modal.style.display = 'none';
+            }
         }
     </script>
 </body>
