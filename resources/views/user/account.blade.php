@@ -138,7 +138,7 @@
             </nav>
 
             <div class="main-panel" style="background: rgb(0, 63, 0)">
-                <div class="content-wrapper" style="background: rgb(1, 63, 1)">
+                <div class="content-wrapper" style="background: rgb(0, 49, 0)">
                     <div class="row ">
                         <div class="col-12 grid-margin">
                             <div class="card">
