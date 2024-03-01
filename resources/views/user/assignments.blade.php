@@ -89,7 +89,7 @@
             </nav>
 
             <div class="main-panel">
-                <div class="content-wrapper">
+                <div class="content-wrapper" style="background: rgb(0, 49, 0)">
                     <div class="row">
                         <div class="col-12 grid-margin">
 
@@ -178,4 +178,5 @@
     <script src="admin/assets/js/todolist.js"></script>
     <script src="admin/assets/js/dashboard.js"></script>
 </body>
+
 </html>
