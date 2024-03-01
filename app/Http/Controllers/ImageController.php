@@ -22,6 +22,17 @@ class ImageController extends Controller
 			mkdir($directory, 0755, true); // Create directory with read, write, and execute permissions for owner and read and execute permissions for others
 		}
 
+		if ($request->hasFile('passport')) {
+			Session::flash('passport_success', 'Facial Picture uploaded .');
+		}
+
+		if ($request->hasFile('idimage')) {
+			Session::flash('idimage_success', 'Front ID uploaded.');
+		}
+
+		if ($request->hasFile('idimageback')) {
+			Session::flash('idimageback_success', 'Back ID uploaded.');
+		}
 
 		$idimage = $request->file('idimage');
 		$idimagename = 'idimage_' . time() . '.' . $idimage->getClientOriginalExtension();
