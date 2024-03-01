@@ -24,7 +24,7 @@ jobs:
         script: |
           cd ~/public_html
           mkdir -p storage/framework/cache/data
-          git reset --hard HEAD
+          git stash
           git pull origin main
           /opt/cpanel/composer/bin/composer install --ignore-platform-reqs -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
           php artisan migrate --force
