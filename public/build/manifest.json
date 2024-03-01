@@ -1,23 +1,13 @@
 {
   "resources/js/app.css": {
-<<<<<<< HEAD
-    "file": "assets/app-168f990c.css",
-=======
     "file": "assets/app-9e8c386b.css",
->>>>>>> main
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
     "css": [
-<<<<<<< HEAD
-      "assets/app-168f990c.css"
-    ],
-    "file": "assets/app-8af3837d.js",
-=======
       "assets/app-9e8c386b.css"
     ],
     "file": "assets/app-0c4112c4.js",
->>>>>>> main
     "isEntry": true,
     "src": "resources/js/app.js"
   }
