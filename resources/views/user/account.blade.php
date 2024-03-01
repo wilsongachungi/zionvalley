@@ -2,6 +2,43 @@
 <html lang="en">
 
 <head>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 100, 0);
+            background-color: rgba(0, 100, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 10px;
+            border: 1px solid #888;
+            width: 60%;
+            max-width: 300px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: green;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>User Account</title>
@@ -18,7 +55,7 @@
 <body>
     <div class="container-scroller">
         @include('user.sub-nav')
-        <div class="container-fluid page-body-wrapper">
+        <div class="container-fluid page-body-wrapper" style="background: rgb(1, 75, 1)">
             <nav class="navbar p-0 fixed-top d-flex flex-row">
                 <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
                     <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg"
@@ -100,8 +137,8 @@
                 </div>
             </nav>
 
-            <div class="main-panel">
-                <div class="content-wrapper">
+            <div class="main-panel" style="background: rgb(0, 63, 0)">
+                <div class="content-wrapper" style="background: rgb(0, 49, 0)">
                     <div class="row ">
                         <div class="col-12 grid-margin">
                             <div class="card">
@@ -111,33 +148,44 @@
                                             @csrf
                                             <thead>
                                                 <tr>
-                                                    {{-- <th>Name</th> --}}
                                                     <th>Total <br> Harambees</th>
                                                     <th>Rate</th>
-                                                    <th>Ksh in/out</th>
-                                                    {{-- <th>Withdrawn</th> --}}
-                                                    {{-- <th>Created at</th> --}}
-
-                                                    {{-- <th>Status</th> --}}
+                                                    <th>Deposit</th>
+                                                    <th>Actions</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 @foreach ($harambees as $harambee)
                                                     <tr>
-                                                        {{-- <td>{{ $harambee->user->name }} </td> --}}
-                                                        <td>{{ $harambee->harambees }} </td>
+                                                        <td>{{ $harambee->total }}</td>
                                                         <td> 1:1 </td>
-                                                        <td>{{ $harambee->deposit }} </td>
-                                                        {{-- <td>{{ $harambee->withdrawn }}</td> --}}
-
-                                                        {{-- <td>{{ $harambee->created_at->format('Y-m-d H:i:') }}</td> --}}
-
-                                                        {{-- <td>
-                                                            <div class="badge badge-outline-success">Dormant</div>
-                                                        </td> --}}
+                                                        <td>{{ $harambee->deposit }}</td>
+                                                        <td>
+                                                            <span style="cursor: pointer; color:green"
+                                                                class="details-link"
+                                                                onclick="showDetailsPopup({{ $harambee->id }})">Details</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4">
+                                                            <div id="detailsModal{{ $harambee->id }}" class="modal"
+                                                                style="display: none;">
+                                                                <div class="modal-content" style="color:green">
+                                                                    <span class="close"
+                                                                        onclick="hideDetailsPopup({{ $harambee->id }})">&times;</span>
+                                                                    <p>Deposit: {{ $harambee->deposit }}</p>
+                                                                    <p>Withdrawn: {{ $harambee->withdrawn }}</p>
+                                                                    <p>Time:
+                                                                        {{ $harambee->created_at->format('Y-m-d H:i') }}
+                                                                    </p>
+                                                                    <p>Balance: {{ $harambee->total }} KSH</p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
                                                     </tr>
                                                 @endforeach
                                             </tbody>
+
                                         </table>
                                         <br>
                                     </div>
@@ -145,9 +193,7 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
 
                 <footer class="footer">
                     <div class="d-sm-flex justify-content-center justify-content-sm-between">
@@ -155,11 +201,10 @@
                             zionvalleycbo</span>
                     </div>
                 </footer>
-
-
             </div>
         </div>
     </div>
+
     <script src="admin/assets/vendors/js/vendor.bundle.base.js"></script>
     <script src="admin/assets/vendors/chart.js/Chart.min.js"></script>
     <script src="admin/assets/vendors/progressbar.js/progressbar.min.js"></script>
@@ -173,6 +218,21 @@
     <script src="admin/assets/js/settings.js"></script>
     <script src="admin/assets/js/todolist.js"></script>
     <script src="admin/assets/js/dashboard.js"></script>
+    <script>
+        function showDetailsPopup(id) {
+            var modal = document.getElementById('detailsModal' + id);
+            if (modal) {
+                modal.style.display = 'block';
+            }
+        }
+
+        function hideDetailsPopup(id) {
+            var modal = document.getElementById('detailsModal' + id);
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 
 </html>

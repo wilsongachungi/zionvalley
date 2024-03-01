@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>User Account</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="admin/assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="admin/assets/vendors/css/vendor.bundle.base.css">
     <link rel="stylesheet" href="admin/assets/vendors/jvectormap/jquery-jvectormap.css">
@@ -12,6 +14,8 @@
     <link rel="stylesheet" href="admin/assets/vendors/owl-carousel-2/owl.carousel.min.css">
     <link rel="stylesheet" href="admin/assets/vendors/owl-carousel-2/owl.theme.default.min.css">
     <link rel="stylesheet" href="admin/assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="shortcut icon" href="admin/assets/images/favicon.png" />
 </head>
 
@@ -45,7 +49,11 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
                                 <div class="navbar-profile">
-                                    <img class="img-xs rounded-circle" src="assets/img/logo1.png" alt="">
+                                    @foreach ($profile as $profiles)
+                                        <img class="img-xs rounded-circle" src="profileimage/{{ $profiles->passport }}"
+                                            alt="image">
+                                    @endforeach
+
                                     <p class="mb-0 d-none d-sm-block navbar-profile-name">
                                         @if (Auth::check())
                                             {{ Auth::user()->name }}
@@ -86,12 +94,12 @@
             </nav>
 
             <div class="main-panel">
-                <div class="content-wrapper">
+                <div class="content-wrapper" style="background: rgb(0, 49, 0)">
                     <div class="row ">
                         <div class="col-12 grid-margin">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Status</h4>
+                                    <h4 class="card-title">Profile</h4>
                                     <div class="table-responsive">
                                         <table class="table">
                                             @csrf
@@ -125,30 +133,72 @@
                         </div>
                     </div>
 
-                    <form action="{{ route('register') }}" method="post" enctype="multipart/form-data">
-                        @csrf
 
-                        <div id="photo-passport-upload" class="row">
-                            <div class="col-md-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h6 class="card-title">Photo Upload</h6>
-                                        <input type="file" name="passport" accept="image/*">
-                                    </div>
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uploadModal">
+                        Profile not complete. Continue
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Upload Form</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h6 class="card-title">Passport Upload</h6>
-                                        <input type="file" name="idimage" accept="image/*">
-                                    </div>
+                                <div class="modal-body">
+                                    <form action="{{ route('upload_profile_image') }}" method="post"
+                                        enctype="multipart/form-data">
+                                        @csrf
+
+                                        <div id="photo-passport-upload" class="row">
+                                            <div class="col-md-6">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">Upload Facial Picture</h6>
+                                                        <input type="file" name="passport" accept="image/*">
+                                                        @if (Session::has('passport_success'))
+                                                            <div class="alert alert-success mt-2">
+                                                                {{ Session::get('passport_success') }}</div>
+                                                        @endif
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">Front ID Upload</h6>
+                                                        <input type="file" name="idimage" accept="image/*">
+                                                        @if (Session::has('idimage_success'))
+                                                            <div class="alert alert-success mt-2">
+                                                                {{ Session::get('idimage_success') }}</div>
+                                                        @endif
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <h6 class="card-title">Back ID Upload</h6>
+                                                        <input type="file" name="idimageback" accept="image/*">
+                                                        @if (Session::has('idimageback_success'))
+                                                            <div class="alert alert-success mt-2">
+                                                                {{ Session::get('idimageback_success') }}</div>
+                                                        @endif
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <button type="submit" class="btn btn-primary mt-3">Submit</button>
-                    </form>
+
 
 
                 </div>

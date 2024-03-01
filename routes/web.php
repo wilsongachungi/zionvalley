@@ -1,17 +1,18 @@
 <?php
 
+use App\Models\Message;
 use Doctrine\DBAL\Schema\View;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\ViewController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\Auth\AuthController;
-use App\Models\Message;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/home', [HomeController::class, 'redirect']);
@@ -69,6 +70,6 @@ Route::delete('/delete_task/{task}', [TaskController::class, 'delete_task'])->na
 Route::get('/downloads', [DownloadController::class, 'downloads'])->name('downloads');
 Route::get('/view_downloads', [DownloadController::class, 'view_downloads'])->name('view_downloads');
 Route::post('/add_downloads', [DownloadController::class, 'add_downloads'])->name('add_downloads');
-Route::post('login', [LoginController::class, 'login']);
-Route::post('communication', [MessageController::class, 'communication'])->name('communication');
-// Route::get('get_message', [MessageController::class, 'get_message'])->name('get_message');
+Route::post('/login', [LoginController::class, 'login']);
+Route::post('/communication', [MessageController::class, 'communication'])->name('communication');
+Route::post('/upload_profile_image', [ImageController::class, 'upload_profile_image'])->name('upload_profile_image');

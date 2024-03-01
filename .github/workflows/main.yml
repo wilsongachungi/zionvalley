@@ -25,7 +25,6 @@ jobs:
           cd ~/public_html
           mkdir -p storage/framework/cache/data
           git pull origin main
-          git reset --hard
           /opt/cpanel/composer/bin/composer install --ignore-platform-reqs -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
           php artisan migrate --force
           php artisan config:cache
