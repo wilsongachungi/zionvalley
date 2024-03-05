@@ -88,8 +88,19 @@
             style="background-image: url('../assets/img/Capture11.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: rgb(235, 234, 236);">
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; ;">
             </div>
-            <p style="font-size: 1.2em;
-            margin-bottom: 10px;">As the beauty of Zion Valley unfolds,
+            
+            <ul style="position: relative; z-index: 1;">
+                <li>A unique and sustainable development growth project.</li>
+                <li>A leisure and nature park, activity center, and resort destination.</li>
+                <li>Education Training and exhibit demonstrations of eco engineering technologies.</li>
+                <li>Like a permanent showground, Smaller and with accommodations.</li>
+            </ul>
+            margin-bottom: 10px;">
+        </div>
+
+        <div>
+        <p style="font-size: 1.2em;">
+              As the beauty of Zion Valley unfolds,
                 <br>
                 Heavenly haven where paradise takes hold. <br>
                 The Promised Land, where dreams can thrive. <br>

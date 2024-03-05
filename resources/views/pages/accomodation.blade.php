@@ -63,12 +63,7 @@
             style="background-image: url('../assets/img/Capture13.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: antiquewhite;">
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);">
             </div>
-            <ul style="position: relative; z-index: 1;">
-                <li>A unique and sustainable development growth project.</li>
-                <li>A leisure and nature park, activity center, and resort destination.</li>
-                <li>Education Training and exhibit demonstrations of eco engineering technologies.</li>
-                <li>Like a permanent showground, Smaller and with accommodations.</li>
-            </ul>
+            
         </div>
         <div class="container">
             <section id="accommodation" class="content">
