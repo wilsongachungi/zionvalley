@@ -114,8 +114,9 @@
                                             <thead>
                                                 <tr>
                                                     <th style="color:greenyellow">Name</th>
-                                                    <th style="color:greenyellow">Email</th>
                                                     <th style="color:greenyellow">Phone</th>
+                                                    <th style="color:greenyellow">Email</th>
+                                                   
                                                     <th style="color:greenyellow">Country</th>
                                                     <th style="color:greenyellow">Location</th>
                                                     <th style="color:greenyellow">Age</th>
