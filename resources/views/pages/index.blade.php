@@ -98,8 +98,9 @@
             margin-bottom: 10px;">
         </div>
 
-        <div>
-        <p style="font-size: 1.2em;">
+        <div style="line-height:1.5">
+        <h4>Welcome to Zion</h4>
+        <p style="test-align:left">
               As the beauty of Zion Valley unfolds,
                 <br>
                 Heavenly haven where paradise takes hold. <br>
