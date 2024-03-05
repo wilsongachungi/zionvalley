@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<style>
+        .dark-shade {
+            background-color: #002000; 
+            color: white; /* Text color */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+        
+        }
+    </style>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -90,7 +97,7 @@
                     <div class="row">
                         <div class="col-12 grid-margin">
                             <div class="card">
-                                <div class="card-body">
+                                <div class="card-body dark-shade">
                                     <h4 class="card-title">Downloads</h4>
                                     <div class="table-responsive">
                                         <table class="table">

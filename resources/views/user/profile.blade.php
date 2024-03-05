@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <style>
-.dark-shade {
-    background-color: #002000; /* Darker and duller green shade */
-    color: white; /* Text color */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Thicker and darker shadow */
-    /* Add any other styles you want */
-}
+        .dark-shade {
+            background-color: #002000; 
+            color: white; /* Text color */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+        
+        }
     </style>
 
 <head>
@@ -107,18 +107,18 @@
                         <div class="col-12 grid-margin">
                             <div class="card">
                                 <div class="card-body dark-shade">
-                                    <h4 class="card-title">Profile</h4>
+                                    <h4 class="card-title" style="color:greenyellow">Profile</h4>
                                     <div class="table-responsive">
                                         <table class="table">
                                             @csrf
                                             <thead>
                                                 <tr>
-                                                    <th>Name</th>
-                                                    <th>Email</th>
-                                                    <th>Phone</th>
-                                                    <th>Country</th>
-                                                    <th>Location</th>
-                                                    <th>Age</th>
+                                                    <th style="color:greenyellow">Name</th>
+                                                    <th style="color:greenyellow">Email</th>
+                                                    <th style="color:greenyellow">Phone</th>
+                                                    <th style="color:greenyellow">Country</th>
+                                                    <th style="color:greenyellow">Location</th>
+                                                    <th style="color:greenyellow">Age</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -144,8 +144,8 @@
 
 
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uploadModal">
-                        Profile not complete. Continue
+                    <button type="button" class="dark-shade" style="color:greenyellow" data-toggle="modal" data-target="#uploadModal">
+                        Profile not complete.Click to Continue
                     </button>
 
                     <!-- Modal -->
@@ -154,7 +154,7 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header" style="background: rgb(0, 49, 0)">
-                                    <h5 class="modal-title" id="exampleModalLabel">Upload Form</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel" style="color:greenyellow">Upload Form</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -168,7 +168,7 @@
                                             <div class="col-md-6">
                                                 <div class="card">
                                                     <div class="card-body dark-shade">
-                                                        <h6 class="card-title">Upload Facial Picture</h6>
+                                                        <h6 class="card-title" style="color:greenyellow">Upload Facial Picture</h6>
                                                         <input type="file" name="passport" accept="image/*">
                                                         @if (Session::has('passport_success'))
                                                             <div class="alert alert-success mt-2">
@@ -180,7 +180,7 @@
                                             <div class="col-md-6">
                                                 <div class="card">
                                                     <div class="card-body dark-shade ">
-                                                        <h6 class="card-title">Front ID Upload</h6>
+                                                        <h6 class="card-title" style="color:greenyellow">Front ID Upload</h6>
                                                         <input type="file" name="idimage" accept="image/*">
                                                         @if (Session::has('idimage_success'))
                                                             <div class="alert alert-success mt-2">
@@ -189,7 +189,7 @@
                                                     </div>
                                                         
                                                     <div class="card-body dark-shade mt-1">
-                                                        <h6 class="card-title">Back ID Upload</h6>
+                                                        <h6 class="card-title" style="color:greenyellow">Back ID Upload</h6>
                                                         <input type="file" name="idimageback" accept="image/*">
                                                         @if (Session::has('idimageback_success'))
                                                             <div class="alert alert-success mt-2">

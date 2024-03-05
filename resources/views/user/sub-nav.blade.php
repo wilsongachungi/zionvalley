@@ -1,4 +1,13 @@
-<nav class="sidebar sidebar-offcanvas" id="sidebar">
+
+<style>
+        .dark-shade {
+            background-color: #002000; 
+            color: white; /* Text color */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+        
+        }
+    </style>
+<nav class="sidebar sidebar-offcanvas dark-shade" id="sidebar" >
     <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
         <a class="sidebar-brand brand-logo" href="#"><img style="height: 70px" src="assets/img/logo1.png"
                 alt="logo" /></a>
@@ -14,7 +23,7 @@
                 <span class="menu-icon">
                     <i class="mdi mdi-account"></i>
                 </span>
-                <span class="menu-title">Profile</span>
+                <span class="menu-title"style="color:greenyellow" >Profile</span>
             </a>
         </li>
         <li class="nav-item menu-items">
@@ -22,7 +31,7 @@
                 <span class="menu-icon">
                     <i class="mdi mdi-currency-usd"></i>
                 </span>
-                <span class="menu-title">Account</span>
+                <span class="menu-title" style="color:greenyellow">Account</span>
             </a>
         </li>
         {{-- <li class="nav-item menu-items">
@@ -30,15 +39,15 @@
                 <span class="menu-icon">
                     <i class="mdi mdi-comment"></i>
                 </span>
-                <span class="menu-title">Comments</span>
+                <span class="menu-title" style="color:greenyellow">Comments</span>
             </a>
         </li> --}}
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('assignment') }}">
                 <span class="menu-icon">
-                    <i class="mdi mdi-download"></i>
+                    <i class="mdi mdi-envelope"></i>
                 </span>
-                <span class="menu-title">Message</span>
+                <span class="menu-title" style="color:greenyellow">Message</span>
             </a>
         </li>
         <li class="nav-item menu-items">
@@ -46,7 +55,7 @@
                 <span class="menu-icon">
                     <i class="mdi mdi-download"></i>
                 </span>
-                <span class="menu-title">Downloads</span>
+                <span class="menu-title" style="color:greenyellow">Downloads</span>
             </a>
         </li>
         <a class="nav-link" href="{{ route('logout') }}">
