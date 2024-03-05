@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+    <style>
+.dark-shade {
+    background-color: #002000; /* Darker and duller green shade */
+    color: white; /* Text color */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Thicker and darker shadow */
+    /* Add any other styles you want */
+}
+    </style>
 
 <head>
     <meta charset="utf-8">
@@ -98,7 +106,7 @@
                     <div class="row ">
                         <div class="col-12 grid-margin">
                             <div class="card">
-                                <div class="card-body">
+                                <div class="card-body dark-shade">
                                     <h4 class="card-title">Profile</h4>
                                     <div class="table-responsive">
                                         <table class="table">
@@ -145,13 +153,13 @@
                         aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
-                                <div class="modal-header">
+                                <div class="modal-header" style="background: rgb(0, 49, 0)">
                                     <h5 class="modal-title" id="exampleModalLabel">Upload Form</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div class="modal-body">
+                                <div class="modal-body" style="background: rgb(0, 49, 0)">
                                     <form action="{{ route('upload_profile_image') }}" method="post"
                                         enctype="multipart/form-data">
                                         @csrf
@@ -159,7 +167,7 @@
                                         <div id="photo-passport-upload" class="row">
                                             <div class="col-md-6">
                                                 <div class="card">
-                                                    <div class="card-body">
+                                                    <div class="card-body dark-shade">
                                                         <h6 class="card-title">Upload Facial Picture</h6>
                                                         <input type="file" name="passport" accept="image/*">
                                                         @if (Session::has('passport_success'))
@@ -171,7 +179,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="card">
-                                                    <div class="card-body">
+                                                    <div class="card-body dark-shade ">
                                                         <h6 class="card-title">Front ID Upload</h6>
                                                         <input type="file" name="idimage" accept="image/*">
                                                         @if (Session::has('idimage_success'))
@@ -179,7 +187,8 @@
                                                                 {{ Session::get('idimage_success') }}</div>
                                                         @endif
                                                     </div>
-                                                    <div class="card-body">
+                                                        
+                                                    <div class="card-body dark-shade mt-1">
                                                         <h6 class="card-title">Back ID Upload</h6>
                                                         <input type="file" name="idimageback" accept="image/*">
                                                         @if (Session::has('idimageback_success'))
@@ -197,22 +206,8 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
                 </div>
-                <div class="content-wrapper">
-                    <div class="row ">
-                        <div class="col-12 grid-margin">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Downloads</h4>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+               
 
                     <footer class="footer">
                         <div class="d-sm-flex justify-content-center justify-content-sm-between">
