@@ -126,8 +126,8 @@
                                                     <td>
                                                         <span class="ps-2">{{ Auth::user()->name }}</span>
                                                     </td>
-                                                    <td>{{ Auth::user()->email }}</td>
                                                     <td>{{ Auth::user()->phone }}</td>
+                                                    <td>{{ Auth::user()->email }}</td>                                                    
                                                     <td>{{ Auth::user()->country }}</td>
                                                     <td>{{ Auth::user()->area_of_residence }}</td>
                                                     <td>{{ Auth::user()->age }}</td>
