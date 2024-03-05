@@ -9,17 +9,17 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
-    {
-        Schema::table('images', function (Blueprint $table) {
-            $table->string('idimageback')->nullable();
-        });
-    }
+    // public function up()
+    // {
+    //     Schema::table('images', function (Blueprint $table) {
+    //         $table->string('idimageback')->nullable();
+    //     });
+    // }
 
-    public function down()
-    {
-        Schema::table('images', function (Blueprint $table) {
-            $table->dropColumn('idimageback');
-        });
-    }
+    // public function down()
+    // {
+    //     Schema::table('images', function (Blueprint $table) {
+    //         $table->dropColumn('idimageback');
+    //     });
+    // }
 };

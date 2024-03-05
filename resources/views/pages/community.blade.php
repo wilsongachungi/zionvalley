@@ -13,6 +13,22 @@
             color: antiquewhite;
             margin-top: 20px;
         }
+        @keyframes zoomShrinkIn {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.zoomShrinkIn {
+    animation: zoomShrinkIn 10s infinite;
+    animation-delay: 5s; /* Delay the animation start for 5 seconds */
+}
+
+
+
     </style>
 @endsection
 
@@ -20,17 +36,18 @@
     <div class="community">
         <div class="page-hero bg-image">
             <div class="hero-section">
-                <div class="container text-center wow zoomIn slow">
-                    <div class="container text-center wow zoomIn"
-                        style="background-color: rgba(3, 79, 3, 0.5); padding: 20px;">
-                        <div class="text-justify line-height-1.5" style="text-align: center">
-                            <p style="font-weight:bold; text-align: center">You are invited to join and buy certificates.
-                                Harambee tree certificates which can grow and bear fruits.
-                            </p>
-                        </div>
-                    </div>
+            <div class="container text-center wow zoomShrinkIn" style="background-color: rgba(3, 79, 3, 0.5); padding: 20px;">
+    <div class="text-justify line-height-1.5" style="text-align: center">
+        <p style="font-weight:bold; text-align: center text-greenyellow">You are invited to join and buy certificates.
+            Harambee tree certificates which can grow and bear fruits.
+        </p>
+    </div>
+</div>
 
-                </div>
+    </div>
+</div>
+
+</div>
             </div>
         </div>
         <div class="banner-container"
