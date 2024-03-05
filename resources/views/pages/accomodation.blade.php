@@ -182,16 +182,16 @@
         
 
         <div class="video-container">
-        <h4>The Exterior</h4> <br>
+        <h4>The Interior</h4> <br>
             <video width="420" height="340" controls autoplay>
-                <source src="../assets/img/EXTERIOR cottage.mp4" type="video/mp4">
+                <source src="../assets/img/interior.mp4" type="video/mp4">
             </video>
         </div> <br>
 
         <div class="video-container">
-        <h4>The Interior</h4> <br>
+        <h4>The Exterior</h4> <br>
             <video width="420" height="340" controls autoplay>
-                <source src="../assets/img/INTERIOR cottage.mp4" type="video/mp4">
+                <source src="../assets/img/exterior.mp4" type="video/mp4">
             </video>
         </div>
         </div>
