@@ -26,6 +26,21 @@
             font-size: 1.2em;
             margin-bottom: 10px;
         }
+                    .video-container {
+                position: relative;
+                width: 100%;
+                padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 = 0.5625) */
+                overflow: hidden;
+            }
+
+            .video-container video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
     </style>
 @endsection
 
@@ -91,20 +106,20 @@
                     </div>
                 </div>
             </section>
-            <div class="text-justify">
-                <h2 class="text-center mb-4">Free Accommodation to Harambee owner</h2>
-                <p class=" line-height-2">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis beatae non eligendi
+
+            
+        <div class="intro-container"
+            style="background-image: url('../assets/img/Capture11.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: rgb(235, 234, 236);">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; ;">
+            </div>
+            <h2 class="text-center mb-4">Free Accommodation to Harambee owner</h2>
+            <p style="font-size: 1.2em;
+            margin-bottom: 10px;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis beatae non eligendi
                     possimus maxime saepe expedita quam eius. Quas, nihil quo assumenda quod quibusdam
-                    nobis maiores dignissimos obcaecati ex autem veritatis architecto aliquam accusamus
-                    blanditiis voluptate rem distinctio necessitatibus vero alias! Nemo labore repellat
-                    quam iure numquam voluptatum necessitatibus quia.
-                </p>
-                <p class="text-justify line-height-2">
                     A menber to own One romantic cottage one weekend each and every year - two nights per year - For
                     every 25k Tree Certificates Held
-                </p>
-            </div>
+            </p>
+        </div>
 
             <div class="row owl-carousel wow fadeInUp mt-5 carousels" id="doctorSlideshow">
                 <div class="item col">
@@ -150,6 +165,35 @@
                     </div>
                 </div>
             </div>
+                     
+        <div class="intro-container"
+            style="background-image: url('../assets/img/Capture11.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: rgb(235, 234, 236);">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; ;">
+            </div>
+            <h2 class="text-center mb-4">Free Accommodation to Harambee owner</h2>
+            <p style="font-size: 1.2em;
+            margin-bottom: 10px;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis beatae non eligendi
+                    possimus maxime saepe expedita quam eius. Quas, nihil quo assumenda quod quibusdam
+                    A menber to own One romantic cottage one weekend each and every year - two nights per year - For
+                    every 25k Tree Certificates Held
+            </p>
+        </div>
+        <div> <br>
+        
+
+        <div class="video-container">
+        <h4>The Interior</h4> <br>
+            <video width="420" height="340" controls autoplay>
+                <source src="../assets/img/interior.mp4" type="video/mp4">
+            </video>
+        </div> <br>
+
+        <div class="video-container">
+        <h4>The Exterior</h4> <br>
+            <video width="420" height="340" controls autoplay>
+                <source src="../assets/img/exterior.mp4" type="video/mp4">
+            </video>
+        </div>
         </div>
     </div>
 </x-base-layout>

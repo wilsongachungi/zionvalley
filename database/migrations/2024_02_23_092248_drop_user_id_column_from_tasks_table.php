@@ -9,20 +9,20 @@ return new class extends Migration
 	/**
 	 * Run the migrations.
 	 */
-	public function up(): void
-	{
-		Schema::table('tasks', function (Blueprint $table) {
-			$table->dropColumn('user_id');
-		});
-	}
+	// public function up(): void
+	// {
+	// 	Schema::table('tasks', function (Blueprint $table) {
+	// 		$table->dropColumn('user_id');
+	// 	});
+	// }
 
-	/**
-	 * Reverse the migrations.
-	 */
-	public function down(): void
-	{
-		Schema::table('tasks', function (Blueprint $table) {
-            $table->integer('user_id')->unsigned();
-        });
-	}
+	// /**
+	//  * Reverse the migrations.
+	//  */
+	// public function down(): void
+	// {
+	// 	Schema::table('tasks', function (Blueprint $table) {
+    //         $table->integer('user_id')->unsigned();
+    //     });
+	// }
 };

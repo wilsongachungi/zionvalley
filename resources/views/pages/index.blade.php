@@ -293,5 +293,5 @@
                     </div>
                 </div>
             </div>
-            @include('layouts.user.partials.latest')
+            
 </x-base-layout>

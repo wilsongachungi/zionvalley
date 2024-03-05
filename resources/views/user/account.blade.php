@@ -38,6 +38,12 @@
             text-decoration: none;
             cursor: pointer;
         }
+        .dark-shade {
+            background-color: #002000; 
+            color: white; /* Text color */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+        
+        }
     </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -142,16 +148,16 @@
                     <div class="row ">
                         <div class="col-12 grid-margin">
                             <div class="card">
-                                <div class="card-body">
+                                <div class="card-body dark-shade">
                                     <div class="table-responsive">
                                         <table class="table">
                                             @csrf
                                             <thead>
                                                 <tr>
-                                                    <th>Total <br> Harambees</th>
-                                                    <th>Rate</th>
-                                                    <th>Deposit</th>
-                                                    <th>Actions</th>
+                                                    <th style="color:greenyellow">Total <br> Harambees</th>
+                                                    <th style="color:greenyellow">Rate</th>
+                                                    <th style="color:greenyellow">Deposit</th>
+                                                    <th style="color:greenyellow">Actions</th>
                                                 </tr>
                                             </thead>
                                             <tbody>

@@ -95,6 +95,8 @@
             color: antiquewhite;
             margin-top: 20px;
         }
+
+        
     </style>
 @endsection
 
