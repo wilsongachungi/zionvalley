@@ -32,6 +32,10 @@
             font-size: 1.2em;
             margin-bottom: 10px;
         }
+
+        .center {
+            text-align: center;
+        }
     </style>
 @endsection
 
@@ -75,17 +79,17 @@
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);">
         </div>
         <ul style="position: relative; z-index: 1;">
-            <li>A unique and sustainable development growth project.</li>
-            <li>A leisure and nature park, activity center, and resort destination.</li>
-            <li>Education Training and exhibit demonstrations of eco engineering technologies.</li>
-            <li>Like a permanent showground, Smaller and with accommodations.</li>
+        A unique and sustainable development growth project. <br>
+        A leisure and nature park, activity center, and resort destination. <br>
+        Education Training and exhibit demonstrations of eco engineering technologies. <br>
+        Like a permanent showground, Smaller and with accommodations. <br>
         </ul>
     </div>
-
-    
-
+    <div class="center">
+        <h4>Ongoing Project</h4>
+    </div>
     <div class="row owl-carousel slide wow fadeInUp" id="doctorSlideshow">
-			<div class="col" >
+			<div class="item col" >
 				<div class="" >
 					<div class="header">
 						<img class="img" style="width:390px; height:300px" src="../assets/img/17 slope.jpg" alt="">
@@ -125,8 +129,6 @@
 			</div>
 		</div>
     </div>
-
-
 
 
     </div>

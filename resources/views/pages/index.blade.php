@@ -89,24 +89,32 @@
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; ;">
             </div>
             
-            <ul style="position: relative; z-index: 1;">
-                <li>A unique and sustainable development growth project.</li>
-                <li>A leisure and nature park, activity center, and resort destination.</li>
-                <li>Education Training and exhibit demonstrations of eco engineering technologies.</li>
-                <li>Like a permanent showground, Smaller and with accommodations.</li>
-            </ul>
-        </div>
+            <p class="line-height-1.5"
+                style="font-size: 1.2em;
+            margin-bottom: 10px; position: relative; text-align: center; ">
+            
+                A unique and sustainable development growth project. <br>
+                A leisure and nature park, activity center, and resort destination. <br>
+                Education Training and exhibit demonstrations of eco engineering technologies. <br>
+                Like a permanent showground, Smaller and with accommodations. <br>
+            </p>
+        </div> <br>
 
-        <div style="line-height:1.5">
-        <h4>Welcome to Zion</h4>
-        <p style="test-align:left">
-              As the beauty of Zion Valley unfolds,
+        <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6" style="line-height: 1.5;">
+            <h4>Welcome to Zion</h4>
+            <p style="text-align: left;">
+                As the beauty of Zion Valley unfolds,
                 <br>
                 Heavenly haven where paradise takes hold. <br>
                 The Promised Land, where dreams can thrive. <br>
                 Rivers that dance and gardens alive.
             </p>
         </div>
+    </div>
+</div>
+
 
 
 
@@ -160,25 +168,26 @@
 
                     <div class="intro-container"
                         style="background-image: url('../assets/img/1 Capture9.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: antiquewhite;">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                        </div>
+                        
                         <ul style="position: relative; z-index: 1;color: antiquewhite;">
-                            <li>A unique and sustainable development growth project.</li>
-                            <li>A leisure and nature park, activity center, and resort destination.</li>
-                            <li>Education Training and exhibit demonstrations of eco engineering technologies.</li>
-                            <li>Like a permanent showground, Smaller and with accommodations.</li>
+                            A unique and sustainable development growth project. <br>
+                            A leisure and nature park, activity center, and resort destination. <br>
+                            Education Training and exhibit demonstrations of eco engineering technologies. <br>
+                            Like a permanent showground, Smaller and with accommodations. <br>
                         </ul>
                     </div>
 
-                    <div class="accordions">
+                    
+                </div>
+                <div class="accordions">
                         <div class="accordion" onclick="toggleDiv('div3')">
-                            <h3 class="float-left text-lg">
+                            <h3 class="float-left text-lg" >
                                 Community-based
                             </h3>
                             <i class="text-md float-right">&#9660;</i>
                         </div>
-                        <div id="div3" class=" line-height-1.5 desc">
-                            <p class="" style:>
+                        <div id="div3" class="mydiv">
+                            <p class="" >
                                 As a CBO, a Community Based Organization, This project is totally unique and
                                 unlike any other resort. <br>
                                 Many of the people you shall meet will be Harambee and
@@ -189,16 +198,18 @@
                                 A sense of belonging for new guests as so many will greet and welcome you.
                             </p>
                         </div>
-                        <div class="accordions">
+                    </div>
+
+                    <div class="accordions">
                             <div class="accordion" onclick="toggleDiv('div1')">
-                                <h4 class="float-left text-lg">
-                                    Attractions and Activities
-                                </h4>
+                                <h3 class="float-left text-lg">
+                                      Attractions and Activities
+                                </h3>
                                 <i class="text-md float-right">&#9660;</i>
                             </div>
-                            <div id="div1" class="desc">
-                                <p class="" style:>
-                                    Zion Valley main attractions being the natural beauty of the Valley and its
+                            <div id="div1" class="myDiv"
+                                style="display: none ;transition: opacity 0.6s ease;line-height: 1.5;">
+                                <p>Zion Valley main attractions being the natural beauty of the Valley and its
                                     surroundings.
                                     <br>
                                     The Chania river, two waterfalls, landscaping, indigenous trees, flowers, and nature
@@ -214,11 +225,19 @@
                                     create
                                     solutions and value from working with nature.
                                 </p>
+                                <p>
+                                    Surrounded by so many charming cottages nestled amongst huge forest trees, we take a
+                                    moment
+                                    in our chosen resting place, a romantic and secluded marram soil eco lodge. <br>
+                                    We prepare ourselves for the evening ahead.
+                                </p>
+                                <p>
+                                    As the sun sets and vibrant bars come alive, we venture out for a night of music,
+                                    dancing,
+                                    happy people and an unforgettable night filled with experiences.
                                 </p>
                             </div>
                         </div>
-                    </div>
-                </div>
 
                 @include('layouts.user.partials.services')
                 <div class="container content wow zoomIn slow">
