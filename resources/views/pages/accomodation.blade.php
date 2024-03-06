@@ -108,8 +108,7 @@
             </div>
             <h2 class="text-center mb-4">Free Accommodation to Harambee owner</h2>
             <p style="font-size: 1.2em;
-            margin-bottom: 10px;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis beatae non eligendi
-                    possimus maxime saepe expedita quam eius. Quas, nihil quo assumenda quod quibusdam
+            margin-bottom: 10px;">
                     A menber to own One romantic cottage one weekend each and every year - two nights per year - For
                     every 25k Tree Certificates Held
             </p>
