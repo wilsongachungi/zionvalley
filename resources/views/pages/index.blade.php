@@ -196,8 +196,8 @@
                         </div>
                         <div id="div3" class="mydiv">
                             <p class="" >
-                                As a CBO, a Community Based Organization, This project is totally unique and
-                                unlike any other resort. <br>
+                                As a CBO, a Community Based Organization, <br> This project is totally unique and
+                                unlike any other resort. <br> <br>
                                 Many of the people you shall meet will be Harambee and
                                 community land owners who have all come together to share in the creation and
                                 benefits from this collective project. <br>
