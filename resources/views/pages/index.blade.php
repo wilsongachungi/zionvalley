@@ -105,7 +105,7 @@
         <div class="col-12 col-md-8 col-lg-6" style="line-height: 1.5;">
             <h4>Welcome to Zion</h4>
             <p style="text-align: left;">
-                As the beauty of Zion Valley unfolds,
+                Let the beauty of Zion Valley unfolds,
                 <br>
                 Heavenly haven where paradise takes hold. <br>
                 The Promised Land, where dreams can thrive. <br>
