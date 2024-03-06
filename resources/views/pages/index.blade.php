@@ -133,7 +133,7 @@
 
                         <p>
 
-                            Heaven cannot be lonely, is a place to be shared.
+                            Heaven cannot be lonely, is a place to be shared. <br>
                             Community Harambee, <br> united and cared.
                         </p>
                         <p>
