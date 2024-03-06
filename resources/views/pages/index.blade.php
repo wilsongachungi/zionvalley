@@ -194,19 +194,22 @@
                             </h3>
                             <i class="text-md float-right">&#9660;</i>
                         </div>
-                        <div id="div3" class="mydiv">
-                            <p style="line-height: 1.5;" >
+                        <div id="div3" class="mydiv" style="line-height: 1.5;">
+                            <p >
                                 As a CBO, a Community Based Organization, <br> This project is totally unique and
                                 unlike any other resort. 
+                                </p>
                                 <p>
                                 Many of the people you shall meet will be Harambee owners who have all come together to share in the creation and
                                 benefits from this collective project.
                                 </p>
-                                 
-                                Zion Valley shall feel more like staying
+                                <p>
+                                 Zion Valley shall feel more like staying
                                 in a family village as many will be owners themselves, one day just like you. <br>
                                 A sense of belonging for new guests as so many will greet and welcome you.
-                            </p>
+                                </p>
+                               
+                           
                         </div>
                     </div>
 
