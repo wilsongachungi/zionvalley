@@ -128,8 +128,12 @@
                     <div id="div11" class="line-height-1.5 desc text-center">
                         <p>
                             Birds sing melodies and bees with delight. <br>
-                            Happy pamoja people in love's warm light. <br>
-                            Heaven cannot be lonely, is a place to be shared
+                            Happy pamoja people in love's warm light. <br> 
+                        </p>
+
+                        <p>
+
+                            Heaven cannot be lonely, is a place to be shared,
                             Community Harambee, <br> united and cared.
                         </p>
                         <p>
