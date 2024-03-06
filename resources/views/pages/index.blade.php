@@ -133,12 +133,14 @@
 
                         <p>
 
-                            Heaven cannot be lonely, is a place to be shared,
+                            Heaven cannot be lonely, is a place to be shared.
                             Community Harambee, <br> united and cared.
                         </p>
                         <p>
-                            Nature's wonders and love's embrace,
-                            Guided journey to this sacred place. <br>
+                            Nature's wonders and love's embrace. <br>
+                            Guided journey to this sacred place. 
+                            </p>
+                            <p>
                             Wonders discovered, let love be your guide. <br>
                             Zion's sanctuary, find peace deep inside.
                         </p>
