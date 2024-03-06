@@ -41,9 +41,8 @@
             <div class="carousel-inner">
                 <div class="carousel-item active text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text">As the beauty of Zion Valley unfolds,
-                            <br>
-                            Heavenly haven where paradise takes hold. <br>
+                        <p class="custom-carousel-text">A leisure and Nature parc. <br>
+                        Activity center, and Eco resort.
 
                         </p>
                     </div>
@@ -52,9 +51,8 @@
 
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text">As the beauty of Zion Valley unfolds,
-                            <br>
-                            Heavenly haven where paradise takes hold. <br>
+                        <p class="custom-carousel-text">A leisure and Nature parc. <br>
+                        Activity center, and Eco resort.
 
                         </p>
                     </div>
@@ -63,9 +61,8 @@
 
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text">As the beauty of Zion Valley unfolds,
-                            <br>
-                            Heavenly haven where paradise takes hold. <br>
+                        <p class="custom-carousel-text">A leisure and Nature parc. <br>
+                        Activity center, and Eco resort.
 
                         </p>
                     </div>
