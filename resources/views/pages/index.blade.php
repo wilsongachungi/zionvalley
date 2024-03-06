@@ -95,7 +95,6 @@
                 <li>Education Training and exhibit demonstrations of eco engineering technologies.</li>
                 <li>Like a permanent showground, Smaller and with accommodations.</li>
             </ul>
-            margin-bottom: 10px;">
         </div>
 
         <div style="line-height:1.5">
