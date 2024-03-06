@@ -169,12 +169,12 @@
                     <div class="intro-container"
                         style="background-image: url('../assets/img/1 Capture9.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: antiquewhite;">
                         
-                        <ul style="position: relative; z-index: 1;color: antiquewhite;">
-                            A unique and sustainable development growth project. <br>
-                            A leisure and nature park, activity center, and resort destination. <br>
-                            Education Training and exhibit demonstrations of eco engineering technologies. <br>
-                            Like a permanent showground, Smaller and with accommodations. <br>
-                        </ul>
+                        <p class="line-height-1.5"
+                style="font-size: 1.2em;
+            margin-bottom: 10px; position: relative; text-align: center; ">
+                        A leisure and Nature parc. <br>
+                        Activity center, and Eco resort.
+    </p>
                     </div>
 
                     
