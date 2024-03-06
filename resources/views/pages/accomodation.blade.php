@@ -46,18 +46,17 @@
 
 <x-base-layout>
     <div class="accomodation">
-        <div class="page-hero bg-image">
-            <div class="hero-section">
-                <div class="container text-center wow zoomIn"
-                    style="background-color:  rgba(3, 79, 3, 0.5); padding: 10px;">
-                    <div class=" line-height-2" style="text-align: center">
-                        <h4>Zion Valley Harambee Village <br>
-                            Join for as little as 1k
-                        </h4>
-                    </div>
+    <div class="page-hero bg-image">
+    <div class="hero-section">
+        <div class="container text-center" id="heroContent">
+            <div class="container text-center wow zoomIn" style="background-color: rgba(3, 79, 3, 0.5); padding: 10px;">
+                <div class="line-height-1.5" style="text-align: center">
+                    <h4>Zion Valley Harambee Village <br> Join for as little as 1k</h4>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
         <div class="intro-container"
             style="background-image: url('../assets/img/Capture13.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: antiquewhite;">
@@ -176,7 +175,7 @@
         
         <div class="video-container">
         <h4>The Exterior</h4> <br>
-            <video width="420" height="340" controls autoplay>
+            <video width="420" height="340" controls >
                 <source src="../assets/img/exterior.mp4" type="video/mp4">
             </video>
         </div>
@@ -184,9 +183,37 @@
         <br>
         <div class="video-container">
         <h4>The Interior</h4> <br>
-            <video width="420" height="340" controls autoplay>
+            <video width="420" height="340" controls>
                 <source src="../assets/img/interior.mp4" type="video/mp4">
             </video>
         </div>
     </div>
+    <script>
+
+    // Function to trigger zooming animation
+    function triggerZoomAnimation() {
+        const heroContent = document.getElementById('heroContent');
+        heroContent.classList.remove('wow', 'zoomIn');
+        void heroContent.offsetWidth; // Trigger reflow to restart the animation
+        heroContent.classList.add('wow', 'zoomIn');
+    }
+
+    // Function to toggle visibility of hero content
+    function toggleHeroContent() {
+        const heroContent = document.getElementById('heroContent');
+        heroContent.style.display = heroContent.style.display === 'none' ? 'block' : 'none';
+    }
+
+    // Initial trigger of zooming animation
+    triggerZoomAnimation();
+
+    // Repeat the sequence every 4 seconds
+    setInterval(() => {
+        toggleHeroContent(); // Hide content
+        setTimeout(() => {
+            toggleHeroContent(); // Show content
+            triggerZoomAnimation(); // Trigger zooming animation
+        }, 2000); // Wait for 1 second before showing content again
+    }, 4000); // Repeat every 4 seconds
+</script>
 </x-base-layout>
