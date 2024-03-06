@@ -100,15 +100,20 @@
         <div class="container">
     <div class="row justify-content-center">
         <div class="col-12 col-md-8 col-lg-6" style="line-height: 1.5;">
-            <h4>Welcome to Zion</h4>
-            <p style="text-align: left;">
-                Let the beauty of Zion Valley unfolds,
+            <h4 class="justify-content-center text-center">Welcome to Zion</h4>
+            <p style="text-align: center;" class="justify-content-center text-center">
+                Let the beauty of Zion Valley unfold,
                 <br>
-                Heavenly haven where paradise takes hold. <br>
+
+                Heavenly haven where paradise takes ahold. <br>
+             </p>
+             <p class="justify-content-center text-center">
                 The Promised Land, where dreams can thrive. <br>
-                Rivers that dance and gardens alive.
+                Rivers that dance and gardens alive.              
             </p>
         </div>
+        </div>
+                 
     </div>
 </div>
 
@@ -159,7 +164,7 @@
                                 Where heaven meets earth, and all worries cease. <br>
                             </p>
                             <p>
-                                Righteousness Peace and Unity calls. <br>
+                                Righteousness Peace and Unity call. <br>
                                 In Zion's haven let your spirit stand tall. <br>
                             </p>
                             <p>
