@@ -260,17 +260,27 @@ p {
             @include('layouts.user.partials.services')
             <div class="container content wow zoomIn slow">
                 <div>
-                    <div style="line-height:1.5">
+                    <div style="line-height:1.5; test-align:left">
                         <h4>Decision made</h4>
-                        <p style="test-align:left">Decision made.. <br>
+                        <p>
+                            Decision made..
+                        <p>
+                        <p>
                             We are leaving the Nairobi concrete hustle and heading
-                            north to Mount Kenya foothills… <br>
-                            The excitement begins! <br>
-                            The road rising, twisting right and left like a meandering river. Forever rising through
+                            north to Mount Kenya foothills…
+                        </p>
+                        <p>
+                            The excitement begins!
+                        </p>
+                        <p>
+                            The road rising, twisting right and left like a meandering river.
+                        <p>
+                            Forever rising through
                             ever green valleys
                             and ever steeper hills, surrounded by lush verdant growth everywhere – and the steepest
-                            roadside drops!!! - <br>
-                            A truly exhilarating journey.
+                            roadside drops!!! -
+                        </p>
+                        A truly exhilarating journey.
                     </div>
 
                 </div>
@@ -286,20 +296,23 @@ p {
                             Dawn arrives just outside Nyeri town, then like a time forgotten world, we find
                             ourselves
                             inside
-                            Zion Valley – Sitting right there beside an amazing waterfall – WOW. <br>
+                            Zion Valley – Sitting right there beside an amazing waterfall – WOW.
+                        </p>
+                        <p>
                             Soothing roars from the crashing waters and the world of traffic soon becomes a distant
-                            memory.
-                            - Peace at last. <br>
+                            memory. <br> - Peace at last.
+                        </p>
+                        <p>
                             Energized by lungful’s of pure clean air, we find ourselves wandering down the
-                            meandering
-                            river
-                            side path. Enchanted by the birds, the bees, the flowers and trees, the incredible
-                            sceneries
-                            bursting with forth with life and abundant growth. <br>
+                            meandering rive side path
+                        </p>
+                        <p>
+                            Enchanted by the birds, the bees, the flowers and trees, the incredible
+                            sceneries bursting with forth with life and abundant growth.
+                        </p>
+                        <p>
                             Artistic living sofas carved from nature are everywhere, Free to sit and soak up the
-                            sounds
-                            and
-                            boundless joys of nature.
+                            sounds and boundless joys of nature.
                         </p>
                     </div>
                     <div class="accordions">
@@ -314,16 +327,22 @@ p {
                             <p>One text message and our hot meal arrives, delivered by hand to our shaded chosen
                                 sofa by
                                 the
-                                river - Heaven. <br>
+                                river - Heaven.
+                            </p>
+                            <p>
                                 After some time – some seemingly endless time and realizing there is ever more to
                                 this
                                 adventure, our journey continues.
+                            </p>
+                            <p>
                                 Laughter and the playful splashes of children beckon us to venture and discover
                                 three
                                 natural swimming pools, exhilarating zip lines, and a vast array of nature-inspired
                                 resort
                                 activities.
                             </p>
+
+
                             <p>
                                 Surrounded by so many charming cottages nestled amongst huge forest trees, we take a
                                 moment
