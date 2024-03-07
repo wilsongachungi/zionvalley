@@ -4,13 +4,29 @@ p {
     color: antiquewhite;
 }
 
+/* 
 .intro-container {
     text-align: center;
     padding: 50px;
 
     color: antiquewhite;
     margin-top: 20px;
+} */
+.intro-container {
+    position: relative;
+    color: rgb(235, 234, 236);
 }
+
+.green-tint {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 128, 0, 0.5);
+    /* Green with 50% opacity */
+}
+
 
 
 
@@ -41,7 +57,7 @@ p {
             <div class="carousel-inner">
                 <div class="carousel-item active text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text">A leisure and Nature parc. <br>
+                        <p class="custom-carousel-text" style="color:greenyellow">A leisure and Nature parc. <br>
                             Activity center, and Eco resort.
 
                         </p>
@@ -51,7 +67,7 @@ p {
 
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text">A leisure and Nature parc. <br>
+                        <p class="custom-carousel-text" style="color:greenyellow">A leisure and Nature parc. <br>
                             Activity center, and Eco resort.
 
                         </p>
@@ -61,7 +77,7 @@ p {
 
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text">A leisure and Nature parc. <br>
+                        <p class="custom-carousel-text" style="color:greenyellow">A leisure and Nature parc. <br>
                             Activity center, and Eco resort.
 
                         </p>
@@ -83,18 +99,16 @@ p {
 
         <div class="intro-container"
             style="background-image: url('../assets/img/Capture11.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: rgb(235, 234, 236);">
-            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; ;">
-            </div>
-
-            <p class="line-height-1.5" style="font-size: 1.2em;
-            margin-bottom: 10px; position: relative; text-align: center; ">
-
+            <div class="green-tint" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+            <p class="line-height-1.5"
+                style="font-size: 1.2em; margin-bottom: 10px; position: relative; text-align: center;">
                 A unique and sustainable development growth project. <br>
                 A leisure and nature park, activity center, and resort destination. <br>
                 Education Training and exhibit demonstrations of eco engineering technologies. <br>
                 Like a permanent showground, Smaller and with accommodations. <br>
             </p>
-        </div> <br>
+        </div>
+        <br>
 
         <div class="container">
             <div class="row justify-content-center">
@@ -175,9 +189,9 @@ p {
 
                 <div class="intro-container"
                     style="background-image: url('../assets/img/1 Capture9.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: antiquewhite;">
-
-                    <p class="line-height-1.5" style="font-size: 1.2em;
-            margin-bottom: 10px; position: relative; text-align: center; ">
+                    <div class="green-tint" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                    </div>
+                    <p class="line-height-1.5" style="font-size: 1.2em;margin-bottom: 10px; position: relative; text-align: center; ">
                         A leisure and Nature parc. <br>
                         Activity center, and Eco resort.
                     </p>
@@ -204,11 +218,12 @@ p {
                     </p>
                     <p>
                         Zion Valley shall feel more like staying
-                        in a family village as many will be owners themselves, one day just like you. <br>
+                        in a family village as many will be owners themselves, one day just like you.
+
+                    </p>
+                    <p>
                         A sense of belonging for new guests as so many will greet and welcome you.
                     </p>
-
-
                 </div>
             </div>
 
@@ -280,7 +295,10 @@ p {
                             and ever steeper hills, surrounded by lush verdant growth everywhere – and the steepest
                             roadside drops!!! -
                         </p>
-                        A truly exhilarating journey.
+                        <p>
+                            A truly exhilarating journey.
+                        </p>
+
                     </div>
 
                 </div>
