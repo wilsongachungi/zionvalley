@@ -157,7 +157,7 @@
                                         <div class="container d-flex justify-content-center align-items-center">
                                             <div>
                                                 <p>
-                                                    <span class="text-success font-weight-bold">Harambee Account</span>:
+                                                    <span class="text-success font-weight-bold">Harambee Account</span> :
                                                     @if (Auth::check())
                                                     {{ Auth::user()->name }}
                                                     @else
@@ -221,7 +221,7 @@
 
                                     </table>
                                     <div class="container d-flex justify-content-center align-items-center">
-                                        <p style="color:green"> Total Kshs </p>
+                                        <p style="color:green">Total Kshs: <span style="color:greenyellow">56,000 </span> </p>
                                     </div>
                                 </div>
                             </div>
