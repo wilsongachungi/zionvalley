@@ -1,37 +1,37 @@
 @section('css')
-    <style>
-        p {
-            color: antiquewhite;
-            line-height: 1.5;
-        }
+<style>
+p {
+    color: antiquewhite;
+    line-height: 1.5;
+}
 
-        p {
-            color: antiquewhite;
-        }
+p {
+    color: antiquewhite;
+}
 
-        .intro-container {
-            text-align: center;
-            padding: 50px;
+.intro-container {
+    text-align: center;
+    padding: 50px;
 
-            color: antiquewhite;
-            margin-top: 20px;
-        }
-
-    </style>
+    color: antiquewhite;
+    margin-top: 20px;
+}
+</style>
 @endsection
 <x-base-layout>
     <div class="harambee">
-    <div class="page-hero bg-image">
-    <div class="hero-section">
-        <div class="container text-center" id="heroContent">
-            <div class="container text-center wow zoomIn" style="background-color: rgba(3, 79, 3, 0.5); padding: 10px;">
-                <div class="line-height-1.5" style="text-align: center">
-                    <h4>Zion Valley Harambee Village <br> Join for as little as 1k</h4>
+        <div class="page-hero bg-image">
+            <div class="hero-section">
+                <div class="container text-center" id="heroContent">
+                    <div class="container text-center wow zoomIn"
+                        style="background-color: rgba(3, 79, 3, 0.5); padding: 10px;">
+                        <div class="line-height-1.5" style="text-align: center">
+                            <h4>Zion Valley Harambee Village <br> Join for as little as 1k</h4>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
         <div class="banner-container"
             style="position: relative; color: antiquewhite; padding: 20px; text-align: center; margin-top:20px; background-image: url('../assets/img/banner2.jpeg'); background-size: cover; background-position: center; ">
@@ -58,8 +58,7 @@
                     </h3>
                     <i class="text-md float-right">&#9660;</i>
                 </div>
-                <div id="div9" class="myDiv"
-                    style="display: none ;transition: opacity 0.6s ease;line-height: 0.5;">
+                <div id="div9" class="myDiv" style="display: none ;transition: opacity 0.6s ease;line-height: 0.5;">
 
                     <p>A unique and sustainable growth project, a leisure and nature parc, an activity center and
                         resort destination. <br>
@@ -88,8 +87,7 @@
                     </h3>
                     <i class="text-md float-right">&#9660;</i>
                 </div>
-                <div id="div8" class="myDiv"
-                    style="display: none ;transition: opacity 0.6s ease;line-height: 0.5;">
+                <div id="div8" class="myDiv" style="display: none ;transition: opacity 0.6s ease;line-height: 0.5;">
                     <p>
                         Zion Valley will issue 'Harambee Trees' as Zion Valley ownership Certificates.
                         Tree certificates are issued in relation to contributions made. <br>
@@ -116,8 +114,7 @@
                         </h3>
                         <i class="text-md float-right">&#9660;</i>
                     </div>
-                    <div id="div7" class="myDiv"
-                        style="display: none ;transition: opacity 0.6s ease;line-height: 1.5;">
+                    <div id="div7" class="myDiv" style="display: none ;transition: opacity 0.6s ease;line-height: 1.5;">
                         <p>
                             Harambee Certificates, Just like trees, are expected to increase in value, to grow and
                             produce fruits.<br>
@@ -262,30 +259,30 @@
         </div>
 
         <script>
-    // Function to trigger zooming animation
-    function triggerZoomAnimation() {
-        const heroContent = document.getElementById('heroContent');
-        heroContent.classList.remove('wow', 'zoomIn');
-        void heroContent.offsetWidth; // Trigger reflow to restart the animation
-        heroContent.classList.add('wow', 'zoomIn');
-    }
+        // Function to trigger zooming animation
+        function triggerZoomAnimation() {
+            const heroContent = document.getElementById('heroContent');
+            heroContent.classList.remove('wow', 'zoomIn');
+            void heroContent.offsetWidth; // Trigger reflow to restart the animation
+            heroContent.classList.add('wow', 'zoomIn');
+        }
 
-    // Function to toggle visibility of hero content
-    function toggleHeroContent() {
-        const heroContent = document.getElementById('heroContent');
-        heroContent.style.display = heroContent.style.display === 'none' ? 'block' : 'none';
-    }
+        // Function to toggle visibility of hero content
+        function toggleHeroContent() {
+            const heroContent = document.getElementById('heroContent');
+            heroContent.style.display = heroContent.style.display === 'none' ? 'block' : 'none';
+        }
 
-    // Initial trigger of zooming animation
-    triggerZoomAnimation();
+        // Initial trigger of zooming animation
+        triggerZoomAnimation();
 
-    // Repeat the sequence every 4 seconds
-    setInterval(() => {
-        toggleHeroContent(); // Hide content
-        setTimeout(() => {
-            toggleHeroContent(); // Show content
-            triggerZoomAnimation(); // Trigger zooming animation
-        }, 2000); // Wait for 1 second before showing content again
-    }, 4000); // Repeat every 4 seconds
-</script>
+        // Repeat the sequence every 4 seconds
+        setInterval(() => {
+            toggleHeroContent(); // Hide content
+            setTimeout(() => {
+                toggleHeroContent(); // Show content
+                triggerZoomAnimation(); // Trigger zooming animation
+            }, 2000); // Wait for 1 second before showing content again
+        }, 4000); // Repeat every 4 seconds
+        </script>
 </x-base-layout>
