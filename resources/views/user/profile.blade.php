@@ -114,8 +114,9 @@
                                             <thead>
                                                 <tr>
                                                     <th style="color:greenyellow">Name</th>
-                                                    <th style="color:greenyellow">Email</th>
                                                     <th style="color:greenyellow">Phone</th>
+                                                    <th style="color:greenyellow">Email</th>
+                                                   
                                                     <th style="color:greenyellow">Country</th>
                                                     <th style="color:greenyellow">Location</th>
                                                     <th style="color:greenyellow">Age</th>
@@ -126,8 +127,8 @@
                                                     <td>
                                                         <span class="ps-2">{{ Auth::user()->name }}</span>
                                                     </td>
-                                                    <td>{{ Auth::user()->email }}</td>
                                                     <td>{{ Auth::user()->phone }}</td>
+                                                    <td>{{ Auth::user()->email }}</td>                                                    
                                                     <td>{{ Auth::user()->country }}</td>
                                                     <td>{{ Auth::user()->area_of_residence }}</td>
                                                     <td>{{ Auth::user()->age }}</td>

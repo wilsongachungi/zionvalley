@@ -24,7 +24,7 @@ jobs:
         script: |
           cd ~/staging
           mkdir -p storage/framework/cache/data
-          git pull origin staging
+          git fetch origin && git reset --hard origin/staging
           /opt/cpanel/composer/bin/composer install --ignore-platform-reqs -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
           php artisan migrate --force
           php artisan config:cache
