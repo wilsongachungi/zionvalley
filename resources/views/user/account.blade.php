@@ -157,7 +157,7 @@
                                         <div class="container d-flex justify-content-center align-items-center">
                                             <div>
                                                 <p>
-                                                    <span class="text-success">Harambee Account</span>:
+                                                    <span class="text-success font-weight-bold">Harambee Account</span>:
                                                     @if (Auth::check())
                                                     {{ Auth::user()->name }}
                                                     @else
@@ -174,20 +174,18 @@
                                                 <th style="text-align:center; color:greenyellow">Todays <br> Rate</th>
                                                 <th style="text-align:center; color:greenyellow">Todays <br> Value</th>
                                             </tr>
-                                        <tbody>
                                             <tr>
                                                 <td style="text-align:center">123456</td>
                                                 <td style="text-align:center">2.4</td>
                                                 <td style="text-align:center">20,0000</td>
                                             </tr>
 
-                                        </tbody>
-                                        <tr>
-                                            <th style="color:greenyellow">Harambees</th>
-                                            <th style="color:greenyellow">Rate</th>
-                                            <th style="color:greenyellow">Deposit</th>
-                                            <th style="color:greenyellow">Actions</th>
-                                        </tr>
+                                            <tr>
+                                                <th style="color:greenyellow">Harambees</th>
+                                                <th style="color:greenyellow">Rate</th>
+                                                <th style="color:greenyellow">Kshs in/out</th>
+                                                <th style="color:greenyellow">Actions</th>
+                                            </tr>
                                         </thead>
 
                                         <tbody>
@@ -222,7 +220,9 @@
                                         </tbody>
 
                                     </table>
-                                    <br>
+                                    <div class="container d-flex justify-content-center align-items-center">
+                                        <p style="color:green"> Total Kshs </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
