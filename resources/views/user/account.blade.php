@@ -3,47 +3,49 @@
 
 <head>
     <style>
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0, 100, 0);
-            background-color: rgba(0, 100, 0, 0.4);
-        }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 100, 0);
+        background-color: rgba(0, 100, 0, 0.4);
+    }
 
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
-            padding: 10px;
-            border: 1px solid #888;
-            width: 60%;
-            max-width: 300px;
-        }
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 10px;
+        border: 1px solid #888;
+        width: 60%;
+        max-width: 300px;
+    }
 
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
 
-        .close:hover,
-        .close:focus {
-            color: green;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        .dark-shade {
-            background-color: #002000; 
-            color: white; /* Text color */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
-        
-        }
+    .close:hover,
+    .close:focus {
+        color: green;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .dark-shade {
+        background-color: #002000;
+        color: white;
+        /* Text color */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+
+    }
     </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -91,9 +93,9 @@
                                     <img class="img-xs rounded-circle" src="assets/img/logo1.png" alt="">
                                     <p class="mb-0 d-none d-sm-block navbar-profile-name">
                                         @if (Auth::check())
-                                            {{ Auth::user()->name }}
+                                        {{ Auth::user()->name }}
                                         @else
-                                            Guest
+                                        Guest
                                         @endif
                                     </p>
                                     <i class="mdi mdi-menu-down d-none d-sm-block"></i>
@@ -111,104 +113,131 @@
                                     </div> --}}
                                     <div class="preview-item-content">
                                         {{-- <a class="nav-link" href="{{ route('profile.show') }}">
-                                            <h6 class="preview-subject mb-1">Settings</h6>
-                                        </a> --}}
-                                    </div>
-                                </a>
-                                {{-- <div class="dropdown-divider"></div> --}}
-                                <a class="dropdown-item preview-item">
-                                    {{-- <div class="preview-thumbnail">
+                                        <h6 class="preview-subject mb-1">Settings</h6>
+                                </a> --}}
+                            </div>
+                            </a>
+                            {{-- <div class="dropdown-divider"></div> --}}
+                            <a class="dropdown-item preview-item">
+                                {{-- <div class="preview-thumbnail">
                                         <div class="preview-icon bg-dark rounded-circle">
                                             <i class="mdi mdi-logout text-danger"></i>
                                         </div>
                                     </div> --}}
-                                    <div class="preview-item-content">
-                                        <p class="preview-subject mb-1">
-                                        <form action="{{ route('logout') }}" method="POST">
-                                            @csrf
-                                            <button type="submit">Logout</button>
-                                        </form>
-                                        </p>
-                                    </div>
-                                </a>
-                                <div class="dropdown-divider"></div>
+                                <div class="preview-item-content">
+                                    <p class="preview-subject mb-1">
+                                    <form action="{{ route('logout') }}" method="POST">
+                                        @csrf
+                                        <button type="submit">Logout</button>
+                                    </form>
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
 
-                            </div>
-                        </li>
-                    </ul>
-                    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
-                        data-toggle="offcanvas">
-                        <span class="mdi mdi-format-line-spacing"></span>
-                    </button>
                 </div>
-            </nav>
+                </li>
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                    data-toggle="offcanvas">
+                    <span class="mdi mdi-format-line-spacing"></span>
+                </button>
+        </div>
+        </nav>
 
-            <div class="main-panel" style="background: rgb(0, 63, 0)">
-                <div class="content-wrapper" style="background: rgb(0, 49, 0)">
-                    <div class="row ">
-                        <div class="col-12 grid-margin">
-                            <div class="card">
-                                <div class="card-body dark-shade">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            @csrf
-                                            <thead>
-                                                <tr>
-                                                    <th style="color:greenyellow">Total <br> Harambees</th>
-                                                    <th style="color:greenyellow">Rate</th>
-                                                    <th style="color:greenyellow">Deposit</th>
-                                                    <th style="color:greenyellow">Actions</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                @foreach ($harambees as $harambee)
-                                                    <tr>
-                                                        <td>{{ $harambee->total }}</td>
-                                                        <td> 1:1 </td>
-                                                        <td>{{ $harambee->deposit }}</td>
-                                                        <td>
-                                                            <span style="cursor: pointer; color:green"
-                                                                class="details-link"
-                                                                onclick="showDetailsPopup({{ $harambee->id }})">Details</span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td colspan="4">
-                                                            <div id="detailsModal{{ $harambee->id }}" class="modal"
-                                                                style="display: none;">
-                                                                <div class="modal-content" style="color:green">
-                                                                    <span class="close"
-                                                                        onclick="hideDetailsPopup({{ $harambee->id }})">&times;</span>
-                                                                    <p>Deposit: {{ $harambee->deposit }}</p>
-                                                                    <p>Withdrawn: {{ $harambee->withdrawn }}</p>
-                                                                    <p>Time:
-                                                                        {{ $harambee->created_at->format('Y-m-d H:i') }}
-                                                                    </p>
-                                                                    <p>Balance: {{ $harambee->total }} KSH</p>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                @endforeach
-                                            </tbody>
+        <div class="main-panel" style="background: rgb(0, 63, 0)">
+            <div class="content-wrapper" style="background: rgb(0, 49, 0)">
+                <div class="row ">
+                    <div class="col-12 grid-margin">
+                        <div class="card">
+                            <div class="card-body dark-shade">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        @csrf
+                                        <div class="container d-flex justify-content-center align-items-center">
+                                            <div>
+                                                <p>
+                                                    <span class="text-success">Harambee Account</span>:
+                                                    @if (Auth::check())
+                                                    {{ Auth::user()->name }}
+                                                    @else
+                                                    Guest
+                                                    @endif
+                                                </p>
+                                            </div>
+                                        </div>
 
-                                        </table>
-                                        <br>
-                                    </div>
+                                        <thead>
+                                            <tr style="text-align:left">
+                                                <th style="text-align:center; color:greenyellow">Total <br> Harambees
+                                                </th>
+                                                <th style="text-align:center; color:greenyellow">Todays <br> Rate</th>
+                                                <th style="text-align:center; color:greenyellow">Todays <br> Value</th>
+                                            </tr>
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align:center">123456</td>
+                                                <td style="text-align:center">2.4</td>
+                                                <td style="text-align:center">20,0000</td>
+                                            </tr>
+
+                                        </tbody>
+                                        <tr>
+                                            <th style="color:greenyellow">Harambees</th>
+                                            <th style="color:greenyellow">Rate</th>
+                                            <th style="color:greenyellow">Deposit</th>
+                                            <th style="color:greenyellow">Actions</th>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            @foreach ($harambees as $harambee)
+                                            <tr>
+                                                <td>{{ $harambee->total }}</td>
+                                                <td> 1:1 </td>
+                                                <td>{{ $harambee->deposit }}</td>
+                                                <td>
+                                                    <span style="cursor: pointer; color:green" class="details-link"
+                                                        onclick="showDetailsPopup({{ $harambee->id }})">Details</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="4">
+                                                    <div id="detailsModal{{ $harambee->id }}" class="modal"
+                                                        style="display: none;">
+                                                        <div class="modal-content" style="color:green">
+                                                            <span class="close"
+                                                                onclick="hideDetailsPopup({{ $harambee->id }})">&times;</span>
+                                                            <p>Deposit: {{ $harambee->deposit }}</p>
+                                                            <p>Withdrawn: {{ $harambee->withdrawn }}</p>
+                                                            <p>Time:
+                                                                {{ $harambee->created_at->format('Y-m-d H:i') }}
+                                                            </p>
+                                                            <p>Balance: {{ $harambee->total }} KSH</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            @endforeach
+                                        </tbody>
+
+                                    </table>
+                                    <br>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <footer class="footer">
-                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ©
-                            zionvalleycbo</span>
-                    </div>
-                </footer>
             </div>
+
+            <footer class="footer">
+                <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                    <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ©
+                        zionvalleycbo</span>
+                </div>
+            </footer>
         </div>
+    </div>
     </div>
 
     <script src="admin/assets/vendors/js/vendor.bundle.base.js"></script>
@@ -225,19 +254,19 @@
     <script src="admin/assets/js/todolist.js"></script>
     <script src="admin/assets/js/dashboard.js"></script>
     <script>
-        function showDetailsPopup(id) {
-            var modal = document.getElementById('detailsModal' + id);
-            if (modal) {
-                modal.style.display = 'block';
-            }
+    function showDetailsPopup(id) {
+        var modal = document.getElementById('detailsModal' + id);
+        if (modal) {
+            modal.style.display = 'block';
         }
+    }
 
-        function hideDetailsPopup(id) {
-            var modal = document.getElementById('detailsModal' + id);
-            if (modal) {
-                modal.style.display = 'none';
-            }
+    function hideDetailsPopup(id) {
+        var modal = document.getElementById('detailsModal' + id);
+        if (modal) {
+            modal.style.display = 'none';
         }
+    }
     </script>
 </body>
 
