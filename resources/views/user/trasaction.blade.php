@@ -171,8 +171,7 @@
                                             <tr style="text-align:left">
                                                 <th style="text-align:center; color:greenyellow">Total <br> Harambees
                                                 </th>
-                                                <th style="text-align:center; color:greenyellow">Todays <br> Rate</th>
-                                                <th style="text-align:center; color:greenyellow">Todays <br> Value</th>
+                                                <th style="text-align:center; color:greenyellow">Todays <br> Rate</th>                                               
                                             </tr>
                                             <tr>
                                                 <td style="text-align:center">123456</td>
@@ -181,44 +180,11 @@
                                             </tr>
 
                                             <tr>
-                                                <th style="color:greenyellow">Harambees</th>
-                                                <th style="color:greenyellow">Rate</th>
-                                                <th style="color:greenyellow">Kshs in/out</th>
+                                                <th style="color:greenyellow">BUY</th>
+                                                <th style="color:greenyellow">SELL</th>
                                                 <th style="color:greenyellow">Actions</th>
                                             </tr>
-                                        </thead>
-
-                                        <tbody>
-                                            @foreach ($harambees as $harambee)
-                                            <tr>
-                                                <td>{{ $harambee->total }}</td>
-                                                <td> 1:1 </td>
-                                                <td>{{ $harambee->deposit }}</td>
-                                                <td>
-                                                    <span style="cursor: pointer; color:green" class="details-link"
-                                                        onclick="showDetailsPopup({{ $harambee->id }})">Details</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="4">
-                                                    <div id="detailsModal{{ $harambee->id }}" class="modal"
-                                                        style="display: none;">
-                                                        <div class="modal-content" style="color:green">
-                                                            <span class="close"
-                                                                onclick="hideDetailsPopup({{ $harambee->id }})">&times;</span>
-                                                            <p>Deposit: {{ $harambee->deposit }}</p>
-                                                            <p>Withdrawn: {{ $harambee->withdrawn }}</p>
-                                                            <p>Time:
-                                                                {{ $harambee->created_at->format('Y-m-d H:i') }}
-                                                            </p>
-                                                            <p>Balance: {{ $harambee->total }} KSH</p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            @endforeach
-                                        </tbody>
-
+                                        </thead>                                      
                                     </table>
                                     <div class="container d-flex justify-content-center align-items-center">
                                         <p class="text-success font-weight-bold">Total Kshs:   <span style="color:greenyellow">56,000 </span> </p>
