@@ -158,7 +158,7 @@
                                                 <p class="text-success font-weight-bold">Account</p>
                                             </div>
                                             <div class="text-center">
-                                                <p>
+                                                <p style="color:greenyellow">
                                                     @if (Auth::check())
                                                     {{ Auth::user()->name }}
                                                     @else
@@ -177,7 +177,19 @@
                                             <tr>
                                                 <th style="color:greenyellow">BUY</th>
                                                 <th style="color:greenyellow">SELL</th>
-                                                <th style="color:greenyellow">Actions</th>
+                                            </tr>
+                                            <tr>
+                                                <th style="color:greenyellow">BEST BUYER</th>
+                                                <th style="color:greenyellow">BEST SELLER</th>                                   
+                                                <th style="color:greenyellow">ACTION</th>                                   
+                                            </tr>
+                                            <tr>
+                                                <td style="color:grey">1.50</td>
+                                                <td style="color:grey">1.60</td>                                   
+                                            </tr>
+                                            <tr>
+                                                <td style="color:grey">1.40</td>
+                                                <td style="color:grey">1.66</td>                                   
                                             </tr>
                                         </thead>
                                     </table>
