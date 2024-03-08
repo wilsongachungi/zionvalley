@@ -148,17 +148,16 @@
         <div class="main-panel" style="background: rgb(0, 63, 0)">
             <div class="content-wrapper" style="background: rgb(0, 49, 0)">
                 <div class="row ">
+                    
                     <div class="col-12 grid-margin">
+                        
                         <div class="card">
-                            <div class="card-body dark-shade">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <div class="container d-flex justify-content-between">
+                        <div class="container d-flex justify-content-between">
                                             <div>
-                                                <p class="text-success font-weight-bold">Account</p>
+                                                <p class="text-success font-weight-bold">Account Name:</p>
                                             </div>
-                                            <div class="text-center">
-                                                <p style="color:greenyellow">
+                                            <div class="text-center align-item-center">
+                                                <p style="color:greenyellow; text-center; align-item:center; content">
                                                     @if (Auth::check())
                                                     {{ Auth::user()->name }}
                                                     @else
@@ -167,8 +166,12 @@
                                                 </p>
                                             </div>
                                         </div>
-
-
+                            <div class="card-body dark-shade">
+                                
+                                <div class="table-responsive">
+                                    
+                                    <table class="table">
+                                     
                                         <thead>
                                             <tr style="text-align:left">
                                                 <th style=" color:greenyellow">Todays Rate</th>
@@ -195,14 +198,12 @@
                                             </tr>
                                         </thead>
                                     </table>
-                                    <div class="container d-flex justify-content-end">
-                                        <p class="text-success font-weight-bold text-align-left">Total Kshs: <span
-                                                style="color:greenyellow">10,000 </span></p>
-                                    </div>
-
-                                </div>
+                                </div> 
                             </div>
+                            <a href="{{ route('account') }}" class="text-decoration-none text-success" style="margin-left:20px">ACCOUNT</a>
+
                         </div>
+                        
                     </div>
                 </div>
             </div>

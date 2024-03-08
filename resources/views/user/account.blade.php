@@ -168,16 +168,16 @@
                                         </div>
 
                                         <thead>
-                                            <tr style="text-align:left">
-                                                <th style="text-align:center; color:greenyellow">Total <br> Harambees
+                                            <tr style="">
+                                                <th style=" color:greenyellow">Total <br> Harambees
                                                 </th>
-                                                <th style="text-align:center; color:greenyellow">Todays <br> Rate</th>
-                                                <th style="text-align:center; color:greenyellow">Todays <br> Value</th>
+                                                <th style=" color:greenyellow">Todays <br> Rate</th>
+                                                <th style=" color:greenyellow">Todays <br> Value</th>
                                             </tr>
                                             <tr>
-                                                <td style="text-align:center">123456</td>
-                                                <td style="text-align:center">2.4</td>
-                                                <td style="text-align:center">20,0000</td>
+                                                <td style="">123456</td>
+                                                <td style="">2.4</td>
+                                                <td style="">20,0000</td>
                                             </tr>
 
                                             <tr>
@@ -218,12 +218,13 @@
                                             </tr>
                                             @endforeach
                                         </tbody>
-
+                                    
                                     </table>
                                     <div class="container d-flex justify-content-center align-items-center">
                                         <p class="text-success font-weight-bold">Total Kshs:   <span style="color:greenyellow">56,000 </span> </p>
                                     </div>
                                 </div>
+                                <a href="{{ route('transaction') }}" class="text-decoration-none text-success">BUY/SELL</a>
                             </div>
                         </div>
                     </div>
