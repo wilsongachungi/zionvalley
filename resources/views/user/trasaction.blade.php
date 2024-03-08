@@ -182,8 +182,8 @@
                                                 <th style="color:greenyellow">SELL</th>
                                             </tr>
                                             <tr>
-                                                <th style="color:greenyellow">BEST BUYER</th>
-                                                <th style="color:greenyellow">BEST SELLER</th>                                   
+                                            <th style="color:greenyellow">Best Seller</th> 
+                                                <th style="color:greenyellow">Best Buyer</th>                                  
                                                 <th style="color:greenyellow">ACTION</th>                                   
                                             </tr>
                                             <tr>
