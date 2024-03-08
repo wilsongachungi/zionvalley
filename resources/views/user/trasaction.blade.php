@@ -172,11 +172,11 @@
                                         <thead>
                                             <tr style="text-align:left">
                                                 <th style=" color:greenyellow">Todays Rate</th>
-                                                <th style=" color:green">1.69</th>
+                                                <th style=" color:green; font-weight:bold">1.69</th>
                                             </tr>
                                             <tr>
-                                                <th style="color:green">BUY</th>
-                                                <th style="color:green">SELL</th>
+                                                <th style="color:greenyellow">BUY</th>
+                                                <th style="color:greenyellow">SELL</th>
                                             </tr>
                                             <tr>
                                                 <th style="color:greenyellow">BEST BUYER</th>
@@ -197,7 +197,7 @@
                                     </table>
                                     <div class="container d-flex justify-content-end">
                                         <p class="text-success font-weight-bold text-align-left">Total Kshs: <span
-                                                style="color:greenyellow">56,000 </span></p>
+                                                style="color:greenyellow">10,000 </span></p>
                                     </div>
 
                                 </div>
