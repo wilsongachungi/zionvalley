@@ -39,7 +39,7 @@
                 <span class="menu-icon">
                     <i class="mdi mdi-envelope"></i>
                 </span>
-                <span class="menu-title" style="color:greenyellow">Transaction</span>
+                <span class="menu-title" style="color:greenyellow">Buy/Sell</span>
             </a>
         </li>
         {{-- <li class="nav-item menu-items">
