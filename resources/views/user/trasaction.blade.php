@@ -153,11 +153,12 @@
                             <div class="card-body dark-shade">
                                 <div class="table-responsive">
                                     <table class="table">
-                                        @csrf
-                                        <div class="container d-flex justify-content-center align-items-center">
+                                        <div class="container d-flex justify-content-between">
                                             <div>
+                                                <p class="text-success font-weight-bold">Account</p>
+                                            </div>
+                                            <div class="text-center">
                                                 <p>
-                                                    <span class="text-success font-weight-bold">Account</span> :
                                                     @if (Auth::check())
                                                     {{ Auth::user()->name }}
                                                     @else
@@ -167,25 +168,24 @@
                                             </div>
                                         </div>
 
+
                                         <thead>
                                             <tr style="text-align:left">
-                                                <th style=" color:greenyellow">Todays <br> Rate</th>                                               
+                                                <th style=" color:greenyellow">Todays Rate</th>
+                                                <th style=" color:greenyellow">1.69</th>
                                             </tr>
-                                            <tr>
-                                                <td style="">123456</td>
-                                                <td style="">2.4</td>                                             
-                                            </tr>
-
                                             <tr>
                                                 <th style="color:greenyellow">BUY</th>
                                                 <th style="color:greenyellow">SELL</th>
                                                 <th style="color:greenyellow">Actions</th>
                                             </tr>
-                                        </thead>                                      
+                                        </thead>
                                     </table>
-                                    <div class="container d-flex justi">
-                                        <p class="text-success font-weight-bold">Total Kshs:   <span style="color:greenyellow">56,000 </span> </p>
+                                    <div class="container d-flex justify-content-end">
+                                        <p class="text-success font-weight-bold text-align-left">Total Kshs: <span
+                                                style="color:greenyellow">56,000 </span></p>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
