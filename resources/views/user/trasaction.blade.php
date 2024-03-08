@@ -148,62 +148,64 @@
         <div class="main-panel" style="background: rgb(0, 63, 0)">
             <div class="content-wrapper" style="background: rgb(0, 49, 0)">
                 <div class="row ">
-                    
+
                     <div class="col-12 grid-margin">
-                        
+
                         <div class="card">
-                        <div class="container d-flex justify-content-between">
-                                            <div>
-                                                <p class="text-success font-weight-bold">Account Name:</p>
-                                            </div>
-                                            <div class="text-center align-item-center">
-                                                <p style="color:greenyellow; text-center; align-item:center; content">
-                                                    @if (Auth::check())
-                                                    {{ Auth::user()->name }}
-                                                    @else
-                                                    Guest
-                                                    @endif
-                                                </p>
-                                            </div>
-                                        </div>
+                            <div class="container d-flex justify-content-between">
+                                <div>
+                                    <p class="text-success font-weight-bold">Account Name:</p>
+                                </div>
+                                <div class="text-center align-item-center">
+                                    <p style="color:greenyellow; text-center; align-item:center; content">
+                                        @if (Auth::check())
+                                        {{ Auth::user()->name }}
+                                        @else
+                                        Guest
+                                        @endif
+                                    </p>
+                                </div>
+                            </div>
                             <div class="card-body dark-shade">
-                                
+
                                 <div class="table-responsive">
-                                    
+
                                     <table class="table">
-                                     
+
                                         <thead>
-                                            <tr style="text-align:left">
-                                                <th style=" color:greenyellow">Todays Rate</th>
-                                                <th style=" color:green; font-weight:bold">1.69</th>
-                                            </tr>
                                             <tr>
                                                 <th style="color:greenyellow">BUY</th>
                                                 <th style="color:greenyellow">SELL</th>
                                             </tr>
+                                            <tr style="text-align:left">
+                                                <th style=" color:greenyellow">Todays Rate</th>
+                                                <th style=" color:green; font-weight:bold">1.69</th>
+                                            </tr>
+
                                             <tr>
-                                            <th style="color:greenyellow">Best Seller</th> 
-                                                <th style="color:greenyellow">Best Buyer</th>                                  
-                                                <th style="color:greenyellow">ACTION</th>                                   
+                                                <th style="color:greenyellow">Best Seller</th>
+                                                <th style="color:greenyellow">Best Buyer</th>
+                                                <th style="color:greenyellow">ACTION</th>
                                             </tr>
                                             <tr>
                                                 <td style="color:grey">1.50</td>
-                                                <td style="color:grey">1.60</td>                                   
-                                                <td style="color:green">Details</td>                                   
+                                                <td style="color:grey">1.60</td>
+                                                <td style="color:green">Details</td>
                                             </tr>
                                             <tr>
                                                 <td style="color:grey">1.40</td>
-                                                <td style="color:grey">1.66</td>                                   
-                                                <td style="color:green">Details</td>                                   
+                                                <td style="color:grey">1.66</td>
+                                                <td style="color:green">Details</td>
                                             </tr>
                                         </thead>
                                     </table>
-                                </div> 
+                                </div>
                             </div>
-                            <a href="{{ route('account') }}" class="text-decoration-none text-success" style="margin-left:20px">ACCOUNT</a>
+                            <a href="{{ route('account') }}" class="text-decoration-none text-success"
+                                style="margin-left:20px">ACCOUNT</a>
 
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
