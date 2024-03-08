@@ -20,4 +20,9 @@ class ViewController extends Controller
 
 		return view('user.reply', compact('userMessages'));
 	}
+	
+	public function transaction()
+	{
+		return view('user.trasaction');
+	}
 }

@@ -153,11 +153,12 @@
                             <div class="card-body dark-shade">
                                 <div class="table-responsive">
                                     <table class="table">
-                                        @csrf
-                                        <div class="container d-flex justify-content-center align-items-center">
+                                        <div class="container d-flex justify-content-between">
                                             <div>
-                                                <p>
-                                                    <span class="text-success font-weight-bold">Harambee Account</span> :
+                                                <p class="text-success font-weight-bold">Account</p>
+                                            </div>
+                                            <div class="text-center">
+                                                <p style="color:greenyellow">
                                                     @if (Auth::check())
                                                     {{ Auth::user()->name }}
                                                     @else
@@ -167,62 +168,38 @@
                                             </div>
                                         </div>
 
+
                                         <thead>
                                             <tr style="text-align:left">
-                                                <th style="text-align:center; color:greenyellow">Total <br> Harambees
-                                                </th>
-                                                <th style="text-align:center; color:greenyellow">Todays <br> Rate</th>
-                                                <th style="text-align:center; color:greenyellow">Todays <br> Value</th>
+                                                <th style=" color:greenyellow">Todays Rate</th>
+                                                <th style=" color:green; font-weight:bold">1.69</th>
                                             </tr>
                                             <tr>
-                                                <td style="text-align:center">123456</td>
-                                                <td style="text-align:center">2.4</td>
-                                                <td style="text-align:center">20,0000</td>
+                                                <th style="color:greenyellow">BUY</th>
+                                                <th style="color:greenyellow">SELL</th>
                                             </tr>
-
                                             <tr>
-                                                <th style="color:greenyellow">Harambees</th>
-                                                <th style="color:greenyellow">Rate</th>
-                                                <th style="color:greenyellow">Kshs in/out</th>
-                                                <th style="color:greenyellow">Actions</th>
+                                                <th style="color:greenyellow">BEST BUYER</th>
+                                                <th style="color:greenyellow">BEST SELLER</th>                                   
+                                                <th style="color:greenyellow">ACTION</th>                                   
+                                            </tr>
+                                            <tr>
+                                                <td style="color:grey">1.50</td>
+                                                <td style="color:grey">1.60</td>                                   
+                                                <td style="color:green">Details</td>                                   
+                                            </tr>
+                                            <tr>
+                                                <td style="color:grey">1.40</td>
+                                                <td style="color:grey">1.66</td>                                   
+                                                <td style="color:green">Details</td>                                   
                                             </tr>
                                         </thead>
-
-                                        <tbody>
-                                            @foreach ($harambees as $harambee)
-                                            <tr>
-                                                <td>{{ $harambee->total }}</td>
-                                                <td> 1:1 </td>
-                                                <td>{{ $harambee->deposit }}</td>
-                                                <td>
-                                                    <span style="cursor: pointer; color:green" class="details-link"
-                                                        onclick="showDetailsPopup({{ $harambee->id }})">Details</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="4">
-                                                    <div id="detailsModal{{ $harambee->id }}" class="modal"
-                                                        style="display: none;">
-                                                        <div class="modal-content" style="color:green">
-                                                            <span class="close"
-                                                                onclick="hideDetailsPopup({{ $harambee->id }})">&times;</span>
-                                                            <p>Deposit: {{ $harambee->deposit }}</p>
-                                                            <p>Withdrawn: {{ $harambee->withdrawn }}</p>
-                                                            <p>Time:
-                                                                {{ $harambee->created_at->format('Y-m-d H:i') }}
-                                                            </p>
-                                                            <p>Balance: {{ $harambee->total }} KSH</p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            @endforeach
-                                        </tbody>
-
                                     </table>
-                                    <div class="container d-flex justify-content-center align-items-center">
-                                        <p class="text-success font-weight-bold">Total Kshs:   <span style="color:greenyellow">56,000 </span> </p>
+                                    <div class="container d-flex justify-content-end">
+                                        <p class="text-success font-weight-bold text-align-left">Total Kshs: <span
+                                                style="color:greenyellow">10,000 </span></p>
                                     </div>
+
                                 </div>
                             </div>
                         </div>

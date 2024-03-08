@@ -14,7 +14,7 @@ p {
 } */
 .intro-container {
     position: relative;
-    color: rgb(235, 234, 236);
+    color: antiquewhite;
 }
 
 .green-tint {

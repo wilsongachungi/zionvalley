@@ -34,6 +34,14 @@
                 <span class="menu-title" style="color:greenyellow">Account</span>
             </a>
         </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="{{ route('transaction') }}">
+                <span class="menu-icon">
+                    <i class="mdi mdi-envelope"></i>
+                </span>
+                <span class="menu-title" style="color:greenyellow">Transaction</span>
+            </a>
+        </li>
         {{-- <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('user_comment') }}">
                 <span class="menu-icon">

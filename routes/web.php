@@ -73,3 +73,4 @@ Route::post('/add_downloads', [DownloadController::class, 'add_downloads'])->nam
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/communication', [MessageController::class, 'communication'])->name('communication');
 Route::post('/upload_profile_image', [ImageController::class, 'upload_profile_image'])->name('upload_profile_image');
+Route::get('/transaction', [ViewController::class, 'transaction'])->name('transaction');
