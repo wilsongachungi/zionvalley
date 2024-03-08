@@ -150,11 +150,7 @@
                 <div class="row ">
                     <div class="col-12 grid-margin">
                         <div class="card">
-                            <div class="card-body dark-shade">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        @csrf
-                                        <div class="container d-flex justify-content-between">
+                        <div class="container d-flex justify-content-between" >
                                             <div>
                                                 <p class="text-success font-weight-bold">Name:</p>
                                             </div>
@@ -168,7 +164,11 @@
                                                 </p>
                                             </div>
                                         </div>
-
+                            <div class="card-body dark-shade">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        @csrf
+                                
                                         <thead>
                                             <tr style="">
                                                 <th style=" color:greenyellow">Total <br> Harambees
