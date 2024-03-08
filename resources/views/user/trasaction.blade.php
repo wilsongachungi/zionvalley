@@ -154,7 +154,7 @@
                         <div class="card">
                             <div class="container d-flex justify-content-between">
                                 <div>
-                                    <p class="text-success font-weight-bold">Account Name:</p>
+                                    <p class="text-success font-weight-bold">Name:</p>
                                 </div>
                                 <div class="text-center align-item-center">
                                     <p style="color:greenyellow; text-center; align-item:center; content">
