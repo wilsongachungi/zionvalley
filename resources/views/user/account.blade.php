@@ -179,7 +179,7 @@
                                             </tr>
                                             <tr>
                                                 <td style="">123456</td>
-                                                <td style="">2.4</td>
+                                                <td style="">x2.4</td>
                                                 <td style="">20,0000</td>
                                             </tr>
 
@@ -195,7 +195,7 @@
                                             @foreach ($harambees as $harambee)
                                             <tr>
                                                 <td>{{ $harambee->total }}</td>
-                                                <td> 1:1 </td>
+                                                <td> x1.0 </td>
                                                 <td>{{ $harambee->deposit }}</td>
                                                 <td>
                                                     <span style="cursor: pointer; color:green" class="details-link"
