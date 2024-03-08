@@ -151,7 +151,7 @@
                 <div class="row ">
 
                     <div class="col-12 grid-margin">
-
+                    
                         <div class="card">
                            <div class="container d-flex justify-content-between">
                                 <div>
@@ -167,8 +167,8 @@
                                     </p>
                                 </div>
                             </div> 
+                            <h4 class="text-success" style="margin-left:25px" >Harambee Balance: <span style="color:greenyellow; margin-left:20px">100,000</span> </h4>
                             <div class="card-body dark-shade">
-
                                 <div class="table-responsive">
 
                                     <table class="table">
