@@ -172,11 +172,11 @@
                                         <thead>
                                             <tr style="text-align:left">
                                                 <th style=" color:greenyellow">Todays Rate</th>
-                                                <th style=" color:greenyellow">1.69</th>
+                                                <th style=" color:green">1.69</th>
                                             </tr>
                                             <tr>
-                                                <th style="color:greenyellow">BUY</th>
-                                                <th style="color:greenyellow">SELL</th>
+                                                <th style="color:green">BUY</th>
+                                                <th style="color:green">SELL</th>
                                             </tr>
                                             <tr>
                                                 <th style="color:greenyellow">BEST BUYER</th>
@@ -186,10 +186,12 @@
                                             <tr>
                                                 <td style="color:grey">1.50</td>
                                                 <td style="color:grey">1.60</td>                                   
+                                                <td style="color:green">Details</td>                                   
                                             </tr>
                                             <tr>
                                                 <td style="color:grey">1.40</td>
                                                 <td style="color:grey">1.66</td>                                   
+                                                <td style="color:green">Details</td>                                   
                                             </tr>
                                         </thead>
                                     </table>
