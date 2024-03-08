@@ -178,9 +178,9 @@
                                                 <th style=" color:greenyellow">Todays <br> Value</th>
                                             </tr>
                                             <tr>
-                                                <td style="">123456</td>
+                                                <td style="">100,000</td>
                                                 <td style="">x2.4</td>
-                                                <td style="">20,0000</td>
+                                                <td style="">240,000</td>
                                             </tr>
 
                                             <tr>
