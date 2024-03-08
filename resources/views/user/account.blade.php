@@ -154,10 +154,12 @@
                                 <div class="table-responsive">
                                     <table class="table">
                                         @csrf
-                                        <div class="container d-flex justify-content-center align-items-center">
+                                        <div class="container d-flex justify-content-between">
                                             <div>
-                                                <p>
-                                                    <span class="text-success font-weight-bold">Name</span> :
+                                                <p class="text-success font-weight-bold">Name:</p>
+                                            </div>
+                                            <div class="text-center align-item-center">
+                                                <p style="color:greenyellow; text-center; align-item:center; content">
                                                     @if (Auth::check())
                                                     {{ Auth::user()->name }}
                                                     @else
@@ -218,13 +220,15 @@
                                             </tr>
                                             @endforeach
                                         </tbody>
-                                    
+
                                     </table>
                                     <div class="container d-flex justify-content-center align-items-center">
-                                        <p class="text-success font-weight-bold">Total Kshs:   <span style="color:greenyellow">56,000 </span> </p>
+                                        <p class="text-success font-weight-bold">Total Kshs: <span
+                                                style="color:greenyellow">56,000 </span> </p>
                                     </div>
                                 </div>
-                                <a href="{{ route('transaction') }}" class="text-decoration-none text-success">BUY/SELL</a>
+                                <a href="{{ route('transaction') }}"
+                                    class="text-decoration-none text-success">BUY/SELL</a>
                             </div>
                         </div>
                     </div>

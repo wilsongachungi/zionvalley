@@ -152,7 +152,7 @@
                     <div class="col-12 grid-margin">
 
                         <div class="card">
-                            <div class="container d-flex justify-content-between">
+                           <div class="container d-flex justify-content-between">
                                 <div>
                                     <p class="text-success font-weight-bold">Name:</p>
                                 </div>
@@ -165,7 +165,7 @@
                                         @endif
                                     </p>
                                 </div>
-                            </div>
+                            </div> 
                             <div class="card-body dark-shade">
 
                                 <div class="table-responsive">
