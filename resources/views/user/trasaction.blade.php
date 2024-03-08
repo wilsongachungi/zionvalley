@@ -157,7 +157,7 @@
                                         <div class="container d-flex justify-content-center align-items-center">
                                             <div>
                                                 <p>
-                                                    <span class="text-success font-weight-bold">Harambee Account</span> :
+                                                    <span class="text-success font-weight-bold">Account</span> :
                                                     @if (Auth::check())
                                                     {{ Auth::user()->name }}
                                                     @else
@@ -169,8 +169,6 @@
 
                                         <thead>
                                             <tr style="text-align:left">
-                                                <th style="color:greenyellow">Total <br> Harambees
-                                                </th>
                                                 <th style=" color:greenyellow">Todays <br> Rate</th>                                               
                                             </tr>
                                             <tr>
