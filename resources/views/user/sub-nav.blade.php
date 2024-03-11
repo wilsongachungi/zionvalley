@@ -29,7 +29,7 @@
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('account') }}">
                 <span class="menu-icon">
-                    <i class="mdi mdi-currency-usd"></i>
+                    <i class=""></i>
                 </span>
                 <span class="menu-title" style="color:greenyellow">Account</span>
             </a>
@@ -64,6 +64,14 @@
                     <i class="mdi mdi-download"></i>
                 </span>
                 <span class="menu-title" style="color:greenyellow">Downloads</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="{{ route('index') }}">
+                <span class="menu-icon">
+                    <i class=""></i>
+                </span>
+                <span class="menu-title" style="color:greenyellow">Home</span>
             </a>
         </li>
         <a class="nav-link" href="{{ route('logout') }}">
