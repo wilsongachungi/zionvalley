@@ -9,13 +9,19 @@
 p {
     color: antiquewhite;
 }
-
 .intro-container {
-    text-align: center;
-    padding: 50px;
-
+    position: relative;
     color: antiquewhite;
-    margin-top: 20px;
+}
+
+.green-tint {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 128, 0, 0.5);
+    /* Green with 50% opacity */
 }
 
 
@@ -86,6 +92,7 @@ p {
             <div
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);">
             </div>
+            <div class="green-tint" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
             <ul style="position: relative; z-index: 1;">
                 A unique and sustainable development growth project. <br>
                 A leisure and nature park, activity center, and resort destination. <br>
