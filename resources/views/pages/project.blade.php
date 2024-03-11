@@ -91,7 +91,7 @@ p {
         <div class="center">
             <h4>Ongoing Project</h4>
         </div>
-        <div id="carouselOngoingProject" class="carousel slide" data-ride="carousel">
+        <div id="carouselOngoingProject" class="carousel slide" data-ride="carousel" data-interval="false">
             <ol class="carousel-indicators">
                 <li data-target="#carouselOngoingProject" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselOngoingProject" data-slide-to="1"></li>
@@ -99,7 +99,7 @@ p {
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="../assets/img/Cottage Rendered 2.gpg" alt="First slide">
+                    <img class="d-block w-100" src="../assets/img/Cottage Rendered 1.jpg" alt="First slide">
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" src="../assets/img/Capture11.JPG" alt="Second slide">
@@ -122,7 +122,7 @@ p {
             <h4>Future Projects</h4>
         </div>
 
-        <div id="carouselFutureProjects" class="carousel slide" data-ride="carousel">
+        <div id="carouselOngoingProject" class="carousel slide" data-ride="carousel" data-interval="false">
             <ol class="carousel-indicators">
                 <li data-target="#carouselFutureProjects" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselFutureProjects" data-slide-to="1"></li>
@@ -130,13 +130,13 @@ p {
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="..." alt="First slide">
+                    <img class="d-block w-100" src="../assets/img/HandRail Tree Branches 02.JPG" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="..." alt="Second slide">
+                    <img class="d-block w-100" src="../assets/img/forest-environment-with-shipping-container-set-int.jpg" alt="Second slide">public/assets/img/forest-environment-with-shipping-container-set-int.jpg
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="..." alt="Third slide">
+                    <img class="d-block w-100" src="../assets/img/14 slope.jpg" alt="Third slide">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselFutureProjects" role="button" data-slide="prev">
@@ -153,7 +153,7 @@ p {
             <h4>Inspirational Projects</h4>
         </div>
 
-        <div id="carouselInspirationalProjects" class="carousel slide" data-ride="carousel">
+        <div id="carouselOngoingProject" class="carousel slide" data-ride="carousel" data-interval="false">
             <ol class="carousel-indicators">
                 <li data-target="#carouselInspirationalProjects" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselInspirationalProjects" data-slide-to="1"></li>
@@ -161,13 +161,13 @@ p {
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="..." alt="First slide">
+                    <img class="d-block w-100" src="../assets/img/13 slope.jpg" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="..." alt="Second slide">
+                    <img class="d-block w-100" src="../assets/img/17 slope.jpg" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="..." alt="Third slide">
+                    <img class="d-block w-100" src="../assets/img/21 slope.jpg" alt="Third slide">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselInspirationalProjects" role="button" data-slide="prev">
