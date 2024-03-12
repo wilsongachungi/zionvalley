@@ -182,7 +182,63 @@
 
                                         <thead>
                                             <tr>
-                                                <th style="color:greenyellow; cursor:pointer">BUY</th>
+                                                <th style="color:greenyellow; cursor:pointer">
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                                        data-target="#buyModal">
+                                                        BUY
+                                                    </button>
+                                                </th>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="buyModal" tabindex="-1" role="dialog"
+                                                    aria-labelledby="buyModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content" style="background: rgb(0, 63, 0)">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title text-green"
+                                                                    style="color:greenyellow" id="buyModalLabel">BUY
+                                                                </h5>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                    <span aria-hidden="true"
+                                                                        class="text-green">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <?php
+                                                                    if (Auth::check()) {
+                                                                        $userName = Auth::user()->name;
+                                                                        $amount = 100000;
+                                                                        $rate = 1.69;
+                                                                    ?>
+                                                                <p class="text-white">Name: <?php echo $userName; ?></p>
+                                                                <!-- Editable input field for amount -->
+                                                                <div class="form-group">
+                                                                    <label class="text-white"
+                                                                        for="buy-amount">Amount:</label>
+                                                                    <input type="text" class="form-control"
+                                                                        id="buy-amount" value="<?php echo $amount; ?>">
+                                                                </div>
+                                                                <!-- Editable input field for rate -->
+                                                                <div class="form-group">
+                                                                    <label class="text-white"
+                                                                        for="buy-rate">Rate:</label>
+                                                                    <input type="text" class="form-control"
+                                                                        id="buy-rate" value="<?php echo $rate; ?>">
+                                                                </div>
+                                                                <?php } ?>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary">Save
+                                                                    changes</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
                                                 <th style="color:greenyellow; cursor:pointer">
                                                     <!-- Button trigger modal -->
                                                     <button type="button" class="btn btn-success" data-toggle="modal"
@@ -197,12 +253,13 @@
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content" style="background: rgb(0, 63, 0)">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title text-white"
-                                                                    id="exampleModalLabel">Modal title</h5>
+                                                                <h5 class="modal-title text-green"
+                                                                    style="color:greenyellow" id="exampleModalLabel">
+                                                                    SELL</h5>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true"
-                                                                        class="text-white">&times;</span>
+                                                                        class="text-green">&times;</span>
                                                                 </button>
                                                             </div>
                                                             <div class="modal-body">
