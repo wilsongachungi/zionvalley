@@ -212,20 +212,23 @@
                                                                         $amount = 100000;
                                                                         $rate = 1.69;
                                                                     ?>
-                                                                <p class="text-white">Name: <?php echo $userName; ?></p>
+                                                                <p style="" class="text-white">Name:
+                                                                    <?php echo $userName; ?></p>
                                                                 <!-- Editable input field for amount -->
                                                                 <div class="form-group">
-                                                                    <label class="text-white"
+                                                                    <label style="" class="text-white"
                                                                         for="buy-amount">Amount:</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="buy-amount" value="<?php echo $amount; ?>">
+                                                                    <input style="color:greenyellow" type="text"
+                                                                        class="form-control" id="buy-amount"
+                                                                        value="<?php echo $amount; ?>">
                                                                 </div>
                                                                 <!-- Editable input field for rate -->
                                                                 <div class="form-group">
-                                                                    <label class="text-white"
+                                                                    <label style="" class="text-white"
                                                                         for="buy-rate">Rate:</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="buy-rate" value="<?php echo $rate; ?>">
+                                                                    <input style="color:greenyellow" type="text"
+                                                                        class="form-control" id="buy-rate"
+                                                                        value="<?php echo $rate; ?>">
                                                                 </div>
                                                                 <?php } ?>
                                                             </div>
@@ -274,13 +277,15 @@
                                                                 <div class="form-group">
                                                                     <label class="text-white"
                                                                         for="amount">Amount:</label>
-                                                                    <input type="text" class="form-control" id="amount"
+                                                                    <input style="color:greenyellow" type="text"
+                                                                        class="form-control" id="amount"
                                                                         value="<?php echo $amount; ?>">
                                                                 </div>
                                                                 <!-- Editable input field for rate -->
                                                                 <div class="form-group">
                                                                     <label class="text-white" for="rate">Rate:</label>
-                                                                    <input type="text" class="form-control" id="rate"
+                                                                    <input style="color:greenyellow" type="text"
+                                                                        class="form-control" id="rate"
                                                                         value="<?php echo $rate; ?>">
                                                                 </div>
                                                                 <?php } ?>
