@@ -175,8 +175,8 @@
 
                                         <thead>
                                             <tr>
-                                                <th style="color:greenyellow">BUY</th>
-                                                <th style="color:greenyellow">SELL</th>
+                                                <th style="color:greenyellow; cursor:pointer">BUY</th>
+                                                <th style="color:greenyellow; cursor:pointer">SELL</th>
                                             </tr>
                                             <tr style="text-align:left">
                                                 <th style=" color:greenyellow">Todays Rate</th>
@@ -186,17 +186,22 @@
                                             <tr>
                                                 <th style="color:greenyellow">Best Seller</th>
                                                 <th style="color:greenyellow">Best Buyer</th>
-                                                <th style="color:greenyellow">ACTION</th>
                                             </tr>
                                             <tr>
-                                                <td style="color:grey">1.50</td>
-                                                <td style="color:grey">1.60</td>
-                                                <td style="color:green">Details</td>
+                                                <td style="color:grey; cursor:pointer" >1.50</td>
+                                                <td style="color:grey; cursor:pointer">1.60</td>
                                             </tr>
                                             <tr>
-                                                <td style="color:grey">1.40</td>
-                                                <td style="color:grey">1.66</td>
-                                                <td style="color:green">Details</td>
+                                                <td style="color:grey ; cursor:pointer">1.40</td>
+                                                <td style="color:grey ; cursor:pointer">1.66</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="color:grey ; cursor:pointer">1.40</td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td style="color:grey ; cursor:pointer">1.40</td>
+                                                
                                             </tr>
                                         </thead>
                                     </table>
