@@ -50,6 +50,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>User Account</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="admin/assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="admin/assets/vendors/css/vendor.bundle.base.css">
     <link rel="stylesheet" href="admin/assets/vendors/jvectormap/jquery-jvectormap.css">
@@ -147,13 +153,13 @@
 
         <div class="main-panel" style="background: rgb(0, 63, 0)">
             <div class="content-wrapper" style="background: rgb(0, 49, 0)">
-            <h4 class="text-center text-success">Transaction Page</h4>
+                <h4 class="text-center text-success">Transaction Page</h4>
                 <div class="row ">
 
                     <div class="col-12 grid-margin">
-                    
+
                         <div class="card">
-                           <div class="container d-flex justify-content-between">
+                            <div class="container d-flex justify-content-between">
                                 <div>
                                     <p class="text-success font-weight-bold">Name:</p>
                                 </div>
@@ -166,8 +172,9 @@
                                         @endif
                                     </p>
                                 </div>
-                            </div> 
-                            <h4 class="text-success" style="margin-left:25px" >Harambee Balance: <span style="color:greenyellow; margin-left:20px">100,000</span> </h4>
+                            </div>
+                            <h4 class="text-success" style="margin-left:25px">Harambee Balance: <span
+                                    style="color:greenyellow; margin-left:20px">100,000</span> </h4>
                             <div class="card-body dark-shade">
                                 <div class="table-responsive">
 
@@ -176,7 +183,62 @@
                                         <thead>
                                             <tr>
                                                 <th style="color:greenyellow; cursor:pointer">BUY</th>
-                                                <th style="color:greenyellow; cursor:pointer">SELL</th>
+                                                <th style="color:greenyellow; cursor:pointer">
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                                        data-target="#exampleModal">
+                                                        SELL
+                                                    </button>
+                                                </th>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content" style="background: rgb(0, 63, 0)">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title text-white"
+                                                                    id="exampleModalLabel">Modal title</h5>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                    <span aria-hidden="true"
+                                                                        class="text-white">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <?php
+                                                                    if (Auth::check()) {
+                                                                        $userName = Auth::user()->name;
+                                                                        $amount = 100000; 
+                                                                        $rate = 1.69; 
+                                                                    ?>
+                                                                <p class="text-white">Name: <?php echo $userName; ?></p>
+                                                                <!-- Editable input field for amount -->
+                                                                <div class="form-group">
+                                                                    <label class="text-white"
+                                                                        for="amount">Amount:</label>
+                                                                    <input type="text" class="form-control" id="amount"
+                                                                        value="<?php echo $amount; ?>">
+                                                                </div>
+                                                                <!-- Editable input field for rate -->
+                                                                <div class="form-group">
+                                                                    <label class="text-white" for="rate">Rate:</label>
+                                                                    <input type="text" class="form-control" id="rate"
+                                                                        value="<?php echo $rate; ?>">
+                                                                </div>
+                                                                <?php } ?>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary">Save
+                                                                    changes</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
                                             </tr>
                                             <tr style="text-align:left">
                                                 <th style=" color:greenyellow">Todays Rate</th>
@@ -188,7 +250,7 @@
                                                 <th style="color:greenyellow">Best Buyer</th>
                                             </tr>
                                             <tr>
-                                                <td style="color:grey; cursor:pointer" >1.50</td>
+                                                <td style="color:grey; cursor:pointer">1.50</td>
                                                 <td style="color:grey; cursor:pointer">1.60</td>
                                             </tr>
                                             <tr>
@@ -197,11 +259,11 @@
                                             </tr>
                                             <tr>
                                                 <td style="color:grey ; cursor:pointer">1.40</td>
-                                                
+
                                             </tr>
                                             <tr>
                                                 <td style="color:grey ; cursor:pointer">1.40</td>
-                                                
+
                                             </tr>
                                         </thead>
                                     </table>
