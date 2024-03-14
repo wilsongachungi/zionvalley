@@ -11,7 +11,7 @@
     <section class="my-4">
         <h3 class="text-center mb-3">Our Team</h3>
         <div class="team-row">
-            <div class="team-col row">
+            <div class="team-col">
                 <div class="user d-flex flex-column col">
                     <img src="../assets/img/chairman.jpeg" alt="">
                     <div class="user-info site-color">Chairman</div>
