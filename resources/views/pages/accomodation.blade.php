@@ -177,8 +177,11 @@ li {
                 <h2 class="text-center mb-4">Free Accommodation to Harambee owner</h2>
                 <p style="font-size: 1.2em;
             margin-bottom: 10px;">
-                    A menber to own One romantic cottage one weekend each and every year - two nights per year - For
-                    every 25k Tree Certificates Held
+                    One romantic cottage <br>
+                    Two nights per year <br>
+                    Each and every year <br>
+                    For
+                    every 25k of Harambees.
                 </p>
             </div>
             <div> <br>
