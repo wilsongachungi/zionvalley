@@ -74,9 +74,9 @@ li {
             style="background-image: url('../assets/img/Capture11.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: rgb(235, 234, 236);">
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; ;">
             </div>
-            <h2 class="text-center mb-4">Free Accommodation to Harambee owner</h2>
+            <h3 class="text-center text-center mb-4">Free Accommodation to Harambee owners</h2>
             <p style="font-size: 1.2em;
-            margin-bottom: 10px;">
+            margin-bottom: 10px; text-align:center;">
                 One romantic cottage <br>
                 Two nights per year <br>
                 Each and every year <br>
@@ -88,7 +88,7 @@ li {
         <div> <br>
 
             <div class="video-container">
-                <h4>The Exterior</h4> <br>
+                <h4>Romantic Cottage Exterior</h4> <br>
                 <video width="420" height="340" controls>
                     <source src="../assets/img/exterior.mp4" type="video/mp4">
                 </video>
@@ -96,10 +96,22 @@ li {
         </div>
         <br>
         <div class="video-container">
-            <h4>The Interior</h4> <br>
+            <h4>Romantic Cottage Interior</h4> <br>
             <video width="420" height="340" controls>
                 <source src="../assets/img/interior.mp4" type="video/mp4">
             </video>
+        </div>
+
+        
+        <div class="intro-container"
+            style="background-image: url('../assets/img/Capture11.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: rgb(235, 234, 236);">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; ;">
+            </div>
+            <h3 class="text-center mb-4">Future Cottages </h2>
+            <p style="font-size: 1.2em;
+            margin-bottom: 10px;">
+                
+            </p>
         </div>
 
         <div class="container">
