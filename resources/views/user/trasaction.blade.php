@@ -333,7 +333,6 @@
                             </div>
                             <a href="{{ route('account') }}" class="text-decoration-none text-success"
                                 style="margin-left:20px">ACCOUNT</a>
-
                         </div>
 
                     </div>
