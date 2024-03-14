@@ -114,17 +114,6 @@ li {
             </section>
 
 
-            <div class="intro-container"
-                style="background-image: url('../assets/img/Capture11.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: rgb(235, 234, 236);">
-                <div class="green-tint" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
-                <h2 class="text-center mb-4">Free Accommodation to Harambee owner</h2>
-                <p style="font-size: 1.2em;
-            margin-bottom: 10px;">
-                    A menber to own One romantic cottage one weekend each and every year - two nights per year - For
-                    every 25k Tree Certificates Held
-                </p>
-            </div>
-
             <div class="row owl-carousel wow fadeInUp mt-5 carousels" id="doctorSlideshow">
                 <div class="item col">
                     <div class="card-doctor">
