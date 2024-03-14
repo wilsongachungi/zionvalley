@@ -69,13 +69,39 @@ li {
             </div>
         </div>
 
-        <div class="intro-container"
-            style="background-image: url('../assets/img/Capture13.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: antiquewhite;">
-            <div
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);">
-            </div>
 
+        <div class="intro-container"
+            style="background-image: url('../assets/img/Capture11.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: rgb(235, 234, 236);">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; ;">
+            </div>
+            <h2 class="text-center mb-4">Free Accommodation to Harambee owner</h2>
+            <p style="font-size: 1.2em;
+            margin-bottom: 10px;">
+                One romantic cottage <br>
+                Two nights per year <br>
+                Each and every year <br>
+                For
+                every 25k of Harambees.
+            </p>
         </div>
+
+        <div> <br>
+
+            <div class="video-container">
+                <h4>The Exterior</h4> <br>
+                <video width="420" height="340" controls>
+                    <source src="../assets/img/exterior.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <br>
+        <div class="video-container">
+            <h4>The Interior</h4> <br>
+            <video width="420" height="340" controls>
+                <source src="../assets/img/interior.mp4" type="video/mp4">
+            </video>
+        </div>
+
         <div class="container">
             <section id="accommodation" class="content">
                 <div class="row">
@@ -159,20 +185,6 @@ li {
                 </div>
             </div>
 
-            <div class="intro-container"
-                style="background-image: url('../assets/img/Capture11.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: rgb(235, 234, 236);">
-                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; ;">
-                </div>
-                <h2 class="text-center mb-4">Free Accommodation to Harambee owner</h2>
-                <p style="font-size: 1.2em;
-            margin-bottom: 10px;">
-                    One romantic cottage <br>
-                    Two nights per year <br>
-                    Each and every year <br>
-                    For
-                    every 25k of Harambees.
-                </p>
-            </div>
             <div> <br>
 
                 <div class="video-container">
