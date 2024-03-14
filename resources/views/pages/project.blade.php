@@ -29,14 +29,19 @@ p {
     /* Green with 50% opacity */
 }
 
-.card-header {
-        background-color: rgb(0, 49, 0);
-        
-    }
+.card {
+    border: none;
+}
 
-    .card-body {
-        background-color:  rgb(0, 49, 0); 
-    }
+.card-header {
+    background-color: rgba(0, 20, 0);
+    border: none;
+}
+
+.card-body {
+    background-color: rgba(0, 20, 0);
+    border: none;
+}
 
 
 
@@ -154,9 +159,11 @@ p {
                     <div class="card-header" id="headingOne">
                         <h5 class="mb-0">
                             <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-                                aria-expanded="true" aria-controls="collapseOne">
-                                underground 
+                                aria-expanded="true" aria-controls="collapseOne"
+                                style="color: greenyellow; text-decoration: none;">
+                                underground
                             </button>
+
                         </h5>
                     </div>
 
@@ -197,7 +204,7 @@ p {
                     <div class="card-header" id="headingTwo">
                         <h5 class="mb-0">
                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                                aria-expanded="false" aria-controls="collapseTwo">
+                                aria-expanded="false" aria-controls="collapseTwo"  style="color: greenyellow; text-decoration: none;">
                                 Field
                             </button>
                         </h5>
@@ -239,7 +246,7 @@ p {
                     <div class="card-header" id="headingThree">
                         <h5 class="mb-0">
                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
-                                aria-expanded="false" aria-controls="collapseThree">
+                                aria-expanded="false" aria-controls="collapseThree"  style="color: greenyellow; text-decoration: none;">
                                 Nature Walks
                             </button>
                         </h5>
