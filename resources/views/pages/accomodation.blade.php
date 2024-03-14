@@ -185,22 +185,7 @@ li {
                 </div>
             </div>
 
-            <div> <br>
 
-                <div class="video-container">
-                    <h4>The Exterior</h4> <br>
-                    <video width="420" height="340" controls>
-                        <source src="../assets/img/exterior.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-            <br>
-            <div class="video-container">
-                <h4>The Interior</h4> <br>
-                <video width="420" height="340" controls>
-                    <source src="../assets/img/interior.mp4" type="video/mp4">
-                </video>
-            </div>
         </div>
         <script>
         // Function to trigger zooming animation
