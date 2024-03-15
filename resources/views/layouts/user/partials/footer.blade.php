@@ -18,7 +18,7 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="downloadsModalLabel">Download PDF</h5>
+                                <h5 class="modal-title" id="downloadsModalLabel" style="color:greenyellow">Download PDF</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -49,19 +49,19 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h6 class="modal-title" id="exampleModalLongTitle">All you need</h5>
+                                    <h6 class="modal-title" id="exampleModalLongTitle" style="color:greenyellow">All you need to Know</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                 </div>
                                 <div class="modal-body">
                                     <ul>
-                                        <li><a href="#" data-toggle="modal" data-target="#termsModal">Terms &
+                                        <li><a href="#" data-toggle="modal" data-target="#termsModal" style="color:greenyellow">Terms &
                                                 Conditions</a></li>
-                                        <li><a href="#" data-toggle="modal" data-target="#advertiseModal">Advertise</a>
+                                        <li><a href="#" data-toggle="modal" data-target="#advertiseModal" style="color:greenyellow">Advertise</a>
                                         </li>
                                         <li><a href="#" data-toggle="modal"
-                                                data-target="#constitutionModal">Constitution</a></li>
+                                                data-target="#constitutionModal" style="color:greenyellow">Constitution</a></li>
                                     </ul>
                                 </div>
                                 <div class="modal-footer">
@@ -79,7 +79,7 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="termsModalLabel">Terms & Conditions</h5>
+                                    <h5 class="modal-title" id="termsModalLabel" style="color:greenyellow">Terms & Conditions</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -111,7 +111,7 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="advertiseModalLabel">Advertise</h5>
+                                    <h5 class="modal-title" id="advertiseModalLabel" style="color:greenyellow">Advertise</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -131,7 +131,7 @@
                                     </p>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal" style="color:greenyellow">Close</button>
                                 </div>
                             </div>
                         </div>
@@ -143,7 +143,7 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="constitutionModalLabel">Constitution</h5>
+                                    <h5 class="modal-title" id="constitutionModalLabel" style="color:greenyellow">Constitution</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
