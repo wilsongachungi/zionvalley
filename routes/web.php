@@ -80,5 +80,5 @@ Route::post('/upload_profile_image', [ImageController::class, 'upload_profile_im
 Route::get('/transaction', [ViewController::class, 'transaction'])->name('transaction');
 Route::post('/buys', [BuyController::class, 'buys'])->name('buys');
 Route::post('/sells', [SellController::class, 'sells'])->name('sells');
-Route::delete('/downloads/{id}', [DownloadController::class, 'delete'])->name('delete_download');
+Route::delete('/delete_download/{download}',[DownloadController::class, 'delete_download'])->name('delete_download');
 Route::get('/downloads/{id}/edit', [DownloadController::class, 'edit'])->name('edit_download');

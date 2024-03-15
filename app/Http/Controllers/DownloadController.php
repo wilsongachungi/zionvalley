@@ -22,28 +22,31 @@ class DownloadController extends Controller
 
 	public function add_downloads(Request $request)
 	{
-
 		$request->validate([
 			'title' => 'required|string',
 			'file' => 'required|file',
 		]);
-
-
+	
+		// Define the directory path
+		$directory = 'downloads';
+	
+		if (!file_exists($directory)) {
+			mkdir($directory, 0755, true); // Create directory with read, write, and execute permissions for owner and read and execute permissions for others
+		}
+	
 		$file = $request->file('file');
 		$fileName = time() . $request->file('file')->getClientOriginalName();
-		$path = $request->file('file')->storeAs('downloads', $fileName, 'public');
-
-
-		
+		$path = $request->file('file')->move($directory, $fileName);
+	
 		$download = Download::create([
 			'title' => $request->title,
-			'file_path' => 'downloads/' . $fileName,
+			'file_path' => $directory . '/' . $fileName, // Store the file path relative to the public directory
 		]);
-
+	
 		return redirect()->back()->with('success', 'Download added successfully.');
 	}
 
-	public function delete(Download $download)
+	public function delete_download(Download $download)
     {
         // Perform authorization check here if needed
         // Example: $this->authorize('delete', $download);
