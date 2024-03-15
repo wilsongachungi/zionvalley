@@ -18,16 +18,19 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="downloadsModalLabel">Downloads</h5>
+                                <h5 class="modal-title" id="downloadsModalLabel">Download PDF</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <h5>Popover in a modal</h5>
-
-                                <h5>Tooltips in a modal</h5>
-
+                                <h6>Terms & Conditions</h6>
+                                <a href="path_to_downloadable_file.pdf" download class="btn btn-primary">Download
+                                    PDF</a>
+                                <hr>
+                                <h6>The constitution</h6>
+                                <a href="path_to_downloadable_file.docx" download class="btn btn-primary">Download
+                                    DOCX</a>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -46,10 +49,10 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLongTitle">Main Modal</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+                                    <h6 class="modal-title" id="exampleModalLongTitle">All you need</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
                                 </div>
                                 <div class="modal-body">
                                     <ul>
@@ -114,7 +117,7 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
                                         voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
                                     </p>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
@@ -146,7 +149,7 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
                                         voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
                                     </p>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
