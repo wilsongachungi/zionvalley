@@ -10,17 +10,177 @@
                 </ul>
             </div>
             <div class="col-sm-6 col-lg-3 py-3">
-                <h5 style="color: greenyellow">More</h5>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#downloadsModal">
+                    Downloads
+                </button>
+                <div class="modal fade" id="downloadsModal" tabindex="-1" role="dialog"
+                    aria-labelledby="downloadsModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="downloadsModalLabel">Downloads</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>Popover in a modal</h5>
+
+                                <h5>Tooltips in a modal</h5>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <ul class="footer-menu">
-                    <li><a href="#">Terms & Condition</a></li>
-                    <li><a href="#">Advertise</a></li>
-                    <li><a href="{{ route('contactzion') }}">Constitution</a></li>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                        Read From Here
+                    </button>
+
+                    <!-- Main Modal -->
+                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Main Modal</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <ul>
+                                        <li><a href="#" data-toggle="modal" data-target="#termsModal">Terms &
+                                                Conditions</a></li>
+                                        <li><a href="#" data-toggle="modal" data-target="#advertiseModal">Advertise</a>
+                                        </li>
+                                        <li><a href="#" data-toggle="modal"
+                                                data-target="#constitutionModal">Constitution</a></li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Modals -->
+
+                    <!-- Terms & Conditions Modal -->
+                    <div class="modal fade" id="termsModal" tabindex="-1" role="dialog"
+                        aria-labelledby="termsModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="termsModalLabel">Terms & Conditions</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
+                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
+                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
+                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
+                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Advertise Modal -->
+                    <div class="modal fade" id="advertiseModal" tabindex="-1" role="dialog"
+                        aria-labelledby="advertiseModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="advertiseModalLabel">Advertise</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
+                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
+                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
+                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
+                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Constitution Modal -->
+                    <div class="modal fade" id="constitutionModal" tabindex="-1" role="dialog"
+                        aria-labelledby="constitutionModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="constitutionModalLabel">Constitution</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
+                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
+                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
+                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
+                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
+                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
+                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
+                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </ul>
             </div>
             <div class="col-sm-6 col-lg-3 py-3">
                 <h5 style="color: greenyellow">Our partner</h5>
                 <ul class="footer-menu">
-					<li><a href="#">Zionvalley Architects</a></li>
+                    <li><a href="#">Zionvalley Architects</a></li>
                     <li><a href="#">Wigitech web</a></li>
                     <li><a href="#">Globalgreen Plant Center</a></li>
 
@@ -47,4 +207,9 @@
         <p id="copyright" class="text-center">Copyright &copy; 2023 <a href="#" target="_blank">zionvalley</a>. All
             right reserved</p>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </footer>
