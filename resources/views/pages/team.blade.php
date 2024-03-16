@@ -9,14 +9,14 @@
 @endsection
 <x-base-layout>
     <section class="my-4">
-        <h3 class="text-center mb-3">Our Team</h3>
+        <h4 class="text-center mb-3">Our Team</h3>
         <div class="team-row">
             <div class="team-col">
                 <div class="user d-flex flex-column col">
                     <img src="../assets/img/chairman.jpeg" alt="">
-                    <div class="user-info site-color">Chairman</div>
+                    <div class="user-info site-color text-center">Chairman</div>
                 </div>
-                <p class="px-2 line-height-1-5">
+                <p class="px-2 line-height-1-5 text-center">
                     Presiding over CBO meetings and working for the interests of the Zion Valley project,
                     its land supporters, the Harambee owners and the local community.
                 </p>
@@ -24,9 +24,9 @@
             <div class="team-col">
                 <div class="user d-flex flex-column col">
                     <img src="../assets/img/secretary.jpeg" alt="">
-                    <div class="user-info site-color">Secretary</div>
+                    <div class="user-info site-color text-center">Secretary</div>
                 </div>
-                <p class="px-2 line-height-1-5">
+                <p class="px-2 line-height-1-5 text-center">
                     Administrative tasks in relation to the CBO and to ensure that all CBO meetings and minutes are
                     well documented and recorde
                 </p>
@@ -34,9 +34,9 @@
             <div class="team-col">
                 <div class="user d-flex flex-column col">
                     <img src="../assets/img/treasurer-removebg-preview (1).png" alt="">
-                    <div class="user-info site-color">Treasurer</div>
+                    <div class="user-info site-color text-center">Treasurer</div>
                 </div>
-                <p class="px-2 line-height-1-5">
+                <p class="px-2 line-height-1-5 text-center">
                     To perform the financial duties of the CBO in concert with the Accounts Executive to ensure correct
                     record keeping and reporting.
                 </p>
@@ -45,9 +45,9 @@
             <div class="team-col">
                 <div class="user d-flex flex-column col">
                     <img src="../assets/img/cex.jpg" alt="">
-                    <div class="user-info site-color">Chief Executive</div>
+                    <div class="user-info site-color text-center">Chief Executive</div>
                 </div>
-                <p class="px-2 line-height-1-5">
+                <p class="px-2 line-height-1-5 text-center">
                     The office to create and steward the rules regulations, procedures, HR matters and internal
                     relationships between the arms of Zion Valley and the CBO
                 </p>
@@ -55,9 +55,9 @@
             <div class="team-col">
                 <div class="user d-flex flex-column col">
                     <img src="../assets/img/daidai.jpg" alt="">
-                    <div class="user-info site-color">Chief Architect</div>
+                    <div class="user-info site-color text-center">Chief Architect</div>
                 </div>
-                <p class="px-2 line-height-1-5">
+                <p class="px-2 line-height-1-5 text-center">
                     A member of the Executive office to provide the economic and strategic planning. The direction and
                     designs of the Zion Valley project
                 </p>
@@ -65,9 +65,9 @@
             <div class="team-col">
                 <div class="user d-flex flex-column col">
                     <img src="../assets/img/ras.png" alt="">
-                    <div class="user-info site-color">Accounts Executive</div>
+                    <div class="user-info site-color text-center">Accounts Executive</div>
                 </div>
-                <p class="px-2 line-height-1-5">
+                <p class="px-2 line-height-1-5 text-center">
                     A member of the Executive office and sitting alongside the Treasurer and all departments.
                     The Chief Anti Corruption Officer to ensure transparency and accountability to the total Harambee
                     membership.
@@ -76,9 +76,9 @@
             <div class="team-col">
                 <div class="user d-flex flex-column col">
                     <img src="../assets/img/19 slope.jpg" alt="">
-                    <div class="user-info site-color">Harambee Advocate</div>
+                    <div class="user-info site-color text-center">Harambee Advocate</div>
                 </div>
-                <p class="px-2 line-height-1-5">
+                <p class="px-2 line-height-1-5 text-center">
                     A member of the Executive office to ensure representation from and reporting to all Harambee owners
                     including Online Certificate Holders
                 </p>
@@ -86,9 +86,9 @@
             <div class="team-col">
                 <div class="user d-flex flex-column col">
                     <img src="../assets/img/vice chair.jpeg" alt="">
-                    <div class="user-info site-color">Implementors</div>
+                    <div class="user-info site-color text-center">Implementors</div>
                 </div>
-                <p class="px-2 line-height-1-5">
+                <p class="px-2 line-height-1-5 text-center">
                     Head supervisor of the team tasked to carry out practical and physical construction projects as
                     overseen by the Architects and CBO representative. This team to include the Social and community
                     support groups
@@ -97,9 +97,9 @@
             <div class="team-col">
                 <div class="user d-flex flex-column col">
                     <img src="../assets/img/wilson.jpg" alt="">
-                    <div class="user-info site-color">IT Developments</div>
+                    <div class="user-info site-color text-center">IT Developments</div>
                 </div>
-                <p class="px-2 line-height-1-5">
+                <p class="px-2 line-height-1-5 text-center">
                     A member of the Executive office providing seamless integration and information transfer between
                     the various subgroups, to the customer and the Harambee membership
                 </p>
