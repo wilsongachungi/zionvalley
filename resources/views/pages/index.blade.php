@@ -94,7 +94,7 @@ p {
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
-        </div>
+        </div> <br>
 
 
         <div class="intro-container"
