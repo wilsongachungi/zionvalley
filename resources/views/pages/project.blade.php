@@ -268,11 +268,11 @@ p {
                                             alt="Second slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/22 Cottage UG.JPG"
+                                        <img class="d-block w-100" src="../assets/img/22 cottage UG.JPG"
                                             alt="Third slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/17 Cottage UG.JPG"
+                                        <img class="d-block w-100" src="../assets/img/17 cottage UG.jpg"
                                             alt="Fourth slide">
                                     </div>
                                     <div class="carousel-item">
