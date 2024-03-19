@@ -51,9 +51,9 @@
 
                         @guest
 
-                        <li class="nav-item {{ Request::is('login') ? 'active' : '' }}">
-                            <a style="color:green" class="nav-link" href="{{ route('login') }}">Login</a>
-                        </li>
+                    <li class="nav-item {{ Request::is('login') ? 'active' : '' }}">
+                        <a style="color:green" class="nav-link" href="{{ route('login') }}">Login</a>
+                    </li>
                     @endguest
                     </li>
 
@@ -62,46 +62,57 @@
                     </li>
                     <li>
                         @if (Route::has('login'))
-                            @auth
+                        @auth
 
-                                {{-- <li class="nav-item {{ Request::is('') ? 'active' : '' }}">
-                                <a style="color:green" class="nav-link" href="{{ route('message') }}">Profile</a>
-                            </li> --}}
-                                @auth
-                                    @php
-                                        $fullName = Auth::user()->name;
-                                        $firstName = explode(' ', $fullName)[0];
-                                    @endphp
+                        {{-- <li class="nav-item {{ Request::is('') ? 'active' : '' }}">
+                        <a style="color:green" class="nav-link" href="{{ route('message') }}">Profile</a>
+                    </li> --}}
+                    @auth
+                    @php
+                    $fullName = Auth::user()->name;
+                    $firstName = explode(' ', $fullName)[0];
+                    @endphp
 
-                                    <div
-                                        style="position: absolute; top: 3px; right: 2px; padding: 8px; background-color: display: flex; align-items: center;">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-secondary dropdown-toggle"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                {{ $firstName }}
-                                            </button>
-                                            <div class="dropdown-menu">
-                                                <form method="POST" action="{{ route('logout') }}">
-                                                    @csrf
-                                                    <button type="submit" class="dropdown-item">Logout</button>
-                                                </form>
-                                                <a href="{{ route('info') }}" class="dropdown-item">Profile</a>
-                                                <a href="{{ route('profile.show') }}" class="dropdown-item">Change Password</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endauth
-                            @else
-                                {{-- <li class="nav-item {{ Request::is('') ? 'active' : '' }}">
-                                <a style="color:green" class="nav-link" href="{{ route('login') }}">login</a>
-                            </li> --}}
-                            @endauth
-                        @endif
+                    <div 
+                        style="position: absolute; top: 3px; right: 2px; padding: 8px; background-color: display: flex; align-items: center;">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                {{ $firstName }}
+                            </button>
+                            <div class="dropdown-menu">
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item">Logout</button>
+                                </form>
+                                <a href="{{ route('info') }}" class="dropdown-item">Profile</a>
+                                <a href="{{ route('profile.show') }}" class="dropdown-item">Change Password</a>
+                            </div>
+                        </div>
+                    </div>
+                    @endauth
+                    @else
+                    {{-- <li class="nav-item {{ Request::is('') ? 'active' : '' }}">
+                    <a style="color:green" class="nav-link" href="{{ route('login') }}">login</a>
+                    </li> --}}
+                    @endauth
+                    @endif
                     </li>
 
                 </ul>
             </div>
         </div>
     </nav>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </div>
 
 </header>
