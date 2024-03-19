@@ -202,28 +202,28 @@ p {
                 <h4>Future Projects</h4>
             </div>
             <div id="carouselInspirationalProjects" class="carousel slide" data-ride="carousel" data-interval="false">
-            <ol class="carousel-indicators">
-                    <li data-target="#carouselOngoingProject" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselOngoingProject" data-slide-to="1"></li>
-                    <li data-target="#carouselOngoingProject" data-slide-to="2"></li>
-                    <li data-target="#carouselOngoingProject" data-slide-to="3"></li>
-                    <li data-target="#carouselOngoingProject" data-slide-to="4"></li>
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselInspirationalProjects" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselInspirationalProjects" data-slide-to="1"></li>
+                    <li data-target="#carouselInspirationalProjects" data-slide-to="2"></li>
+                    <li data-target="#carouselInspirationalProjects" data-slide-to="3"></li>
+                    <li data-target="#carouselInspirationalProjects" data-slide-to="4"></li>
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100 " src="../assets/img/HandRail.jpg" alt="First slide">
+                        <img class="d-block w-100" src="../assets/img/HandRail.jpg" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100  " src="../assets/img/handrail1.jpg" alt="Second slide">
+                        <img class="d-block w-100" src="../assets/img/handrail1.jpg" alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100 " src="../assets/img/Handrail2.jpg" alt="Third slide">
+                        <img class="d-block w-100" src="../assets/img/Handrail2.jpg" alt="Third slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100 " src="../assets/img/Round decking.jpg" alt="Third slide">
+                        <img class="d-block w-100" src="../assets/img/Round decking.jpg" alt="Fourth slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100 " src="../assets/img/jungle house side deck.jpg" alt="Third slide">
+                        <img class="d-block w-100" src="../assets/img/jungle house side deck.jpg" alt="Fifth slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselInspirationalProjects" role="button" data-slide="prev">
