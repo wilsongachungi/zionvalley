@@ -78,21 +78,53 @@ p {
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
 
                     </div>
-                    <img class="img1 pb-0 mb-0" src="../assets/img/IMG_20181226_140601.jpg" alt="Image 1">
+                    <img class="img1 pb-0 mb-0" src="../assets/img/1 cottage UG.jpg" alt="Image 1" style="height: 400px;">
                 </div>
 
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
 
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/safari.jpg" alt="Image 2">
+
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/3 cottage UG.jpg" alt="Image 2"
+                        style="height: 400px;">
                 </div>
 
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
 
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/safari.jpg" alt="Image 3">
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Treehouse Tweaked.jpg" alt="Image 3" style="height: 400px;">
+                </div>
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/12a.jpg" alt="Image 3" style="height: 400px;">
+                </div>
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/decking.jpg" alt="Image 3" style="height: 400px;">
+                </div>
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/66.jpg" alt="Image 3" style="height: 400px;">
+                </div>
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Treehouse33.jpg" alt="Image 3" style="height: 400px;">
+                </div>
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/7.jpg" alt="Image 3" style="height: 400px;">
                 </div>
             </div>
 
@@ -112,13 +144,13 @@ p {
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);">
             </div>
             <div class="green-tint" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
-            <ul class="line-height-1.5"
-                style="font-size: 1.2em; margin-bottom: 10px; position: relative; text-align: center;">
+            <p class="line-height-1.5 "
+                style="font-size: 1.2em; margin-bottom: 10px; position: relative; text-align: center; align-item:center">
                 A unique and sustainable development growth project. <br>
                 A leisure and nature park, activity center, and resort destination. <br>
                 Education Training and exhibit demonstrations of eco engineering technologies. <br>
                 Like a permanent showground, Smaller and with accommodations. <br>
-            </ul>
+            </p>
         </div>
         <div class="container">
             <div class="center">
