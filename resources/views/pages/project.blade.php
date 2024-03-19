@@ -214,13 +214,13 @@ p {
                         <img class="d-block w-100" src="../assets/img/Treehouse Tweaked.jpg" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/handrail1.jpg" alt="Second slide">
+                        <img class="d-block w-100" src="../assets/img/HandRail Tree Branches 3.JPG" alt="Second slide">
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="../assets/img/zion river side.jpg" alt="Third slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/Round decking.jpg" alt="Fourth slide">
+                        <img class="d-block w-100" src="../assets/img/Round decking.JPG" alt="Fourth slide">
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="../assets/img/jungle house side deck.jpg" alt="Fifth slide">
