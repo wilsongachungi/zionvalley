@@ -62,7 +62,7 @@ p {
 
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0" src="../assets/img/IMG_20181226_140601.jpg" alt="Image 1">
+                    <img class="img1 pb-0 mb-0" src="../assets/img/12a.jpg" alt="Image 1">
                 </div>
 
                 <div class="carousel-item text-center">

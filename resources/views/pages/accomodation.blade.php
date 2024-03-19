@@ -62,7 +62,7 @@ li {
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
 
                     </div>
-                    <img class="img1 pb-0 mb-0" src="../assets/img/1 cottage UG.jpg" alt="Image 1"
+                    <img class="img1 pb-0 mb-0" src="../assets/img/cottage12.jpg" alt="Image 1"
                         style="height: 400px;">
                 </div>
 
@@ -71,7 +71,7 @@ li {
 
                     </div>
 
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/3 cottage UG.jpg" alt="Image 2"
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/cottage accommodation.jpg" alt="Image 2"
                         style="height: 400px;">
                 </div>
 
@@ -93,7 +93,7 @@ li {
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
 
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/decking.jpg" alt="Image 3"
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/moss roof cottage.jpg" alt="Image 3"
                         style="height: 400px;">
                 </div>
                 <div class="carousel-item text-center">
