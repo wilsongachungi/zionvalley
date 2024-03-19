@@ -288,6 +288,10 @@ p {
                                             alt="Fourth slide">
                                     </div>
                                     <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/25 cottage UG.JPG"
+                                            alt="Fourth slide">
+                                    </div>
+                                    <div class="carousel-item">
                                         <img class="d-block w-100" src="../assets/img/Real Village2.jpeg"
                                             alt="Fifth slide">
                                     </div>
