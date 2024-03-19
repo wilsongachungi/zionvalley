@@ -62,7 +62,7 @@ li {
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
 
                     </div>
-                    <img class="img1 pb-0 mb-0" src="../assets/img/cottage12.jpg" alt="Image 1"
+                    <img class="img1 pb-0 mb-0" src="../assets/img/Cottage12.jpg" alt="Image 1"
                         style="height: 400px;">
                 </div>
 
