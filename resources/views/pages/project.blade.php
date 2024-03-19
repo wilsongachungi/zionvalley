@@ -161,7 +161,7 @@ p {
         </div>
         <div class="container">
             <div class="center">
-                <h4>Ongoing Project</h4>
+                <h4>Current Projects</h4>
             </div>
             <div id="carouselOngoingProject" class="carousel slide" data-ride="carousel" data-interval="false">
                 <ol class="carousel-indicators">
@@ -220,7 +220,7 @@ p {
                         <img class="d-block w-100" src="../assets/img/zion river side.jpg" alt="Third slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/Round decking.JPG" alt="Fourth slide">
+                        <img class="d-block w-100" src="../assets/img/round decking.jpg" alt="Fourth slide">
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="../assets/img/jungle house side deck.jpg" alt="Fifth slide">
@@ -238,7 +238,7 @@ p {
 
 
             <div class="center">
-                <h4>Inspirational Project</h4>
+                <h4>Project Inspirations</h4>
             </div>
             <div id="accordion">
                 <div class="card">
