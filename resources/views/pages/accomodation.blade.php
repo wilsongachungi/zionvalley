@@ -55,8 +55,80 @@ li {
 @endsection
 
 <x-base-layout>
-    <div class="accomodation">
-        <div class="page-hero bg-image">
+    <div class="home">
+    <div id="carouselExample" class="carousel slide bg-warning" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+
+                    </div>
+                    <img class="img1 pb-0 mb-0" src="../assets/img/1 cottage UG.jpg" alt="Image 1"
+                        style="height: 400px;">
+                </div>
+
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+
+                    </div>
+
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/3 cottage UG.jpg" alt="Image 2"
+                        style="height: 400px;">
+                </div>
+
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Treehouse Tweaked.jpg" alt="Image 3"
+                        style="height: 400px;">
+                </div>
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/12a.jpg" alt="Image 3"
+                        style="height: 400px;">
+                </div>
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/decking.jpg" alt="Image 3"
+                        style="height: 400px;">
+                </div>
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/66.jpg" alt="Image 3"
+                        style="height: 400px;">
+                </div>
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Treehouse33.jpg" alt="Image 3"
+                        style="height: 400px;">
+                </div>
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/7.jpg" alt="Image 3"
+                        style="height: 400px;">
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div> <br>
+        <!-- <div class="page-hero bg-image">
             <div class="hero-section">
                 <div class="container text-center" id="heroContent">
                     <div class="container text-center wow zoomIn"
@@ -67,7 +139,7 @@ li {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
         <div class="intro-container"
