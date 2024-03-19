@@ -209,6 +209,7 @@ p {
                     <li data-target="#carouselInspirationalProjects" data-slide-to="3"></li>
                     <li data-target="#carouselInspirationalProjects" data-slide-to="4"></li>
                     <li data-target="#carouselInspirationalProjects" data-slide-to="5"></li>
+                    <li data-target="#carouselInspirationalProjects" data-slide-to="6"></li>
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -227,7 +228,7 @@ p {
                         <img class="d-block w-100" src="../assets/img/jungle house side deck.jpg" alt="Fifth slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/14 slope.jpg" alt="Fifth slide">
+                        <img class="d-block w-100" src="../assets/img/jungle hopuse deck.jpg" alt="Sixth slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselInspirationalProjects" role="button" data-slide="prev">
