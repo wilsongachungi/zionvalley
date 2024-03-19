@@ -276,6 +276,18 @@ p {
                                             alt="Fourth slide">
                                     </div>
                                     <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/6 cottage UG.jpg"
+                                            alt="Fourth slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/12 cottage UG.jpg"
+                                            alt="Fourth slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/13 cottage UG.jpg"
+                                            alt="Fourth slide">
+                                    </div>
+                                    <div class="carousel-item">
                                         <img class="d-block w-100" src="../assets/img/Real Village2.jpeg"
                                             alt="Fifth slide">
                                     </div>
