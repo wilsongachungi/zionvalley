@@ -217,7 +217,7 @@ p {
                         <img class="d-block w-100" src="../assets/img/handrail1.jpg" alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/handrail2.jpg" alt="Third slide">
+                        <img class="d-block w-100" src="../assets/img/zion river side.jpg" alt="Third slide">
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="../assets/img/Round decking.jpg" alt="Fourth slide">
