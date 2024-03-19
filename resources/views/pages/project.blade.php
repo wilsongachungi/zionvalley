@@ -230,6 +230,9 @@ p {
                     <div class="carousel-item">
                         <img class="d-block w-100" src="../assets/img/jungle hopuse deck.jpg" alt="Sixth slide">
                     </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/jungle house side deck.jpg" alt="Fifth slide">
+                    </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselInspirationalProjects" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

@@ -74,6 +74,11 @@ li {
             style="background-image: url('../assets/img/Capture11.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: rgb(235, 234, 236);">
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; ;">
             </div>
+            <p style="font-size: 1.2em;
+            margin-bottom: 10px; text-align:center;">
+                All cottages to be listed and available online <br>
+                www.AirBnB.com and www.booking.com
+            </p>
             <h3 class="text-center text-center mb-4">Free Accommodation to Harambee owners</h2>
             <p style="font-size: 1.2em;
             margin-bottom: 10px; text-align:center;">
