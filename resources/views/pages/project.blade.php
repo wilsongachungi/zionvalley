@@ -318,7 +318,7 @@ p {
                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
                                 aria-expanded="false" aria-controls="collapseTwo"
                                 style="color: greenyellow; text-decoration: none;">
-                                Field
+                                Romantic Cottages
                             </button>
                         </h5>
                     </div>
@@ -330,13 +330,22 @@ p {
                                 <!-- Carousel content -->
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img class="d-block w-100" src="../assets/img/13 slope.jpg" alt="First slide">
+                                        <img class="d-block w-100" src="../assets/img/5 cottage.jpg" alt="First slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/17 slope.jpg" alt="Second slide">
+                                        <img class="d-block w-100" src="../assets/img/34 cottage.JPG" alt="Second slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/21 slope.jpg" alt="Third slide">
+                                        <img class="d-block w-100" src="../assets/img/44 cottage.jpg" alt="Third slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/cottage 1j.jpg" alt="Third slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/cottageee.jpg" alt="Third slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/moss roof cottage.jpg" alt="Third slide">
                                     </div>
                                 </div>
                                 <!-- Carousel navigation controls -->
