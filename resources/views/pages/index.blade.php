@@ -139,7 +139,7 @@ p {
             <div class="accordions">
                 <div class="accordion" onclick="toggleDiv('div11')">
                     <h3 class="float-left text-lg">
-                        Birds sing
+                        Happy Pamoja
                     </h3>
                     <i class="text-md float-right">&#9660;</i>
                 </div>
@@ -167,7 +167,7 @@ p {
                 <div class="accordions">
                     <div class="accordion" onclick="toggleDiv('div13')">
                         <h4 class="float-left text-lg">
-                            Joy and Peace
+                            Zion Train
                         </h4>
                         <i class="text-md float-right">&#9660;</i>
                     </div>

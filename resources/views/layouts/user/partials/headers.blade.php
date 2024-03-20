@@ -32,33 +32,33 @@
             <div class="collapse navbar-collapse" id="navbarSupport">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item {{ Request::route()->getName() === 'index' ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('index') }}">Home</a>
+                        <a class="nav-link" href="{{ route('index') }}" style="color:antiquewhite;">Welcome to Zion</a>
                     </li>
                     <li class="nav-item {{ Request::is('community') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('community') }}">Community Environment</a>
+                        <a class="nav-link" href="{{ route('community') }} " style="color:antiquewhite;">Community Environment</a>
                     </li>
                     <li class="nav-item {{ Request::is('project') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('project') }}">Projects</a>
+                        <a class="nav-link" href="{{ route('project') }}"  style="color:antiquewhite;">Projects</a>
                     </li>
                     <li class="nav-item {{ Request::is('accomodation') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('accomodation') }}">Accomodation</a>
+                        <a class="nav-link" href="{{ route('accomodation') }}" style="color:antiquewhite;">Accomodation</a>
                     </li>
                     <li class="nav-item {{ Request::is('harambee') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('harambee') }}">Harambee</a>
+                        <a class="nav-link" href="{{ route('harambee') }}"  style="color:antiquewhite;">Harambee</a>
                     </li>
                     <li class="nav-item {{ Request::is('contactzion') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('contactzion') }}">Connect</a>
+                        <a class="nav-link" href="{{ route('contactzion') }} " style="color:antiquewhite;">Connect</a>
 
                         @guest
 
                     <li class="nav-item {{ Request::is('login') ? 'active' : '' }}">
-                        <a style="color:green" class="nav-link" href="{{ route('login') }}">Login</a>
+                        <a style="color:green" class="nav-link" href="{{ route('login') }} " style="color:antiquewhite;">Login</a>
                     </li>
                     @endguest
                     </li>
 
                     <li class="nav-item {{ Request::is('team') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('team') }}">Team</a>
+                        <a class="nav-link" href="{{ route('team') }}"  style="color:antiquewhite;">Team</a>
                     </li>
                     <li>
                         @if (Route::has('login'))
