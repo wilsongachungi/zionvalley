@@ -86,7 +86,7 @@ p {
 
 <x-base-layout>
     <br>
-    <h5 class="welcome-text">Project</h5>
+    <h5 class="welcome-text">Projects</h5>
     <div class="homepage">
         <div id="carouselExample" class="carousel slide bg-warning" data-ride="carousel">
             <div class="carousel-inner">
