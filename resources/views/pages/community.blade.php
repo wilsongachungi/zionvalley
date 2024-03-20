@@ -26,13 +26,28 @@
     animation: zoomShrinkIn 10s infinite;
     animation-delay: 5s; /* Delay the animation start for 5 seconds */
 }
+@media (max-width: 767px) {
+    .welcome-text {
+        display: block; 
+        color: antiquewhite;
+        text-align:center;
+    }
+}
 
 
+@media (min-width: 768px) {
+    .welcome-text {
+        display: none; 
+    }
+}
 
     </style>
 @endsection
 
 <x-base-layout>
+<br>
+    <h5 class="welcome-text">Community</h5>
+
     <div class="community">
         <div class="page-hero bg-image">
             <div class="hero-section">

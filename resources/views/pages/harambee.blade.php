@@ -34,9 +34,26 @@ p {
 .zoom-in-out {
     animation: zoomInOut 5s infinite;
 }
+@media (max-width: 767px) {
+    .welcome-text {
+        display: block; 
+        color: antiquewhite;
+        text-align: center;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .welcome-text {
+        display: none; 
+        
+    }
+}
 </style>
 @endsection
 <x-base-layout>
+<br>
+    <h5 class="welcome-text ">Harambee</h5>
     <div class="harambee">
         <div class="page-hero bg-image">
             <div class="hero-section">

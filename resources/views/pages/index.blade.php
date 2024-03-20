@@ -52,6 +52,7 @@ p {
     .welcome-text {
         display: block; 
         color: antiquewhite;
+        text-align:center;
     }
 }
 

@@ -67,10 +67,26 @@ p {
 .center {
     text-align: center;
 }
+@media (max-width: 767px) {
+    .welcome-text {
+        display: block; 
+        color: antiquewhite;
+        text-align: center;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .welcome-text {
+        display: none; 
+    }
+}
 </style>
 @endsection
 
 <x-base-layout>
+    <br>
+    <h5 class="welcome-text">Project</h5>
     <div class="homepage">
         <div id="carouselExample" class="carousel slide bg-warning" data-ride="carousel">
             <div class="carousel-inner">
@@ -341,7 +357,8 @@ p {
                                         <img class="d-block w-100" src="../assets/img/5 cottage.jpg" alt="First slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/34 cottage.JPG" alt="Second slide">
+                                        <img class="d-block w-100" src="../assets/img/34 cottage.JPG"
+                                            alt="Second slide">
                                     </div>
                                     <div class="carousel-item">
                                         <img class="d-block w-100" src="../assets/img/44 cottage.jpg" alt="Third slide">
@@ -353,7 +370,8 @@ p {
                                         <img class="d-block w-100" src="../assets/img/cottageee.jpg" alt="Third slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/moss roof cottage.jpg" alt="Third slide">
+                                        <img class="d-block w-100" src="../assets/img/moss roof cottage.jpg"
+                                            alt="Third slide">
                                     </div>
                                 </div>
                                 <!-- Carousel navigation controls -->
@@ -406,11 +424,13 @@ p {
                                     </div>
                                     <div class="carousel-item">
                                         <img class="d-block w-100" src="../assets/img/21.jpg" alt="Third slide">
-                                    </div><div class="carousel-item">
+                                    </div>
+                                    <div class="carousel-item">
                                         <img class="d-block w-100" src="../assets/img/21b.jpg" alt="Third slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/Mugumo Hollow Trunck.jpg" alt="Third slide">
+                                        <img class="d-block w-100" src="../assets/img/Mugumo Hollow Trunck.jpg"
+                                            alt="Third slide">
                                     </div>
 
                                 </div>

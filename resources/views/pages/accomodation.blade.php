@@ -51,10 +51,26 @@ li {
     background-color: rgba(0, 128, 0, 0.5);
     /* Green with 50% opacity */
 }
+@media (max-width: 767px) {
+    .welcome-text {
+        display: block; 
+        color: antiquewhite;
+        text-align:center;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .welcome-text {
+        display: none; 
+    }
+}
 </style>
 @endsection
 
 <x-base-layout>
+<br>
+    <h5 class="welcome-text">Accomodation</h5>
     <div class="home">
     <div id="carouselExample" class="carousel slide bg-warning" data-ride="carousel">
             <div class="carousel-inner">

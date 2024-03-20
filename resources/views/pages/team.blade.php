@@ -5,9 +5,12 @@
                 height: 100%;
             }
         }
+        
     </style>
 @endsection
 <x-base-layout>
+<br>
+    <h5 class="welcome-text">Team</h5>
     <section class="my-4">
         <h4 class="text-center mb-3">Our Team</h3>
         <div class="team-row">
