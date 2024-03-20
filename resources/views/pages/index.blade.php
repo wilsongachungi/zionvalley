@@ -48,18 +48,33 @@ p {
     font-size: 1.2em;
     margin-bottom: 10px;
 }
+@media (max-width: 767px) {
+    .welcome-text {
+        display: block; 
+        color: antiquewhite;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .welcome-text {
+        display: none; 
+    }
+}
 </style>
 @endsection
 
 <x-base-layout>
+    <br>
+    <h5 class="welcome-text">Welcome to Zion</h5>
     <div class="homepage">
+       
         <div id="carouselExample" class="carousel slide bg-warning" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
                         <p class="custom-carousel-text" style="color:greenyellow">A leisure and Nature parc. <br>
                             Activity center, and Eco resort.
-
                         </p>
                     </div>
                     <img class="img1 pb-0 mb-0" src="../assets/img/12a.jpg" alt="Image 1">
