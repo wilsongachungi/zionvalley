@@ -20,7 +20,7 @@
         </div>
     </div> --}}
 
-    <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
         <div class="container">
             <a class="navbar-brand" href="{{ route('index') }}"><span class="text-primary">Zion</span>-Valley</a>
 
