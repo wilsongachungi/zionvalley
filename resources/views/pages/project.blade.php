@@ -474,6 +474,38 @@ li {
                                         <img class="d-block w-100" src="../assets/img/Mugumo Hollow Trunck.jpg"
                                             alt="Third slide">
                                     </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/44.jpg"
+                                            alt="Third slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/46.jpg"
+                                            alt="Third slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/222.jpg"
+                                            alt="Third slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/22.jpg"
+                                            alt="Third slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/6c.jpg"
+                                            alt="Third slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/6d.jpg"
+                                            alt="Third slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/living chainlink round tube.jpg"
+                                            alt="Third slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/living chainlink fence 2.jpg"
+                                            alt="Third slide">
+                                    </div>
 
                                 </div>
                                 <!-- Carousel navigation controls -->
