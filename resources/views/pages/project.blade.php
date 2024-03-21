@@ -459,52 +459,52 @@ li {
                                         <img class="d-block w-100" src="../assets/img/6.jpg" alt="Third slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/6a.jpg" alt="Third slide">
+                                        <img class="d-block w-100" src="../assets/img/6a.jpg" alt="4 slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/11.jpg" alt="Third slide">
+                                        <img class="d-block w-100" src="../assets/img/11.jpg" alt="5 slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/21.jpg" alt="Third slide">
+                                        <img class="d-block w-100" src="../assets/img/21.jpg" alt="6 slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/21b.jpg" alt="Third slide">
+                                        <img class="d-block w-100" src="../assets/img/21b.jpg" alt="7 slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/Mugumo Hollow Trunck.jpg"
-                                            alt="Third slide">
+                                        <img class="d-block w-100" src="../assets/img/Mugumo Hollow Trunk.jpeg"
+                                            alt="8 slide">
                                     </div>
                                     <div class="carousel-item">
                                         <img class="d-block w-100" src="../assets/img/44.jpg"
-                                            alt="Third slide">
+                                            alt="9 slide">
                                     </div>
                                     <div class="carousel-item">
                                         <img class="d-block w-100" src="../assets/img/46.jpg"
-                                            alt="Third slide">
+                                            alt="10 slide">
                                     </div>
                                     <div class="carousel-item">
                                         <img class="d-block w-100" src="../assets/img/222.jpg"
-                                            alt="Third slide">
+                                            alt="11 slide">
                                     </div>
                                     <div class="carousel-item">
                                         <img class="d-block w-100" src="../assets/img/22.jpg"
-                                            alt="Third slide">
+                                            alt="12 slide">
                                     </div>
                                     <div class="carousel-item">
                                         <img class="d-block w-100" src="../assets/img/6c.jpg"
-                                            alt="Third slide">
+                                            alt="13 slide">
                                     </div>
                                     <div class="carousel-item">
                                         <img class="d-block w-100" src="../assets/img/6d.jpg"
-                                            alt="Third slide">
+                                            alt="14 slide">
                                     </div>
                                     <div class="carousel-item">
                                         <img class="d-block w-100" src="../assets/img/living chainlink round tube.jpg"
-                                            alt="Third slide">
+                                            alt="15 slide">
                                     </div>
                                     <div class="carousel-item">
                                         <img class="d-block w-100" src="../assets/img/living chainlink fence 2.jpg"
-                                            alt="Third slide">
+                                            alt="16 slide">
                                     </div>
 
                                 </div>
