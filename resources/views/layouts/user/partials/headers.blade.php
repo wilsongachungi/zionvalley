@@ -9,6 +9,9 @@
     .navbar-nav .nav-item a.nav-link:hover {
       color: greenyellow; /* Set background color on hover and active */
     }
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.2); /* Black with 70% transparency */
+    }
   </style>
     {{-- <div class="topbar">
         <div class="container">
