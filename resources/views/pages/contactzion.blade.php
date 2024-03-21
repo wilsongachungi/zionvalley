@@ -1,5 +1,8 @@
+<style>
+    
+</style>
 <x-base-layout>
-    <!-- Button to trigger the first modal -->
+   <br>
     <button style="margin-left: 30px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">
         Get Connected
     </button>

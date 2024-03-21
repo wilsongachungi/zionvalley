@@ -23,7 +23,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 150, 0, 0.5);
+    background-color: rgba(0, 50, 0, 0.5);
     /* Green with 50% opacity */
 }
 
@@ -61,6 +61,16 @@ p {
     .welcome-text {
         display: none; 
     }
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 </style>
 @endsection

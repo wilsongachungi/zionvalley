@@ -48,7 +48,7 @@ li {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 128, 0, 0.5);
+    background-color: rgba(0, 50, 0, 0.5);
     /* Green with 50% opacity */
 }
 @media (max-width: 767px) {
@@ -65,6 +65,7 @@ li {
         display: none; 
     }
 }
+
 </style>
 @endsection
 
@@ -102,7 +103,7 @@ li {
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
 
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/12a.jpg" alt="Image 3"
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/5 cottage.jpg" alt="Image 3"
                         style="height: 400px;">
                 </div>
                 <div class="carousel-item text-center">
@@ -130,8 +131,8 @@ li {
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
 
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/7.jpg" alt="Image 3"
-                        style="height: 400px;">
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/8 cottage.jpg" alt="Image 3"
+                        style="height: 500px;">
                 </div>
             </div>
 
@@ -162,6 +163,7 @@ li {
             style="background-image: url('../assets/img/Capture11.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: rgb(235, 234, 236);">
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; ;">
             </div>
+            <div class="green-tint" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
             <p style="font-size: 1.2em;
             margin-bottom: 10px; text-align:center;">
                 All cottages to be listed and available online <br>

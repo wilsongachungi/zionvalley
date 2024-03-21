@@ -34,9 +34,10 @@ p {
 .zoom-in-out {
     animation: zoomInOut 5s infinite;
 }
+
 @media (max-width: 767px) {
     .welcome-text {
-        display: block; 
+        display: block;
         color: antiquewhite;
         text-align: center;
     }
@@ -45,14 +46,25 @@ p {
 
 @media (min-width: 768px) {
     .welcome-text {
-        display: none; 
-        
+        display: none;
+
     }
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 </style>
 @endsection
 <x-base-layout>
-<br>
+    <br>
     <h5 class="welcome-text ">Harambee</h5>
     <div class="harambee">
         <div class="page-hero bg-image">
@@ -298,7 +310,7 @@ p {
         window.addEventListener('DOMContentLoaded', (event) => {
             setTimeout(() => {
                 document.getElementById('zoomInOut').classList.add('zoom-in-out');
-            }, 1000); 
+            }, 1000);
         });
         </script>
 </x-base-layout>

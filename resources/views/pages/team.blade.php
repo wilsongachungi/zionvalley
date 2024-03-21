@@ -20,6 +20,16 @@
         display: none;
     }
 }
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
 </style>
 @endsection
 <x-base-layout>
