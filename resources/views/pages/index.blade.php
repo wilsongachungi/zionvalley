@@ -54,7 +54,6 @@ p {
         display: block;
         color: antiquewhite;
         text-align: center;
-        position: fixed;
     }
 }
 
@@ -62,6 +61,7 @@ p {
 @media (min-width: 768px) {
     .welcome-text {
         display: none;
+
     }
 }
 
