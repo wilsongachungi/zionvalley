@@ -383,6 +383,38 @@ li {
                                         <img class="d-block w-100" src="../assets/img/moss roof cottage.jpg"
                                             alt="Third slide">
                                     </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/New1.jpeg"
+                                            alt="Third slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/New2.jpeg"
+                                            alt="Third slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/New3.jpeg"
+                                            alt="Third slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/New4.jpeg"
+                                            alt="Third slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/cottage example.jpg"
+                                            alt="Third slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/cottage 8a.jpg"
+                                            alt="Third slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/cottage 4hf.jpg"
+                                            alt="Third slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/Cottage121.jpg"
+                                            alt="Third slide">
+                                    </div>
                                 </div>
                                 <!-- Carousel navigation controls -->
                                 <a class="carousel-control-prev" href="#carouselInspirationalProjects2" role="button"
@@ -591,19 +623,19 @@ li {
                                         <img class="d-block w-100" src="../assets/img/tree deck.jpg" alt="eleventh slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/decking.1.jpg" alt="twelfth slide">
+                                        <img class="d-block w-100" src="../assets/img/decking.1.jpg" alt="twelvefth slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/decking.jpg" alt="Third slide">
+                                        <img class="d-block w-100" src="../assets/img/decking.jpg" alt="thirteenth slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/decking 1a.jpg" alt="Third slide">
+                                        <img class="d-block w-100" src="../assets/img/decking1a.jpg" alt="fourteenth slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/decking22.jpg" alt="Third slide">
+                                        <img class="d-block w-100" src="../assets/img/decking22.jpg" alt="Fiveteenth slide">
                                     </div>
                                 </div>
-                                <!-- Carousel navigation controls -->
+
                                 <a class="carousel-control-prev" href="#carouselInspirationalProjects5" role="button"
                                     data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

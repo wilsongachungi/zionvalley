@@ -48,20 +48,26 @@ p {
     font-size: 1.2em;
     margin-bottom: 10px;
 }
+
 @media (max-width: 767px) {
     .welcome-text {
-        display: block; 
+        display: block;
         color: antiquewhite;
-        text-align:center;
+        text-align: center;
+        position: fixed;
+        top: 20px;
+        /* Adjust as needed */
+        left: 20px;
     }
 }
 
 
 @media (min-width: 768px) {
     .welcome-text {
-        display: none; 
+        display: none;
     }
 }
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -79,7 +85,7 @@ li {
     <br>
     <h5 class="welcome-text">Welcome to Zion</h5>
     <div class="homepage">
-       
+
         <div id="carouselExample" class="carousel slide bg-warning" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active text-center">
@@ -217,7 +223,8 @@ li {
                     style="background-image: url('../assets/img/1 Capture9.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: antiquewhite;">
                     <div class="green-tint" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
                     </div>
-                    <p class="line-height-1.5" style="font-size: 1.2em;margin-bottom: 10px; position: relative; text-align: center; ">
+                    <p class="line-height-1.5"
+                        style="font-size: 1.2em;margin-bottom: 10px; position: relative; text-align: center; ">
                         A leisure and Nature parc. <br>
                         Activity center, and Eco resort.
                     </p>
