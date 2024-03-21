@@ -131,8 +131,8 @@ li {
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
 
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/8 cottage.jpg" alt="Image 3"
-                        style="height: 500px;">
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/new1.jpeg" alt="Image 3"
+                        style="height: 400px;">
                 </div>
             </div>
 
