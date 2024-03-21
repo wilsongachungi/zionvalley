@@ -1,8 +1,17 @@
 <style>
-    
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
 </style>
 <x-base-layout>
-   <br>
+    <br>
     <button style="margin-left: 30px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">
         Get Connected
     </button>
@@ -40,10 +49,10 @@
 
     @if (Auth::check())
     @else
-        <button style="margin-left: 30px" type="button" class="btn btn-primary">
-            <a href="{{ route('register') }}" style="color: white; text-decoration: none;">Register</a>
-        </button>
-        <br>
+    <button style="margin-left: 30px" type="button" class="btn btn-primary">
+        <a href="{{ route('register') }}" style="color: white; text-decoration: none;">Register</a>
+    </button>
+    <br>
     @endif
 
 
@@ -52,8 +61,7 @@
     </button>
 
     <!-- Modal 2 -->
-    <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modal2Label"
-        aria-hidden="true">
+    <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modal2Label" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable" role="document">
             <div class="modal-content">
                 <div class="">
@@ -71,13 +79,13 @@
                                 <p> Free Cottage Timeshares to Harambee Members</p>
 
                                 @if ($errors->any())
-                                    <div class="alert alert-danger">
-                                        <ul>
-                                            @foreach ($errors->all() as $error)
-                                                <li>{{ $error }}</li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
                                 @endif
 
                                 <!-- Name and Email Address (1st Row) -->
@@ -88,7 +96,7 @@
                                             id="name" name="name" placeholder="{{ $user->name ?? 'Full name' }}"
                                             value="{{ old('name', auth()->user()->name ?? '') }}">
                                         @error('name')
-                                            <p class="alert alert-danger py-0">{{ $message }}</p>
+                                        <p class="alert alert-danger py-0">{{ $message }}</p>
                                         @enderror
                                     </div>
                                     <div class="form-group col-12 col-sm-6">
@@ -98,7 +106,7 @@
                                             placeholder="{{ $user->email ?? 'Email address..' }}"
                                             value="{{ old('email', auth()->user()->email ?? '') }}">
                                         @error('email')
-                                            <p class="alert alert-danger">{{ $message }}</p>
+                                        <p class="alert alert-danger">{{ $message }}</p>
                                         @enderror
                                     </div>
                                 </div>
@@ -107,21 +115,20 @@
                                 <div class="form-row">
                                     <div class="form-group col-12 col-sm-6">
                                         <label style="color: greenyellow" for="phone">Phone</label>
-                                        <input type="number"
-                                            class="form-control @error('phone') is-invalid @enderror" id="phone"
-                                            name="phone" placeholder="{{ $user->phone ?? 'Phone' }}"
+                                        <input type="number" class="form-control @error('phone') is-invalid @enderror"
+                                            id="phone" name="phone" placeholder="{{ $user->phone ?? 'Phone' }}"
                                             value="{{ old('phone', auth()->user()->phone ?? '') }}">
                                         @error('phone')
-                                            <p class="alert alert-danger">{{ $message }}</p>
+                                        <p class="alert alert-danger">{{ $message }}</p>
                                         @enderror
                                     </div>
                                     <div class="form-group col-12 col-sm-6">
                                         <label style="color: greenyellow" for="country">Country</label>
-                                        <input type="text"
-                                            class="form-control @error('country') is-invalid @enderror" id="country"
-                                            name="country" placeholder="Kenya.." value="{{ old('country') }}">
+                                        <input type="text" class="form-control @error('country') is-invalid @enderror"
+                                            id="country" name="country" placeholder="Kenya.."
+                                            value="{{ old('country') }}">
                                         @error('country')
-                                            <p class="alert alert-danger">{{ $message }}</p>
+                                        <p class="alert alert-danger">{{ $message }}</p>
                                         @enderror
                                     </div>
                                 </div>
@@ -130,21 +137,19 @@
                                 <div class="form-row">
                                     <div class="form-group col-12 col-sm-6">
                                         <label style="color: greenyellow" for="idNumber">ID/Passport Number</label>
-                                        <input type="text"
-                                            class="form-control @error('idNumber') is-invalid @enderror"
+                                        <input type="text" class="form-control @error('idNumber') is-invalid @enderror"
                                             id="idNumber" name="idnumber" placeholder="ID/Passport Number.."
                                             value="{{ old('idNumber') }}">
                                         @error('idNumber')
-                                            <p class="alert alert-danger">{{ $message }}</p>
+                                        <p class="alert alert-danger">{{ $message }}</p>
                                         @enderror
                                     </div>
                                     <div class="form-group col-12 col-sm-6">
                                         <label style="color: greenyellow" for="age">Age</label>
                                         <input type="text" class="form-control @error('age') is-invalid @enderror"
-                                            id="age" name="age" placeholder="Age.."
-                                            value="{{ old('age') }}">
+                                            id="age" name="age" placeholder="Age.." value="{{ old('age') }}">
                                         @error('age')
-                                            <p class="alert alert-danger">{{ $message }}</p>
+                                        <p class="alert alert-danger">{{ $message }}</p>
                                         @enderror
                                     </div>
                                 </div>
@@ -156,22 +161,22 @@
                                             id="idphoto" name="idphoto">
                                         @error('passport')
                                             <p class="alert alert-danger">{{ $message }}</p>
-                                        @enderror
-                                    </div> --}}
-                                    <div class="form-group col-12 col-sm-6">
-                                        <label style="color: greenyellow" for="selectOption">Category</label>
-                                        <select class="form-control" id="selectOption" name="select">
-                                            <option value="" selected disabled>--Select--</option>
-                                            <option value="land_owner">Land Owner</option>
-                                            <option value="Fainancial_supporter">Financial supporter</option>
-                                            <option value="other">Others</option>
-                                            <!-- Add more options as needed -->
-                                        </select>
-                                    </div>
+                                    @enderror
+                                </div> --}}
+                                <div class="form-group col-12 col-sm-6">
+                                    <label style="color: greenyellow" for="selectOption">Category</label>
+                                    <select class="form-control" id="selectOption" name="select">
+                                        <option value="" selected disabled>--Select--</option>
+                                        <option value="land_owner">Land Owner</option>
+                                        <option value="Fainancial_supporter">Financial supporter</option>
+                                        <option value="other">Others</option>
+                                        <!-- Add more options as needed -->
+                                    </select>
                                 </div>
+                        </div>
 
-                                <!-- Passport (4th Row) -->
-                                {{-- <div class="form-row">
+                        <!-- Passport (4th Row) -->
+                        {{-- <div class="form-row">
                                     <div class="form-group col-12 col-sm-6">
                                         <label style="color: greenyellow" for="passport">Passport (Image)</label>
                                         <input type="file"
@@ -179,29 +184,29 @@
                                             id="passport" name="passport_image">
                                         @error('passport')
                                             <p class="alert alert-danger">{{ $message }}</p>
-                                        @enderror
-                                    </div>
-
-                                </div> --}}
-
-                                <!-- Select Option (5th Row) -->
-                                <div class="form-row">
-
-                                </div>
-                                <!-- Submit Button -->
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
-                        </div>
+                        @enderror
                     </div>
+
+                </div> --}}
+
+                <!-- Select Option (5th Row) -->
+                <div class="form-row">
+
                 </div>
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
             </div>
         </div>
+    </div>
+    </div>
+    </div>
     </div><br>
 
 
-    <button id="buyHarambeeBtn" style="margin-left: 30px" type="button" class="btn btn-primary"
-        data-toggle="tooltip" data-placement="top" data-html="true"
-        @if (!Auth::check()) disabled title="<b>Please log in to access this feature</b>" @endif>
+    <button id="buyHarambeeBtn" style="margin-left: 30px" type="button" class="btn btn-primary" data-toggle="tooltip"
+        data-placement="top" data-html="true" @if (!Auth::check()) disabled
+        title="<b>Please log in to access this feature</b>" @endif>
         Buy Harambee
     </button>
 
@@ -209,8 +214,7 @@
 
 
 
-    <div class="modal fade" id="modal9" tabindex="-1" role="dialog" aria-labelledby="modal1Label"
-        aria-hidden="true">
+    <div class="modal fade" id="modal9" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content" style="height: 100%; width:100%">
                 <div class="">
@@ -235,14 +239,12 @@
         </div>
     </div><br>
 
-    <button style="margin-left: 30px" type="button" class="btn btn-primary" data-toggle="modal"
-        data-target="#modal4">
+    <button style="margin-left: 30px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal4">
         Job applicaton
     </button>
 
     <!-- Modal 2 -->
-    <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="modal4Label"
-        aria-hidden="true">
+    <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="modal4Label" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable" role="document">
             <div class="modal-content">
                 <div class="">
@@ -258,13 +260,13 @@
                                 @csrf
 
                                 @if ($errors->any())
-                                    <div class="alert alert-danger">
-                                        <ul>
-                                            @foreach ($errors->all() as $error)
-                                                <li>{{ $error }}</li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
                                 @endif
                                 <p> </p>
 
@@ -273,21 +275,20 @@
                                     <div class="form-group col-12 col-sm-6">
                                         <label style="color: greenyellow" for="name">Full Name</label>
                                         <input type="text" class="form-control @error('name') is-invalid @enderror"
-                                            id="name" name="name"
-                                            placeholder="{{ $user->name ?? 'Full name' }}"
+                                            id="name" name="name" placeholder="{{ $user->name ?? 'Full name' }}"
                                             value="{{ old('name') }}">
                                         @error('name')
-                                            <p class="alert alert-danger py-0">{{ $message }}</p>
+                                        <p class="alert alert-danger py-0">{{ $message }}</p>
                                         @enderror
                                     </div>
                                     <div class="form-group col-12 col-sm-6">
                                         <label style="color: greenyellow" for="email">Email Address</label>
-                                        <input type="text"
-                                            class="form-control @error('email') is-invalid @enderror" id="email"
-                                            name="email" placeholder="{{ $user->email ?? 'Email address..' }}"
+                                        <input type="text" class="form-control @error('email') is-invalid @enderror"
+                                            id="email" name="email"
+                                            placeholder="{{ $user->email ?? 'Email address..' }}"
                                             value="{{ old('email') }}">
                                         @error('email')
-                                            <p class="alert alert-danger">{{ $message }}</p>
+                                        <p class="alert alert-danger">{{ $message }}</p>
                                         @enderror
                                     </div>
                                 </div>
@@ -296,21 +297,19 @@
                                 <div class="form-row">
                                     <div class="form-group col-12 col-sm-6">
                                         <label style="color: greenyellow" for="phone">Phone</label>
-                                        <input type="number"
-                                            class="form-control @error('phone') is-invalid @enderror" id="phone"
-                                            name="phone" placeholder="Phone.." value="{{ old('phone') }}">
+                                        <input type="number" class="form-control @error('phone') is-invalid @enderror"
+                                            id="phone" name="phone" placeholder="Phone.." value="{{ old('phone') }}">
                                         @error('phone')
-                                            <p class="alert alert-danger">{{ $message }}</p>
+                                        <p class="alert alert-danger">{{ $message }}</p>
                                         @enderror
                                     </div>
                                     <div class="form-group col-12 col-sm-6">
                                         <label style="color: greenyellow" for="country">Country</label>
-                                        <input type="text"
-                                            class="form-control @error('country') is-invalid @enderror"
+                                        <input type="text" class="form-control @error('country') is-invalid @enderror"
                                             id="country" name="country" placeholder="Kenya.."
                                             value="{{ old('country') }}">
                                         @error('country')
-                                            <p class="alert alert-danger">{{ $message }}</p>
+                                        <p class="alert alert-danger">{{ $message }}</p>
                                         @enderror
                                     </div>
                                 </div>
@@ -319,21 +318,19 @@
                                 <div class="form-row">
                                     <div class="form-group col-12 col-sm-6">
                                         <label style="color: greenyellow" for="idNumber">ID/Passport Number</label>
-                                        <input type="text"
-                                            class="form-control @error('idNumber') is-invalid @enderror"
+                                        <input type="text" class="form-control @error('idNumber') is-invalid @enderror"
                                             id="idNumber" name="idnumber" placeholder="ID/Passport Number.."
                                             value="{{ old('idNumber') }}">
                                         @error('idNumber')
-                                            <p class="alert alert-danger">{{ $message }}</p>
+                                        <p class="alert alert-danger">{{ $message }}</p>
                                         @enderror
                                     </div>
                                     <div class="form-group col-12 col-sm-6">
                                         <label style="color: greenyellow" for="age">Age</label>
                                         <input type="text" class="form-control @error('age') is-invalid @enderror"
-                                            id="age" name="age" placeholder="Age.."
-                                            value="{{ old('age') }}">
+                                            id="age" name="age" placeholder="Age.." value="{{ old('age') }}">
                                         @error('age')
-                                            <p class="alert alert-danger">{{ $message }}</p>
+                                        <p class="alert alert-danger">{{ $message }}</p>
                                         @enderror
                                     </div>
                                 </div>
@@ -345,25 +342,25 @@
                                             id="passport" name="idphoto">
                                         @error('passport')
                                             <p class="alert alert-danger">{{ $message }}</p>
-                                        @enderror
-                                    </div> --}}
-                                <div class="form-group col-12 col-sm-6">
-                                    <label style="color: greenyellow" for="selectOption"> Job Category</label>
-                                    <select class="form-control" id="selectOption" name="select">
-                                        <option value="" selected disabled>--Select--</option>
-                                        <option value="Masonry">Masonry</option>
-                                        <option value="Carpentry">Carpentry</option>
-                                        <option value="Security">Security</option>
-                                        <option value="Store Keeping">Store Keeping</option>
-                                        <option value="Chef">Chef</option>
-                                        <option value="Preservation">Tree Preservation</option>
-                                        <!-- Add more options as needed -->
-                                    </select>
-                                </div>
+                                @enderror
+                        </div> --}}
+                        <div class="form-group col-12 col-sm-6">
+                            <label style="color: greenyellow" for="selectOption"> Job Category</label>
+                            <select class="form-control" id="selectOption" name="select">
+                                <option value="" selected disabled>--Select--</option>
+                                <option value="Masonry">Masonry</option>
+                                <option value="Carpentry">Carpentry</option>
+                                <option value="Security">Security</option>
+                                <option value="Store Keeping">Store Keeping</option>
+                                <option value="Chef">Chef</option>
+                                <option value="Preservation">Tree Preservation</option>
+                                <!-- Add more options as needed -->
+                            </select>
                         </div>
+                    </div>
 
-                        <!-- Passport (4th Row) -->
-                        {{-- <div class="form-row">
+                    <!-- Passport (4th Row) -->
+                    {{-- <div class="form-row">
                                     <div class="form-group col-12 col-sm-6">
                                         <label style="color: greenyellow" for="passport">Passport (Image)</label>
                                         <input type="file"
@@ -371,27 +368,25 @@
                                             id="passport_image" name="passport_image">
                                         @error('passport')
                                             <p class="alert alert-danger">{{ $message }}</p>
-                                        @enderror
-                                    </div>
-                                </div> --}}
-                        <div class="form-row">
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="margin-left: 10px">Submit</button>
-                        </form>
-                    </div>
+                    @enderror
                 </div>
+            </div> --}}
+            <div class="form-row">
             </div>
+            <button type="submit" class="btn btn-primary" style="margin-left: 10px">Submit</button>
+            </form>
         </div>
+    </div>
+    </div>
+    </div>
     </div>
     </div><br>
 
-    <button style="margin-left: 30px" type="button" class="btn btn-primary" data-toggle="modal"
-        data-target="#modal3">
+    <button style="margin-left: 30px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal3">
         Contact Us
     </button>
 
-    <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="modal3Label"
-        aria-hidden="true">
+    <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="modal3Label" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable" role="document">
             <div class="modal-content" style="height: 80%">
                 <div class="">
@@ -408,20 +403,22 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var buyHarambeeBtn = document.getElementById('buyHarambeeBtn');
+    document.addEventListener('DOMContentLoaded', function() {
+        var buyHarambeeBtn = document.getElementById('buyHarambeeBtn');
 
-            if (buyHarambeeBtn) {
-                buyHarambeeBtn.addEventListener('click', function() {
+        if (buyHarambeeBtn) {
+            buyHarambeeBtn.addEventListener('click', function() {
 
-                    if (!{!! json_encode(Auth::check()) !!}) {
+                if (!{
+                        !!json_encode(Auth::check()) !!
+                    }) {
 
-                        return false;
-                    }
-                    $('#modal9').modal('show');
-                });
-            }
-        });
+                    return false;
+                }
+                $('#modal9').modal('show');
+            });
+        }
+    });
     </script>
 
 
