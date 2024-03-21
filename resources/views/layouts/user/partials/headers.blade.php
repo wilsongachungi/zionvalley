@@ -10,7 +10,7 @@
       color: greenyellow; /* Set background color on hover and active */
     }
     .navbar {
-      background-color: rgba(0, 0, 0, 0.3); /* Black with 70% transparency */
+      background-color: rgba(0, 0, 0, 0.5); /* Black with 70% transparency */
     }
   </style>
     {{-- <div class="topbar">
