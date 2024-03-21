@@ -275,77 +275,7 @@ li {
                 <h4>Project Inspirations</h4>
             </div>
             <div id="accordion">
-                <div class="card">
-                    <div class="card-header" id="headingOne">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-                                aria-expanded="true" aria-controls="collapseOne"
-                                style="color: greenyellow; text-decoration: none;">
-                                underground
-                            </button>
 
-                        </h5>
-                    </div>
-
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                        <div class="card-body">
-                            <!-- Carousel inside collapsible item 1 -->
-                            <div id="carouselInspirationalProjects1" class="carousel slide" data-ride="carousel"
-                                data-interval="false">
-                                <!-- Carousel content -->
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img class="d-block w-100" src="../assets/img/restaurant.jpg" alt="First slide">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/Real Village.jpeg"
-                                            alt="Second slide">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/22 cottage UG.JPG"
-                                            alt="Third slide">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/17 cottage UG.jpg"
-                                            alt="Fourth slide">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/6 cottage UG.jpg"
-                                            alt="Fourth slide">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/12 cottage UG.jpg"
-                                            alt="Fourth slide">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/13 cottage UG.jpg"
-                                            alt="Fourth slide">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/25 cottage UG.JPG"
-                                            alt="Fourth slide">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/Real Village2.jpeg"
-                                            alt="Fifth slide">
-                                    </div>
-                                </div>
-                                <!-- Carousel navigation controls -->
-                                <a class="carousel-control-prev" href="#carouselInspirationalProjects1" role="button"
-                                    data-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next" href="#carouselInspirationalProjects1" role="button"
-                                    data-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </div>
-                            <!-- End of Carousel inside collapsible item 1 -->
-                        </div>
-                    </div>
-                </div>
                 <div class="card">
                     <div class="card-header" id="headingTwo">
                         <h5 class="mb-0">
@@ -680,6 +610,97 @@ li {
                                 </a>
                             </div>
                             <!-- End of Carousel inside collapsible item 2 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne"
+                                style="color: greenyellow; text-decoration: none;">
+                                underground
+                            </button>
+
+                        </h5>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <!-- Carousel inside collapsible item 1 -->
+                            <div id="carouselInspirationalProjects1" class="carousel slide" data-ride="carousel"
+                                data-interval="false">
+                                <!-- Carousel content -->
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="../assets/img/restaurant.jpg" alt="First slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/Real Village.jpeg"
+                                            alt="Second slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/22 cottage UG.JPG"
+                                            alt="Third slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/17 cottage UG.jpg"
+                                            alt="Fourth slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/6 cottage UG.jpg"
+                                            alt="Fourth slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/12 cottage UG.jpg"
+                                            alt="Fourth slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/13 cottage UG.jpg"
+                                            alt="Fourth slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/25 cottage UG.JPG"
+                                            alt="Fourth slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/33 cottage.jpg"
+                                            alt="Fifth slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/37 cottage.jpg"
+                                            alt="Fifth slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/28 cottage.jpg"
+                                            alt="Fifth slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/31 cottage.jpg"
+                                            alt="Fifth slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/25 cottage.jpg"
+                                            alt="Fifth slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/20 cottage UG.jpg"
+                                            alt="Fifth slide">
+                                    </div>
+                                </div>
+                                <!-- Carousel navigation controls -->
+                                <a class="carousel-control-prev" href="#carouselInspirationalProjects1" role="button"
+                                    data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselInspirationalProjects1" role="button"
+                                    data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                            <!-- End of Carousel inside collapsible item 1 -->
                         </div>
                     </div>
                 </div>
