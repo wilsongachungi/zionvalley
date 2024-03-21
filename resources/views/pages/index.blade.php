@@ -55,9 +55,6 @@ p {
         color: antiquewhite;
         text-align: center;
         position: fixed;
-        top: 20px;
-        /* Adjust as needed */
-        left: 20px;
     }
 }
 
