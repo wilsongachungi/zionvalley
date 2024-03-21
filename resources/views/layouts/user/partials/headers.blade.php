@@ -1,4 +1,15 @@
 <header>
+<style>
+    /* CSS styles for the navigation items */
+    .navbar-nav .nav-item a.nav-link {
+      color: antiquewhite; /* Set default text color to white */
+    }
+
+    .navbar-nav .nav-item.active a.nav-link,
+    .navbar-nav .nav-item a.nav-link:hover {
+      color: greenyellow; /* Set background color on hover and active */
+    }
+  </style>
     {{-- <div class="topbar">
         <div class="container">
             <div class="row">
