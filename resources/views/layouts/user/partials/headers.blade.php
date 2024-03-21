@@ -75,19 +75,19 @@
 
                     <div 
                         style="position: absolute; top: 3px; right: 2px; padding: 8px; background-color: display: flex; align-items: center;">
-                        <div class="btn-group">
+                        <div class="dropdown">
                             <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 {{ $firstName }}
                             </button>
-                            <div class="dropdown-menu">
+                            <!-- <div class="dropdown-menu">
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
                                     <button type="submit" class="dropdown-item">Logout</button>
                                 </form>
                                 <a href="{{ route('info') }}" class="dropdown-item">Profile</a>
                                 <a href="{{ route('profile.show') }}" class="dropdown-item">Change Password</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     @endauth

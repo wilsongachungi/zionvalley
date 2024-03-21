@@ -23,7 +23,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 128, 0, 0.5);
+    background-color: rgba(0, 150, 0, 0.5);
     /* Green with 50% opacity */
 }
 
