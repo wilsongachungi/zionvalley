@@ -56,7 +56,7 @@ p {
     text-align: center;
     position: fixed;
     top: 20px;
-    left: 55%;
+    left: 59%;
     transform: translateX(-50%);
     z-index: 1000;
 }
