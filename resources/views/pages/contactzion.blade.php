@@ -9,8 +9,34 @@ li {
     font-size: 1.2em;
     margin-bottom: 10px;
 }
+.welcome-text {
+    display: none;
+    color: antiquewhite;
+    text-align: center;
+    position: fixed;
+    top: 20px;
+    left: 55%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+
+@media (max-width: 767px) {
+    .welcome-text {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .welcome-text {
+        display: none;
+    }
+}
+
 </style>
 <x-base-layout>
+<br>
+    <h5 class="welcome-text">Projects</h5>
     <br>
     <button style="margin-left: 30px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">
         Get Connected
