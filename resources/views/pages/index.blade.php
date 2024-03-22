@@ -49,21 +49,31 @@ p {
     margin-bottom: 10px;
 }
 
+/* Default styles for .welcome-text */
+.welcome-text {
+    display: none;
+    color: antiquewhite;
+    text-align: center;
+    position: fixed;
+    top: 20px;
+    left: 60%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+
 @media (max-width: 767px) {
     .welcome-text {
         display: block;
-        color: antiquewhite;
-        text-align: center;
     }
 }
-
 
 @media (min-width: 768px) {
     .welcome-text {
         display: none;
-
     }
 }
+
 
 ul {
     list-style-type: none;
