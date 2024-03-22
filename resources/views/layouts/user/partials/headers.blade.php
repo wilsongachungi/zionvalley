@@ -40,7 +40,7 @@
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport"
                 aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
-                <span style="background-color:green" class="navbar-toggler-icon"></span>
+                <span style="background-color:rgba(0,78,0)" class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupport">
