@@ -101,7 +101,7 @@ li {
                             Activity center, and Eco resort.
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0" src="../assets/img/home 1.jpg" alt="Image 1">
+                    <img class="img1 pb-0 mb-0" src="../assets/img/Home 1.jpg" alt="Image 1">
                 </div>
 
                 <div class="carousel-item text-center">
