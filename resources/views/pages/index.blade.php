@@ -101,7 +101,7 @@ li {
                             Activity center, and Eco resort.
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0" src="../assets/img/12a.jpg" alt="Image 1">
+                    <img class="img1 pb-0 mb-0" src="../assets/img/home 1.jpg" alt="Image 1">
                 </div>
 
                 <div class="carousel-item text-center">
@@ -111,7 +111,7 @@ li {
 
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/safari.jpg" alt="Image 2">
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 2.JPG" alt="Image 2">
                 </div>
 
                 <div class="carousel-item text-center">
@@ -121,7 +121,25 @@ li {
 
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/ziplining2.jpg" alt="Image 3">
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 3.jpg" alt="Image 3">
+                </div>
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+                        <p class="custom-carousel-text" style="color:greenyellow">A leisure and Nature parc. <br>
+                            Activity center, and Eco resort.
+
+                        </p>
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 4.JPG" alt="Image 3">
+                </div>
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+                        <p class="custom-carousel-text" style="color:greenyellow">A leisure and Nature parc. <br>
+                            Activity center, and Eco resort.
+
+                        </p>
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home Carosel.jpg" alt="Image 3">
                 </div>
             </div>
 
