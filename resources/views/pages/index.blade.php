@@ -141,7 +141,7 @@ li {
             <div class="green-tint" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
             <p class="line-height-1.5"
                 style="font-size: 1.2em; margin-bottom: 10px; position: relative; text-align: center;">
-                A unique and sustainable development growth project. <br>
+                A unique and sustainable development project. <br>
                 A leisure and nature park, activity center, and resort destination. <br>
                 Education Training and exhibit demonstrations of eco engineering technologies. <br>
                 Like a permanent showground, Smaller and with accommodations. <br>

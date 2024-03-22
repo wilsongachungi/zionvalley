@@ -51,36 +51,46 @@ li {
     background-color: rgba(0, 50, 0, 0.5);
     /* Green with 50% opacity */
 }
-@media (max-width: 767px) {
-    .welcome-text {
-        display: block; 
-        color: antiquewhite;
-        text-align:center;
-    }
+
+.welcome-text {
+    display: none;
+    color: antiquewhite;
+    text-align: center;
+    position: fixed;
+    top: 20px;
+    left: 60%;
+    transform: translateX(-50%);
+    z-index: 1000;
 }
 
+
+@media (max-width: 767px) {
+    .welcome-text {
+        display: block;
+    }
+}
 
 @media (min-width: 768px) {
     .welcome-text {
-        display: none; 
+        display: none;
     }
 }
+
 
 </style>
 @endsection
 
 <x-base-layout>
-<br>
+    <br>
     <h5 class="welcome-text">Accomodation</h5>
     <div class="home">
-    <div id="carouselExample" class="carousel slide bg-warning" data-ride="carousel">
+        <div id="carouselExample" class="carousel slide bg-warning" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
 
                     </div>
-                    <img class="img1 pb-0 mb-0" src="../assets/img/Cottage12.jpg" alt="Image 1"
-                        style="height: 400px;">
+                    <img class="img1 pb-0 mb-0" src="../assets/img/Cottage12.jpg" alt="Image 1" style="height: 400px;">
                 </div>
 
                 <div class="carousel-item text-center">
@@ -88,8 +98,8 @@ li {
 
                     </div>
 
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/cottage accommodation.jpg" alt="Image 2"
-                        style="height: 400px;">
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/cottage accommodation.jpg"
+                        alt="Image 2" style="height: 400px;">
                 </div>
 
                 <div class="carousel-item text-center">
@@ -170,14 +180,14 @@ li {
                 www.AirBnB.com and www.booking.com
             </p>
             <h3 class="text-center text-center mb-4">Free Accommodation to Harambee owners</h2>
-            <p style="font-size: 1.2em;
+                <p style="font-size: 1.2em;
             margin-bottom: 10px; text-align:center;">
-                One romantic cottage <br>
-                Two nights per year <br>
-                Each and every year <br>
-                For
-                every 25k of Harambees.
-            </p>
+                    One romantic cottage <br>
+                    Two nights per year <br>
+                    Each and every year <br>
+                    For
+                    every 25k of Harambees.
+                </p>
         </div>
 
         <div> <br>
@@ -197,16 +207,16 @@ li {
             </video>
         </div>
 
-        
+
         <div class="intro-container"
             style="background-image: url('../assets/img/Capture11.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: rgb(235, 234, 236);">
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; ;">
             </div>
             <h3 class="text-center mb-4">Future Cottages </h2>
-            <p style="font-size: 1.2em;
+                <p style="font-size: 1.2em;
             margin-bottom: 10px;">
-                
-            </p>
+
+                </p>
         </div>
 
         <div class="container">
