@@ -51,7 +51,6 @@ class CreateNewUser implements CreatesNewUsers
 			$user->update(['passport' => $passport]);
 		}
 
-
 		return $user;
 	}
 }
