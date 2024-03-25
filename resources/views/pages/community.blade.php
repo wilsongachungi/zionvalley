@@ -1,5 +1,17 @@
 @section('css')
 <style>
+    .custom-carousel-item {
+    position: absolute;
+    text-align: center;
+    background-color: rgba(3, 79, 3, 0.5);
+    padding: 20px;
+}
+
+.custom-carousel-text {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
 p {
     color: antiquewhite;
     line-height: 1.5;
@@ -85,21 +97,66 @@ li {
     <h5 class="welcome-text">Community</h5>
 
     <div class="community">
-        <div class="page-hero bg-image">
-            <div class="hero-section">
-                <div class="container text-center wow zoomShrinkIn"
-                    style="background-color: rgba(3, 79, 3, 0.5); padding: 20px;">
-                    <div class="text-justify line-height-1.5" style="text-align: center">
-                        <p style="font-weight:bold; text-align: center text-greenyellow">You are invited to join and buy
-                            certificates.
-                            Harambee tree certificates which can grow and bear fruits.
+
+      <div id="carouselExample" class="carousel slide bg-warning" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+                        <p class="custom-carousel-text" style="color:greenyellow">A leisure and Nature parc. <br>
+                            Activity center, and Eco resort.
                         </p>
                     </div>
+                    <img class="img1 pb-0 mb-0" src="../assets/img/Home 1.jpg" alt="Image 1">
                 </div>
 
-            </div>
-        </div>
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+                        <p class="custom-carousel-text" style="color:greenyellow">A leisure and Nature parc. <br>
+                            Activity center, and Eco resort.
 
+                        </p>
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 2.JPG" alt="Image 2">
+                </div>
+
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+                        <p class="custom-carousel-text" style="color:greenyellow">A leisure and Nature parc. <br>
+                            Activity center, and Eco resort.
+
+                        </p>
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 3.jpg" alt="Image 3">
+                </div>
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+                        <p class="custom-carousel-text" style="color:greenyellow">A leisure and Nature parc. <br>
+                            Activity center, and Eco resort.
+
+                        </p>
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 4.JPG" alt="Image 3">
+                </div>
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+                        <p class="custom-carousel-text" style="color:greenyellow">A leisure and Nature parc. <br>
+                            Activity center, and Eco resort.
+
+                        </p>
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home Carosel.jpg" alt="Image 3">
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div> <br>
     </div>
     </div>
     </div>
