@@ -93,15 +93,8 @@
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
                                         voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
                                     </p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
-                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
-                                    </p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
-                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
-                                    </p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
-                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
-                                    </p>
+                                    <a href="../downloads/conservancy.pdf" target="_blank" class="btn btn-primary">Open
+                                        PDF</a>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -165,21 +158,8 @@
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
                                         voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
                                     </p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
-                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
-                                    </p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
-                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
-                                    </p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
-                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
-                                    </p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
-                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
-                                    </p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
-                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
-                                    </p>
+                                    <a href="../downloads/conservancy.pdf" target="_blank" class="btn btn-primary">Open
+                                        PDF</a>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -193,7 +173,7 @@
             <div class="col-sm-6 col-lg-3 py-3">
                 <h5 style="color: greenyellow">Our partner</h5>
                 <ul class="footer-menu">
-                    <li><a href="../assets/img/CV.pdf">Zionvalley Architects</a></li>
+                    <li><a href="#">Zionvalley Architects</a></li>
                     <li><a href="#">Wigitech web</a></li>
                     <li><a href="#">Globalgreen Plant Center</a></li>
 
