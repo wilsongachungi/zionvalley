@@ -18,7 +18,8 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="downloadsModalLabel" style="color:greenyellow">Download PDF</h5>
+                                <h5 class="modal-title" id="downloadsModalLabel" style="color:greenyellow">Download PDF
+                                </h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -49,19 +50,22 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h6 class="modal-title" id="exampleModalLongTitle" style="color:greenyellow">All you need to Know</h5>
+                                    <h6 class="modal-title" id="exampleModalLongTitle" style="color:greenyellow">All you
+                                        need to Know</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                 </div>
                                 <div class="modal-body">
                                     <ul>
-                                        <li><a href="#" data-toggle="modal" data-target="#termsModal" style="color:greenyellow">Terms &
+                                        <li><a href="#" data-toggle="modal" data-target="#termsModal"
+                                                style="color:greenyellow">Terms &
                                                 Conditions</a></li>
-                                        <li><a href="#" data-toggle="modal" data-target="#advertiseModal" style="color:greenyellow">Advertise</a>
+                                        <li><a href="#" data-toggle="modal" data-target="#advertiseModal"
+                                                style="color:greenyellow">Advertise</a>
                                         </li>
-                                        <li><a href="#" data-toggle="modal"
-                                                data-target="#constitutionModal" style="color:greenyellow">Constitution</a></li>
+                                        <li><a href="#" data-toggle="modal" data-target="#constitutionModal"
+                                                style="color:greenyellow">Constitution</a></li>
                                     </ul>
                                 </div>
                                 <div class="modal-footer">
@@ -79,7 +83,8 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="termsModalLabel" style="color:greenyellow">Terms & Conditions</h5>
+                                    <h5 class="modal-title" id="termsModalLabel" style="color:greenyellow">Terms &
+                                        Conditions</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -88,15 +93,8 @@
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
                                         voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
                                     </p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
-                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
-                                    </p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
-                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
-                                    </p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
-                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
-                                    </p>
+                                    <a href="../downloads/conservancy.pdf" target="_blank" class="btn btn-primary">Open
+                                        PDF</a>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -111,7 +109,8 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="advertiseModalLabel" style="color:greenyellow">Advertise</h5>
+                                    <h5 class="modal-title" id="advertiseModalLabel" style="color:greenyellow">Advertise
+                                    </h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -129,9 +128,12 @@
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
                                         voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
                                     </p>
+                                    <a href="../downloads/conservancy.pdf" target="_blank" class="btn btn-primary">Open
+                                        PDF</a>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal" style="color:greenyellow">Close</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                                        style="color:greenyellow">Close</button>
                                 </div>
                             </div>
                         </div>
@@ -143,7 +145,8 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="constitutionModalLabel" style="color:greenyellow">Constitution</h5>
+                                    <h5 class="modal-title" id="constitutionModalLabel" style="color:greenyellow">
+                                        Constitution</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -155,21 +158,8 @@
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
                                         voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
                                     </p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
-                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
-                                    </p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
-                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
-                                    </p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
-                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
-                                    </p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
-                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
-                                    </p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
-                                        voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
-                                    </p>
+                                    <a href="../downloads/conservancy.pdf" target="_blank" class="btn btn-primary">Open
+                                        PDF</a>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
