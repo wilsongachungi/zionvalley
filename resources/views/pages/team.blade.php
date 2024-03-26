@@ -88,7 +88,8 @@ li {
                     <p class="px-2 line-height-1-5 text-center">
                         A member of the Executive office to provide the economic and strategic planning. The direction
                         and
-                        designs of the Zion Valley project
+                        designs of the Zion Valley project <br>
+                        <a href="../assets/img/CV.pdf">Architect CV</a>
                     </p>
                 </div>
                 <div class="team-col">
