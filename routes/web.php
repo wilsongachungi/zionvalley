@@ -82,3 +82,4 @@ Route::post('/buys', [BuyController::class, 'buys'])->name('buys');
 Route::post('/sells', [SellController::class, 'sells'])->name('sells');
 Route::delete('/delete_download/{download}',[DownloadController::class, 'delete_download'])->name('delete_download');
 Route::get('/downloads/{id}/edit', [DownloadController::class, 'edit'])->name('edit_download');
+Route::get('/architect', [viewController::class, 'architect'])->name('architect');

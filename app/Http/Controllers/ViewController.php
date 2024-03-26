@@ -25,4 +25,9 @@ class ViewController extends Controller
 	{
 		return view('user.trasaction');
 	}
+
+	public function architect()
+	{
+		return view('user.architect');
+	}
 }

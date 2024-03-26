@@ -11,27 +11,89 @@
             </div>
             <div class="col-sm-6 col-lg-3 py-3">
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#downloadsModal">
-                    Downloads
+                    FAQ
                 </button>
                 <div class="modal fade" id="downloadsModal" tabindex="-1" role="dialog"
                     aria-labelledby="downloadsModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="downloadsModalLabel" style="color:greenyellow">Download PDF
+                                <h5 class="modal-title" id="downloadsModalLabel" style="color:greenyellow">FAQ
                                 </h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <h6>Terms & Conditions</h6>
-                                <a href="path_to_downloadable_file.pdf" download class="btn btn-primary">Download
-                                    PDF</a>
-                                <hr>
-                                <h6>The constitution</h6>
-                                <a href="path_to_downloadable_file.docx" download class="btn btn-primary">Download
-                                    DOCX</a>
+                                <div id="accordion">
+                                    <div class="card">
+                                        <div class="card-header" id="headingOne">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link" data-toggle="collapse"
+                                                    data-target="#collapseOne" aria-expanded="true"
+                                                    aria-controls="collapseOne">
+                                                    Question 1
+                                                </button>
+                                            </h5>
+                                        </div>
+
+                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                            data-parent="#accordion">
+                                            <div class="card-body">
+                                                <p style="color:green">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                                    terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingTwo">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                                    data-target="#collapseTwo" aria-expanded="false"
+                                                    aria-controls="collapseTwo">
+                                                    Question 2
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                            data-parent="#accordion">
+                                            <div class="card-body">
+                                                <p style="color:green">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                                    terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingThree">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                                    data-target="#collapseThree" aria-expanded="false"
+                                                    aria-controls="collapseThree">
+                                                    Question 3
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                            data-parent="#accordion">
+                                            <div class="card-body">
+                                                <p style="color:green">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                                    terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+                                                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <a href="https://zionvalleycbo.org/chatify" class="btn btn-secondary">Chat with Admin</a>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -39,12 +101,13 @@
                         </div>
                     </div>
                 </div>
+
+                
                 <ul class="footer-menu">
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
                         Read From Here
                     </button>
 
-                    <!-- Main Modal -->
                     <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
                         aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                         <div class="modal-dialog" role="document">
