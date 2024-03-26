@@ -50,6 +50,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>User Account</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="admin/assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="admin/assets/vendors/css/vendor.bundle.base.css">
     <link rel="stylesheet" href="admin/assets/vendors/jvectormap/jquery-jvectormap.css">
@@ -147,62 +153,188 @@
 
         <div class="main-panel" style="background: rgb(0, 63, 0)">
             <div class="content-wrapper" style="background: rgb(0, 49, 0)">
+                <h4 class="text-center text-success">Transaction Page</h4>
                 <div class="row ">
+
                     <div class="col-12 grid-margin">
+
                         <div class="card">
+                            <div class="container d-flex justify-content-between">
+                                <div>
+                                    <p class="text-success font-weight-bold">Name:</p>
+                                </div>
+                                <div class="text-center align-item-center">
+                                    <p style="color:greenyellow; text-center; align-item:center; content">
+                                        @if (Auth::check())
+                                        {{ Auth::user()->name }}
+                                        @else
+                                        Guest
+                                        @endif
+                                    </p>
+                                </div>
+                            </div>
+                            <h4 class="text-success" style="margin-left:25px">Harambee Balance: <span
+                                    style="color:greenyellow; margin-left:20px">100,000</span> </h4>
                             <div class="card-body dark-shade">
                                 <div class="table-responsive">
-                                    <table class="table">
-                                        <div class="container d-flex justify-content-between">
-                                            <div>
-                                                <p class="text-success font-weight-bold">Account</p>
-                                            </div>
-                                            <div class="text-center">
-                                                <p style="color:greenyellow">
-                                                    @if (Auth::check())
-                                                    {{ Auth::user()->name }}
-                                                    @else
-                                                    Guest
-                                                    @endif
-                                                </p>
-                                            </div>
-                                        </div>
 
+                                    <table class="table">
 
                                         <thead>
+                                            <tr>
+                                                <th style="color:greenyellow; cursor:pointer">
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                                        data-target="#buyModal">
+                                                        BUY
+                                                    </button>
+                                                </th>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="buyModal" tabindex="-1" role="dialog"
+                                                    aria-labelledby="buyModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content" style="background: rgb(0, 63, 0)">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title text-green"
+                                                                    style="color:greenyellow" id="buyModalLabel">BUY
+                                                                </h5>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                    <span aria-hidden="true"
+                                                                        class="text-green">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <?php
+                                                                    if (Auth::check()) {
+                                                                        $userName = Auth::user()->name;
+                                                                        $amount = 100000;
+                                                                        $rate = 1.69;
+                                                                    ?>
+                                                                <p style="" class="text-white">Name:
+                                                                    <?php echo $userName; ?></p>
+                                                                <!-- Editable input field for amount -->
+                                                                <div class="form-group">
+                                                                    <label style="" class="text-white"
+                                                                        for="buy-amount">Amount:</label>
+                                                                    <input style="color:greenyellow" type="text"
+                                                                        class="form-control" id="buy-amount"
+                                                                        value="<?php echo $amount; ?>">
+                                                                </div>
+                                                                <!-- Editable input field for rate -->
+                                                                <div class="form-group">
+                                                                    <label style="" class="text-white"
+                                                                        for="buy-rate">Rate:</label>
+                                                                    <input style="color:greenyellow" type="text"
+                                                                        class="form-control" id="buy-rate"
+                                                                        value="<?php echo $rate; ?>">
+                                                                </div>
+                                                                <?php } ?>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary">Save
+                                                                    </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <th style="color:greenyellow; cursor:pointer">
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                                        data-target="#exampleModal">
+                                                        SELL
+                                                    </button>
+                                                </th>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content" style="background: rgb(0, 63, 0)">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title text-green"
+                                                                    style="color:greenyellow" id="exampleModalLabel">
+                                                                    SELL</h5>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                    <span aria-hidden="true"
+                                                                        class="text-green">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <?php
+                                                                    if (Auth::check()) {
+                                                                        $userName = Auth::user()->name;
+                                                                        $amount = 100000; 
+                                                                        $rate = 1.69; 
+                                                                    ?>
+                                                                <p class="text-white">Name: <?php echo $userName; ?></p>
+                                                                <!-- Editable input field for amount -->
+                                                                <div class="form-group">
+                                                                    <label class="text-white"
+                                                                        for="amount">Amount:</label>
+                                                                    <input style="color:greenyellow" type="text"
+                                                                        class="form-control" id="amount"
+                                                                        value="<?php echo $amount; ?>">
+                                                                </div>
+                                                                <!-- Editable input field for rate -->
+                                                                <div class="form-group">
+                                                                    <label class="text-white" for="rate">Rate:</label>
+                                                                    <input style="color:greenyellow" type="text"
+                                                                        class="form-control" id="rate"
+                                                                        value="<?php echo $rate; ?>">
+                                                                </div>
+                                                                <?php } ?>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary">Save
+                                                                    </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </tr>
                                             <tr style="text-align:left">
                                                 <th style=" color:greenyellow">Todays Rate</th>
                                                 <th style=" color:green; font-weight:bold">1.69</th>
                                             </tr>
+
                                             <tr>
-                                                <th style="color:greenyellow">BUY</th>
-                                                <th style="color:greenyellow">SELL</th>
+                                                <th style="color:greenyellow">Best Seller</th>
+                                                <th style="color:greenyellow">Best Buyer</th>
                                             </tr>
                                             <tr>
-                                                <th style="color:greenyellow">BEST BUYER</th>
-                                                <th style="color:greenyellow">BEST SELLER</th>                                   
-                                                <th style="color:greenyellow">ACTION</th>                                   
+                                                <td style="color:grey; cursor:pointer">1.50</td>
+                                                <td style="color:grey; cursor:pointer">1.60</td>
                                             </tr>
                                             <tr>
-                                                <td style="color:grey">1.50</td>
-                                                <td style="color:grey">1.60</td>                                   
-                                                <td style="color:green">Details</td>                                   
+                                                <td style="color:grey ; cursor:pointer">1.40</td>
+                                                <td style="color:grey ; cursor:pointer">1.66</td>
                                             </tr>
                                             <tr>
-                                                <td style="color:grey">1.40</td>
-                                                <td style="color:grey">1.66</td>                                   
-                                                <td style="color:green">Details</td>                                   
+                                                <td style="color:grey ; cursor:pointer">1.40</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="color:grey ; cursor:pointer">1.40</td>
+
                                             </tr>
                                         </thead>
                                     </table>
-                                    <div class="container d-flex justify-content-end">
-                                        <p class="text-success font-weight-bold text-align-left">Total Kshs: <span
-                                                style="color:greenyellow">10,000 </span></p>
-                                    </div>
-
                                 </div>
                             </div>
+                            <a href="{{ route('account') }}" class="text-decoration-none text-success"
+                                style="margin-left:20px">ACCOUNT</a>
                         </div>
+
                     </div>
                 </div>
             </div>

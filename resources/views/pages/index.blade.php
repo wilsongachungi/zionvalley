@@ -23,7 +23,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 128, 0, 0.5);
+    background-color: rgba(0, 50, 0, 0.5);
     /* Green with 50% opacity */
 }
 
@@ -48,21 +48,60 @@ p {
     font-size: 1.2em;
     margin-bottom: 10px;
 }
+
+/* Default styles for .welcome-text */
+.welcome-text {
+    display: none;
+    color: antiquewhite;
+    text-align: center;
+    position: fixed;
+    top: 20px;
+    left: 59%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+
+@media (max-width: 767px) {
+    .welcome-text {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .welcome-text {
+        display: none;
+    }
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
 </style>
 @endsection
 
 <x-base-layout>
+    <br>
+    <h5 class="welcome-text">Welcome to Zion</h5>
     <div class="homepage">
+
         <div id="carouselExample" class="carousel slide bg-warning" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
                         <p class="custom-carousel-text" style="color:greenyellow">A leisure and Nature parc. <br>
                             Activity center, and Eco resort.
-
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0" src="../assets/img/IMG_20181226_140601.jpg" alt="Image 1">
+                    <img class="img1 pb-0 mb-0" src="../assets/img/Home 1.jpg" alt="Image 1">
                 </div>
 
                 <div class="carousel-item text-center">
@@ -72,7 +111,7 @@ p {
 
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/safari.jpg" alt="Image 2">
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 2.JPG" alt="Image 2">
                 </div>
 
                 <div class="carousel-item text-center">
@@ -82,7 +121,25 @@ p {
 
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/ziplining2.jpg" alt="Image 3">
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 3.jpg" alt="Image 3">
+                </div>
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+                        <p class="custom-carousel-text" style="color:greenyellow">A leisure and Nature parc. <br>
+                            Activity center, and Eco resort.
+
+                        </p>
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 4.JPG" alt="Image 3">
+                </div>
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+                        <p class="custom-carousel-text" style="color:greenyellow">A leisure and Nature parc. <br>
+                            Activity center, and Eco resort.
+
+                        </p>
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home Carosel.jpg" alt="Image 3">
                 </div>
             </div>
 
@@ -94,7 +151,7 @@ p {
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
-        </div>
+        </div> <br>
 
 
         <div class="intro-container"
@@ -102,7 +159,7 @@ p {
             <div class="green-tint" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
             <p class="line-height-1.5"
                 style="font-size: 1.2em; margin-bottom: 10px; position: relative; text-align: center;">
-                A unique and sustainable development growth project. <br>
+                A unique and sustainable development project. <br>
                 A leisure and nature park, activity center, and resort destination. <br>
                 Education Training and exhibit demonstrations of eco engineering technologies. <br>
                 Like a permanent showground, Smaller and with accommodations. <br>
@@ -139,7 +196,7 @@ p {
             <div class="accordions">
                 <div class="accordion" onclick="toggleDiv('div11')">
                     <h3 class="float-left text-lg">
-                        Birds sing
+                        Happy Pamoja
                     </h3>
                     <i class="text-md float-right">&#9660;</i>
                 </div>
@@ -167,7 +224,7 @@ p {
                 <div class="accordions">
                     <div class="accordion" onclick="toggleDiv('div13')">
                         <h4 class="float-left text-lg">
-                            Joy and Peace
+                            Zion Train
                         </h4>
                         <i class="text-md float-right">&#9660;</i>
                     </div>
@@ -191,7 +248,8 @@ p {
                     style="background-image: url('../assets/img/1 Capture9.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: antiquewhite;">
                     <div class="green-tint" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
                     </div>
-                    <p class="line-height-1.5" style="font-size: 1.2em;margin-bottom: 10px; position: relative; text-align: center; ">
+                    <p class="line-height-1.5"
+                        style="font-size: 1.2em;margin-bottom: 10px; position: relative; text-align: center; ">
                         A leisure and Nature parc. <br>
                         Activity center, and Eco resort.
                     </p>

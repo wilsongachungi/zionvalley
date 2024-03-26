@@ -16,14 +16,69 @@ p {
     color: antiquewhite;
     margin-top: 20px;
 }
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.zoom-in-out {
+    animation: zoomInOut 5s infinite;
+}
+
+.welcome-text {
+    display: none;
+    color: antiquewhite;
+    text-align: center;
+    position: fixed;
+    top: 20px;
+    left: 55%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+
+@media (max-width: 767px) {
+    .welcome-text {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .welcome-text {
+        display: none;
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
 </style>
 @endsection
 <x-base-layout>
+    <br>
+    <h5 class="welcome-text ">Harambee</h5>
     <div class="harambee">
         <div class="page-hero bg-image">
             <div class="hero-section">
                 <div class="container text-center" id="heroContent">
-                    <div class="container text-center wow zoomIn"
+                    <div class="container text-center wow zoom-in-out" id="zoomInOut"
                         style="background-color: rgba(3, 79, 3, 0.5); padding: 10px;">
                         <div class="line-height-1.5" style="text-align: center">
                             <h4>Zion Valley Harambee Village <br> Join for as little as 1k</h4>
@@ -32,6 +87,7 @@ p {
                 </div>
             </div>
         </div>
+
 
         <div class="banner-container"
             style="position: relative; color: antiquewhite; padding: 20px; text-align: center; margin-top:20px; background-image: url('../assets/img/banner2.jpeg'); background-size: cover; background-position: center; ">
@@ -259,30 +315,10 @@ p {
         </div>
 
         <script>
-        // Function to trigger zooming animation
-        function triggerZoomAnimation() {
-            const heroContent = document.getElementById('heroContent');
-            heroContent.classList.remove('wow', 'zoomIn');
-            void heroContent.offsetWidth; // Trigger reflow to restart the animation
-            heroContent.classList.add('wow', 'zoomIn');
-        }
-
-        // Function to toggle visibility of hero content
-        function toggleHeroContent() {
-            const heroContent = document.getElementById('heroContent');
-            heroContent.style.display = heroContent.style.display === 'none' ? 'block' : 'none';
-        }
-
-        // Initial trigger of zooming animation
-        triggerZoomAnimation();
-
-        // Repeat the sequence every 4 seconds
-        setInterval(() => {
-            toggleHeroContent(); // Hide content
+        window.addEventListener('DOMContentLoaded', (event) => {
             setTimeout(() => {
-                toggleHeroContent(); // Show content
-                triggerZoomAnimation(); // Trigger zooming animation
-            }, 2000); // Wait for 1 second before showing content again
-        }, 4000); // Repeat every 4 seconds
+                document.getElementById('zoomInOut').classList.add('zoom-in-out');
+            }, 1000);
+        });
         </script>
 </x-base-layout>

@@ -924,11 +924,11 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: rgba(110, 128, 122, 0.8);
+  color: antiquewhite;
 }
 
 .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
-  color: #6E807A;
+  color: antiquewhite;
 }
 
 .navbar-light .navbar-nav .show > .nav-link,
@@ -1009,7 +1009,7 @@ a.text-dark:hover, a.text-dark:focus {
 .page-link {
   margin-left: 5px;
   min-width: 40px;
-  color: #6E807A;
+  color:antiquewhite;
   border: 1px solid #dee6e5;
   text-align: center;
   border-radius: 4px;

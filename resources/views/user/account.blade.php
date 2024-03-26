@@ -147,17 +147,16 @@
 
         <div class="main-panel" style="background: rgb(0, 63, 0)">
             <div class="content-wrapper" style="background: rgb(0, 49, 0)">
+            <h4 class="text-center text-success">Account Page</h4>
                 <div class="row ">
                     <div class="col-12 grid-margin">
                         <div class="card">
-                            <div class="card-body dark-shade">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        @csrf
-                                        <div class="container d-flex justify-content-center align-items-center">
+                        <div class="container d-flex justify-content-between" >
                                             <div>
-                                                <p>
-                                                    <span class="text-success font-weight-bold">Harambee Account</span> :
+                                                <p class="text-success font-weight-bold">Name:</p>
+                                            </div>
+                                            <div class="text-center align-item-center">
+                                                <p style="color:greenyellow; text-center; align-item:center; content">
                                                     @if (Auth::check())
                                                     {{ Auth::user()->name }}
                                                     @else
@@ -166,18 +165,22 @@
                                                 </p>
                                             </div>
                                         </div>
-
+                            <div class="card-body dark-shade">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        @csrf
+                                
                                         <thead>
-                                            <tr style="text-align:left">
-                                                <th style="text-align:center; color:greenyellow">Total <br> Harambees
+                                            <tr style="">
+                                                <th style=" color:greenyellow">Total <br> Harambees
                                                 </th>
-                                                <th style="text-align:center; color:greenyellow">Todays <br> Rate</th>
-                                                <th style="text-align:center; color:greenyellow">Todays <br> Value</th>
+                                                <th style=" color:greenyellow">Todays <br> Rate</th>
+                                                <th style=" color:greenyellow">Todays <br> Value</th>
                                             </tr>
                                             <tr>
-                                                <td style="text-align:center">123456</td>
-                                                <td style="text-align:center">2.4</td>
-                                                <td style="text-align:center">20,0000</td>
+                                                <td style="">100,000</td>
+                                                <td style="">x2.4</td>
+                                                <td style="">240,000</td>
                                             </tr>
 
                                             <tr>
@@ -192,7 +195,7 @@
                                             @foreach ($harambees as $harambee)
                                             <tr>
                                                 <td>{{ $harambee->total }}</td>
-                                                <td> 1:1 </td>
+                                                <td> x1.0 </td>
                                                 <td>{{ $harambee->deposit }}</td>
                                                 <td>
                                                     <span style="cursor: pointer; color:green" class="details-link"
@@ -221,9 +224,12 @@
 
                                     </table>
                                     <div class="container d-flex justify-content-center align-items-center">
-                                        <p class="text-success font-weight-bold">Total Kshs:   <span style="color:greenyellow">56,000 </span> </p>
+                                        <p class="text-success font-weight-bold">Total Kshs: <span
+                                                style="color:greenyellow">56,000 </span> </p>
                                     </div>
                                 </div>
+                                <a href="{{ route('transaction') }}"
+                                    class="text-decoration-none text-success">BUY/SELL</a>
                             </div>
                         </div>
                     </div>

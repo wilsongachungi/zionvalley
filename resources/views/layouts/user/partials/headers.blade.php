@@ -1,107 +1,110 @@
 <header>
-    {{-- <div class="topbar">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8 text-sm">
-                    <div class="site-info">
-                        <a href="#"><span class="mai-call text-primary"></span> +254 792 668219</a>
-                        <span class="divider">|</span>
-                        <a href="#"><span class="mai-mail text-primary"></span>zionvalleykenya@gmail.com</a>
-                    </div>
-                </div>
-                <div class="col-sm-4 text-right text-sm">
-                    <div class="social-mini-button">
-                        <a href="#"><span class="mai-logo-facebook-f"></span></a>
-                        <a href="#"><span class="mai-logo-whatsapp"></span></a>
-                        <a href="#"><span class="mai-logo-instagram"></span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
 
-    <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    </head>
+    <style>
+    .navbar-nav .nav-item a.nav-link {
+        color: antiquewhite;
+
+    }
+
+    .navbar-nav .nav-item.active a.nav-link,
+    .navbar-nav .nav-item a.nav-link:hover {
+        color: greenyellow;
+
+    }
+
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.5);
+
+    }
+
+    .btn-secondary {
+        background-color: transparent !important;
+        color: inherit;
+        /* Optional: Inherit text color from parent */
+        border-color: inherit;
+        /* Optional: Inherit border color from parent */
+    }
+    </style>
+
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
         <div class="container">
             <a class="navbar-brand" href="{{ route('index') }}"><span class="text-primary">Zion</span>-Valley</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport"
                 aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span style="background-color: rgba(0, 78, 0)" class="navbar-toggler-icon"></span>
             </button>
+
+
+
 
             <div class="collapse navbar-collapse" id="navbarSupport">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item {{ Request::route()->getName() === 'index' ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('index') }}">Home</a>
+
+                    <li style="list-style-type: none;"
+                        class="nav-item {{ Request::route()->getName() === 'index' ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('index') }}">Welcome to Zion</a>
                     </li>
-                    <li class="nav-item {{ Request::is('community') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('community') }}">Community Environment</a>
+                    <li style="list-style-type: none;" class="nav-item {{ Request::is('community') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('community') }}">Community</a>
                     </li>
-                    <li class="nav-item {{ Request::is('project') ? 'active' : '' }}">
+                    <li style="list-style-type: none;" class="nav-item {{ Request::is('project') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('project') }}">Projects</a>
                     </li>
-                    <li class="nav-item {{ Request::is('accomodation') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('accomodation') }}">Accomodation</a>
+                    <li style="list-style-type: none;"
+                        class="nav-item {{ Request::is('accomodation') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('accomodation') }}">Accommodation</a>
                     </li>
-                    <li class="nav-item {{ Request::is('harambee') ? 'active' : '' }}">
+                    <li style="list-style-type: none;" class="nav-item {{ Request::is('harambee') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('harambee') }}">Harambee</a>
                     </li>
-                    <li class="nav-item {{ Request::is('contactzion') ? 'active' : '' }}">
+                    <li style="list-style-type: none;"
+                        class="nav-item {{ Request::is('contactzion') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('contactzion') }}">Connect</a>
-
-                        @guest
-
-                        <li class="nav-item {{ Request::is('login') ? 'active' : '' }}">
-                            <a style="color:green" class="nav-link" href="{{ route('login') }}">Login</a>
-                        </li>
-                    @endguest
                     </li>
 
-                    <li class="nav-item {{ Request::is('team') ? 'active' : '' }}">
+                    <li style="list-style-type: none;" class="nav-item {{ Request::is('team') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('team') }}">Team</a>
                     </li>
-                    <li>
-                        @if (Route::has('login'))
-                            @auth
-
-                                {{-- <li class="nav-item {{ Request::is('') ? 'active' : '' }}">
-                                <a style="color:green" class="nav-link" href="{{ route('message') }}">Profile</a>
-                            </li> --}}
-                                @auth
-                                    @php
-                                        $fullName = Auth::user()->name;
-                                        $firstName = explode(' ', $fullName)[0];
-                                    @endphp
-
-                                    <div
-                                        style="position: absolute; top: 3px; right: 2px; padding: 8px; background-color: display: flex; align-items: center;">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-secondary dropdown-toggle"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                {{ $firstName }}
-                                            </button>
-                                            <div class="dropdown-menu">
-                                                <form method="POST" action="{{ route('logout') }}">
-                                                    @csrf
-                                                    <button type="submit" class="dropdown-item">Logout</button>
-                                                </form>
-                                                <a href="{{ route('info') }}" class="dropdown-item">Profile</a>
-                                                <a href="{{ route('profile.show') }}" class="dropdown-item">Change Password</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endauth
-                            @else
-                                {{-- <li class="nav-item {{ Request::is('') ? 'active' : '' }}">
-                                <a style="color:green" class="nav-link" href="{{ route('login') }}">login</a>
-                            </li> --}}
-                            @endauth
-                        @endif
-                    </li>
-
                 </ul>
             </div>
         </div>
+        @auth
+        @php
+        $fullName = Auth::user()->name;
+        $firstName = explode(' ', $fullName)[0];
+        @endphp
+        <div class="centered-container"
+            style=" position:absolute;z-index:1000; align-item:center;  justify-content: center; right:20px; margin-top:100px">
+            @auth
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="userDropdownMenu"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:green">
+                    {{ $firstName }}
+                </button>
+                <div class="dropdown-menu" aria-labelledby="userDropdownMenu">
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit" class="dropdown-item">Logout</button>
+                    </form>
+                    <a href="{{ route('info') }}" class="dropdown-item">Profile</a>
+                    <a href="{{ route('profile.show') }}" class="dropdown-item">Change Password</a>
+                </div>
+            </div>
+            @endauth
+            @else
+            <li style="list-style-type: none; margin-top:0px"
+                class="nav-item {{ Request::is('login') ? 'active' : '' }}" style="list-style-type: none;">
+                <a style="color:green; " class="nav-link" href="{{ route('login') }}">Login</a>
+            </li>
+            @endauth
+        </div>
     </nav>
+
 
 </header>
