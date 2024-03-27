@@ -93,7 +93,8 @@
                                     </div>
                                 </div>
                                 <br>
-                                <a href="https://zionvalleycbo.org/chatify" class="btn btn-secondary">Chat with Admin</a>
+                                <a href="https://zionvalleycbo.org/chatify" class="btn btn-secondary">Chat with
+                                    Admin</a>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -102,7 +103,7 @@
                     </div>
                 </div>
 
-                
+
                 <ul class="footer-menu">
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
                         Office Documents
@@ -267,5 +268,23 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+    $(document).ready(function() {
+        $('.btn-primary').click(function(e) {
+            e.preventDefault(); // Prevent the default action of the link
+            var screenSize = $(window).width(); // Get the screen width
+
+            // Check if the screen width is below a certain threshold (e.g., for small screens)
+            if (screenSize <= 768) {
+                // If the screen size is small, prompt the user to download the PDF
+                window.location.href = '../downloads/conservancy.pdf'; // Direct download
+            } else {
+                // If the screen size is larger, open the PDF in a new tab/window
+                window.open('../downloads/conservancy.pdf', '_blank');
+            }
+        });
+    });
+    </script>
 
 </footer>
