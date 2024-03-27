@@ -26,6 +26,7 @@ class CreateNewUser implements CreatesNewUsers
 			'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
 			'idimage' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
 			'passport' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
+			'avatar' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
 		])->validate();
 
 		$user = User::create([
@@ -37,6 +38,7 @@ class CreateNewUser implements CreatesNewUsers
 			'date_of_birth' => $input['date_of_birth'],
 			'email' => $input['email'],
 			'password' => Hash::make($input['password']),
+			'avatar' => $avatarPath, // Save avatar path or filename in 'avatar' field
 		]);
 
 		if (request()->hasFile('idimage')) {
