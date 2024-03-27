@@ -93,7 +93,8 @@
                                     </div>
                                 </div>
                                 <br>
-                                <a href="https://zionvalleycbo.org/chatify" class="btn btn-secondary">Chat with Admin</a>
+                                <a href="https://zionvalleycbo.org/chatify" class="btn btn-secondary">Chat with
+                                    Admin</a>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -102,10 +103,10 @@
                     </div>
                 </div>
 
-                
+
                 <ul class="footer-menu">
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-                        Read From Here
+                        Office Document
                     </button>
 
                     <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
@@ -121,14 +122,130 @@
                                 </div>
                                 <div class="modal-body">
                                     <ul>
-                                        <li><a href="#" data-toggle="modal" data-target="#termsModal"
-                                                style="color:greenyellow">Terms &
-                                                Conditions</a></li>
+
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                                                style="color: greenyellow;">Terms & Conditions <span
+                                                    class="caret"></span></a>
+                                            <ul class="dropdown-menu"
+                                                style="background-color: rgba(0, 49, 0, 0.9); padding: 5px;">
+                                                <li style="margin-bottom: 0;"><a
+                                                        style="color: green; padding: 5px 10px;" data-toggle="modal"
+                                                        data-target="#termsModal" href="#">View Terms</a></li>
+                                                <li style="margin-bottom: 0;"><a
+                                                        style="color: green; padding: 5px 10px;" data-toggle="modal"
+                                                        data-target="#privacyModal" href="#">Privacy Policy</a></li>
+                                                <li style="margin-bottom: 0;"><a
+                                                        style="color: green; padding: 5px 10px;" data-toggle="modal"
+                                                        data-target="#cookieModal" href="#">Cookie Policy</a></li>
+                                            </ul>
+                                        </li>
+
+
+                                        <!-- Terms Modal -->
+                                        <div class="modal fade" id="termsModal" tabindex="-1" role="dialog"
+                                            aria-labelledby="termsModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="termsModalLabel">Terms & Conditions
+                                                        </h5>
+                                                        <button type="button" class="close" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+                                                            doloribus repellat veniam asperiores ipsum, ipsam architecto
+                                                            assumenda similique iure nihil corporis. Eius, facere
+                                                            asperiores? Unde ipsa, pariatur eveniet id suscipit
+                                                            cupiditate sit reprehenderit vel dolores ullam quisquam!
+                                                            Obcaecati tempore quibusdam soluta officiis recusandae
+                                                            veniam distinctio molestias repellat aperiam fuga officia
+                                                            porro unde veritatis, voluptatibus sint, laborum voluptate
+                                                            magnam consectetur totam. Officia modi vel eius excepturi
+                                                            natus consectetur sapiente? Ratione ab dignissimos sed
+                                                            consectetur in. In accusantium blanditiis voluptas amet
+                                                            tenetur odio dolores placeat necessitatibus nemo explicabo
+                                                            libero quaerat illo, dolor quasi commodi atque sint mollitia
+                                                            ipsa molestias. Accusantium, magni vitae!</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Privacy Policy Modal -->
+                                        <div class="modal fade" id="privacyModal" tabindex="-1" role="dialog"
+                                            aria-labelledby="privacyModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="privacyModalLabel">Privacy Policy
+                                                        </h5>
+                                                        <button type="button" class="close" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <!-- Add your privacy policy content here -->
+                                                        This is the content of the Privacy Policy modal.
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Cookie Policy Modal -->
+                                        <div class="modal fade" id="cookieModal" tabindex="-1" role="dialog"
+                                            aria-labelledby="cookieModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="cookieModalLabel">Cookie Policy</h5>
+                                                        <button type="button" class="close" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <!-- Add your cookie policy content here -->
+                                                        This is the content of the Cookie Policy modal.
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
                                         <li><a href="#" data-toggle="modal" data-target="#advertiseModal"
                                                 style="color:greenyellow">Advertise</a>
                                         </li>
-                                        <li><a href="#" data-toggle="modal" data-target="#constitutionModal"
-                                                style="color:greenyellow">Constitution</a></li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                                                style="color: greenyellow;">Constitution <span class="caret"></span></a>
+                                            <ul class="dropdown-menu"
+                                                style="background-color: rgba(0, 49, 0, 0.9); padding: 5px;">
+                                                <li style="margin-bottom: 0;"><a
+                                                        style="color: green; padding: 5px 10px;" data-toggle="modal"
+                                                        data-target="#modalOption1" href="#">Option 1</a></li>
+                                                <li style="margin-bottom: 0;"><a
+                                                        style="color: green; padding: 5px 10px;" data-toggle="modal"
+                                                        data-target="#modalOption2" href="#">Option 2</a></li>
+                                                <li style="margin-bottom: 0;"><a
+                                                        style="color: green; padding: 5px 10px;" data-toggle="modal"
+                                                        data-target="#modalOption3" href="#">Option 3</a></li>
+                                            </ul>
+                                        </li>
+
                                     </ul>
                                 </div>
                                 <div class="modal-footer">

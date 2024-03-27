@@ -83,11 +83,55 @@ li {
     <h5 class="welcome-text">Accomodation</h5>
     <div class="home">
 
+        <div id="carouselExample" class="carousel slide bg-warning" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+                      
+                    </div>
+                    <img class="img1 pb-0 mb-0" src="../assets/img/Home 1.jpg" alt="Image 1">
+                </div>
+
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+                     
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 2.JPG" alt="Image 2">
+                </div>
+
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+                      
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 3.jpg" alt="Image 3">
+                </div>
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+                        
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 4.JPG" alt="Image 3">
+                </div>
+                <div class="carousel-item text-center">
+                   
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home Carosel.jpg" alt="Image 3">
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div> <br>
         <div class="intro-container"
             style="background-image: url('../assets/img/Capture11.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: rgb(235, 234, 236);">
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; ;">
             </div>
-            <h3 class="text-center mb-4"></h2>
+            <h3 class="text-center mb-4">
+                </h2>
         </div>
         <br>
         <div class="container">
@@ -101,7 +145,7 @@ li {
                     <div class="col-12 col-md-4 single-accommodation">
                         <img src="../assets/img/2 Patio Panorama.PNG" alt="">
                         <div class="overlay"></div>
-                        <div class="service-desc pl-2 pb-2">Cottage</div>
+                        <div class="service-desc pl-2 pb-2">cCottage</div>
                     </div>
                     <div class="col-12 col-md-4 single-accommodation">
                         <img src="../assets/img/Kitchen South.PNG" alt="">
