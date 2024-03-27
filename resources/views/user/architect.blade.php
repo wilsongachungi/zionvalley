@@ -75,12 +75,114 @@ li {
         display: none;
     }
 }
+.carousel-item img {
+    height: 300px;
+    /* Adjust the height as needed */
+    object-fit: cover;
+}
+
+p {
+    color: antiquewhite;
+}
+
+.intro-container {
+    text-align: center;
+    padding: 50px;
+
+    color: antiquewhite;
+    margin-top: 20px;
+}
+
+
+.green-tint {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 50, 0, 0.5);
+    /* Green with 50% opacity */
+}
+
+.card {
+    border: none;
+}
+
+.card-header {
+    background-color: rgba(0, 20, 0);
+    border: none;
+}
+
+.card-body {
+    background-color: rgba(0, 20, 0);
+    border: none;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    h3 {
+        font-size: 13px;
+    }
+
+}
+
+.custom-carousel-item {
+    position: absolute;
+    text-align: center;
+    background-color: rgba(3, 79, 3, 0.5);
+    padding: 0px;
+}
+
+.custom-carousel-text {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.center {
+    text-align: center;
+}
+
+.welcome-text {
+    display: none;
+    color: antiquewhite;
+    text-align: center;
+    position: fixed;
+    top: 20px;
+    left: 55%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+
+@media (max-width: 767px) {
+    .welcome-text {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .welcome-text {
+        display: none;
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
 </style>
 @endsection
 
 <x-base-layout>
     <br>
-    <h5 class="welcome-text">Accomodation</h5>
+    <h5 class="welcome-text">Architects</h5>
     <div class="home">
 
         <div id="carouselExample" class="carousel slide bg-warning" data-ride="carousel">
@@ -133,6 +235,7 @@ li {
             <h3 class="text-center mb-4">
                 </h2>
         </div>
+
         <br>
         <div class="container">
             <section id="accommodation" class="content">
@@ -172,49 +275,61 @@ li {
             </section>
 
 
-            <div class="row owl-carousel wow fadeInUp mt-5 carousels" id="doctorSlideshow">
-                <div class="item col">
-                    <div class="card-doctor">
-                        <div class="header">
-                            <img class="owl-img" src="../assets/img/Back Bedroom.jpg" alt="">
-                        </div>
+            <div class="center">
+                <h4>Projects</h4>
+            </div>
+            <div id="carouselInspirationalProjects" class="carousel slide" data-ride="carousel" data-interval="false">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselInspirationalProjects" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselInspirationalProjects" data-slide-to="1"></li>
+                    <li data-target="#carouselInspirationalProjects" data-slide-to="2"></li>
+                    <li data-target="#carouselInspirationalProjects" data-slide-to="3"></li>
+                    <li data-target="#carouselInspirationalProjects" data-slide-to="4"></li>
+                    <li data-target="#carouselInspirationalProjects" data-slide-to="5"></li>
+                    <li data-target="#carouselInspirationalProjects" data-slide-to="6"></li>
+                    <li data-target="#carouselInspirationalProjects" data-slide-to="7"></li>
+                    <li data-target="#carouselInspirationalProjects" data-slide-to="8"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="../assets/img/Back Bedroom.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/6 Back Steps Up.webp" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/7 Back Steps.jpg" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/4 opatiooct.jpg" alt="Fourth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/Kitchen Logs.jpg" alt="Fifth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/jungle hopuse deck.jpg" alt="Sixth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/jungle house side deck.jpg" alt="Fifth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/safari.jpg" alt="Fifth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/safari.jpg" alt="Fifth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/ziplining2.jpg" alt="Fifth slide">
                     </div>
                 </div>
-                <div class="item col">
-                    <div class="card-doctor">
-                        <div class="header">
-                            <img class="owl-img" src="../assets/img/6 Back Steps Up.webp" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="item col">
-                    <div class="card-doctor">
-                        <div class="header">
-                            <img class="owl-img" src="../assets/img/7 Back Steps.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="item col">
-                    <div class="card-doctor">
-                        <div class="header">
-                            <img class="owl-img" src="../assets/img/4 opatiooct.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="item col">
-                    <div class="card-doctor">
-                        <div class="header">
-                            <img class="owl-img" src="../assets/img/Kitchen Logs.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="item col">
-                    <div class="card-doctor">
-                        <div class="header">
-                            <img class="owl-img" src="../assets/img/IMB Living Room.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
+                <a class="carousel-control-prev" href="#carouselInspirationalProjects" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselInspirationalProjects" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
 
 

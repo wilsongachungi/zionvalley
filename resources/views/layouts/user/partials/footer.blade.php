@@ -241,7 +241,7 @@
             <div class="col-sm-6 col-lg-3 py-3">
                 <h5 style="color: greenyellow">Our partner</h5>
                 <ul class="footer-menu">
-                    <li><a href="#">Zionvalley Architects</a></li>
+                    <li><a href="{{ route('architect') }}">Zionvalley Architects</a></li>
                     <li><a href="#">Wigitech web</a></li>
                     <li><a href="#">Globalgreen Plant Center</a></li>
 
