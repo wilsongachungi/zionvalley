@@ -36,6 +36,7 @@ class User extends Authenticatable
 		'country',
 		'date_of_birth',
 		'password',
+		'avatar',
 	];
 
 	/**
