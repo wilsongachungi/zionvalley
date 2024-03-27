@@ -98,7 +98,7 @@
             </div>
             @endauth
             @else
-            <li class="nav-item" id="loginLink" style="list-style-type: none; display:none">
+            <li class="nav-item" id="loginLink" style="list-style-type: none;display:none">
                 <a style="color: green;" class="nav-link" href="{{ route('login') }}">Login</a>
             </li>
             @endauth
