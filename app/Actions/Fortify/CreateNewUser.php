@@ -29,6 +29,8 @@ class CreateNewUser implements CreatesNewUsers
 			'avatar' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
 		])->validate();
 
+		$avatarPath = null;
+
 		if (request()->hasFile('avatar')) {
 			$avatar = request()->file('avatar');
 			$avatarPath = $avatar->store('avatars', 'public'); // Assuming 'avatars' is your storage path
