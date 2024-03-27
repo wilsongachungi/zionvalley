@@ -192,8 +192,8 @@
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
                                         voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
                                     </p>
-                                    <a href="../downloads/conservancy.pdf" target="_blank" class="btn btn-primary">Open
-                                        PDF</a>
+                                    <iframe src="../downloads/conservancy.pdf" style="width: 100%; height: 600px;"></iframe>
+
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal"
