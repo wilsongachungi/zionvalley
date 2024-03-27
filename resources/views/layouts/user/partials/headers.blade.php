@@ -98,13 +98,20 @@
             </div>
             @endauth
             @else
-            <li style="list-style-type: none; margin-top:0px"
-                class="nav-item {{ Request::is('login') ? 'active' : '' }}" style="list-style-type: none;">
-                <a style="color:green; " class="nav-link" href="{{ route('login') }}">Login</a>
+            <li class="nav-item" id="loginLink" style="list-style-type: none; display:none">
+                <a style="color: green;" class="nav-link" href="{{ route('login') }}">Login</a>
             </li>
             @endauth
         </div>
     </nav>
 
+    <script>
+        $(document).ready(function () {
+            // Toggle login link visibility when navbar is expanded/collapsed
+            $('.navbar-toggler').click(function () {
+                $('#loginLink').toggle();
+            });
+        });
+    </script>
 
 </header>
