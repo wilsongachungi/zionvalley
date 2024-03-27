@@ -93,8 +93,12 @@
                                     </div>
                                 </div>
                                 <br>
-                                <a href="https://zionvalleycbo.org/chatify" class="btn btn-secondary">Chat with
-                                    Admin</a>
+                                <div class="form-group">
+                                    <label for="questionTextarea">Ask a Question:</label>
+                                    <textarea class="form-control" id="questionTextarea" rows="3"
+                                        placeholder="Type your question here..."></textarea> <br>
+                                        <button type="button" class="btn btn-primary" onclick="sendQuestion()">Send Question</button>
+                                </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -192,8 +196,8 @@
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
                                         voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
                                     </p>
-                                    <iframe src="../downloads/conservancy.pdf" style="width: 100%; height: 600px;"></iframe>
-
+                                    <a href="../downloads/conservancy.pdf" target="_blank" class="btn btn-primary">Open
+                                        PDF</a>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal"
@@ -268,23 +272,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
-    <script>
-    $(document).ready(function() {
-        $('.btn-primary').click(function(e) {
-            e.preventDefault(); // Prevent the default action of the link
-            var screenSize = $(window).width(); // Get the screen width
-
-            // Check if the screen width is below a certain threshold (e.g., for small screens)
-            if (screenSize <= 768) {
-                // If the screen size is small, prompt the user to download the PDF
-                window.location.href = '../downloads/conservancy.pdf'; // Direct download
-            } else {
-                // If the screen size is larger, open the PDF in a new tab/window
-                window.open('../downloads/conservancy.pdf', '_blank');
-            }
-        });
-    });
-    </script>
 
 </footer>
