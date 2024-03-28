@@ -46,23 +46,9 @@ class CreateNewUser implements CreatesNewUsers
 			'name' => $input['name'],
 			'email' => $input['email'] ?? 'uknown',
 			'phone' => $input['phone'],						
-			'email' => $input['email'],
 			'password' => Hash::make($input['password']),
 		]);
 		
-	
-		if (request()->hasFile('idimage')) {
-			$idimage = request()->file('idimage')->getClientOriginalName();
-			request()->file('idimage')->storeAs('idimage', $user->id . '/' . $idimage);
-			$user->update(['idimage' => $idimage]);
-		}
-	
-		if (request()->hasFile('passport')) {
-			$passport = request()->file('passport')->getClientOriginalName();
-			request()->file('passport')->storeAs('passport', $user->id . '/' . $passport);
-			$user->update(['passport' => $passport]);
-		}
-	
 		return $user;
 	}
 	
