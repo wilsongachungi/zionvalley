@@ -23,14 +23,13 @@ class CreateNewUser implements CreatesNewUsers
 			'name' => ['required', 'string', 'max:255'],
 			'email' => ['nullable', 'string', 'email', 'max:255', 'unique:users'],
 			'phone' => ['required', 'string', 'max:255'],
-			'area_of_residence' => ['nullable', 'string', 'max:255'],
-			'date_of_birth' => ['nullable', 'date'],
 			'password' => $this->passwordRules(),
 			'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
 			'idimage' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
 			'passport' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
 			'avatar' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
 		])->validate();
+		
 		
 		
 		
@@ -45,7 +44,7 @@ class CreateNewUser implements CreatesNewUsers
 	
 		$user = User::create([
 			'name' => $input['name'],
-			'email' => $input['email'],
+			'email' => $input['email'] ?? 'uknown',
 			'phone' => $input['phone'],
 			'area_of_residence' => $input['area_of_residence'],
 			'date_of_birth' => $input['date_of_birth'],
