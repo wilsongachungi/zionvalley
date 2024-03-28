@@ -41,10 +41,23 @@ class CreateNewUser implements CreatesNewUsers
 			$avatarPath = $avatar->store('avatars', 'public'); 
 		}
 		
+		$userPhone = $input['phone'] ?? null;
+
+
+		if (!empty($userPhone) && strlen($userPhone) >= 10) { // Example validation for minimum length
+			// Check if phone number already exists in the database
+			$existingUser = User::where('phone', $userPhone)->first();
+
+			if ($existingUser) {
+				// Handle duplicate phone number (e.g., throw an exception or return an error response)
+				throw new \Exception("Phone number already exists. Please use a different phone number.");
+			}
+		}
+
+		
 	
 		$user = User::create([
 			'name' => $input['name'],
-			'email' => $input['email'],
 			'phone' => $input['phone'],						
 			'password' => Hash::make($input['password']),
 			'avatar' => isset($input['avatar']) ? $input['avatar'] : 'default_avatar.jpg',

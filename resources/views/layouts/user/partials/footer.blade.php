@@ -25,6 +25,12 @@
                                 </button>
                             </div>
                             <div class="modal-body">
+                            <div class="form-group">
+                                    <label for="questionTextarea">Ask a Question:</label>
+                                    <textarea class="form-control" id="questionTextarea" rows="3"
+                                        placeholder="Type your question here..."></textarea> <br>
+                                        <button type="button" class="btn btn-primary" onclick="sendQuestion()">Send Question</button>
+                                </div>
                                 <div id="accordion">
                                     <div class="card">
                                         <div class="card-header" id="headingOne">
@@ -93,12 +99,7 @@
                                     </div>
                                 </div>
                                 <br>
-                                <div class="form-group">
-                                    <label for="questionTextarea">Ask a Question:</label>
-                                    <textarea class="form-control" id="questionTextarea" rows="3"
-                                        placeholder="Type your question here..."></textarea> <br>
-                                        <button type="button" class="btn btn-primary" onclick="sendQuestion()">Send Question</button>
-                                </div>
+                               
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
