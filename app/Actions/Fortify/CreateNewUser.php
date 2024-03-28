@@ -47,6 +47,7 @@ class CreateNewUser implements CreatesNewUsers
 			'email' => $input['email'],
 			'phone' => $input['phone'],						
 			'password' => Hash::make($input['password']),
+			'avatar' => isset($input['avatar']) ? $input['avatar'] : 'default_avatar.jpg',
 		]);
 		
 		return $user;
