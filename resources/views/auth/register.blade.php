@@ -14,18 +14,19 @@
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')"
                     required autofocus autocomplete="name" />
             </div>
-
-            <div class="mt-4">
-                <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')"
-                    required autocomplete="username" />
-            </div>
-
             <div>
                 <x-label for="phone" value="{{ __('phone') }}" />
                 <x-input id="phone" class="block mt-1 w-full" type="number" name="phone" :value="old('phone')"
                     required autofocus autocomplete="phone" />
             </div>
+
+            <!-- <div class="mt-4">
+                <x-label for="email" value="{{ __('Email') }}" />
+                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')"
+                    required autocomplete="username" />
+            </div>
+
+           
 			<div>
                 <x-label for="country" value="{{ __('Country') }}" />
                 <x-input id="phone" class="block mt-1 w-full" type="text" name="country" :value="old('country')"
@@ -41,7 +42,7 @@
                 <x-label for="date_of_birth" value="{{ __('Date of Birth') }}" />
                 <x-input id="date_of_birth" class="block mt-1 w-full" type="date" name="date_of_birth" :value="old('date_of_birth')"
                     required autofocus autocomplete="date_of_birth" />
-            </div>
+            </div> -->
 
             <div class="mt-4">
                 <x-label for="password" value="{{ __('Password') }}" />
