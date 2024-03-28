@@ -21,7 +21,7 @@ class CreateNewUser implements CreatesNewUsers
 	{
 		Validator::make($input, [
 			'name' => ['required', 'string', 'max:255'],
-			'email' => ['nullable', 'string', 'email', 'max:255', 'unique:users'],
+			'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
 			'phone' => ['required', 'string', 'max:255'],
 			'area_of_residence' => ['nullable', 'string', 'max:255'],
 			'date_of_birth' => ['nullable', 'date'],
@@ -30,8 +30,8 @@ class CreateNewUser implements CreatesNewUsers
 			'idimage' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
 			'passport' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
 			'avatar' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
-			'country' => ['nullable', 'string', 'max:255'], // Make 'country' optional
 		])->validate();
+		
 		
 		
 	
@@ -39,7 +39,7 @@ class CreateNewUser implements CreatesNewUsers
 	
 		if (request()->hasFile('avatar')) {
 			$avatar = request()->file('avatar');
-			$avatarPath = $avatar->store('avatars', 'public'); // Assuming 'avatars' is your storage path
+			$avatarPath = $avatar->store('avatars', 'public'); 
 		}
 		
 	
@@ -47,13 +47,12 @@ class CreateNewUser implements CreatesNewUsers
 			'name' => $input['name'],
 			'email' => $input['email'],
 			'phone' => $input['phone'],
-			'country' => $input['country'] ?? null, // Use the country value if provided, otherwise use null
-			'area_of_residence' => $input['area_of_residence'] ?? null,
-			'date_of_birth' => $input['date_of_birth'] ?? null,
-			'email' => $input['email'] ?? null,
+			'area_of_residence' => $input['area_of_residence'],
+			'date_of_birth' => $input['date_of_birth'],
+			'email' => $input['email'],
 			'password' => Hash::make($input['password']),
-			'avatar' => $avatarPath, // Save avatar path or filename in 'avatar' field
 		]);
+		
 	
 		if (request()->hasFile('idimage')) {
 			$idimage = request()->file('idimage')->getClientOriginalName();
