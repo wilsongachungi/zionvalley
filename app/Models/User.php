@@ -32,9 +32,6 @@ class User extends Authenticatable
 		'name',
 		'email',
 		'phone',
-		'area_of_residence',
-		'country',
-		'date_of_birth',
 		'password',
 		'avatar',
 	];
