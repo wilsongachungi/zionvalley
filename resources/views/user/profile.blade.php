@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    <style>
-        .dark-shade {
-            background-color: #002000; 
-            color: white; /* Text color */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
-        
-        }
-    </style>
+<style>
+.dark-shade {
+    background-color: #002000;
+    color: white;
+    /* Text color */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+
+}
+</style>
 
 <head>
     <meta charset="utf-8">
@@ -58,15 +59,15 @@
                             <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
                                 <div class="navbar-profile">
                                     @foreach ($profile as $profiles)
-                                        <img class="img-xs rounded-circle" src="profileimage/{{ $profiles->passport }}"
-                                            alt="image">
+                                    <img class="img-xs rounded-circle" src="profileimage/{{ $profiles->passport }}"
+                                        alt="image">
                                     @endforeach
 
                                     <p class="mb-0 d-none d-sm-block navbar-profile-name">
                                         @if (Auth::check())
-                                            {{ Auth::user()->name }}
+                                        {{ Auth::user()->name }}
                                         @else
-                                            Guest
+                                        Guest
                                         @endif
                                     </p>
                                     <i class="mdi mdi-menu-down d-none d-sm-block"></i>
@@ -116,7 +117,7 @@
                                                     <th style="color:greenyellow">Name</th>
                                                     <th style="color:greenyellow">Phone</th>
                                                     <th style="color:greenyellow">Email</th>
-                                                   
+
                                                     <th style="color:greenyellow">Country</th>
                                                     <th style="color:greenyellow">Location</th>
                                                     <th style="color:greenyellow">Age</th>
@@ -128,7 +129,7 @@
                                                         <span class="ps-2">{{ Auth::user()->name }}</span>
                                                     </td>
                                                     <td>{{ Auth::user()->phone }}</td>
-                                                    <td>{{ Auth::user()->email }}</td>                                                    
+                                                    <td>{{ Auth::user()->email }}</td>
                                                     <!-- <td>{{ Auth::user()->country }}</td>
                                                     <td>{{ Auth::user()->area_of_residence }}</td>
                                                     <td>{{ Auth::user()->age }}</td> -->
@@ -145,7 +146,8 @@
 
 
                     <!-- Button trigger modal -->
-                    <button type="button" class="dark-shade" style="color:greenyellow" data-toggle="modal" data-target="#uploadModal">
+                    <button type="button" class="dark-shade" style="color:greenyellow" data-toggle="modal"
+                        data-target="#uploadModal">
                         Profile not complete.Click to Continue
                     </button>
 
@@ -155,7 +157,8 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header" style="background: rgb(0, 49, 0)">
-                                    <h5 class="modal-title" id="exampleModalLabel" style="color:greenyellow">Upload Form</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel" style="color:greenyellow">Upload Form
+                                    </h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -169,11 +172,12 @@
                                             <div class="col-md-6">
                                                 <div class="card">
                                                     <div class="card-body dark-shade">
-                                                        <h6 class="card-title" style="color:greenyellow">Upload Facial Picture</h6>
+                                                        <h6 class="card-title" style="color:greenyellow">Upload Facial
+                                                            Picture</h6>
                                                         <input type="file" name="passport" accept="image/*">
                                                         @if (Session::has('passport_success'))
-                                                            <div class="alert alert-success mt-2">
-                                                                {{ Session::get('passport_success') }}</div>
+                                                        <div class="alert alert-success mt-2">
+                                                            {{ Session::get('passport_success') }}</div>
                                                         @endif
                                                     </div>
                                                 </div>
@@ -181,58 +185,100 @@
                                             <div class="col-md-6">
                                                 <div class="card">
                                                     <div class="card-body dark-shade ">
-                                                        <h6 class="card-title" style="color:greenyellow">Front ID Upload</h6>
+                                                        <h6 class="card-title" style="color:greenyellow">Front ID Upload
+                                                        </h6>
                                                         <input type="file" name="idimage" accept="image/*">
                                                         @if (Session::has('idimage_success'))
-                                                            <div class="alert alert-success mt-2">
-                                                                {{ Session::get('idimage_success') }}</div>
+                                                        <div class="alert alert-success mt-2">
+                                                            {{ Session::get('idimage_success') }}</div>
                                                         @endif
                                                     </div>
-                                                        
-                                                    <div class="card-body dark-shade mt-1">
-                                                        <h6 class="card-title" style="color:greenyellow">Back ID Upload</h6>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mt-3">
+                                                <div class="card">
+                                                    <div class="card-body dark-shade">
+                                                        <h6 class="card-title" style="color:greenyellow">Back ID Upload
+                                                        </h6>
                                                         <input type="file" name="idimageback" accept="image/*">
                                                         @if (Session::has('idimageback_success'))
-                                                            <div class="alert alert-success mt-2">
-                                                                {{ Session::get('idimageback_success') }}</div>
+                                                        <div class="alert alert-success mt-2">
+                                                            {{ Session::get('idimageback_success') }}</div>
                                                         @endif
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-
                                         <button type="submit" class="btn btn-primary mt-3">Submit</button>
                                     </form>
+                                    
+                            
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-body dark-shade">
+                                            <h6 class="card-title" style="color:greenyellow">Update Profile Information
+                                            </h6>
+                                            <form action="" method="post">
+                                                @csrf
+                                                <div class="form-group">
+                                                    <label for="email">Email:</label>
+                                                    <input type="email" class="form-control" id="email" name="email"
+                                                        required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="age">Age:</label>
+                                                    <input type="number" class="form-control" id="age" name="age"
+                                                        required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="country">Country:</label>
+                                                    <input type="text" class="form-control" id="country" name="country"
+                                                        required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="residence">Residence:</label>
+                                                    <input type="text" class="form-control" id="residence"
+                                                        name="residence" required>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Update
+                                                    Information</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
-               
 
-                    <footer class="footer">
-                        <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ©
-                                zionvalleycbo</span>
-                        </div>
-                    </footer>
 
-                </div>
+                <footer class="footer">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ©
+                            zionvalleycbo</span>
+                    </div>
+                </footer>
+
             </div>
         </div>
-        <script src="admin/assets/vendors/js/vendor.bundle.base.js"></script>
-        <script src="admin/assets/vendors/chart.js/Chart.min.js"></script>
-        <script src="admin/assets/vendors/progressbar.js/progressbar.min.js"></script>
-        <script src="admin/assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
-        <script src="admin/assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-        <script src="admin/assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
-        <script src="admin/assets/js/jquery.cookie.js" type="text/javascript"></script>
-        <script src="admin/assets/js/off-canvas.js"></script>
-        <script src="admin/assets/js/hoverable-collapse.js"></script>
-        <script src="admin/assets/js/misc.js"></script>
-        <script src="admin/assets/js/settings.js"></script>
-        <script src="admin/assets/js/todolist.js"></script>
-        <script src="admin/assets/js/dashboard.js"></script>
+    </div>
+    <script src="admin/assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="admin/assets/vendors/chart.js/Chart.min.js"></script>
+    <script src="admin/assets/vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="admin/assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
+    <script src="admin/assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="admin/assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
+    <script src="admin/assets/js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="admin/assets/js/off-canvas.js"></script>
+    <script src="admin/assets/js/hoverable-collapse.js"></script>
+    <script src="admin/assets/js/misc.js"></script>
+    <script src="admin/assets/js/settings.js"></script>
+    <script src="admin/assets/js/todolist.js"></script>
+    <script src="admin/assets/js/dashboard.js"></script>
 </body>
 
 </html>
