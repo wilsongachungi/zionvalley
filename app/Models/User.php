@@ -72,12 +72,12 @@ class User extends Authenticatable
 	 *
 	 * @return int|null
 	 */
-	public function getAgeAttribute()
-	{
-		$dob = $this->attributes['date_of_birth'];
+	// public function getAgeAttribute()
+	// {
+	// 	$dob = $this->attributes['date_of_birth'];
 
-		return $dob ? Carbon::parse($dob)->age : null;
-	}
+	// 	return $dob ? Carbon::parse($dob)->age : null;
+	// }
 
 	public function messages(): HasMany
 	{
