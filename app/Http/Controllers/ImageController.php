@@ -19,7 +19,7 @@ class ImageController extends Controller
 		$directory = 'profileimage';
 
 		if (!file_exists($directory)) {
-			mkdir($directory, 0755, true); // Create directory with read, write, and execute permissions for owner and read and execute permissions for others
+			mkdir($directory, 0755, true); 
 		}
 
 		if ($request->hasFile('passport')) {
