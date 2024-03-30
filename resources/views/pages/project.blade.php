@@ -439,12 +439,23 @@ li {
                                         <img class="d-block w-100" src="../assets/img/6d.jpg" alt="14 slide">
                                     </div>
                                     <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/29 cottage.jpg" alt="15 slide">
+                                    </div>
+                                    <div class="carousel-item">
                                         <img class="d-block w-100" src="../assets/img/living chainlink round tube.jpg"
-                                            alt="15 slide">
+                                            alt="16 slide">
                                     </div>
                                     <div class="carousel-item">
                                         <img class="d-block w-100" src="../assets/img/living chainlink fence 2.jpg"
-                                            alt="16 slide">
+                                            alt="17 slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/6d.jpg"
+                                            alt="18 slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/43.jpg"
+                                            alt="19 slide">
                                     </div>
 
                                 </div>
@@ -490,42 +501,60 @@ li {
                                         <img class="d-block w-100" src="../assets/img/3 slope.jpg" alt="Third slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/4 slope.jpg" alt="Third slide">
+                                        <img class="d-block w-100" src="../assets/img/4 slope.jpg" alt="4 slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/5 slope.jpg" alt="Third slide">
+                                        <img class="d-block w-100" src="../assets/img/5 slope.jpg" alt="5 slide">
                                     </div>
                                     <div class="carousel-item">
                                         <img class="d-block w-100" src="../assets/img/17 slope house.jpg"
-                                            alt="Third slide">
+                                            alt="6 slide">
                                     </div>
                                     <div class="carousel-item">
                                         <img class="d-block w-100" src="../assets/img/22 slope house.jpg"
-                                            alt="Third slide">
+                                            alt="7 slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/19 slope.jpg" alt="Third slide">
+                                        <img class="d-block w-100" src="../assets/img/19 slope.jpg" alt="8 slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/9 slope.jpg" alt="Third slide">
+                                        <img class="d-block w-100" src="../assets/img/9 slope.jpg" alt="9 slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/10 slope.jpg" alt="Third slide">
+                                        <img class="d-block w-100" src="../assets/img/10 slope.jpg" alt="10 slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/11 slope.jpg" alt="Third slide">
+                                        <img class="d-block w-100" src="../assets/img/11 slope.jpg" alt="11 slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/12 slope.jpg" alt="Third slide">
+                                        <img class="d-block w-100" src="../assets/img/12 slope.jpg" alt="12 slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/13 slope.jpg" alt="Third slide">
+                                        <img class="d-block w-100" src="../assets/img/13 slope.jpg" alt="13 slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/14 slope.jpg" alt="Third slide">
+                                        <img class="d-block w-100" src="../assets/img/14 slope.jpg" alt="14 slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="../assets/img/15 slope.jpg" alt="Third slide">
+                                        <img class="d-block w-100" src="../assets/img/15 slope.jpg" alt="15 slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/20 slope.jpg" alt="16 slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/21 slope.jpg" alt="17 slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/25 slope.jpg" alt="18 slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/26 slope.jpg" alt="19 slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/27 slope.jpg" alt="20 slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../assets/img/28 slope.jpg" alt="21 slide">
                                     </div>
                                 </div>
                                 <!-- Carousel navigation controls -->
