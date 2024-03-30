@@ -111,13 +111,11 @@
                                     <h4 class="card-title" style="color:greenyellow">Profile</h4>
                                     <div class="table-responsive">
                                         <table class="table">
-                                            @csrf
                                             <thead>
                                                 <tr>
                                                     <th style="color:greenyellow">Name</th>
                                                     <th style="color:greenyellow">Phone</th>
                                                     <th style="color:greenyellow">Email</th>
-
                                                     <th style="color:greenyellow">Country</th>
                                                     <th style="color:greenyellow">Location</th>
                                                     <th style="color:greenyellow">Age</th>
@@ -125,14 +123,12 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>
-                                                        <span class="ps-2">{{ Auth::user()->name }}</span>
-                                                    </td>
+                                                    <td>{{ Auth::user()->name }}</td>
                                                     <td>{{ Auth::user()->phone }}</td>
                                                     <td>{{ Auth::user()->email }}</td>
-                                                    <!-- <td>{{ Auth::user()->country }}</td>
-                                                    <td>{{ Auth::user()->area_of_residence }}</td>
-                                                    <td>{{ Auth::user()->age }}</td> -->
+                                                    <td>{{ Auth::user()->profileInformation->country }}</td>
+                                                    <td>{{ Auth::user()->profileInformation->residence }}</td>
+                                                    <td>{{ Auth::user()->profileInformation->age }}</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -218,33 +214,34 @@
                                             <div class="card">
                                                 <div class="card-body dark-shade">
                                                     <h6 class="card-title" style="color:greenyellow">Completing Profile
-                                                        Information
-                                                    </h6>
+                                                        Information</h6>
                                                     <form action="{{ route('complete_profile') }}" method="post"
                                                         enctype="multipart/form-data">
                                                         @csrf
                                                         <div class="form-group">
                                                             <label for="email">Email:</label>
                                                             <input style="color:antiquewhite" type="email"
-                                                                class="form-control" id="email" name="email" required>
+                                                                class="form-control" id="email" name="email"
+                                                                value="{{ old('email') }}" required>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="age">Age:</label>
                                                             <input style="color:antiquewhite" type="number"
-                                                                class="form-control" id="age" name="age" required>
+                                                                class="form-control" id="age" name="age"
+                                                                value="{{ old('age') }}" required>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="country">Country:</label>
                                                             <input style="color:antiquewhite" type="text"
                                                                 class="form-control" id="country" name="country"
-                                                                required>
+                                                                value="{{ old('country') }}" required>
                                                         </div>
                                                         <div class="form-group">
                                                             <label style="color:antiquewhite"
                                                                 for="residence">Residence:</label>
                                                             <input style="color:antiquewhite" type="text"
                                                                 class="form-control" id="residence" name="residence"
-                                                                required>
+                                                                value="{{ old('residence') }}" required>
                                                         </div>
                                                         <button type="submit" class="btn btn-primary">Update
                                                             Information</button>

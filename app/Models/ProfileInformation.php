@@ -19,4 +19,10 @@ class ProfileInformation extends Model
         'residence',
     ];
 
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+    
+
 }
