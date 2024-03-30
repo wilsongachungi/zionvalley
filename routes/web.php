@@ -12,6 +12,7 @@ use App\Http\Controllers\MessageController;
 use App\Http\Controllers\SellController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\ViewController;
+use App\Http\Controllers\ProfileController;
 use App\Models\Message;
 use Doctrine\DBAL\Schema\View;
 use Illuminate\Support\Facades\Route;
@@ -83,3 +84,6 @@ Route::post('/sells', [SellController::class, 'sells'])->name('sells');
 Route::delete('/delete_download/{download}',[DownloadController::class, 'delete_download'])->name('delete_download');
 Route::get('/downloads/{id}/edit', [DownloadController::class, 'edit'])->name('edit_download');
 Route::get('/architect', [viewController::class, 'architect'])->name('architect');
+Route::post('/complete_profile', [ProfileController::class, 'complete_profile'])->name('complete_profile');
+
+

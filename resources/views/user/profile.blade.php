@@ -182,7 +182,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6">
+                                            <!-- <div class="col-md-6">
                                                 <div class="card">
                                                     <div class="card-body dark-shade ">
                                                         <h6 class="card-title" style="color:greenyellow">Front ID Upload
@@ -207,51 +207,61 @@
                                                         @endif
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <button type="submit" class="btn btn-primary mt-3">Submit</button>
                                     </form>
-                                    
-                            
-                            <div class="row mt-3">
-                                <div class="col-md-12">
-                                    <div class="card">
-                                        <div class="card-body dark-shade">
-                                            <h6 class="card-title" style="color:greenyellow">Update Profile Information
-                                            </h6>
-                                            <form action="" method="post">
-                                                @csrf
-                                                <div class="form-group">
-                                                    <label for="email">Email:</label>
-                                                    <input type="email" class="form-control" id="email" name="email"
-                                                        required>
+
+
+                                    <div class="row mt-3">
+                                        <div class="col-md-12">
+                                            <div class="card">
+                                                <div class="card-body dark-shade">
+                                                    <h6 class="card-title" style="color:greenyellow">Completing Profile
+                                                        Information
+                                                    </h6>
+                                                    <form action="{{ route('complete_profile') }}" method="post"
+                                                        enctype="multipart/form-data">
+                                                        @csrf
+                                                        <div class="form-group">
+                                                            <label for="email">Email:</label>
+                                                            <input style="color:antiquewhite" type="email"
+                                                                class="form-control" id="email" name="email" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="age">Age:</label>
+                                                            <input style="color:antiquewhite" type="number"
+                                                                class="form-control" id="age" name="age" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="country">Country:</label>
+                                                            <input style="color:antiquewhite" type="text"
+                                                                class="form-control" id="country" name="country"
+                                                                required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label style="color:antiquewhite"
+                                                                for="residence">Residence:</label>
+                                                            <input style="color:antiquewhite" type="text"
+                                                                class="form-control" id="residence" name="residence"
+                                                                required>
+                                                        </div>
+                                                        <button type="submit" class="btn btn-primary">Update
+                                                            Information</button>
+                                                    </form>
+                                                    @if(session('success'))
+                                                    <div class="alert alert-success mt-3">
+                                                        {{ session('success') }}
+                                                    </div>
+                                                    @endif
                                                 </div>
-                                                <div class="form-group">
-                                                    <label for="age">Age:</label>
-                                                    <input type="number" class="form-control" id="age" name="age"
-                                                        required>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="country">Country:</label>
-                                                    <input type="text" class="form-control" id="country" name="country"
-                                                        required>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="residence">Residence:</label>
-                                                    <input type="text" class="form-control" id="residence"
-                                                        name="residence" required>
-                                                </div>
-                                                <button type="submit" class="btn btn-primary">Update
-                                                    Information</button>
-                                            </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                                </div>
-                            </div>
                         </div>
-                        
+
                     </div>
                 </div>
 
