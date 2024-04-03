@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\ProfileInformation; // Import the ProfileInformation model
+use App\Models\ProfileInformation; 
 
 class ProfileController extends Controller
 {
@@ -17,18 +17,16 @@ class ProfileController extends Controller
             'residence' => 'required|string',
         ]);
 
-        $user = auth()->user(); // Assuming you want to associate this with the logged-in user
+        $user = auth()->user(); 
 
-        // Check if the user already has a profile information record
         $profile = ProfileInformation::where('user_id', $user->id)->first();
 
-        // If the profile record doesn't exist, create a new one
         if (!$profile) {
             $profile = new ProfileInformation();
-            $profile->user_id = $user->id; // Assuming there's a user_id column in the profileinformation table
+            $profile->user_id = $user->id; 
         }
 
-        // Update the profile information
+
 
         $profile->age = $validatedData['age'];
         $profile->country = $validatedData['country'];
