@@ -126,9 +126,9 @@
                                                     <td>{{ Auth::user()->name }}</td>
                                                     <td>{{ Auth::user()->phone }}</td>
                                                     <td>{{ Auth::user()->email }}</td>
-                                                    <td>{{ Auth::user()->profileInformation->country ?? 'N/A' }}</td>
+                                                    <!-- <td>{{ Auth::user()->profileInformation->country ?? 'N/A' }}</td>
                                                     <td>{{ Auth::user()->profileInformation->residence ?? 'N/A' }}</td>
-                                                    <td>{{ Auth::user()->profileInformation->age ?? 'N/A' }}</td>
+                                                    <td>{{ Auth::user()->profileInformation->age ?? 'N/A' }}</td> -->
                                                 </tr>
                                             </tbody>
                                         </table>
