@@ -153,7 +153,7 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header" style="background: rgb(0, 49, 0)">
-                                    <h5 class="modal-title" id="exampleModalLabel" style="color:greenyellow">Upload 
+                                    <h5 class="modal-title" id="exampleModalLabel" style="color:greenyellow">Upload Form
                                     </h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
