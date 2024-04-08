@@ -144,7 +144,7 @@
                     <!-- Button trigger modal -->
                     <button type="button" class="dark-shade" style="color:greenyellow" data-toggle="modal"
                         data-target="#uploadModal">
-                        Profile not complete.Click to Continue
+                        Profile not complete.Continue
                     </button>
 
                     <!-- Modal -->
