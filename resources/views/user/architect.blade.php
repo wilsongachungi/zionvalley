@@ -179,18 +179,16 @@ li {
     margin-bottom: 10px;
 }
 
-    /* Style for full-page iframe */
     .full-page-iframe {
       position: fixed;
       top: 0;
       left: 0;
-      width: 150%;
+      width: 180%;
       height: 150%;
       z-index: 9999;
       background: rgba(0, 0, 0, 0.6);
     }
 
-    /* Style for close button */
     .close-btn {
       position: absolute;
       top: 20px;
@@ -212,31 +210,31 @@ li {
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
 
                     </div>
-                    <img class="img1 pb-0 mb-0" src="../assets/img/Home 1.jpg" alt="Image 1">
+                    <img class="img1 pb-0 mb-0 " style="height:100vh; object-fit:cover; object-position:center" src="../assets/img/solar.jpg" alt="Image 1">
                 </div>
 
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
 
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 2.JPG" alt="Image 2">
+                    <img class="img1 pb-0 mb-0 d-block"  style="height:100vh; object-fit:cover; object-position:center" src="../assets/img/image035.JPG" alt="Image 2">
                 </div>
 
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
 
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 3.jpg" alt="Image 3">
+                    <img class="img1 pb-0 mb-0 d-block"  style="height:100vh; object-fit:cover; object-position:center" src="../assets/img/Luscome Lower2.PNG" alt="Image 3">
                 </div>
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
 
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 4.JPG" alt="Image 3">
+                    <img class="img1 pb-0 mb-0 d-block"  style="height:100vh; object-fit:cover; object-position:center" src="../assets/img/Wood Ibiza1.JPG" alt="Image 3">
                 </div>
                 <div class="carousel-item text-center">
 
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home Carosel.jpg" alt="Image 3">
+                    <img class="img1 pb-0 mb-0 d-block"  style="height:100vh; object-fit:cover; object-position:center" src="../assets/img/Craig Manifold 2.jpg" alt="Image 3">
                 </div>
             </div>
 
