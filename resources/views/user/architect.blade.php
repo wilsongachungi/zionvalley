@@ -224,7 +224,7 @@ li {
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
 
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block"  style="height:100vh; object-fit:cover; object-position:center" src="../assets/img/Luscome Lower2.PNG" alt="Image 3">
+                    <img class="img1 pb-0 mb-0 d-block"  style="height:100vh; object-fit:cover; object-position:center" src="../assets/img/Luscome Lower2.PNG" alt="Image 13">
                 </div>
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
