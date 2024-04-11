@@ -75,6 +75,7 @@ li {
         display: none;
     }
 }
+
 .carousel-item img {
     height: 300px;
     /* Adjust the height as needed */
@@ -177,6 +178,24 @@ li {
     font-size: 1.2em;
     margin-bottom: 10px;
 }
+
+    .full-page-iframe {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 180%;
+      height: 150%;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 10000;
+    }
+
 </style>
 @endsection
 
@@ -189,33 +208,33 @@ li {
             <div class="carousel-inner">
                 <div class="carousel-item active text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                      
+
                     </div>
-                    <img class="img1 pb-0 mb-0" src="../assets/img/Home 1.jpg" alt="Image 1">
+                    <img class="img1 pb-0 mb-0 " style="height:100vh; object-fit:cover; object-position:center" src="../assets/img/solar.jpg" alt="Image 1">
                 </div>
 
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                     
+
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 2.JPG" alt="Image 2">
+                    <img class="img1 pb-0 mb-0 d-block"  style="height:100vh; object-fit:cover; object-position:center" src="../assets/img/image035.JPG" alt="Image 2">
                 </div>
 
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                      
+
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 3.jpg" alt="Image 3">
+                    <img class="img1 pb-0 mb-0 d-block"  style="height:100vh; object-fit:cover; object-position:center" src="../assets/img/Luscome Lower2.PNG" alt="Image 3">
                 </div>
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        
+
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 4.JPG" alt="Image 3">
+                    <img class="img1 pb-0 mb-0 d-block"  style="height:100vh; object-fit:cover; object-position:center" src="../assets/img/Wood Ibiza1.JPG" alt="Image 3">
                 </div>
                 <div class="carousel-item text-center">
-                   
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home Carosel.jpg" alt="Image 3">
+
+                    <img class="img1 pb-0 mb-0 d-block"  style="height:100vh; object-fit:cover; object-position:center" src="../assets/img/Craig Manifold 2.jpg" alt="Image 3">
                 </div>
             </div>
 
@@ -330,6 +349,30 @@ li {
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
+            </div>
+
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#iframeModal">
+                Architects Experience
+            </button>
+
+            <!-- Modal with iframe -->
+            <div class="modal fade" id="iframeModal" tabindex="-1" aria-labelledby="iframeModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="iframeModalLabel">Architects Cv</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="../assets/img/CV.pdf"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
