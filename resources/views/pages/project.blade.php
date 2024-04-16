@@ -242,7 +242,8 @@ li {
                 <ol class="carousel-indicators">
                     <li data-target="#carouselInspirationalProjects" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselInspirationalProjects" data-slide-to="1"></li>
-                    <li data-target="#carouselInspirationalProjects" data-slide-to="2"></li>
+                    <li data-target="#carouselInspirationalProjects" data-slide-to="10"></li>
+                    <li data-target="#carouselInspirationalProjects" data-slide-to="11"></li>
                     <li data-target="#carouselInspirationalProjects" data-slide-to="3"></li>
                     <li data-target="#carouselInspirationalProjects" data-slide-to="4"></li>
                     <li data-target="#carouselInspirationalProjects" data-slide-to="5"></li>
@@ -256,6 +257,12 @@ li {
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="../assets/img/HandRail Tree Branches 3.JPG" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/handrail1.jpg" alt="15">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/handrail2.JPG" alt="16">
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="../assets/img/zion river side.jpg" alt="Third slide">
@@ -273,7 +280,7 @@ li {
                         <img class="d-block w-100" src="../assets/img/jungle house side deck.jpg" alt="Fifth slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/safari.jpg" alt="Fifth slide">
+                        <img class="d-block w-100" src="../assets/img/decking22.jpg" alt="Fifth slide">
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="../assets/img/safari.jpg" alt="Fifth slide">

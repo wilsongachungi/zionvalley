@@ -68,11 +68,7 @@
                                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
                                             data-parent="#accordion">
                                             <div class="card-body">
-                                                <p style="color:green">
-                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                                                    terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-                                                </p>
+                                              
                                             </div>
                                         </div>
                                     </div>
@@ -88,13 +84,7 @@
                                         </div>
                                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                                             data-parent="#accordion">
-                                            <div class="card-body">
-                                                <p style="color:green">
-                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                                                    terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
-                                                    skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-                                                </p>
-                                            </div>
+                                            petro
                                         </div>
                                     </div>
                                 </div>
@@ -244,7 +234,7 @@
                 <ul class="footer-menu">
                     <li><a href="{{ route('architect') }}">Zionvalley Architects</a></li>
                     <li><a href="#">Wigitech web</a></li>
-                    <li><a href="#">Globalgreen Plant Center</a></li>
+                    <li><a href="https://www.google.com/search?sa=X&sca_esv=28539f6bd3358b60&biw=360&bih=666&sxsrf=ACQVn0-UWo9V8r4xACJEe3w0jfRLsXdocg%3A1712828383767&q=Global%20green%20plants%20centre&ludocid=2189355778132343318&ibp=gwp%3B0%2C7&lsig=AB86z5VTyhD-s7qsmI7htaUEwV2x&kgs=864aefdd3dc2cc5d&shndl=-1&source=sh%2Fx%2Floc%2Fact%2Fm4%2F2#lkt=LocalPoiPhotos&lpg=cid:CgIgAQ%3D%3D">Globalgreen Plant Center</a></li>
 
                 </ul>
             </div>

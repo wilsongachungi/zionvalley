@@ -113,35 +113,35 @@ li {
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
 
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/5 cottage.jpg" alt="Image 3"
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/5 cottage.jpg" alt="Image 4"
                         style="height: 400px;">
                 </div>
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
 
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/moss roof cottage.jpg" alt="Image 3"
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/moss roof cottage.jpg" alt="Image 5"
                         style="height: 400px;">
                 </div>
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
 
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/66.jpg" alt="Image 3"
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Cottage Rendered 3.jpg" alt="Image 6"
                         style="height: 400px;">
                 </div>
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
 
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Treehouse33.jpg" alt="Image 3"
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Treehouse33.jpg" alt="Image 7"
                         style="height: 400px;">
                 </div>
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
 
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/new1.jpeg" alt="Image 3"
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/new1.jpeg" alt="Image 8"
                         style="height: 400px;">
                 </div>
             </div>
@@ -173,7 +173,7 @@ li {
             style="background-image: url('../assets/img/Capture11.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: rgb(235, 234, 236);">
             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; ;">
             </div>
-            <div class="green-tint" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+            
             <p style="font-size: 1.2em;
             margin-bottom: 10px; text-align:center;">
                 All cottages to be listed and available online <br>
