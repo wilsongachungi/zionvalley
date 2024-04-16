@@ -6,15 +6,15 @@ use Illuminate\Http\Request;
 
 class EmailController extends Controller
 {
-    public function sendQuestion(Request $request)
+    public function send_question(Request $request)
     {
-        // Validate the request
+        
         $request->validate([
             'question' => 'required|string',
         ]);
 
         // Send email using Laravel's Mail facade
-        Mail::to('your-email@example.com')->send(new QuestionMail($request->question));
+        Mail::to('zionvalleykenya@gmail.com')->send(new QuestionMail($request->question));
 
         // Save the question in the database
         $question = new Question();
