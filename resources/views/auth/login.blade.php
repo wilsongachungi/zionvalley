@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <x-authentication-card>
+    <x-authentication-card >
         <x-slot name="logo">
             <img src="../assets/img/logo1-removebg-preview.png" style="width:200;height:100px" alt="">
         </x-slot>
@@ -7,18 +7,18 @@
         <x-validation-errors class="mb-4" />
 
         @if (session('status'))
-            <div class="mb-4 font-medium text-sm text-green-600">
-                {{ session('status') }}
-            </div>
+        <div class="mb-4 font-medium text-sm text-green-600">
+            {{ session('status') }}
+        </div>
         @endif
 
-        <form method="POST" action="{{ route('login') }}">
+        <form method="POST" action="{{ route('login') }}" >
             @csrf
 
             <div>
-                <x-label for="login" value="{{ __('Email or Phone Number') }}" />
-                <x-input id="login" class="block mt-1 w-full" type="text" name="login" :value="old('login')"
-                    required autofocus />
+                <x-label for="login" value="{{ __('Phone Number') }}" />
+                <x-input id="login" class="block mt-1 w-full" type="number" name="login" :value="old('login')" required
+                    autofocus maxlength="10" />
             </div>
 
             <div class="mt-4">
@@ -39,10 +39,10 @@
                     {{ __('Register') }}
                 </a>
                 @if (Route::has('password.request'))
-                    <a class="ml-6 underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                        href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
+                <a class="ml-6 underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    href="{{ route('password.request') }}">
+                    {{ __('Forgot your password?') }}
+                </a>
                 @endif
 
                 <x-button class="ml-4">

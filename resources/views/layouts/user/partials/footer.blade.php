@@ -26,7 +26,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     @if (session('success'))
                                     <div class="alert alert-success">{{ session('success') }}</div>
                                     @endif
@@ -38,7 +38,7 @@
                                         <button type="submit" class="btn btn-primary">Send Question</button>
                                     </form>
 
-                                </div>
+                                </div> -->
                                 <div id="accordion">
                                     <div class="card">
                                         <div class="card-header" id="headingOne">

@@ -222,7 +222,7 @@
                                                             <label for="email">Email:</label>
                                                             <input style="color:antiquewhite" type="email"
                                                                 class="form-control" id="email" name="email"
-                                                                value="{{ old('email') }}" required>
+                                                                value="{{ old('email') }}" >
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="age">Age:</label>
