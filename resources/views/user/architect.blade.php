@@ -257,7 +257,7 @@ li {
 
         <br>
         <div class="container">
-            <section id="accommodation" class="content">
+            <!-- <section id="accommodation" class="content">
                 <div class="row">
                     <div class="col-12 col-md-4 single-accommodation">
                         <img src="../assets/img/1 Yello Drive.PNG" alt="">
@@ -267,7 +267,7 @@ li {
                     <div class="col-12 col-md-4 single-accommodation">
                         <img src="../assets/img/2 Patio Panorama.PNG" alt="">
                         <div class="overlay"></div>
-                        <div class="service-desc pl-2 pb-2">cCottage</div>
+                        <div class="service-desc pl-2 pb-2">Cottage</div>
                     </div>
                     <div class="col-12 col-md-4 single-accommodation">
                         <img src="../assets/img/Kitchen South.PNG" alt="">
@@ -291,11 +291,68 @@ li {
                         </div>
                     </div>
                 </div>
-            </section>
-
+            </section> -->
 
             <div class="center">
-                <h4>Projects</h4>
+                <h4>Construction Projects</h4>
+            </div>
+
+            <div id="carouselproj" class="carousel slide" data-ride="carousel" data-interval="false">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselproj" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselproj" data-slide-to="1"></li>
+                    <li data-target="#carouselproj" data-slide-to="2"></li>
+                    <li data-target="#carouselproj" data-slide-to="3"></li>
+                    <li data-target="#carouselproj" data-slide-to="4"></li>
+                    <li data-target="#carouselproj" data-slide-to="5"></li>
+                    <li data-target="#carouselproj" data-slide-to="6"></li>
+                    <li data-target="#carouselproj" data-slide-to="7"></li>
+                    <li data-target="#carouselproj" data-slide-to="8"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="../assets/img/1 Yello Drive.PNG"alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/2 Patio Panorama.PNG" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/7 Back Steps.jpg" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/Kitchen South.PNG" alt="Fourth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100"  src="../assets/img/Bathroom.jpg" alt="Fifth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/Kitchen1.jpg" alt="Sixth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/jungle house side deck.jpg" alt="Fifth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/6 Back Steps Up.webp" alt="Fifth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/1 Yello Drive.PNG" alt="Fifth slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/8 Patio Doors.jpg"alt="Fifth slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselproj" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselproj" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+            <div class="center">
+                <h4>Solar Projects</h4>
             </div>
             <div id="carouselInspirationalProjects" class="carousel slide" data-ride="carousel" data-interval="false">
                 <ol class="carousel-indicators">
@@ -311,10 +368,10 @@ li {
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="../assets/img/Back Bedroom.jpg" alt="First slide">
+                        <img class="d-block w-100"  src="../assets/img/solar.jpg" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/6 Back Steps Up.webp" alt="Second slide">
+                        <img class="d-block w-100" src="../assets/img/image035.JPG" alt="Second slide">
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src="../assets/img/7 Back Steps.jpg" alt="Third slide">
