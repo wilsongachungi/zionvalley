@@ -125,10 +125,10 @@
                                                 <tr>
                                                     <td>{{ Auth::user()->name }}</td>
                                                     <td>{{ Auth::user()->phone }}</td>
-                                                    <td>{{ Auth::user()->email }}</td>
-                                                    <td>{{ Auth::user()->profileInformation->country }}</td>
-                                                    <td>{{ Auth::user()->profileInformation->residence }}</td>
-                                                    <td>{{ Auth::user()->profileInformation->age }}</td>
+                                                    <td>{{ Auth::user()->profileInformation->email ?? 'N/A' }}</td>                                                   
+                                                    <td>{{ Auth::user()->profileInformation->country ?? 'N/A' }}</td>
+                                                    <td>{{ Auth::user()->profileInformation->residence ?? 'N/A' }}</td>
+                                                    <td>{{ Auth::user()->profileInformation->age ?? 'N/A' }}</td>                                                   
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -144,7 +144,7 @@
                     <!-- Button trigger modal -->
                     <button type="button" class="dark-shade" style="color:greenyellow" data-toggle="modal"
                         data-target="#uploadModal">
-                        Profile not complete.Click to Continue
+                        Profile not complete.Continue
                     </button>
 
                     <!-- Modal -->
