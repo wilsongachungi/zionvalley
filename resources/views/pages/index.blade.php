@@ -406,12 +406,12 @@
                 <div class="accordions">
 					<div class="accordion" onclick="toggleDiv('div12')">
 						<h3 class="float-left text-lg">
-							The Greater Future Potential
+							Zion Valley Global Foundation
 						</h3>
 						<i class="text-md float-right">&#9660;</i>
 					</div>
 					<div id="div12" class="myDiv" style="display: none; transition: opacity 0.6s ease; line-height: 1.5;">
-						<p>Zion Valley Global Foundation</p>
+						<h3 style="text-align: center">Zion Valley Global Foundation</h3>
 						<p>The potential exists for the Replication of the EcoHub and EcoParc model to be rolled out to numerous river valley riparian communities across Kenya and even beyond.</p>
 
 						<h4>EcoHub’s</h4>
