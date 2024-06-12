@@ -5,13 +5,13 @@
         }
 
         /*
-                                            .intro-container {
-                                                text-align: center;
-                                                padding: 50px;
+                                                .intro-container {
+                                                    text-align: center;
+                                                    padding: 50px;
 
-                                                color: antiquewhite;
-                                                margin-top: 20px;
-                                            } */
+                                                    color: antiquewhite;
+                                                    margin-top: 20px;
+                                                } */
         .intro-container {
             position: relative;
             color: antiquewhite;
@@ -272,35 +272,6 @@
                         transformative solutions, and sustainable practices at the expert level.
                     </p>
                 </div>
-
-
-            </div>
-            <div class="accordions">
-                <div class="accordion" onclick="toggleDiv('div3')">
-                    <h3 class="float-left text-lg">
-                        Community-based
-                    </h3>
-                    <i class="text-md float-right">&#9660;</i>
-                </div>
-                <div id="div3" class="mydiv" style="line-height: 1.5;">
-                    <p>
-                        As a CBO, a Community Based Organization, <br> This project is totally unique and
-                        unlike any other resort.
-                    </p>
-                    <p>
-                        Many of the people you shall meet will be Harambee owners who have all <br> come together to
-                        share in the creation and
-                        benefits from this collective project.
-                    </p>
-                    <p>
-                        Zion Valley shall feel more like staying
-                        in a family village as many will be owners themselves, one day just like you.
-
-                    </p>
-                    <p>
-                        A sense of belonging for new guests as so many will greet and welcome you.
-                    </p>
-                </div>
             </div>
 
             <div class="accordions">
@@ -349,32 +320,19 @@
                 </div>
             </div>
 
-            @include('layouts.user.partials.services')
+
             <div class="container content wow zoomIn slow">
                 <div>
                     <div style="line-height:1.5; test-align:left">
-                        <h4>Decision made</h4>
-                        <p>
-                            Decision made..
-                        <p>
-                        <p>
-                            We are leaving the Nairobi concrete hustle and heading
-                            north to Mount Kenya foothills…
-                        </p>
-                        <p>
-                            The excitement begins!
-                        </p>
-                        <p>
-                            The road rising, twisting right and left like a meandering river.
-                        <p>
-                            Forever rising through
-                            ever green valleys
-                            and ever steeper hills, surrounded by lush verdant growth everywhere – and the steepest
-                            roadside drops!!! -
-                        </p>
-                        <p>
-                            A truly exhilarating journey.
-                        </p>
+                        <h4>Eco Parc Local Zion Valley CBO’s</h4>
+                        A Garden of Eden with Botanical Gardens and an Arboretum, a visitor and learning center.
+						 <br>
+                         A permanent Eco Showground Including, nature walks, sauna, Yoga, juice bar Earth Oven Pizzas, fire
+                        pits, camping and accommodations. <br>
+                        Displays and examples to inspire regular people, regular people who didn’t necessarily come to
+                        be educated on Global ‘Climate’ issues, but who came to Zion for some fun and leisure time. <br>
+                        Workshops and activities with information on what they themselves can do at home and at the
+                        Shamba scale and how.
 
                     </div>
 
