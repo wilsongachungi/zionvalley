@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Sell;
 use Illuminate\Http\Request;
 
 class SellController extends Controller
@@ -15,11 +16,11 @@ class SellController extends Controller
         ]);
 
         $buy = new Sell();
-        $buy->user_id = auth()->id(); 
+        $buy->user_id = auth()->id();
         $buy->amount = $validatedData['amount'];
         $buy->rate = $validatedData['rate'];
         $buy->save();
-       
+
         return redirect()->back()->with('success', 'Buy data stored successfully!');
     }
 }

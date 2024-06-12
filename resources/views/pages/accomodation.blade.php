@@ -177,7 +177,7 @@ li {
             <p style="font-size: 1.2em;
             margin-bottom: 10px; text-align:center;">
                 All cottages to be listed and available online <br>
-                www.AirBnB.com and www.booking.com
+                
             </p>
             <h3 class="text-center text-center mb-4">Free Accommodation to Harambee owners</h2>
                 <p style="font-size: 1.2em;
