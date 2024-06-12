@@ -1,91 +1,91 @@
 @section('css')
-<style>
-p {
-    color: antiquewhite;
-}
+    <style>
+        p {
+            color: antiquewhite;
+        }
 
-/* 
-.intro-container {
-    text-align: center;
-    padding: 50px;
+        /*
+                                            .intro-container {
+                                                text-align: center;
+                                                padding: 50px;
 
-    color: antiquewhite;
-    margin-top: 20px;
-} */
-.intro-container {
-    position: relative;
-    color: antiquewhite;
-}
+                                                color: antiquewhite;
+                                                margin-top: 20px;
+                                            } */
+        .intro-container {
+            position: relative;
+            color: antiquewhite;
+        }
 
-.green-tint {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 50, 0, 0.5);
-    /* Green with 50% opacity */
-}
-
-
+        .green-tint {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 50, 0, 0.5);
+            /* Green with 50% opacity */
+        }
 
 
-@media screen and (max-width: 600px) {
-    h3 {
-        font-size: 13px;
-    }
-
-}
-
-.custom-carousel-item {
-    position: absolute;
-    text-align: center;
-    background-color: rgba(3, 79, 3, 0.5);
-    padding: 20px;
-}
-
-.custom-carousel-text {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-/* Default styles for .welcome-text */
-.welcome-text {
-    display: none;
-    color: antiquewhite;
-    text-align: center;
-    position: fixed;
-    top: 20px;
-    left: 59%;
-    transform: translateX(-50%);
-    z-index: 1000;
-}
 
 
-@media (max-width: 767px) {
-    .welcome-text {
-        display: block;
-    }
-}
+        @media screen and (max-width: 600px) {
+            h3 {
+                font-size: 13px;
+            }
 
-@media (min-width: 768px) {
-    .welcome-text {
-        display: none;
-    }
-}
+        }
+
+        .custom-carousel-item {
+            position: absolute;
+            text-align: center;
+            background-color: rgba(3, 79, 3, 0.5);
+            padding: 20px;
+        }
+
+        .custom-carousel-text {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        /* Default styles for .welcome-text */
+        .welcome-text {
+            display: none;
+            color: antiquewhite;
+            text-align: center;
+            position: fixed;
+            top: 20px;
+            left: 59%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
 
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
+        @media (max-width: 767px) {
+            .welcome-text {
+                display: block;
+            }
+        }
 
-li {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-</style>
+        @media (min-width: 768px) {
+            .welcome-text {
+                display: none;
+            }
+        }
+
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+    </style>
 @endsection
 
 <x-base-layout>
@@ -97,7 +97,7 @@ li {
             <div class="carousel-inner">
                 <div class="carousel-item active text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text" style="color:greenyellow">A leisure and Nature parc. <br>
+                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL ASSESSMENT. <br>
                             Activity center, and Eco resort.
                         </p>
                     </div>
@@ -106,7 +106,7 @@ li {
 
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text" style="color:greenyellow">A leisure and Nature parc. <br>
+                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL ASSESSMENT. <br>
                             Activity center, and Eco resort.
 
                         </p>
@@ -116,7 +116,7 @@ li {
 
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text" style="color:greenyellow">A leisure and Nature parc. <br>
+                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL ASSESSMENT. <br>
                             Activity center, and Eco resort.
 
                         </p>
@@ -125,7 +125,7 @@ li {
                 </div>
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text" style="color:greenyellow">A leisure and Nature parc. <br>
+                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL ASSESSMENT. <br>
                             Activity center, and Eco resort.
 
                         </p>
@@ -134,7 +134,7 @@ li {
                 </div>
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text" style="color:greenyellow">A leisure and Nature parc. <br>
+                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL ASSESSMENT. <br>
                             Activity center, and Eco resort.
 
                         </p>
@@ -159,10 +159,8 @@ li {
             <div class="green-tint" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
             <p class="line-height-1.5"
                 style="font-size: 1.2em; margin-bottom: 10px; position: relative; text-align: center;">
-                A unique and sustainable development project. <br>
-                A leisure and nature park, activity center, and resort destination. <br>
-                Education Training and exhibit demonstrations of eco engineering technologies. <br>
-                Like a permanent showground, Smaller and with accommodations. <br>
+                A Garden of Eden including Rare Tree Arboretum, Botanical Gardens and Seed Banks. <br>
+                A reserve for rare, endangered and medicinal herbs, plants and trees.
             </p>
         </div>
         <br>
@@ -196,50 +194,70 @@ li {
             <div class="accordions">
                 <div class="accordion" onclick="toggleDiv('div11')">
                     <h3 class="float-left text-lg">
-                        Happy Pamoja
+                        EcoHub
                     </h3>
                     <i class="text-md float-right">&#9660;</i>
                 </div>
                 <div id="div11" class="line-height-1.5 desc text-center">
                     <p>
-                        Birds sing melodies and bees with delight. <br>
-                        Happy pamoja people in love's warm light. <br>
+                        Focal centers to inspire and facilitate Afro Centric innovative solutions to a wide range of
+                        Climate and environmental challenges.
                     </p>
 
                     <p>
 
-                        Heaven cannot be lonely, is a place to be shared. <br>
-                        Community Harambee, <br> united and cared.
+                        Dynamic and inclusive communities of those like-motivated and passionate about the environment
+                        to network, interact and learn.
                     </p>
                     <p>
-                        Nature's wonders and love's embrace. <br>
-                        Guided journey to this sacred place.
+                        Eco-regenerated surroundings to inspire and communicate an appreciation and understanding of
+                        what it is we are working for.
                     </p>
                     <p>
-                        Wonders discovered, let love be your guide. <br>
-                        Zion's sanctuary, find peace deep inside.
+                        Formal and organic interactions between environmental organizations, agencies, and communities.
+                        Between climate experts and professionals. stakeholders, practitioners, individuals and
+                        entreprenuers with diverse perspectives and expertise
+                    </p>
+                    <p>
+                    <p>
+                        Workshops to actively exchange ideas and knowledge, to share best practices, potential problems
+                        and solutions.
+                    </p>
+                    <p>
+                        Facilitating interaction between the public and private sectors to address systemic barriers,
+                        policies, and regulations to support progress toward environmental sustainability.
+                    </p>
+                    <p>
+                        Active promotion of entrepreneurial opportunities and potential partnerships in the development
+                        and implementation of transformative solutions.
                     </p>
                 </div>
 
                 <div class="accordions">
                     <div class="accordion" onclick="toggleDiv('div13')">
                         <h4 class="float-left text-lg">
-                            Zion Train
+                            Access to Resources and Support:
                         </h4>
                         <i class="text-md float-right">&#9660;</i>
                     </div>
                     <div id="div13" class="desc text-center">
                         <p>
-                            In Zion Valley find joy and peace. <br>
-                            Where heaven meets earth, and all worries cease. <br>
+                            Shared office, equipment, facilities and resources.
+                            Venues for seminars, forums, AGM’s, conferences, and workshops.
                         </p>
                         <p>
-                            Righteousness Peace and Unity call. <br>
-                            In Zion's haven let your spirit stand tall. <br>
+                            Exhibition promotion and information space from environmental and member organizations.
+                            Latest projects, innovative technologies, best practice and contact info.
                         </p>
                         <p>
-                            To the Promised Land where your soul can be free. <br>
-                            Get on board the Zion train, Let your spirit BE. <br>
+                            Product info on areas such as eco-engineering and construction, Renewable energy,
+                            eco-materials, eco products, and services.
+                        </p>
+                        <p>Information dissemination and access to funding support mechanisms, training, and education.
+                        </p>
+                        <p>
+                            Research, testing, and development of innovative solutions and activities related to
+                            environmental technologies, climate mitigation strategies,
                         </p>
                     </div>
                 </div>
@@ -250,8 +268,8 @@ li {
                     </div>
                     <p class="line-height-1.5"
                         style="font-size: 1.2em;margin-bottom: 10px; position: relative; text-align: center; ">
-                        A leisure and Nature parc. <br>
-                        Activity center, and Eco resort.
+                        The collective aim being to increase the knowledge capacity, development and implementation of
+                        transformative solutions, and sustainable practices at the expert level.
                     </p>
                 </div>
 
@@ -292,7 +310,8 @@ li {
                     </h3>
                     <i class="text-md float-right">&#9660;</i>
                 </div>
-                <div id="div1" class="myDiv" style="display: none ;transition: opacity 0.6s ease;line-height: 1.5;">
+                <div id="div1" class="myDiv"
+                    style="display: none ;transition: opacity 0.6s ease;line-height: 1.5;">
                     <p>Zion Valley main attractions being the natural beauty of the Valley and its
                         surroundings.
                     </p>
@@ -367,7 +386,8 @@ li {
                         </h3>
                         <i class="text-md float-right">&#9660;</i>
                     </div>
-                    <div id="div7" class="myDiv" style="display: none ;transition: opacity 0.6s ease;line-height: 1.5;">
+                    <div id="div7" class="myDiv"
+                        style="display: none ;transition: opacity 0.6s ease;line-height: 1.5;">
                         <p>
                             Dawn arrives just outside Nyeri town, then like a time forgotten world, we find
                             ourselves
