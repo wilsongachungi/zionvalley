@@ -5,13 +5,13 @@
         }
 
         /*
-                                                .intro-container {
-                                                    text-align: center;
-                                                    padding: 50px;
+                                                            .intro-container {
+                                                                text-align: center;
+                                                                padding: 50px;
 
-                                                    color: antiquewhite;
-                                                    margin-top: 20px;
-                                                } */
+                                                                color: antiquewhite;
+                                                                margin-top: 20px;
+                                                            } */
         .intro-container {
             position: relative;
             color: antiquewhite;
@@ -121,15 +121,6 @@
 
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 3.jpg" alt="Image 3">
-                </div>
-                <div class="carousel-item text-center">
-                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL ASSESSMENT. <br>
-                            Activity center, and Eco resort.
-
-                        </p>
-                    </div>
                     <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 4.JPG" alt="Image 3">
                 </div>
                 <div class="carousel-item text-center">
@@ -165,7 +156,7 @@
         </div>
         <br>
 
-        <div class="container">
+        {{-- <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8 col-lg-6" style="line-height: 1.5;">
                     <h4 class="justify-content-center text-center">Welcome to Zion</h4>
@@ -182,11 +173,25 @@
                 </div>
             </div>
 
-        </div>
+        </div> --}}
     </div>
 
 
+    <div class="container content wow zoomIn slow">
+        <div>
+            <div style="line-height:1.5; test-align:left">
+                <h4 style="text-align: center">OPPORTUNITY - POTENTIAL - SOLUTION</h4>
+                Rivers and Valleys of Mt Kenya and Aberdere are eco-system highways of strategic ecological
+                significance. Eco Interconnections are crucial to supporting biodiversity, flora fauna and clean water
+                delivery systems to towns, villages and urban population centers.
+                Steep valley sides are currently neglected, under valued, and provide very little for human sustenance.
+                We have the perfect opportunity for ecosystem regeneration and to create something special and extremely
+                valuable.
 
+            </div>
+
+        </div>
+    </div>
 
 
     <div class=" container content wow zoomIn slow ">
@@ -326,8 +331,9 @@
                     <div style="line-height:1.5; test-align:left">
                         <h4>Eco Parc Local Zion Valley CBO’s</h4>
                         A Garden of Eden with Botanical Gardens and an Arboretum, a visitor and learning center.
-						 <br>
-                         A permanent Eco Showground Including, nature walks, sauna, Yoga, juice bar Earth Oven Pizzas, fire
+                        <br>
+                        A permanent Eco Showground Including, nature walks, sauna, Yoga, juice bar Earth Oven Pizzas,
+                        fire
                         pits, camping and accommodations. <br>
                         Displays and examples to inspire regular people, regular people who didn’t necessarily come to
                         be educated on Global ‘Climate’ issues, but who came to Zion for some fun and leisure time. <br>
@@ -340,36 +346,21 @@
                 <div class="accordions">
                     <div class="accordion" onclick="toggleDiv('div7')">
                         <h3 class="float-left text-lg">
-                            Forgotten world
+                            African appropriate technologies and focused at the Urban and Shamba scale.
                         </h3>
                         <i class="text-md float-right">&#9660;</i>
                     </div>
                     <div id="div7" class="myDiv"
                         style="display: none ;transition: opacity 0.6s ease;line-height: 1.5;">
-                        <p>
-                            Dawn arrives just outside Nyeri town, then like a time forgotten world, we find
-                            ourselves
-                            inside
-                            Zion Valley – Sitting right there beside an amazing waterfall – WOW.
-                        </p>
-                        <p>
-                            Soothing roars from the crashing waters and the world of traffic soon becomes a distant
-                            memory. <br> - Peace at last.
-                        </p>
-                        <p>
-                            Energized by lungful’s of pure clean air, we find ourselves wandering down the
-                            meandering rive side path
-                        </p>
-                        <p>
-                            Enchanted by the birds, the bees, the flowers and trees, the incredible
-                            sceneries bursting with forth with life and abundant growth.
-                        </p>
-                        <p>
-                            Artistic living sofas carved from nature are everywhere, Free to sit and soak up the
-                            sounds and boundless joys of nature.
-                        </p>
+                        Smart Farming means feeding the soil and its organisms - Before the soil then feeds the crops.
+                        The role of Fungi, Beetles and Worms etc.
+                        Water absorption and retention, how nature recycles biomass into soil manures
+                        How the River/Riparian, the steep valleys and low-value land can become an environmental wonder,
+                        can support a community and give sustainable benefits to everyone.
+                        How jobs can be created by working with nature Simple shamba scale technologies and information
+                        at the local levels for practical action by the maximum numbers of regular people.
                     </div>
-                    <div class="accordions">
+                    {{-- <div class="accordions">
                         <div class="accordion" onclick="toggleDiv('div4')">
                             <h3 class="float-left text-lg">
                                 Our Hot Meal
@@ -409,9 +400,30 @@
                                 happy people and an unforgettable night filled with experiences.
                             </p>
                         </div>
+                    </div> --}}
+                </div>
+
+                <div class="container content wow zoomIn slow">
+                    <div>
+                        <div style="line-height:1.5; test-align:left">
+                            <h4>Eco Parc Local Zion Valley CBO’s</h4>
+                            A Garden of Eden with Botanical Gardens and an Arboretum, a visitor and learning center.
+                            <br>
+                            A permanent Eco Showground Including, nature walks, sauna, Yoga, juice bar Earth Oven
+                            Pizzas,
+                            fire
+                            pits, camping and accommodations. <br>
+                            Displays and examples to inspire regular people, regular people who didn’t necessarily come
+                            to
+                            be educated on Global ‘Climate’ issues, but who came to Zion for some fun and leisure time.
+                            <br>
+                            Workshops and activities with information on what they themselves can do at home and at the
+                            Shamba scale and how.
+
+                        </div>
+
                     </div>
                 </div>
             </div>
-        </div>
 
 </x-base-layout>
