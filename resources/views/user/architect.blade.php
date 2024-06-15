@@ -388,19 +388,25 @@
                         <img class="d-block w-100" src="../assets/img/Kitchen Logs.jpg" alt="Fifth slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/jungle hopuse deck.jpg" alt="Sixth slide">
+                        <img class="d-block w-100" src="../assets/img/IMB Living Room.jpg" alt="Sixth slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/jungle house side deck.jpg" alt="Fifth slide">
+                        <img class="d-block w-100" src="../assets/img/IMG_20180520_120510.jpg" alt="seven slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/safari.jpg" alt="Fifth slide">
+                        <img class="d-block w-100" src="../assets/img/8 Patio Doors.jpg" alt="eigth slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/safari.jpg" alt="Fifth slide">
+                        <img class="d-block w-100" src="../assets/img/7 Back Steps.jpg" alt="nineth slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/ziplining2.jpg" alt="Fifth slide">
+                        <img class="d-block w-100" src="../assets/img/2 Patio Panorama.PNG" alt="Fifth slide">
+                    </div>
+					<div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/Back Bed 2.jpg" alt="Fifth slide">
+                    </div>
+					<div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/Bathroom.jpg" alt="Fifth slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselInspirationalProjects" role="button"
@@ -432,7 +438,7 @@
                         </div>
                         <div class="modal-body">
                             <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="../assets/img/CV.pdf"></iframe>
+                                {{-- <iframe class="embed-responsive-item" src="../assets/img/CV.pdf"></iframe> --}}
                             </div>
                         </div>
                     </div>
