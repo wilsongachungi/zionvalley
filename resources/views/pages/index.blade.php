@@ -4,14 +4,6 @@
             color: antiquewhite;
         }
 
-        /*
-                                                            .intro-container {
-                                                                text-align: center;
-                                                                padding: 50px;
-
-                                                                color: antiquewhite;
-                                                                margin-top: 20px;
-                                                            } */
         .intro-container {
             position: relative;
             color: antiquewhite;
@@ -26,9 +18,6 @@
             background-color: rgba(0, 50, 0, 0.5);
             /* Green with 50% opacity */
         }
-
-
-
 
         @media screen and (max-width: 600px) {
             h3 {
@@ -156,24 +145,29 @@
         </div>
         <br>
 
-        {{-- <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-8 col-lg-6" style="line-height: 1.5;">
-                    <h4 class="justify-content-center text-center">Welcome to Zion</h4>
-                    <p style="text-align: center;" class="justify-content-center text-center">
-                        Let the beauty of Zion Valley unfold,
-                        <br>
+        <!-- Modal -->
+        <div id="newsletterModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Hi!..Tell us about You</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
 
-                        Heavenly haven where paradise takes ahold. <br>
-                    </p>
-                    <p class="justify-content-center text-center">
-                        The Promised Land, where dreams can thrive. <br>
-                        Rivers that dance and gardens alive.
-                    </p>
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="" placeholder="Text here.">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
                 </div>
             </div>
+        </div>
 
-        </div> --}}
     </div>
 
 
@@ -404,58 +398,95 @@
                 </div>
 
                 <div class="accordions">
-					<div class="accordion" onclick="toggleDiv('div12')">
-						<h3 class="float-left text-lg">
-							Zion Valley Global Foundation
-						</h3>
-						<i class="text-md float-right">&#9660;</i>
-					</div>
-					<div id="div12" class="myDiv" style="display: none; transition: opacity 0.6s ease; line-height: 1.5;">
-						<h3 style="text-align: center">Zion Valley Global Foundation</h3>
-						<p>The potential exists for the Replication of the EcoHub and EcoParc model to be rolled out to numerous river valley riparian communities across Kenya and even beyond.</p>
+                    <div class="accordion" onclick="toggleDiv('div12')">
+                        <h3 class="float-left text-lg">
+                            Zion Valley Global Foundation
+                        </h3>
+                        <i class="text-md float-right">&#9660;</i>
+                    </div>
+                    <div id="div12" class="myDiv"
+                        style="display: none; transition: opacity 0.6s ease; line-height: 1.5;">
+                        <h3 style="text-align: center">Zion Valley Global Foundation</h3>
+                        <p>The potential exists for the Replication of the EcoHub and EcoParc model to be rolled out to
+                            numerous river valley riparian communities across Kenya and even beyond.</p>
 
-						<h4>EcoHub’s</h4>
-						<p>Locally placed networking, educational learning and information dissemination centers.</p>
-						<p>Focal points for eco-orientated groups, organizations, and individuals to facilitate the development and implementation of transformative solutions.</p>
+                        <h4>EcoHub’s</h4>
+                        <p>Locally placed networking, educational learning and information dissemination centers.</p>
+                        <p>Focal points for eco-orientated groups, organizations, and individuals to facilitate the
+                            development and implementation of transformative solutions.</p>
 
-						<h4>EcoParc’s</h4>
-						<p>Self-sustaining revenue model to attract visitors and impart awareness of the abundant value of nature and the Environment.</p>
-						<p>Community-level access to eco-building and renewable energy exhibits, demonstrations, displays, activities, and workshops to communicate what individuals can do for themselves.</p>
+                        <h4>EcoParc’s</h4>
+                        <p>Self-sustaining revenue model to attract visitors and impart awareness of the abundant value
+                            of nature and the Environment.</p>
+                        <p>Community-level access to eco-building and renewable energy exhibits, demonstrations,
+                            displays, activities, and workshops to communicate what individuals can do for themselves.
+                        </p>
 
-						<h4>Target Audiences</h4>
-						<p><strong>EcoHubs:</strong> Eco-related students, specialists, NGOs, entrepreneurs, and agencies.</p>
-						<p><strong>EcoParcs:</strong> Regular people who are to be attracted by the ‘leisure’ offerings, including those who may not be otherwise aware of the ‘Climate’ issues and solutions.</p>
+                        <h4>Target Audiences</h4>
+                        <p><strong>EcoHubs:</strong> Eco-related students, specialists, NGOs, entrepreneurs, and
+                            agencies.</p>
+                        <p><strong>EcoParcs:</strong> Regular people who are to be attracted by the ‘leisure’ offerings,
+                            including those who may not be otherwise aware of the ‘Climate’ issues and solutions.</p>
 
-						<h4>Mission & Vision</h4>
-						<p>To propagate the Nyeri climate mitigation EcoHub and EcoParc models to numerous local communities at multiple locations across Kenya/Africa – even beyond.</p>
+                        <h4>Mission & Vision</h4>
+                        <p>To propagate the Nyeri climate mitigation EcoHub and EcoParc models to numerous local
+                            communities at multiple locations across Kenya/Africa – even beyond.</p>
 
-						<h4>Strategy</h4>
-						<p>Develop the CBO framework for the integration of land use and management teams for EcoHub implementation at the local group level. The CBOs being the legal framework that can protect the landowners and at the same time bring the use of lands into one collective project.</p>
-						<p>Refine ‘Plug and Go’ administration frameworks as required for local ‘Franchise’ replication.</p>
-						<p>Coherent rules, regulations, and operation manuals for self-supporting, self-operating EcoHubs.</p>
+                        <h4>Strategy</h4>
+                        <p>Develop the CBO framework for the integration of land use and management teams for EcoHub
+                            implementation at the local group level. The CBOs being the legal framework that can protect
+                            the landowners and at the same time bring the use of lands into one collective project.</p>
+                        <p>Refine ‘Plug and Go’ administration frameworks as required for local ‘Franchise’ replication.
+                        </p>
+                        <p>Coherent rules, regulations, and operation manuals for self-supporting, self-operating
+                            EcoHubs.</p>
 
-						<h4>Plan</h4>
-						<p>A. Learn from the process of developing the Nyeri project as the first working model test bed.</p>
-						<p>B. Test the replication procedures by setting up a second site before considering rolling out to multiple potential venues.</p>
+                        <h4>Plan</h4>
+                        <p>A. Learn from the process of developing the Nyeri project as the first working model test
+                            bed.</p>
+                        <p>B. Test the replication procedures by setting up a second site before considering rolling out
+                            to multiple potential venues.</p>
 
-						<h4>Zion Valley Global - The Foundation Central Administration and Stewardship Team/Office</h4>
-						<p>1. Identify EcoHub locations and communities suitable for replication.</p>
-						<p>2. Engage local community, identify commitment, and create the local ‘team’.</p>
-						<p>3. Conduct local meetings to communicate to the landowners that the steep valley slopes are environmental capital, and that indigenous trees have more value standing than being cut for charcoal.</p>
-						<p>4. Provide process and administer the resources (grants/loans) for each local startup.</p>
-						<p>5. Ongoing stewardship oversight and supervisory relationships with local CBO ‘Facilitator’ teams.</p>
+                        <h4>Zion Valley Global - The Foundation Central Administration and Stewardship Team/Office</h4>
+                        <p>1. Identify EcoHub locations and communities suitable for replication.</p>
+                        <p>2. Engage local community, identify commitment, and create the local ‘team’.</p>
+                        <p>3. Conduct local meetings to communicate to the landowners that the steep valley slopes are
+                            environmental capital, and that indigenous trees have more value standing than being cut for
+                            charcoal.</p>
+                        <p>4. Provide process and administer the resources (grants/loans) for each local startup.</p>
+                        <p>5. Ongoing stewardship oversight and supervisory relationships with local CBO ‘Facilitator’
+                            teams.</p>
 
-						<p>Replication of the EcoHub and EcoParc model for maximum climate change mitigation</p>
-						<p>Message and solutions communicated to thousands of regular people.</p>
-					</div>
-				</div>
+                        <p>Replication of the EcoHub and EcoParc model for maximum climate change mitigation</p>
+                        <p>Message and solutions communicated to thousands of regular people.</p>
+                    </div>
+                </div>
 
-				<script>
-					function toggleDiv(divId) {
-						var div = document.getElementById(divId);
-						div.style.display = div.style.display === 'none' ? 'block' : 'none';
-					}
-				</script>
+                <script>
+                    function toggleDiv(divId) {
+                        var div = document.getElementById(divId);
+                        div.style.display = div.style.display === 'none' ? 'block' : 'none';
+                    }
+                </script>
+
+                <script>
+                    $(document).ready(function() {
+                        function showNewsletterModal() {
+                            $('#newsletterModal').modal('show');
+                            setTimeout(function() {
+                                $('#newsletterModal').modal('hide');
+                            }, 10000); // 10 seconds
+                        }
+
+                        // Initial show and repeat every 30 seconds
+                        showNewsletterModal();
+                        setInterval(function() {
+                            showNewsletterModal();
+                        }, 30000); // 30 seconds
+                    });
+                </script>
+
+
 
             </div>
 
