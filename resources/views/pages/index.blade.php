@@ -157,13 +157,13 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="aboutYourself"
-                                        placeholder="Text here.">
-                                </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
+                            <form method="POST" action="{{ route('identify.store') }}" enctype="multipart/form-data">
+								@csrf
+								<input type="text" name="identify_data" placeholder="Enter your identify data" required> <br>
+								<button type="submit">Submit</button>
+							</form>
+
+
                         </div>
                     </div>
                 </div>

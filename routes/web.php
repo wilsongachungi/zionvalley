@@ -90,7 +90,7 @@ Route::get('/architect', [viewController::class, 'architect'])->name('architect'
 Route::post('/complete_profile', [ProfileController::class, 'complete_profile'])->name('complete_profile');
 Route::post('/send_question', [EmailController::class, 'send_question'])->name('send_question');
 Route::get('/display_question', [EmailController::class, 'display_question'])->name('display_question');
-Route::get('/identify', [IdentifyController::class, 'identify'])->name('identify');
+Route::post('/identify', [IdentifyController::class, 'store'])->name('identify.store');
 
 
 

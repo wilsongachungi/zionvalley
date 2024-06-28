@@ -103,5 +103,9 @@ class User extends Authenticatable
 {
     return $this->hasOne(ProfileInformation::class);
 }
+public function identify()
+    {
+        return $this->hasOne(Identify::class);
+    }
 
 }
