@@ -1,23 +1,24 @@
 <?php
 
-use App\Http\Controllers\AccountController;
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\Auth\AuthController;
-use App\Http\Controllers\BuyController;
-use App\Http\Controllers\DownloadController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ImageController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\MessageController;
-use App\Http\Controllers\SellController;
-use App\Http\Controllers\TaskController;
-use App\Http\Controllers\ViewController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\EmailController;
-
 use App\Models\Message;
 use Doctrine\DBAL\Schema\View;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BuyController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SellController;
+use App\Http\Controllers\TaskController;
+use App\Http\Controllers\ViewController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\EmailController;
+use App\Http\Controllers\ImageController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AccountController;
+use App\Http\Controllers\MessageController;
+
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DownloadController;
+use App\Http\Controllers\IdentifyController;
+use App\Http\Controllers\Auth\AuthController;
 
 
 
@@ -89,6 +90,7 @@ Route::get('/architect', [viewController::class, 'architect'])->name('architect'
 Route::post('/complete_profile', [ProfileController::class, 'complete_profile'])->name('complete_profile');
 Route::post('/send_question', [EmailController::class, 'send_question'])->name('send_question');
 Route::get('/display_question', [EmailController::class, 'display_question'])->name('display_question');
+Route::get('/identify', [IdentifyController::class, 'identify'])->name('identify');
 
 
 
