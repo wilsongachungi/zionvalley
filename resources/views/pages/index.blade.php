@@ -146,29 +146,29 @@
         <br>
 
 
-        @if (auth()->check())
+        @if (auth()->check() && !session('identify_submitted'))
             <div id="newsletterModal" class="modal fade" tabindex="-1" role="dialog">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-							<p class="modal-title">Hi! {{ auth()->user()->name }}, Tell us about You</p>
+                            <p class="modal-title">Hi! {{ auth()->user()->name }}, Tell us about You</p>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
                             <form method="POST" action="{{ route('identify.store') }}" enctype="multipart/form-data">
-								@csrf
-								<input type="text" name="identify_data" placeholder="Enter your identify data" required> <br>
-								<button type="submit">Submit</button>
-							</form>
-
-
+                                @csrf
+                                <input type="text" name="identify_data" placeholder="Enter your identify data"
+                                    required> <br>
+                                <button type="submit">Submit</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-        @endif>
+        @endif
+
     </div>
 
 
