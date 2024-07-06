@@ -148,10 +148,10 @@
 
         @if (auth()->check() && !session('identify_submitted'))
             <div id="newsletterModal" class="modal fade" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
+                <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <p class="modal-title">Hi! {{ auth()->user()->name }}, Tell us about You</p>
+                            <h5 class="modal-title">Hi, {{ auth()->user()->name }}! Tell us about yourself</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -159,9 +159,12 @@
                         <div class="modal-body">
                             <form method="POST" action="{{ route('identify.store') }}" enctype="multipart/form-data">
                                 @csrf
-                                <input type="text" name="identify_data" placeholder="Enter your identify data"
-                                    required> <br>
-                                <button type="submit">Submit</button>
+                                <div class="form-group">
+                                    <label for="identify_data">Tell us about you</label>
+                                    <input type="text" name="identify_data" id="identify_data" class="form-control"
+                                        placeholder="Tell us about you" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">Submit</button>
                             </form>
                         </div>
                     </div>
