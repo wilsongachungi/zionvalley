@@ -302,7 +302,7 @@
                     <img class="d-block w-100" src="../assets/img/Wood Ibiza1.JPG" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="../assets/img/image035.JPG" alt="Third slide">
+                    <img class="d-block w-100" src="../assets/img/Image035.JPG" alt="Third slide">
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" src="../assets/img/Luscome Lower2.PNG" alt="Fourth slide">

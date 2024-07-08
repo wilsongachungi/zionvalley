@@ -90,7 +90,7 @@
                             Activity center, and Eco resort.
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0" src="../assets/img/Home 1.jpg" alt="Image 1">
+                    <img class="img1 pb-0 mb-0" src="../assets/img/1 Yello Drive.PNG" alt="Image 1">
                 </div>
 
                 <div class="carousel-item text-center">
@@ -151,17 +151,18 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-							<p class="modal-title">Hi! {{ auth()->user()->name }}, Tell us about You</p>
+                            <p class="modal-title">Hi! {{ auth()->user()->name }}, Tell us about You</p>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
                             <form method="POST" action="{{ route('identify.store') }}" enctype="multipart/form-data">
-								@csrf
-								<input type="text" name="identify_data" placeholder="Enter your identify data" required> <br>
-								<button type="submit">Submit</button>
-							</form>
+                                @csrf
+                                <input type="text" name="identify_data" placeholder="Enter your identify data"
+                                    required> <br>
+                                <button type="submit">Submit</button>
+                            </form>
 
 
                         </div>
