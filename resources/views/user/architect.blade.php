@@ -223,39 +223,41 @@
         <div id="carouselExample" class="carousel slide bg-warning" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active text-center">
-                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
 
-                    </div>
                     <img class="img1 pb-0 mb-0 " style="height:100vh; object-fit:cover; object-position:center"
                         src="../assets/img/solar.jpg" alt="Image 1">
                 </div>
 
                 <div class="carousel-item text-center">
-                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
 
-                    </div>
                     <img class="img1 pb-0 mb-0 d-block" style="height:100vh; object-fit:cover; object-position:center"
                         src="../assets/img/image035.JPG" alt="Image 2">
                 </div>
 
                 <div class="carousel-item text-center">
-                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
 
-                    </div>
                     <img class="img1 pb-0 mb-0 d-block" style="height:100vh; object-fit:cover; object-position:center"
                         src="../assets/img/Luscome Lower2.PNG" alt="Image 13">
                 </div>
                 <div class="carousel-item text-center">
-                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
 
-                    </div>
                     <img class="img1 pb-0 mb-0 d-block" style="height:100vh; object-fit:cover; object-position:center"
                         src="../assets/img/Wood Ibiza1.JPG" alt="Image 3">
                 </div>
                 <div class="carousel-item text-center">
 
                     <img class="img1 pb-0 mb-0 d-block" style="height:100vh; object-fit:cover; object-position:center"
-                        src="../assets/img/Craig Manifold 2.jpg" alt="Image 3">
+                        src="../assets/img/4 opatiooct.jpg" alt="Image 3">
+                </div>
+                <div class="carousel-item text-center">
+
+                    <img class="img1 pb-0 mb-0 d-block" style="height:100vh; object-fit:cover; object-position:center"
+                        src="../assets/img/2 Patio Panorama.PNG" alt="Image 3">
+                </div>
+                <div class="carousel-item text-center">
+
+                    <img class="img1 pb-0 mb-0 d-block" style="height:100vh; object-fit:cover; object-position:center"
+                        src="../assets/img/1 Yello Drive.PNG" alt="Image 3">
                 </div>
             </div>
 
@@ -399,6 +401,8 @@
             <img src="../assets/img/kamau p2.png" alt="">
             <img src="../assets/img/kamau p3.png" alt="">
             <img src="../assets/img/kamau p4.png" alt="">
+            <div> <a href="https://web.archive.org/web/20190815121115/http://www.tmsthermalstore.com/testimonials.php">for
+                    more about the architect</a></div>
         </div>
 
     </div>
