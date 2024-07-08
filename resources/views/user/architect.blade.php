@@ -364,30 +364,13 @@
                 </a>
             </div>
 
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#iframeModal">
-                Architects Experience
-            </button>
-
-            <!-- Modal with iframe -->
-            <div class="modal fade" id="iframeModal" tabindex="-1" aria-labelledby="iframeModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="iframeModalLabel">Architects Cv</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="embed-responsive embed-responsive-16by9">
-                                {{-- <iframe class="embed-responsive-item" src="../assets/img/CV.pdf"></iframe> --}}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+			<div class="center">
+				<h3>Architectures Experience</h3>
+				<img class="w-50 h-100" src="../assets/img/kamau p1.png" alt="">
+				<img class="w-50 h-100" src="../assets/img/kamau p2.png" alt="">
+				<img class="w-50 h-100" src="../assets/img/kamau p3.png" alt="">
+				<img class="w-50 h-100" src="../assets/img/kamau p4.png" alt="">
+			</div>
 
         </div>
         <script>
