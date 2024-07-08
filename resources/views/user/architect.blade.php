@@ -316,62 +316,57 @@
                 </div>
             </section> --}}
 
-            <div class="center">
-                <h4>Professional history</h4>
-            </div>
-            <div id="carouselProjects" class="carousel slide" data-ride="carousel" data-interval="false">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselProjects" data-slide-to="12" class="active"></li>
-                    <li data-target="#carouselProjects" data-slide-to="13"></li>
-                    <li data-target="#carouselProjects" data-slide-to="14"></li>
-                    <li data-target="#carouselProjects" data-slide-to="15"></li>
-                    <li data-target="#carouselProjects" data-slide-to="16"></li>
-                    <li data-target="#carouselProjects" data-slide-to="17"></li>
-                    <li data-target="#carouselProjects" data-slide-to="18"></li>
-                    <li data-target="#carouselProjects" data-slide-to="19"></li>
-                    <li data-target="#carouselProjects" data-slide-to="20"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="../assets/img/solar.jpg" alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/Wood Ibiza1.JPG" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/image035.JPG" alt="Third slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/Luscome Lower2.PNG" alt="Fourth slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/Wood Ibiza2.jpg" alt="Fifth slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/Craig Manifold 2.jpg" alt="Sixth slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/Luscome Upperok.PNG" alt="Fifth slide">
-                    </div>
-                    {{-- <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/" alt="Fifth slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/" alt="Fifth slide">
-                    </div> --}}
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/" alt="Fifth slide">
-                    </div>
+        <div class="center">
+            <h4>Professional history</h4>
+        </div>
+        <div id="carouselProjects" class="carousel slide" data-ride="carousel" data-interval="false">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselProjects" data-slide-to="12" class="active"></li>
+                <li data-target="#carouselProjects" data-slide-to="13"></li>
+                <li data-target="#carouselProjects" data-slide-to="14"></li>
+                <li data-target="#carouselProjects" data-slide-to="15"></li>
+                <li data-target="#carouselProjects" data-slide-to="16"></li>
+                <li data-target="#carouselProjects" data-slide-to="17"></li>
+                <li data-target="#carouselProjects" data-slide-to="18"></li>
+                <li data-target="#carouselProjects" data-slide-to="19"></li>
+                <li data-target="#carouselProjects" data-slide-to="20"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="../assets/img/solar.jpg" alt="First slide">
                 </div>
-                <a class="carousel-control-prev" href="#carouselProjects" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselProjects" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/Wood Ibiza1.JPG" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/image035.JPG" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/Luscome Lower2.PNG" alt="Fourth slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/Wood Ibiza2.jpg" alt="Fifth slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/Craig Manifold 2.jpg" alt="Sixth slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/Luscome Upperok.PNG" alt="Fifth slide">
+                </div>
+
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/" alt="Fifth slide">
+                </div>
             </div>
+            <a class="carousel-control-prev" href="#carouselProjects" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselProjects" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
 
 
             <div class="center">
