@@ -195,6 +195,23 @@
             right: 20px;
             z-index: 10000;
         }
+
+        .center {
+            text-align: center;
+        }
+
+        .center img {
+            width: 50%;
+            height: auto;
+            display: inline-block;
+        }
+
+        @media (max-width: 600px) {
+            .center img {
+                width: 100%;
+                height: auto;
+            }
+        }
     </style>
 @endsection
 
@@ -260,164 +277,156 @@
         </div>
 
 
-            <div class="center">
-                <h4>Professional history</h4>
-            </div>
-            <div id="carouselProjects" class="carousel slide" data-ride="carousel" data-interval="false">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselProjects" data-slide-to="12" class="active"></li>
-                    <li data-target="#carouselProjects" data-slide-to="13"></li>
-                    <li data-target="#carouselProjects" data-slide-to="14"></li>
-                    <li data-target="#carouselProjects" data-slide-to="15"></li>
-                    <li data-target="#carouselProjects" data-slide-to="16"></li>
-                    <li data-target="#carouselProjects" data-slide-to="17"></li>
-                    <li data-target="#carouselProjects" data-slide-to="18"></li>
-                    <li data-target="#carouselProjects" data-slide-to="19"></li>
-                    <li data-target="#carouselProjects" data-slide-to="20"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="../assets/img/solar.jpg" alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/Wood Ibiza1.JPG" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/image035.JPG" alt="Third slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/Luscome Lower2.PNG" alt="Fourth slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/Wood Ibiza2.jpg" alt="Fifth slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/Craig Manifold 2.jpg" alt="Sixth slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/Luscome Upperok.PNG" alt="Fifth slide">
-                    </div>
-                    {{-- <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/" alt="Fifth slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/" alt="Fifth slide">
-                    </div> --}}
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/" alt="Fifth slide">
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselProjects" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselProjects" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-
-
-            <div class="center">
-                <h4>Self built home UK</h4>
-            </div>
-            <div id="carouselInspirationalProjects" class="carousel slide" data-ride="carousel"
-                data-interval="false">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselInspirationalProjects" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselInspirationalProjects" data-slide-to="1"></li>
-                    <li data-target="#carouselInspirationalProjects" data-slide-to="2"></li>
-                    <li data-target="#carouselInspirationalProjects" data-slide-to="3"></li>
-                    <li data-target="#carouselInspirationalProjects" data-slide-to="4"></li>
-                    <li data-target="#carouselInspirationalProjects" data-slide-to="5"></li>
-                    <li data-target="#carouselInspirationalProjects" data-slide-to="6"></li>
-                    <li data-target="#carouselInspirationalProjects" data-slide-to="7"></li>
-                    <li data-target="#carouselInspirationalProjects" data-slide-to="8"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="../assets/img/Back Bedroom.jpg" alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/6 Back Steps Up.webp" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/7 Back Steps.jpg" alt="Third slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/4 opatiooct.jpg" alt="Fourth slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/Kitchen Logs.jpg" alt="Fifth slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/IMB Living Room.jpg" alt="Sixth slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/IMG_20180520_120510.jpg" alt="seven slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/8 Patio Doors.jpg" alt="eigth slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/7 Back Steps.jpg" alt="nineth slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/2 Patio Panorama.PNG" alt="Fifth slide">
-                    </div>
-					<div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/Back Bed 2.jpg" alt="Fifth slide">
-                    </div>
-					<div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/img/Bathroom.jpg" alt="Fifth slide">
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselInspirationalProjects" role="button"
-                    data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselInspirationalProjects" role="button"
-                    data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-
-			<div class="center">
-				<h3>Architectures Experience</h3>
-				<img class="w-50 h-100" src="../assets/img/kamau p1.png" alt="">
-				<img class="w-50 h-100" src="../assets/img/kamau p2.png" alt="">
-				<img class="w-50 h-100" src="../assets/img/kamau p3.png" alt="">
-				<img class="w-50 h-100" src="../assets/img/kamau p4.png" alt="">
-			</div>
-
+        <div class="center">
+            <h4>Professional history</h4>
         </div>
-        <script>
-            // Function to trigger zooming animation
-            function triggerZoomAnimation() {
-                const heroContent = document.getElementById('heroContent');
-                heroContent.classList.remove('wow', 'zoomIn');
-                void heroContent.offsetWidth; // Trigger reflow to restart the animation
-                heroContent.classList.add('wow', 'zoomIn');
-            }
+        <div id="carouselProjects" class="carousel slide" data-ride="carousel" data-interval="false">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselProjects" data-slide-to="12" class="active"></li>
+                <li data-target="#carouselProjects" data-slide-to="13"></li>
+                <li data-target="#carouselProjects" data-slide-to="14"></li>
+                <li data-target="#carouselProjects" data-slide-to="15"></li>
+                <li data-target="#carouselProjects" data-slide-to="16"></li>
+                <li data-target="#carouselProjects" data-slide-to="17"></li>
+                <li data-target="#carouselProjects" data-slide-to="18"></li>
+                <li data-target="#carouselProjects" data-slide-to="19"></li>
+                <li data-target="#carouselProjects" data-slide-to="20"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="../assets/img/solar.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/Wood Ibiza1.JPG" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/image035.JPG" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/Luscome Lower2.PNG" alt="Fourth slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/Wood Ibiza2.jpg" alt="Fifth slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/Craig Manifold 2.jpg" alt="Sixth slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/Luscome Upperok.PNG" alt="Fifth slide">
+                </div>
 
-            // Function to toggle visibility of hero content
-            function toggleHeroContent() {
-                const heroContent = document.getElementById('heroContent');
-                heroContent.style.display = heroContent.style.display === 'none' ? 'block' : 'none';
-            }
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/" alt="Fifth slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselProjects" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselProjects" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
 
-            // Initial trigger of zooming animation
-            triggerZoomAnimation();
 
-            // Repeat the sequence every 4 seconds
-            setInterval(() => {
-                toggleHeroContent(); // Hide content
-                setTimeout(() => {
-                    toggleHeroContent(); // Show content
-                    triggerZoomAnimation(); // Trigger zooming animation
-                }, 2000); // Wait for 1 second before showing content again
-            }, 4000); // Repeat every 4 seconds
-        </script>
+        <div class="center">
+            <h4>Self built home UK</h4>
+        </div>
+        <div id="carouselInspirationalProjects" class="carousel slide" data-ride="carousel" data-interval="false">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselInspirationalProjects" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselInspirationalProjects" data-slide-to="1"></li>
+                <li data-target="#carouselInspirationalProjects" data-slide-to="2"></li>
+                <li data-target="#carouselInspirationalProjects" data-slide-to="3"></li>
+                <li data-target="#carouselInspirationalProjects" data-slide-to="4"></li>
+                <li data-target="#carouselInspirationalProjects" data-slide-to="5"></li>
+                <li data-target="#carouselInspirationalProjects" data-slide-to="6"></li>
+                <li data-target="#carouselInspirationalProjects" data-slide-to="7"></li>
+                <li data-target="#carouselInspirationalProjects" data-slide-to="8"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="../assets/img/Back Bedroom.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/6 Back Steps Up.webp" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/7 Back Steps.jpg" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/4 opatiooct.jpg" alt="Fourth slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/Kitchen Logs.jpg" alt="Fifth slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/IMB Living Room.jpg" alt="Sixth slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/IMG_20180520_120510.jpg" alt="seven slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/8 Patio Doors.jpg" alt="eigth slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/7 Back Steps.jpg" alt="nineth slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/2 Patio Panorama.PNG" alt="Fifth slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/Back Bed 2.jpg" alt="Fifth slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/Bathroom.jpg" alt="Fifth slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselInspirationalProjects" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselInspirationalProjects" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <div class="center">
+            <h3>Architectures Experience</h3>
+            <img src="../assets/img/kamau p1.png" alt="">
+            <img src="../assets/img/kamau p2.png" alt="">
+            <img src="../assets/img/kamau p3.png" alt="">
+            <img src="../assets/img/kamau p4.png" alt="">
+        </div>
+
+    </div>
+    <script>
+        // Function to trigger zooming animation
+        function triggerZoomAnimation() {
+            const heroContent = document.getElementById('heroContent');
+            heroContent.classList.remove('wow', 'zoomIn');
+            void heroContent.offsetWidth; // Trigger reflow to restart the animation
+            heroContent.classList.add('wow', 'zoomIn');
+        }
+
+        // Function to toggle visibility of hero content
+        function toggleHeroContent() {
+            const heroContent = document.getElementById('heroContent');
+            heroContent.style.display = heroContent.style.display === 'none' ? 'block' : 'none';
+        }
+
+        // Initial trigger of zooming animation
+        triggerZoomAnimation();
+
+        // Repeat the sequence every 4 seconds
+        setInterval(() => {
+            toggleHeroContent(); // Hide content
+            setTimeout(() => {
+                toggleHeroContent(); // Show content
+                triggerZoomAnimation(); // Trigger zooming animation
+            }, 2000); // Wait for 1 second before showing content again
+        }, 4000); // Repeat every 4 seconds
+    </script>
 </x-base-layout>
