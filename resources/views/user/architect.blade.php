@@ -231,7 +231,7 @@
                 <div class="carousel-item text-center">
 
                     <img class="img1 pb-0 mb-0 d-block" style="height:100vh; object-fit:cover; object-position:center"
-                        src="../assets/img/image035.jpg" alt="Image 2">
+                        src="../assets/img/Image035.jpg" alt="Image 2">
                 </div>
 
                 <div class="carousel-item text-center">
