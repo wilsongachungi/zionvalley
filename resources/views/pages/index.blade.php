@@ -147,29 +147,30 @@
 
 
         @if (auth()->check() && !session('identify_submitted'))
-            <div id="newsletterModal" class="modal fade" tabindex="-1" role="dialog">
+            <div id="newsletterModal" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static"
+                data-keyboard="false">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-							<p class="modal-title">Hi! {{ auth()->user()->name }}, Tell us about You</p>
+                            <p class="modal-title">Hi! {{ auth()->user()->name }}, Nice to have You..</p>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
                             <form method="POST" action="{{ route('identify.store') }}" enctype="multipart/form-data">
-								@csrf
-								<input type="text" name="identify_data" placeholder="Enter your identify data" required> <br>
-								<button type="submit">Submit</button>
-							</form>
-
-
+                                @csrf
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="identify_data" name="identify_data"
+                                        placeholder="tell us something about you" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         @endif
-
     </div>
 
 
@@ -356,47 +357,6 @@
                         How jobs can be created by working with nature Simple shamba scale technologies and information
                         at the local levels for practical action by the maximum numbers of regular people.
                     </div>
-                    {{-- <div class="accordions">
-                        <div class="accordion" onclick="toggleDiv('div4')">
-                            <h3 class="float-left text-lg">
-                                Our Hot Meal
-                            </h3>
-                            <i class="text-md float-right">&#9660;</i>
-                        </div>
-                        <div id="div4" class="myDiv"
-                            style="display: none ;transition: opacity 0.6s ease;line-height: 1.5;">
-                            <p>One text message and our hot meal arrives, delivered by hand to our shaded chosen
-                                sofa by
-                                the
-                                river - Heaven.
-                            </p>
-                            <p>
-                                After some time – some seemingly endless time and realizing there is ever more to
-                                this
-                                adventure, our journey continues.
-                            </p>
-                            <p>
-                                Laughter and the playful splashes of children beckon us to venture and discover
-                                three
-                                natural swimming pools, exhilarating zip lines, and a vast array of nature-inspired
-                                resort
-                                activities.
-                            </p>
-
-
-                            <p>
-                                Surrounded by so many charming cottages nestled amongst huge forest trees, we take a
-                                moment
-                                in our chosen resting place, a romantic and secluded marram soil eco lodge. <br>
-                                We prepare ourselves for the evening ahead.
-                            </p>
-                            <p>
-                                As the sun sets and vibrant bars come alive, we venture out for a night of music,
-                                dancing,
-                                happy people and an unforgettable night filled with experiences.
-                            </p>
-                        </div>
-                    </div> --}}
                 </div>
 
                 <div class="accordions">
@@ -472,19 +432,58 @@
                 </script>
 
                 <script>
-                    $(document).ready(function() {
-                        function showNewsletterModal() {
+                    document.addEventListener('DOMContentLoaded', function() {
+                        // Automatically show the modal if it's supposed to be visible
+                        @if (auth()->check() && !session('identify_submitted'))
                             $('#newsletterModal').modal('show');
-                            setTimeout(function() {
-                                $('#newsletterModal').modal('hide');
-                            }, 10000); // 10 seconds
-                        }
+                        @endif
 
-                        // Initial show and repeat every 30 seconds
-                        showNewsletterModal();
-                        setInterval(function() {
+                        // Ensure form submission works with the Enter key
+                        document.getElementById('identify_data').addEventListener('keydown', function(event) {
+                            if (event.key === 'Enter') {
+                                event.preventDefault();
+                                this.closest('form').submit();
+                            }
+                        });
+
+                        $(document).ready(function() {
+                            let typingTimer;
+                            const typingInterval = 10000; // 10 seconds
+
+                            function showNewsletterModal() {
+                                $('#newsletterModal').modal('show');
+                                typingTimer = setTimeout(function() {
+                                    $('#newsletterModal').modal('hide');
+                                }, typingInterval); // 10 seconds
+                            }
+
+                            function resetTimer() {
+                                clearTimeout(typingTimer);
+                                typingTimer = setTimeout(function() {
+                                    $('#newsletterModal').modal('hide');
+                                }, typingInterval); // 10 seconds
+                            }
+
+                            // Show modal initially and then every 30 seconds
                             showNewsletterModal();
-                        }, 30000); // 30 seconds
+                            setInterval(function() {
+                                showNewsletterModal();
+                            }, 30000); // 30 seconds
+
+                            // Reset timer if the user is typing
+                            $('#identify_data').on('input', function() {
+                                resetTimer();
+                            });
+
+                            // Prevent modal from closing if user is typing
+                            $('#identify_data').on('focus', function() {
+                                clearTimeout(typingTimer);
+                            });
+
+                            $('#identify_data').on('blur', function() {
+                                resetTimer();
+                            });
+                        });
                     });
                 </script>
 

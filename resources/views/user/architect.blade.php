@@ -280,41 +280,6 @@
 
         <br>
         <div class="container">
-            {{-- <section id="accommodation" class="content">
-                <div class="row">
-                    <div class="col-12 col-md-4 single-accommodation">
-                        <img src="../assets/img/1 Yello Drive.PNG" alt="">
-                        <div class="overlay"></div>
-                        <div class="service-desc pl-2 pb-2">Drive Way</div>
-                    </div>
-                    <div class="col-12 col-md-4 single-accommodation">
-                        <img src="../assets/img/2 Patio Panorama.PNG" alt="">
-                        <div class="overlay"></div>
-                        <div class="service-desc pl-2 pb-2">cCottage</div>
-                    </div>
-                    <div class="col-12 col-md-4 single-accommodation">
-                        <img src="../assets/img/Kitchen South.PNG" alt="">
-                        <div class="overlay"></div>
-                        <div class="service-desc pl-2 pb-2">Kitchen South</div>
-                    </div>
-                    <div class="col-12 col-md-4 single-accommodation">
-                        <img src="../assets/img/Bathroom.jpg" alt="">
-                        <div class="overlay"></div>
-                        <div class="service-desc pl-2 pb-2">Bathroom</div>
-                    </div>
-                    <div class="col-12 col-md-4 single-accommodation">
-                        <img src="../assets/img/Kitchen1.jpg" alt="">
-                        <div class="overlay"></div>
-                        <div class="service-desc pl-2 pb-2">Kitchen</div>
-                    </div>
-                    <div class="col-12 col-md-4 single-accommodation">
-                        <img src="../assets/img/8 Patio Doors.jpg" alt="">
-                        <div class="overlay"></div>
-                        <div class="service-desc pl-2 pb-2">River and Waterfall.</p>
-                        </div>
-                    </div>
-                </div>
-            </section> --}}
 
         <div class="center">
             <h4>Professional history</h4>
