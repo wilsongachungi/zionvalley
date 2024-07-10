@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Image;
 use App\Models\Harambee;
+use App\Models\Identify;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,13 +15,14 @@ class AccountController extends Controller
 	{
 		$user = Auth::user();
 
-		// Fetch images associated with the authenticated user
+
+		$identity = Identify::all();
+
 		$profile = Image::where('user_id', $user->id)->get();
 
-		return view('user.profile', ['profile' => $profile]);
+		
+		return view('user.profile', compact('identity', 'profile'));
 	}
-
-
 
 	public function account()
 	{

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
-.dark-shade {
-    background-color: #002000;
-    color: white;
-    /* Text color */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    .dark-shade {
+        background-color: #002000;
+        color: white;
+        /* Text color */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 
-}
+    }
 </style>
 
 <head>
@@ -59,15 +59,15 @@
                             <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
                                 <div class="navbar-profile">
                                     @foreach ($profile as $profiles)
-                                    <img class="img-xs rounded-circle" src="profileimage/{{ $profiles->passport }}"
-                                        alt="image">
+                                        <img class="img-xs rounded-circle" src="profileimage/{{ $profiles->passport }}"
+                                            alt="image">
                                     @endforeach
 
                                     <p class="mb-0 d-none d-sm-block navbar-profile-name">
                                         @if (Auth::check())
-                                        {{ Auth::user()->name }}
+                                            {{ Auth::user()->name }}
                                         @else
-                                        Guest
+                                            Guest
                                         @endif
                                     </p>
                                     <i class="mdi mdi-menu-down d-none d-sm-block"></i>
@@ -125,21 +125,37 @@
                                                 <tr>
                                                     <td>{{ Auth::user()->name }}</td>
                                                     <td>{{ Auth::user()->phone }}</td>
-                                                    <td>{{ Auth::user()->profileInformation->email ?? 'N/A' }}</td>                                                   
+                                                    <td>{{ Auth::user()->profileInformation->email ?? 'N/A' }}</td>
                                                     <td>{{ Auth::user()->profileInformation->country ?? 'N/A' }}</td>
                                                     <td>{{ Auth::user()->profileInformation->residence ?? 'N/A' }}</td>
-                                                    <td>{{ Auth::user()->profileInformation->age ?? 'N/A' }}</td>                                                   
+                                                    <td>{{ Auth::user()->profileInformation->age ?? 'N/A' }}</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                         <br>
+										<h4 class="card-title" style="color:greenyellow">Who you said you are</h4>
+										@foreach ($identity as $item)
+											<div>
+												<p>{{ $item->identify_data }}</p>
+												<button class="edit-btn" data-item-id="{{ $item->id }}">Edit</button>
+												<div class="edit-form" id="edit-form-{{ $item->id }}" style="display: none;">
+													<form action="{{ route('update.identity', $item->id) }}" method="POST">
+														@csrf
+														@method('PUT')
+														<label for="identify_data">Edit:</label>
+														<input type="text" id="identify_data" name="identify_data" value="{{ $item->identify_data }}">
+														<button type="submit" class="btn btn-primary">Update</button>
+													</form>
+												</div>
+											</div>
+										@endforeach
+
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
 
                     <!-- Button trigger modal -->
                     <button type="button" class="dark-shade" style="color:greenyellow" data-toggle="modal"
@@ -153,7 +169,9 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header" style="background: rgb(0, 49, 0)">
-                                    <h5 class="modal-title" id="exampleModalLabel" style="color:greenyellow">Upload Form
+                                    <h5 class="modal-title" id="exampleModalLabel" style="color:greenyellow">
+                                        Upload
+                                        Form
                                     </h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
@@ -168,12 +186,13 @@
                                             <div class="col-md-6">
                                                 <div class="card">
                                                     <div class="card-body dark-shade">
-                                                        <h6 class="card-title" style="color:greenyellow">Upload Facial
+                                                        <h6 class="card-title" style="color:greenyellow">
+                                                            Upload Facial
                                                             Picture</h6>
                                                         <input type="file" name="passport" accept="image/*">
                                                         @if (Session::has('passport_success'))
-                                                        <div class="alert alert-success mt-2">
-                                                            {{ Session::get('passport_success') }}</div>
+                                                            <div class="alert alert-success mt-2">
+                                                                {{ Session::get('passport_success') }}</div>
                                                         @endif
                                                     </div>
                                                 </div>
@@ -185,9 +204,9 @@
                                                         </h6>
                                                         <input type="file" name="idimage" accept="image/*">
                                                         @if (Session::has('idimage_success'))
-                                                        <div class="alert alert-success mt-2">
+<div class="alert alert-success mt-2">
                                                             {{ Session::get('idimage_success') }}</div>
-                                                        @endif
+@endif
                                                     </div>
                                                 </div>
                                             </div>
@@ -198,9 +217,9 @@
                                                         </h6>
                                                         <input type="file" name="idimageback" accept="image/*">
                                                         @if (Session::has('idimageback_success'))
-                                                        <div class="alert alert-success mt-2">
+<div class="alert alert-success mt-2">
                                                             {{ Session::get('idimageback_success') }}</div>
-                                                        @endif
+@endif
                                                     </div>
                                                 </div>
                                             </div> -->
@@ -213,7 +232,9 @@
                                         <div class="col-md-12">
                                             <div class="card">
                                                 <div class="card-body dark-shade">
-                                                    <h6 class="card-title" style="color:greenyellow">Completing Profile
+                                                    <h6 class="card-title" style="color:greenyellow">
+                                                        Completing
+                                                        Profile
                                                         Information</h6>
                                                     <form action="{{ route('complete_profile') }}" method="post"
                                                         enctype="multipart/form-data">
@@ -222,7 +243,7 @@
                                                             <label for="email">Email:</label>
                                                             <input style="color:antiquewhite" type="email"
                                                                 class="form-control" id="email" name="email"
-                                                                value="{{ old('email') }}" >
+                                                                value="{{ old('email') }}">
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="age">Age:</label>
@@ -246,10 +267,10 @@
                                                         <button type="submit" class="btn btn-primary">Update
                                                             Information</button>
                                                     </form>
-                                                    @if(session('success'))
-                                                    <div class="alert alert-success mt-3">
-                                                        {{ session('success') }}
-                                                    </div>
+                                                    @if (session('success'))
+                                                        <div class="alert alert-success mt-3">
+                                                            {{ session('success') }}
+                                                        </div>
                                                     @endif
                                                 </div>
                                             </div>
@@ -258,21 +279,41 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
-
-                <footer class="footer">
-                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ©
-                            zionvalleycbo</span>
-                    </div>
-                </footer>
-
             </div>
+
+            <footer class="footer">
+                <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                    <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ©
+                        zionvalleycbo</span>
+                </div>
+            </footer>
+
         </div>
     </div>
+    </div>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const editButtons = document.querySelectorAll('.edit-btn');
+
+			editButtons.forEach(button => {
+				button.addEventListener('click', function() {
+					const itemId = this.getAttribute('data-item-id');
+					const editForm = document.getElementById(`edit-form-${itemId}`);
+
+					// Toggle visibility of edit form
+					if (editForm.style.display === 'none') {
+						editForm.style.display = 'block';
+					} else {
+						editForm.style.display = 'none';
+					}
+				});
+			});
+		});
+	</script>
+
     <script src="admin/assets/vendors/js/vendor.bundle.base.js"></script>
     <script src="admin/assets/vendors/chart.js/Chart.min.js"></script>
     <script src="admin/assets/vendors/progressbar.js/progressbar.min.js"></script>

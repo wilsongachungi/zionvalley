@@ -407,7 +407,7 @@
             <img src="../assets/img/kamau p3.png" alt="">
             <img src="../assets/img/kamau p4.png" alt="">
             <div> <a href="https://web.archive.org/web/20190815121115/http://www.tmsthermalstore.com/testimonials.php">for
-                    more about the architect</a>
+                    testimonials as a solar thermal heating engineer</a>
             </div> <br> <br>
             <div class="center">
                 <h3>Installation Manual</h3>

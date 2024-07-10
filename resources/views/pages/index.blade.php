@@ -90,8 +90,19 @@
                             Activity center, and Eco resort.
                         </p>
                     </div>
+                    <img class="img1 pb-0 mb-0" src="../assets/img/Home 1.jpg" alt="Image 1">
+                </div>
+
+                <div class="carousel-item active text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL ASSESSMENT. <br>
+                            Activity center, and Eco resort.
+                        </p>
+                    </div>
                     <img class="img1 pb-0 mb-0" src="../assets/img/1 Yello Drive.PNG" alt="Image 1">
                 </div>
+
+
 
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
@@ -162,7 +173,7 @@
                                 @csrf
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="identify_data" name="identify_data"
-                                        placeholder="tell us something about you" required>
+                                        placeholder="Tell us something about you" required>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
@@ -171,6 +182,7 @@
                 </div>
             </div>
         @endif
+
     </div>
 
 
@@ -457,23 +469,22 @@
                                 }, typingInterval); // 10 seconds
                             }
 
+                            // Show modal initially if not already submitted
+                            @if (!session('identify_submitted'))
+                                showNewsletterModal();
+                            @endif
+
+                            // Reset timer if the user is typing
+                            $('#identify_data').on('input', function() {
+                                resetTimer();
+                            });
+
                             function resetTimer() {
                                 clearTimeout(typingTimer);
                                 typingTimer = setTimeout(function() {
                                     $('#newsletterModal').modal('hide');
                                 }, typingInterval); // 10 seconds
                             }
-
-                            // Show modal initially and then every 30 seconds
-                            showNewsletterModal();
-                            setInterval(function() {
-                                showNewsletterModal();
-                            }, 30000); // 30 seconds
-
-                            // Reset timer if the user is typing
-                            $('#identify_data').on('input', function() {
-                                resetTimer();
-                            });
 
                             // Prevent modal from closing if user is typing
                             $('#identify_data').on('focus', function() {

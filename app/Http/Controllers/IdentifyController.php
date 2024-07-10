@@ -11,18 +11,34 @@ class IdentifyController extends Controller
 {
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'identify_data' => 'required|string',
+        // Check if the user has already submitted the data
+        if (session('identify_submitted')) {
+            return redirect()->back()->with('error', 'You have already submitted your identify data.');
+        }
+
+        // Validate the incoming request
+        $request->validate([
+            'identify_data' => 'required|string|max:255',
         ]);
 
-        $identify = new Identify();
-        $identify->identify_data = $validatedData['identify_data'];
-        $identify->user_id = auth()->id();
-        $identify->save();
+        // Store the identify data for the user
+        $identity = new Identify();
+        $identity->identify_data = $request->input('identify_data');
+        $identity->user_id = auth()->user()->id;
+        $identity->save();
 
-
+        // Mark that the user has submitted the data
         session(['identify_submitted' => true]);
 
-        return redirect()->back()->with('success', 'Identify data saved successfully!');
+        return redirect()->back()->with('success', 'Your identify data has been submitted successfully.');
+    }
+
+	public function update(Request $request, $id)
+    {
+        $identity = Identify::findOrFail($id);
+        $identity->identify_data = $request->input('identify_data');
+        $identity->save();
+
+        return redirect()->back()->with('success', 'Identity data updated successfully');
     }
 }

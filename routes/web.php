@@ -91,6 +91,9 @@ Route::post('/complete_profile', [ProfileController::class, 'complete_profile'])
 Route::post('/send_question', [EmailController::class, 'send_question'])->name('send_question');
 Route::get('/display_question', [EmailController::class, 'display_question'])->name('display_question');
 Route::post('/identify', [IdentifyController::class, 'store'])->name('identify.store');
+Route::put('/identity/{id}', [IdentifyController::class, 'update'])->name('update.identity');
+
+
 
 
 
