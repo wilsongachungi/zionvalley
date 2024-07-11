@@ -87,50 +87,46 @@
                 <div class="carousel-item active text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
                         <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL ASSESSMENT. <br>
-                            Activity center, and Eco resort.
+                            Activity center, and Eco resort.
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0" src="../assets/img/Home 1.jpg" alt="Image 1">
-                </div>
-
-                <div class="carousel-item active text-center">
-                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL ASSESSMENT. <br>
-                            Activity center, and Eco resort.
-                        </p>
-                    </div>
-                    <img class="img1 pb-0 mb-0" src="../assets/img/1 Yello Drive.PNG" alt="Image 1">
-                </div>
-
-
-
-                <div class="carousel-item text-center">
-                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL ASSESSMENT. <br>
-                            Activity center, and Eco resort.
-
-                        </p>
-                    </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 2.JPG" alt="Image 2">
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 1.jpg" alt="Image 1">
                 </div>
 
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
                         <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL ASSESSMENT. <br>
-                            Activity center, and Eco resort.
-
+                            Activity center, and Eco resort.
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 4.JPG" alt="Image 3">
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/1 Yello Drive.PNG" alt="Image 2">
                 </div>
+
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
                         <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL ASSESSMENT. <br>
-                            Activity center, and Eco resort.
-
+                            Activity center, and Eco resort.
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home Carosel.jpg" alt="Image 3">
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 2.JPG" alt="Image 3">
+                </div>
+
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL ASSESSMENT. <br>
+                            Activity center, and Eco resort.
+                        </p>
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 4.JPG" alt="Image 4">
+                </div>
+
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL ASSESSMENT. <br>
+                            Activity center, and Eco resort.
+                        </p>
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home Carosel.jpg" alt="Image 5">
                 </div>
             </div>
 
@@ -142,7 +138,7 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
-        </div> <br>
+        </div>
 
 
         <div class="intro-container"
