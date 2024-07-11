@@ -108,7 +108,7 @@
                             Activity center, and Eco resort.
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 2.JPG" alt="Image 3">
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/riverchania.JPG" alt="Image 3">
                 </div>
 
                 <div class="carousel-item text-center">
