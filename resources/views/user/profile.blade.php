@@ -132,6 +132,7 @@
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        
                                         <br>
 										<h4 class="card-title" style="color:greenyellow">Who you said you are</h4>
 										@foreach ($identity as $item)
@@ -149,7 +150,6 @@
 												</div>
 											</div>
 										@endforeach
-
 
                                     </div>
                                 </div>
