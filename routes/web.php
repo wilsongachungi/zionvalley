@@ -19,8 +19,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\IdentifyController;
 use App\Http\Controllers\Auth\AuthController;
-
-
+use App\Http\Controllers\payments\MpesaController;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/home', [HomeController::class, 'redirect']);
@@ -92,6 +91,7 @@ Route::post('/send_question', [EmailController::class, 'send_question'])->name('
 Route::get('/display_question', [EmailController::class, 'display_question'])->name('display_question');
 Route::post('/identify', [IdentifyController::class, 'store'])->name('identify.store');
 Route::put('/identity/{id}', [IdentifyController::class, 'update'])->name('update.identity');
+Route::post('get-tocken', [MpesaController::class, 'getAccessTocken']);
 
 
 

@@ -346,7 +346,7 @@
                                 <a href="{{ route('account') }}" class="text-decoration-none text-success"
                                     style="margin-left:20px">ACCOUNT</a>
                             </div>
-                            <div class="container mt-5">
+                            {{-- <div class="container mt-5">
                                 <div class="row">
                                     <div class="col-md-6 offset-md-3">
                                         <div class="card">
@@ -392,6 +392,50 @@
                                                 </form>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div> --}}
+
+                            <div class="container">
+                                <div class="row mt-5">
+                                    <div class="col sm-8 mx-auto">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Obtain Access Tocken
+                                            </div>
+                                            <div class="card-body">
+                                                <button id="getAccessToken" class="btn-primary">Request Access
+                                                    Tocken</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mt-5">
+                                            <div class="card-header">Register URLs</div>
+                                            <div class="card-body">
+                                                <button class="btn-primary">Register URLs</button>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mt-5">
+                                            <div class="card-header">Simulate Transaction</div>
+                                            <div class="card-body">
+                                                <form action="">
+                                                    @csrf
+                                                    <div class="form-groip">
+                                                        <label for="amount">Amount</label>
+                                                        <input type="number" name="amount" id="amount"
+                                                            class="form-control">
+                                                    </div>
+                                                    <div class="form-groip">
+                                                        <label for="account">Account</label>
+                                                        <input type="text" name="account" id="account"
+                                                            class="form-control">
+                                                    </div>
+                                                </form>
+                                                <button class="btn-primary">Simulate Payments</button>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -457,6 +501,19 @@
                 }
             });
         });
+    </script>
+    <script>
+        document.getElementById('getAccessTocken').addEventListener('click', (event) => {
+            event.preventDefault();
+            axios.post('/get-tocken', {})
+                .then((respnse) => {
+                    console.log(response)
+                })
+                .catch((error) => {
+                    console.log(error);
+                })
+
+        })
     </script>
 </body>
 
