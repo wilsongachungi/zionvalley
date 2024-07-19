@@ -132,24 +132,31 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        
+
                                         <br>
-										<h4 class="card-title" style="color:greenyellow">Who you said you are</h4>
-										@foreach ($identity as $item)
-											<div>
-												<p>{{ $item->identify_data }}</p>
-												<button class="edit-btn" data-item-id="{{ $item->id }}">Edit</button>
-												<div class="edit-form" id="edit-form-{{ $item->id }}" style="display: none;">
-													<form action="{{ route('update.identity', $item->id) }}" method="POST">
-														@csrf
-														@method('PUT')
-														<label for="identify_data">Edit:</label>
-														<input type="text" id="identify_data" name="identify_data" value="{{ $item->identify_data }}">
-														<button type="submit" class="btn btn-primary">Update</button>
-													</form>
-												</div>
-											</div>
-										@endforeach
+                                        <h4 class="card-title" style="color:greenyellow">Who you said you are</h4>
+                                        <!-- Display Identity Data -->
+                                        @if ($identity)
+                                            <div>
+                                                <p>{{ $identity->identify_data }}</p>
+                                                <button class="edit-btn"
+                                                    data-item-id="{{ $identity->id }}">Edit</button>
+                                                <div class="edit-form" id="edit-form-{{ $identity->id }}"
+                                                    style="display: none;">
+                                                    <form action="{{ route('update.identity', $identity->id) }}"
+                                                        method="POST">
+                                                        @csrf
+                                                        @method('PUT')
+                                                        <label for="identify_data">Edit:</label>
+                                                        <input type="text" id="identify_data" name="identify_data"
+                                                            value="{{ $identity->identify_data }}">
+                                                        <button type="submit" class="btn btn-primary">Update</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        @else
+                                            <p>No identity data found.</p>
+                                        @endif
 
                                     </div>
                                 </div>
@@ -294,25 +301,25 @@
     </div>
     </div>
 
-	<script>
-		document.addEventListener('DOMContentLoaded', function() {
-			const editButtons = document.querySelectorAll('.edit-btn');
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const editButtons = document.querySelectorAll('.edit-btn');
 
-			editButtons.forEach(button => {
-				button.addEventListener('click', function() {
-					const itemId = this.getAttribute('data-item-id');
-					const editForm = document.getElementById(`edit-form-${itemId}`);
+            editButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const itemId = this.getAttribute('data-item-id');
+                    const editForm = document.getElementById(`edit-form-${itemId}`);
 
-					// Toggle visibility of edit form
-					if (editForm.style.display === 'none') {
-						editForm.style.display = 'block';
-					} else {
-						editForm.style.display = 'none';
-					}
-				});
-			});
-		});
-	</script>
+                    // Toggle visibility of edit form
+                    if (editForm.style.display === 'none') {
+                        editForm.style.display = 'block';
+                    } else {
+                        editForm.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 
     <script src="admin/assets/vendors/js/vendor.bundle.base.js"></script>
     <script src="admin/assets/vendors/chart.js/Chart.min.js"></script>

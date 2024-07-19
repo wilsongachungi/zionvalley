@@ -235,6 +235,11 @@
                                                                             value="<?php echo $rate; ?>">
                                                                     </div>
                                                                     <?php } ?>
+                                                                    <div class="card-header text-center">
+                                                                        <h4 class="card-title">Pay Bill: <span style="color:greenyellow">516 600</span></h4>
+                                                                        <h4 class="card-title">Account: <span style="color:greenyellow"> 840 518</span> </h4>
+                                                                        <p>Name: Zionvalley CBO</p>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="modal-footer">
                                                                     <button type="button" class="btn btn-secondary"
