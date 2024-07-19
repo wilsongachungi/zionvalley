@@ -169,24 +169,13 @@
                                 <div class="table-responsive">
                                     <table class="table">
                                         @csrf
-                                
+
                                         <thead>
-                                            <tr style="">
-                                                <th style=" color:greenyellow">Total <br> Harambees
-                                                </th>
-                                                <th style=" color:greenyellow">Todays <br> Rate</th>
-                                                <th style=" color:greenyellow">Todays <br> Value</th>
-                                            </tr>
-                                            <tr>
-                                                <td style="">100,000</td>
-                                                <td style="">x2.4</td>
-                                                <td style="">240,000</td>
-                                            </tr>
 
                                             <tr>
                                                 <th style="color:greenyellow">Harambees</th>
-                                                <th style="color:greenyellow">Rate</th>
-                                                <th style="color:greenyellow">Kshs in/out</th>
+                                                <th style="color:greenyellow">Kshs in</th>
+                                                <th style="color:greenyellow">Kshs out</th>
                                                 <th style="color:greenyellow">Actions</th>
                                             </tr>
                                         </thead>
@@ -195,8 +184,10 @@
                                             @foreach ($harambees as $harambee)
                                             <tr>
                                                 <td>{{ $harambee->total }}</td>
-                                                <td> x1.0 </td>
+
                                                 <td>{{ $harambee->deposit }}</td>
+                                                <td>{{ $harambee->withdraw ?? '0.00' }}</td>
+
                                                 <td>
                                                     <span style="cursor: pointer; color:green" class="details-link"
                                                         onclick="showDetailsPopup({{ $harambee->id }})">Details</span>
@@ -224,8 +215,9 @@
 
                                     </table>
                                     <div class="container d-flex justify-content-center align-items-center">
-                                        <p class="text-success font-weight-bold">Total Kshs: <span
-                                                style="color:greenyellow">56,000 </span> </p>
+										
+                                        <p class="text-success font-weight-bold">Total Kshs:0.00 <span
+                                                style="color:greenyellow"> </span> </p>
                                     </div>
                                 </div>
                                 <a href="{{ route('transaction') }}"

@@ -112,24 +112,6 @@
                                 <h6 class="p-3 mb-0"></h6>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item preview-item">
-                                    {{-- <div class="preview-thumbnail">
-                                        <div class="preview-icon bg-dark rounded-circle">
-                                            <i class="mdi mdi-settings text-success"></i>
-                                        </div>
-                                    </div> --}}
-                                    <div class="preview-item-content">
-                                        {{-- <a class="nav-link" href="{{ route('profile.show') }}">
-                                        <h6 class="preview-subject mb-1">Settings</h6>
-                                </a> --}}
-                                    </div>
-                                </a>
-                                {{-- <div class="dropdown-divider"></div> --}}
-                                <a class="dropdown-item preview-item">
-                                    {{-- <div class="preview-thumbnail">
-                                        <div class="preview-icon bg-dark rounded-circle">
-                                            <i class="mdi mdi-logout text-danger"></i>
-                                        </div>
-                                    </div> --}}
                                     <div class="preview-item-content">
                                         <p class="preview-subject mb-1">
                                         <form action="{{ route('logout') }}" method="POST">
@@ -186,7 +168,7 @@
                                                         <!-- Button trigger modal -->
                                                         <button type="button" class="btn btn-success"
                                                             data-toggle="modal" data-target="#buyModal">
-                                                            BUY
+                                                            Deposit
                                                         </button>
                                                     </th>
 
@@ -199,7 +181,7 @@
                                                                 <div class="modal-header">
                                                                     <h5 class="modal-title text-green"
                                                                         style="color:greenyellow" id="buyModalLabel">
-                                                                        BUY
+                                                                        Deposit
                                                                     </h5>
                                                                     <button type="button" class="close"
                                                                         data-dismiss="modal" aria-label="Close">
@@ -208,14 +190,14 @@
                                                                     </button>
                                                                 </div>
                                                                 <div class="modal-body">
-                                                                    <?php
-                                                                    if (Auth::check()) {
-                                                                        $userName = Auth::user()->name;
-                                                                        $amount = 100000;
-                                                                        $rate = 1.69;
-                                                                    ?>
+                                                                    <?php if (Auth::check()) {
+																		$userName = Auth::user()->name;
+																		$amount = 0.00;
+																		$rate = 1.00;
+																	?>
                                                                     <p style="" class="text-white">Name:
                                                                         <?php echo $userName; ?></p>
+
                                                                     <!-- Editable input field for amount -->
                                                                     <div class="form-group">
                                                                         <label style="" class="text-white"
@@ -225,6 +207,7 @@
                                                                             id="buy-amount"
                                                                             value="<?php echo $amount; ?>">
                                                                     </div>
+
                                                                     <!-- Editable input field for rate -->
                                                                     <div class="form-group">
                                                                         <label style="" class="text-white"
@@ -234,29 +217,48 @@
                                                                             id="buy-rate"
                                                                             value="<?php echo $rate; ?>">
                                                                     </div>
+
+                                                                    <!-- Checkbox for agreeing to terms -->
+                                                                    <div class="form-group form-check">
+                                                                        <input type="checkbox"
+                                                                            class="form-check-input"
+                                                                            id="termsCheckbox">
+                                                                        <label class="form-check-label text-white"
+                                                                            for="termsCheckbox">
+                                                                            I agree to the <a href="#"
+                                                                                class="text-info">terms and
+                                                                                conditions</a>.
+                                                                        </label>
+                                                                    </div>
+
                                                                     <?php } ?>
+
                                                                     <div class="card-header text-center">
-                                                                        <h4 class="card-title">Pay Bill: <span style="color:greenyellow">516 600</span></h4>
-                                                                        <h4 class="card-title">Account: <span style="color:greenyellow"> 840 518</span> </h4>
+                                                                        <h4 class="card-title">Pay Bill: <span
+                                                                                style="color:greenyellow">516
+                                                                                600</span></h4>
+                                                                        <h4 class="card-title">Account: <span
+                                                                                style="color:greenyellow"> 840
+                                                                                518</span> </h4>
                                                                         <p>Name: Zionvalley CBO</p>
                                                                     </div>
                                                                 </div>
                                                                 <div class="modal-footer">
                                                                     <button type="button" class="btn btn-secondary"
                                                                         data-dismiss="modal">Close</button>
-                                                                    <button type="button"
-                                                                        class="btn btn-primary">Save
-                                                                    </button>
+                                                                    <button type="button" class="btn btn-primary"
+                                                                        id="saveButton">Submit</button>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
 
+
                                                     <th style="color:greenyellow; cursor:pointer">
                                                         <!-- Button trigger modal -->
                                                         <button type="button" class="btn btn-success"
                                                             data-toggle="modal" data-target="#exampleModal">
-                                                            SELL
+                                                            Withdraw
                                                         </button>
                                                     </th>
 
@@ -271,7 +273,7 @@
                                                                     <h5 class="modal-title text-green"
                                                                         style="color:greenyellow"
                                                                         id="exampleModalLabel">
-                                                                        SELL</h5>
+                                                                        Withdraw</h5>
                                                                     <button type="button" class="close"
                                                                         data-dismiss="modal" aria-label="Close">
                                                                         <span aria-hidden="true"
@@ -321,29 +323,9 @@
                                                 </tr>
                                                 <tr style="text-align:left">
                                                     <th style=" color:greenyellow">Todays Rate</th>
-                                                    <th style=" color:green; font-weight:bold">1.69</th>
+                                                    <th style=" color:green; font-weight:bold">1.00</th>
                                                 </tr>
 
-                                                <tr>
-                                                    <th style="color:greenyellow">Best Seller</th>
-                                                    <th style="color:greenyellow">Best Buyer</th>
-                                                </tr>
-                                                <tr>
-                                                    <td style="color:grey; cursor:pointer">1.50</td>
-                                                    <td style="color:grey; cursor:pointer">1.60</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="color:grey ; cursor:pointer">1.40</td>
-                                                    <td style="color:grey ; cursor:pointer">1.66</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="color:grey ; cursor:pointer">1.40</td>
-
-                                                </tr>
-                                                <tr>
-                                                    <td style="color:grey ; cursor:pointer">1.40</td>
-
-                                                </tr>
                                             </thead>
                                         </table>
                                     </div>
@@ -359,7 +341,7 @@
                                             <div class="card-header text-center">
                                                 <h3 class="card-title">Pay Bill: 516 600</h3>
                                                 <h3 class="card-title">Account: 840 518 </h3>
-												<p>Name: Zionvalley CBO</p>
+                                                <p>Name: Zionvalley CBO</p>
                                             </div>
                                         </div>
                                     </div>
