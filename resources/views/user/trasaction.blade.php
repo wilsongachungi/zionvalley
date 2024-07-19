@@ -235,6 +235,11 @@
                                                                             value="<?php echo $rate; ?>">
                                                                     </div>
                                                                     <?php } ?>
+                                                                    <div class="card-header text-center">
+                                                                        <h4 class="card-title">Pay Bill: <span style="color:greenyellow">516 600</span></h4>
+                                                                        <h4 class="card-title">Account: <span style="color:greenyellow"> 840 518</span> </h4>
+                                                                        <p>Name: Zionvalley CBO</p>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="modal-footer">
                                                                     <button type="button" class="btn btn-secondary"
@@ -345,74 +350,44 @@
                                 </div>
                                 <a href="{{ route('account') }}" class="text-decoration-none text-success"
                                     style="margin-left:20px">ACCOUNT</a>
-                            </div>
-                            {{-- <div class="container mt-5">
+                            </div> <br>
+
+                            <div>
                                 <div class="row">
-                                    <div class="col-md-6 offset-md-3">
+                                    <div class="col-md-12">
                                         <div class="card">
-                                            <div class="card-header">
-                                                <h5>Make a Payment</h5>
-                                            </div>
-                                            <div class="card-body">
-                                                <p>Paybill: <strong>840518</strong>.</p>
-                                                <p>Account: <strong>ZION VALLEY CBO</strong>.</p>
-                                                <form method="" action="">
-                                                    @csrf
-                                                    <div class="form-group">
-                                                        <label for="payment_method">Choose Payment Method</label>
-                                                        <select name="payment_method" id="payment_method"
-                                                            class="form-control" required>
-                                                            <option value="">Select Payment Method</option>
-                                                            <option value="mpesa">MPesa</option>
-                                                            <option value="bank_account">Bank Account</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group" id="mpesa_fields" style="display: none;">
-                                                        <label for="mpesa_amount">Amount</label>
-                                                        <input type="number" name="mpesa_amount" id="mpesa_amount"
-                                                            class="form-control" placeholder="Enter Amount">
-                                                        <label for="mpesa_number" class="mt-2">MPesa Number</label>
-                                                        <input type="text" name="mpesa_number" id="mpesa_number"
-                                                            class="form-control" placeholder="Enter MPesa Number">
-                                                    </div>
-                                                    <div class="form-group" id="bank_fields" style="display: none;">
-                                                        <label for="bank_name">Bank Name</label>
-                                                        <input type="text" name="bank_name" id="bank_name"
-                                                            class="form-control" placeholder="Enter Bank Name">
-                                                        <label for="bank_account_number" class="mt-2">Account
-                                                            Number</label>
-                                                        <input type="text" name="bank_account_number"
-                                                            id="bank_account_number" class="form-control"
-                                                            placeholder="Enter Account Number">
-                                                        <label for="bank_amount" class="mt-2">Amount</label>
-                                                        <input type="number" name="bank_amount" id="bank_amount"
-                                                            class="form-control" placeholder="Enter Amount">
-                                                    </div>
-                                                    <button type="submit" class="btn btn-primary">Pay Now</button>
-                                                </form>
+                                            <div class="card-header text-center">
+                                                <h3 class="card-title">Pay Bill: 516 600</h3>
+                                                <h3 class="card-title">Account: 840 518 </h3>
+												<p>Name: Zionvalley CBO</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div> --}}
+                            </div>
+                        </div>
+                    </div>
 
-                            <div class="container">
+                </div>
+
+
+                {{-- <div class="container">
                                 <div class="row mt-5">
-                                    <div class="col sm-8 mx-auto">
+                                    <div class="col-sm-8 mx-auto">
                                         <div class="card">
                                             <div class="card-header">
-                                                Obtain Access Tocken
+                                                Obtain Access Token
                                             </div>
                                             <div class="card-body">
-                                                <button id="getAccessToken" class="btn-primary">Request Access
-                                                    Tocken</button>
+                                                <button id="getAccessToken" class="btn btn-primary">Request Access
+                                                    Token</button>
                                             </div>
                                         </div>
 
                                         <div class="card mt-5">
                                             <div class="card-header">Register URLs</div>
                                             <div class="card-body">
-                                                <button class="btn-primary">Register URLs</button>
+                                                <button class="btn btn-primary">Register URLs</button>
                                             </div>
                                         </div>
 
@@ -421,36 +396,36 @@
                                             <div class="card-body">
                                                 <form action="">
                                                     @csrf
-                                                    <div class="form-groip">
+                                                    <div class="form-group">
                                                         <label for="amount">Amount</label>
                                                         <input type="number" name="amount" id="amount"
                                                             class="form-control">
                                                     </div>
-                                                    <div class="form-groip">
+                                                    <div class="form-group">
                                                         <label for="account">Account</label>
                                                         <input type="text" name="account" id="account"
                                                             class="form-control">
                                                     </div>
                                                 </form>
-                                                <button class="btn-primary">Simulate Payments</button>
+                                                <button class="btn btn-primary">Simulate Payments</button>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <footer class="footer">
-                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ©
-                            zionvalleycbo</span>
-                    </div>
-                </footer>
+                            </div> --}}
             </div>
         </div>
+    </div>
+    </div>
+
+    <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ©
+                zionvalleycbo</span>
+        </div>
+    </footer>
+    </div>
+    </div>
     </div>
 
     <script src="admin/assets/vendors/js/vendor.bundle.base.js"></script>
@@ -482,43 +457,25 @@
         }
     </script>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var paymentMethodSelect = document.getElementById('payment_method');
-            var mpesaFields = document.getElementById('mpesa_fields');
-            var bankFields = document.getElementById('bank_fields');
+    {{-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-            paymentMethodSelect.addEventListener('change', function() {
-                if (this.value === 'mpesa') {
-                    mpesaFields.style.display = 'block';
-                    bankFields.style.display = 'none';
-                } else if (this.value === 'bank_account') {
-                    mpesaFields.style.display = 'none';
-                    bankFields.style.display = 'block';
-                } else {
-                    mpesaFields.style.display = 'none';
-                    bankFields.style.display = 'none';
-                }
-            });
-        });
-    </script>
     <script>
-        document.getElementById('getAccessTocken').addEventListener('click', (event) => {
+        document.getElementById('getAccessToken').addEventListener('click', (event) => {
             event.preventDefault();
-            axios.post('/get-tocken', {})
-                .then((respnse) => {
-                    console.log(response)
+            axios.post('/get-token', {})
+                .then((response.data) => {
+                    console.log(response);
                 })
                 .catch((error) => {
                     console.log(error);
-                })
+                });
+        });
+    </script> --}}
 
-        })
-    </script>
-</body>
 
-</html>
-</nav>
+
+
+
 </body>
 
 </html>

@@ -15,14 +15,15 @@ class AccountController extends Controller
 	{
 		$user = Auth::user();
 
+		// Fetch only one identity record for the authenticated user
+		$identity = Identify::where('user_id', $user->id)->first();
 
-		$identity = Identify::all();
-
+		// Fetch all profile images for the authenticated user
 		$profile = Image::where('user_id', $user->id)->get();
 
-		
 		return view('user.profile', compact('identity', 'profile'));
 	}
+
 
 	public function account()
 	{
