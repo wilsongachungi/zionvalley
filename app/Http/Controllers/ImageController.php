@@ -9,54 +9,48 @@ use Illuminate\Support\Facades\Session;
 
 class ImageController extends Controller
 {
-	public function upload_profile_image(Request $request)
-	{
-		$user = Auth::user();
+    public function upload_profile_image(Request $request)
+    {
+        $user = Auth::user();
 
-		$profile = new Image;
+        // Ensure the directory exists
+        $directory = 'profileimage';
+        if (!file_exists($directory)) {
+            mkdir($directory, 0755, true);
+        }
 
-		// Define the directory path
-		$directory = 'profileimage';
+        // Check if a file was uploaded
+        if ($request->hasFile('passport')) {
+            $passport = $request->file('passport');
+            $passportname = 'passport_' . time() . '.' . $passport->getClientOriginalExtension();
+            $passport->move($directory, $passportname);
 
-		if (!file_exists($directory)) {
-			mkdir($directory, 0755, true); 
-		}
+            // Check if the user already has an image record
+            $profile = Image::where('user_id', $user->id)->first();
 
-		if ($request->hasFile('passport')) {
-			Session::flash('passport_success', 'Facial Picture uploaded .');
-		}
+            if ($profile) {
+                // Delete the old passport image file if it exists
+                $oldPassportPath = $directory . '/' . $profile->passport;
+                if (file_exists($oldPassportPath)) {
+                    unlink($oldPassportPath);
+                }
 
-		if ($request->hasFile('idimage')) {
-			Session::flash('idimage_success', 'Front ID uploaded.');
-		}
+                // Update the existing record with the new passport image
+                $profile->passport = $passportname;
+            } else {
+                // Create a new record
+                $profile = new Image;
+                $profile->passport = $passportname;
+                $profile->user_id = $user->id;
+            }
 
-		if ($request->hasFile('idimageback')) {
-			Session::flash('idimageback_success', 'Back ID uploaded.');
-		}
+            $profile->save();
 
-		$idimage = $request->file('idimage');
-		$idimagename = 'idimage_' . time() . '.' . $idimage->getClientOriginalExtension();
-		$idimage->move($directory, $idimagename);
+            Session::flash('success', 'Profile image has been updated successfully.');
+        } else {
+            Session::flash('error', 'No passport image uploaded.');
+        }
 
-		$passport = $request->file('passport');
-		$passportname = 'passport_' . time() . '.' . $passport->getClientOriginalExtension();
-		$passport->move($directory, $passportname);
-
-
-		$idimageback = $request->file('idimageback');
-		$idimagebackname = 'idimageback_' . time() . '.' . $idimageback->getClientOriginalExtension();
-		$idimageback->move($directory, $idimagebackname);
-
-		$profile->idimage = $idimagename;
-		$profile->passport = $passportname;
-		$profile->idimageback = $idimagebackname;
-
-		$profile->user_id = $user->id;
-
-		$profile->save();
-
-		Session::flash('success', 'Profile image has been updated successfully.');
-
-		return redirect()->back();
-	}
+        return redirect()->back();
+    }
 }
