@@ -86,7 +86,7 @@
             <div class="carousel-inner">
                 <div class="carousel-item active text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL ASSESSMENT. <br>
+                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL. <br>
                             Activity center, and Eco resort.
                         </p>
                     </div>
@@ -104,7 +104,7 @@
 
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL ASSESSMENT. <br>
+                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL. <br>
                             Activity center, and Eco resort.
                         </p>
                     </div>
@@ -113,7 +113,7 @@
 
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL ASSESSMENT. <br>
+                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL. <br>
                             Activity center, and Eco resort.
                         </p>
                     </div>
@@ -122,7 +122,7 @@
 
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL ASSESSMENT. <br>
+                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL. <br>
                             Activity center, and Eco resort.
                         </p>
                     </div>
