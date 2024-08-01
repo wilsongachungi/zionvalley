@@ -93,14 +93,14 @@
                     <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 1.jpg" alt="Image 1">
                 </div>
 
-                <div class="carousel-item text-center">
+                {{-- <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
                         <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL ASSESSMENT. <br>
                             Activity center, and Eco resort.
                         </p>
                     </div>
                     <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/1 Yello Drive.PNG" alt="Image 2">
-                </div>
+                </div> --}}
 
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
