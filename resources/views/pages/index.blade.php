@@ -153,57 +153,6 @@
         <br>
 
         @if (auth()->check() && !session('identity_exists'))
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    // Automatically show the modal if it's supposed to be visible
-                    $('#newsletterModal').modal('show');
-
-                    // Ensure form submission works with the Enter key
-                    document.getElementById('identify_data').addEventListener('keydown', function(event) {
-                        if (event.key === 'Enter') {
-                            event.preventDefault();
-                            this.closest('form').submit();
-                        }
-                    });
-
-                    $(document).ready(function() {
-                        let typingTimer;
-                        const typingInterval = 10000; // 10 seconds
-
-                        function showNewsletterModal() {
-                            $('#newsletterModal').modal('show');
-                            typingTimer = setTimeout(function() {
-                                $('#newsletterModal').modal('hide');
-                            }, typingInterval); // 10 seconds
-                        }
-
-                        // Show modal initially if not already submitted
-                        showNewsletterModal();
-
-                        // Reset timer if the user is typing
-                        $('#identify_data').on('input', function() {
-                            resetTimer();
-                        });
-
-                        function resetTimer() {
-                            clearTimeout(typingTimer);
-                            typingTimer = setTimeout(function() {
-                                $('#newsletterModal').modal('hide');
-                            }, typingInterval); // 10 seconds
-                        }
-
-                        // Prevent modal from closing if user is typing
-                        $('#identify_data').on('focus', function() {
-                            clearTimeout(typingTimer);
-                        });
-
-                        $('#identify_data').on('blur', function() {
-                            resetTimer();
-                        });
-                    });
-                });
-            </script>
-
             <div id="newsletterModal" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static"
                 data-keyboard="false">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -228,9 +177,6 @@
                 </div>
             </div>
         @endif
-
-
-
     </div>
 
 
@@ -244,9 +190,7 @@
                 Steep valley sides are currently neglected, under valued, and provide very little for human sustenance.
                 We have the perfect opportunity for ecosystem regeneration and to create something special and extremely
                 valuable.
-
             </div>
-
         </div>
     </div>
 
@@ -490,6 +434,58 @@
                         div.style.display = div.style.display === 'none' ? 'block' : 'none';
                     }
                 </script>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        // Automatically show the modal if it's supposed to be visible
+                        // $('#newsletterModal').modal('show');
+
+                        // Ensure form submission works with the Enter key
+                        document.getElementById('identify_data').addEventListener('keydown', function(event) {
+                            if (event.key === 'Enter') {
+                                event.preventDefault();
+                                this.closest('form').submit();
+                            }
+                        });
+
+                        $(document).ready(function() {
+                            let typingTimer;
+                            const typingInterval = 10000; // 10 seconds
+
+                            function showNewsletterModal() {
+                                $('#newsletterModal').modal('show');
+                                typingTimer = setTimeout(function() {
+                                    $('#newsletterModal').modal('hide');
+                                }, typingInterval); // 10 seconds
+                            }
+
+                            // Show modal initially if not already submitted
+                            showNewsletterModal();
+
+                            // Reset timer if the user is typing
+                            $('#identify_data').on('input', function() {
+                                resetTimer();
+                            });
+
+                            function resetTimer() {
+                                clearTimeout(typingTimer);
+                                typingTimer = setTimeout(function() {
+                                    $('#newsletterModal').modal('hide');
+                                }, typingInterval); // 10 seconds
+                            }
+
+                            // Prevent modal from closing if user is typing
+                            $('#identify_data').on('focus', function() {
+                                clearTimeout(typingTimer);
+                            });
+
+                            $('#identify_data').on('blur', function() {
+                                resetTimer();
+                            });
+                        });
+                    });
+                </script>
+
             </div>
 
 </x-base-layout>
