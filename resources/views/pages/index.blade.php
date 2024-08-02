@@ -152,7 +152,6 @@
         </div>
         <br>
 
-
         @if (auth()->check() && !session('identity_exists'))
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
@@ -229,6 +228,7 @@
                 </div>
             </div>
         @endif
+
 
 
     </div>

@@ -23,8 +23,6 @@ use App\Http\Controllers\payments\MpesaController;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/home', [HomeController::class, 'redirect']);
-// Route::get('/admin.add_image_view', [HomeController::class, 'redirect']);
-
 Route::middleware([
 	'auth:sanctum',
 	config('jetstream.auth_session'),
@@ -92,8 +90,3 @@ Route::get('/display_question', [EmailController::class, 'display_question'])->n
 Route::post('/identify', [IdentifyController::class, 'store'])->name('identify.store');
 Route::put('/identity/{id}', [IdentifyController::class, 'update'])->name('update.identity');
 Route::post('get-tocken', [MpesaController::class, 'getAccessTocken']);
-
-
-
-
-
