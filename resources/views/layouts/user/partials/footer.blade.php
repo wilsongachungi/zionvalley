@@ -55,7 +55,7 @@
                                             data-parent="#accordion">
                                             <div class="card-body">
                                                 <p style="color:green">
-                                                
+
                                                 </p>
 
                                             </div>
@@ -90,7 +90,7 @@
                                         </div>
                                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                                             data-parent="#accordion">
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -223,8 +223,16 @@
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo beatae enim
                                         voluptatem doloremque, expedita voluptates facilis odit eaque cumque maiores?
                                     </p>
-                                    <a href="../downloads/conservancy.pdf" target="_blank" class="btn btn-primary">Open
-                                        PDF</a>
+									<div class="image-gallery">
+										<a href="../downloads/const1.png" target="_blank"><img src="../downloads/const1.png" alt="const1" class="img-thumbnail"></a>
+										<a href="../downloads/const2.png" target="_blank"><img src="../downloads/const2.png" alt="const2" class="img-thumbnail"></a>
+										<a href="../downloads/const3.png" target="_blank"><img src="../downloads/const3.png" alt="const3" class="img-thumbnail"></a>
+										<a href="../downloads/const4.png" target="_blank"><img src="../downloads/const4.png" alt="const4" class="img-thumbnail"></a>
+										<a href="../downloads/const5.png" target="_blank"><img src="../downloads/const5.png" alt="const5" class="img-thumbnail"></a>
+										<a href="../downloads/const6.png" target="_blank"><img src="../downloads/const6.png" alt="const6" class="img-thumbnail"></a>
+										<a href="../downloads/const7.png" target="_blank"><img src="../downloads/const7.png" alt="const7" class="img-thumbnail"></a>
+									</div>
+
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

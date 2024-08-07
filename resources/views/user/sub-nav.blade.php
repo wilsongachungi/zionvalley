@@ -59,11 +59,11 @@
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="{{ route('downloads') }}">
+            <a class="nav-link" href="{{ route('documents') }}">
                 <span class="menu-icon">
                     <i class="mdi mdi-download"></i>
                 </span>
-                <span class="menu-title" style="color:greenyellow">Downloads</span>
+                <span class="menu-title" style="color:greenyellow">Documents</span>
             </a>
         </li>
         <li class="nav-item menu-items">

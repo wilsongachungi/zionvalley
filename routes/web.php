@@ -20,6 +20,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\IdentifyController;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\DocumentsController;
 use App\Http\Controllers\payments\MpesaController;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
@@ -94,4 +95,5 @@ Route::post('get-tocken', [MpesaController::class, 'getAccessTocken']);
 Route::get('/identification', [ViewController::class, 'identification'])->name('identification');
 Route::post('/identification', [CommentController::class, 'store'])->name('store');
 Route::get('/user/{id}/edit', [CommentController::class, 'edit'])->name('edit');
+Route::get('/documents', [DocumentsController::class, 'documents'])->name('documents');
 
