@@ -435,7 +435,7 @@
                     }
                 </script>
 
-                {{-- <script>
+                <script>
                     document.addEventListener('DOMContentLoaded', function() {
                         // Automatically show the modal if it's supposed to be visible
                         // $('#newsletterModal').modal('show');
@@ -484,8 +484,6 @@
                             });
                         });
                     });
-                </script> --}}
-
+                </script>
             </div>
-
 </x-base-layout>

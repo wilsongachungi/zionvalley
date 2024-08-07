@@ -41,6 +41,16 @@
                 <span class="menu-title">Messages</span>
             </a>
         </li>
+
+		<li class="nav-item menu-items">
+            <a class="nav-link" href="{{ route('identification') }}">
+                <span class="menu-icon">
+                    <i class="mdi mdi-contacts"></i>
+                </span>
+                <span class="menu-title">Identification</span>
+            </a>
+        </li>
+
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('reply_message') }}">
                 <span class="menu-icon">

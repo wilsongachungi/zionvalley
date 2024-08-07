@@ -1,10 +1,10 @@
 
 <style>
         .dark-shade {
-            background-color: #002000; 
+            background-color: #002000;
             color: white; /* Text color */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
-        
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+
         }
     </style>
 <nav class="sidebar sidebar-offcanvas dark-shade" id="sidebar" >

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Message;
+use App\Models\Identify;
+use App\Models\AdminComment;
 use Illuminate\Http\Request;
 
 class ViewController extends Controller
@@ -20,7 +22,7 @@ class ViewController extends Controller
 
 		return view('user.reply', compact('userMessages'));
 	}
-	
+
 	public function transaction()
 	{
 		return view('user.trasaction');
@@ -30,4 +32,16 @@ class ViewController extends Controller
 	{
 		return view('user.architect');
 	}
+
+	public function identification()
+    {
+        // Fetch all Identify records
+        $identity = Identify::all();
+
+        // Fetch comments for all users
+        $comments = AdminComment::all()->keyBy('user_id');
+
+        // Pass data to the view
+        return view('user.identification', compact('identity', 'comments'));
+    }
 }

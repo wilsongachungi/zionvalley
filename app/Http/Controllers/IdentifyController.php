@@ -18,7 +18,7 @@ class IdentifyController extends Controller
 
 		if ($existingEntries->count() > 0) {
 			// Keep only the first entry and delete the rest
-			$existingEntries->skip(1)->each(function($entry) {
+			$existingEntries->skip(1)->each(function ($entry) {
 				$entry->delete();
 			});
 
@@ -45,11 +45,11 @@ class IdentifyController extends Controller
 
 
 	public function update(Request $request, $id)
-    {
-        $identity = Identify::findOrFail($id);
-        $identity->identify_data = $request->input('identify_data');
-        $identity->save();
+	{
+		$identity = Identify::findOrFail($id);
+		$identity->identify_data = $request->input('identify_data');
+		$identity->save();
 
-        return redirect()->back()->with('success', 'Identity data updated successfully');
-    }
+		return redirect()->back()->with('success', 'Identity data updated successfully');
+	}
 }

@@ -13,8 +13,9 @@ use App\Http\Controllers\EmailController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AccountController;
-use App\Http\Controllers\MessageController;
+use App\Http\Controllers\CommentController;
 
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\IdentifyController;
@@ -81,7 +82,7 @@ Route::post('/upload_profile_image', [ImageController::class, 'upload_profile_im
 Route::get('/transaction', [ViewController::class, 'transaction'])->name('transaction');
 Route::post('/buys', [BuyController::class, 'buys'])->name('buys');
 Route::post('/sells', [SellController::class, 'sells'])->name('sells');
-Route::delete('/delete_download/{download}',[DownloadController::class, 'delete_download'])->name('delete_download');
+Route::delete('/delete_download/{download}', [DownloadController::class, 'delete_download'])->name('delete_download');
 Route::get('/downloads/{id}/edit', [DownloadController::class, 'edit'])->name('edit_download');
 Route::get('/architect', [viewController::class, 'architect'])->name('architect');
 Route::post('/complete_profile', [ProfileController::class, 'complete_profile'])->name('complete_profile');
@@ -90,3 +91,7 @@ Route::get('/display_question', [EmailController::class, 'display_question'])->n
 Route::post('/identify', [IdentifyController::class, 'store'])->name('identify.store');
 Route::put('/identity/{id}', [IdentifyController::class, 'update'])->name('update.identity');
 Route::post('get-tocken', [MpesaController::class, 'getAccessTocken']);
+Route::get('/identification', [ViewController::class, 'identification'])->name('identification');
+Route::post('/identification', [CommentController::class, 'store'])->name('store');
+Route::get('/user/{id}/edit', [CommentController::class, 'edit'])->name('edit');
+
