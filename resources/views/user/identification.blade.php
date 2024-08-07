@@ -8,6 +8,7 @@
                         <table class="table">
                             <thead>
                                 <tr>
+                                    <th>Name</th>
                                     <th>Who They Say They Are..</th>
                                     <th>Existing Comment</th>
                                     <th>Add/Edit a Comment</th>
@@ -16,6 +17,7 @@
                             <tbody>
                                 @forelse ($identity as $record)
                                     <tr>
+                                        <td>{{ $record->user->name ?? 'Unknown' }}</td> <!-- Display the user's name -->
                                         <td>{{ $record->identify_data }}</td>
                                         <td>
                                             {{-- Display existing comment if available --}}
@@ -32,7 +34,7 @@
                                     </tr>
                                 @empty
                                     <tr style="border: 1px solid #ddd; background-color: #F5F5F5; color: #000;">
-                                        <td colspan="3" style="border: 1px solid #ddd;">There is no data</td>
+                                        <td colspan="4" style="border: 1px solid #ddd;">There is no data</td>
                                     </tr>
                                 @endforelse
                             </tbody>
