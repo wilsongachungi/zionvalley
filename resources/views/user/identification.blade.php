@@ -17,7 +17,7 @@
                             <tbody>
                                 @forelse ($identity as $record)
                                     <tr>
-                                        <td>{{ $record->user->name ?? 'Unknown' }}</td> <!-- Display the user's name -->
+                                        <td>{{ $record->user->name ?? 'Unknown' }}</td> 
                                         <td>{{ $record->identify_data }}</td>
                                         <td>
                                             {{-- Display existing comment if available --}}
