@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class MpesaController extends Controller
 {
-	public function getAccessToken()
+	public function get_token()
 	{
 		$url = env('MPESA_ENV') == 0
 			? 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials'

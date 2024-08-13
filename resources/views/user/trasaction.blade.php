@@ -349,52 +349,30 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
+                <div class="container">
+                    <h4>Initiate STK Transaction</h4>
+                    <form id="tipesaForm">
+                        @csrf
+
+                        <div class="form-group">
+                            <label for="amount">Amount:</label>
+                            <input type="text" id="amount" name="amount" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phonenumber">Phone Number:</label>
+                            <input type="text" id="phonenumber" name="phonenumber" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Initiate Transaction</button>
+                    </form>
+
+                    <div id="responseMessage"></div>
                 </div>
 
 
-                {{-- <div class="container">
-                                <div class="row mt-5">
-                                    <div class="col-sm-8 mx-auto">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                Obtain Access Token
-                                            </div>
-                                            <div class="card-body">
-                                                <button id="getAccessToken" class="btn btn-primary">Request Access
-                                                    Token</button>
-                                            </div>
-                                        </div>
 
-                                        <div class="card mt-5">
-                                            <div class="card-header">Register URLs</div>
-                                            <div class="card-body">
-                                                <button class="btn btn-primary">Register URLs</button>
-                                            </div>
-                                        </div>
-
-                                        <div class="card mt-5">
-                                            <div class="card-header">Simulate Transaction</div>
-                                            <div class="card-body">
-                                                <form action="">
-                                                    @csrf
-                                                    <div class="form-group">
-                                                        <label for="amount">Amount</label>
-                                                        <input type="number" name="amount" id="amount"
-                                                            class="form-control">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="account">Account</label>
-                                                        <input type="text" name="account" id="account"
-                                                            class="form-control">
-                                                    </div>
-                                                </form>
-                                                <button class="btn btn-primary">Simulate Payments</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> --}}
             </div>
         </div>
     </div>
@@ -454,9 +432,39 @@
         });
     </script> --}}
 
+    <script>
+        $(document).ready(function() {
+            $('#tipesaForm').on('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
 
-
-
+                $.ajax({
+                    url: "{{ url('tipesaStk') }}",
+                    method: 'POST',
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        // Check if 'success' or 'error' exists in the response
+                        if (response.success) {
+                            $('#responseMessage').html('<p class="text-success">' + response
+                                .success + '</p>');
+                        } else if (response.error) {
+                            $('#responseMessage').html('<p class="text-danger">' + response
+                                .error + '</p>');
+                        } else {
+                            $('#responseMessage').html(
+                                '<p class="text-danger">Unknown error occurred.</p>');
+                        }
+                    },
+                    error: function(xhr) {
+                        // Handle AJAX errors
+                        var errorMessage = xhr.responseJSON.errors ? xhr.responseJSON.errors :
+                            xhr.responseJSON.error;
+                        $('#responseMessage').html('<p class="text-danger">' + (errorMessage ||
+                            'An error occurred.') + '</p>');
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 

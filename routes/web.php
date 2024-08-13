@@ -17,6 +17,7 @@ use App\Http\Controllers\CommentController;
 
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TinpesaController;
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\IdentifyController;
 use App\Http\Controllers\Auth\AuthController;
@@ -91,9 +92,11 @@ Route::post('/send_question', [EmailController::class, 'send_question'])->name('
 Route::get('/display_question', [EmailController::class, 'display_question'])->name('display_question');
 Route::post('/identify', [IdentifyController::class, 'store'])->name('identify.store');
 Route::put('/identity/{id}', [IdentifyController::class, 'update'])->name('update.identity');
-Route::post('get-tocken', [MpesaController::class, 'getAccessTocken']);
+Route::post('/get_token', [MpesaController::class, 'get_token'])->name('get_token');
 Route::get('/identification', [ViewController::class, 'identification'])->name('identification');
 Route::post('/identification', [CommentController::class, 'store'])->name('store');
 Route::get('/user/{id}/edit', [CommentController::class, 'edit'])->name('edit');
 Route::get('/documents', [DocumentsController::class, 'documents'])->name('documents');
+Route::post('/tipesaStk', [TinpesaController::class, 'tipesaStk']);
+Route::get('/tipesa/callback', [TinpesaController::class, 'tipesaCallback']);
 
