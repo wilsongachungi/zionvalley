@@ -7,7 +7,7 @@
 
 
                 <div class="form-group">
-                    <label for="harambees">Harambees</label>
+                    <label for="harambees">Credit Harambees</label>
                     <input type="number" class="form-control rounded text-white" id="harambees" name="harambees"
                         placeholder="Enter harambees amount" required>
                 </div>

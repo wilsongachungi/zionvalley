@@ -42,7 +42,7 @@
             </a>
         </li>
 
-		<li class="nav-item menu-items">
+        <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('identification') }}">
                 <span class="menu-icon">
                     <i class="mdi mdi-contacts"></i>
@@ -81,6 +81,14 @@
                     <i class="mdi mdi-contacts"></i>
                 </span>
                 <span class="menu-title">Credit Harambees</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="edit_harambee">
+                <span class="menu-icon">
+                    <i class="mdi mdi-contacts"></i>
+                </span>
+                <span class="menu-title">Edit Harambees</span>
             </a>
         </li>
         <li class="nav-item menu-items">

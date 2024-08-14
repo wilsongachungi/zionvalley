@@ -19,6 +19,7 @@ use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TinpesaController;
 use App\Http\Controllers\DownloadController;
+use App\Http\Controllers\HarambeeController;
 use App\Http\Controllers\IdentifyController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\DocumentsController;
@@ -98,5 +99,12 @@ Route::post('/identification', [CommentController::class, 'store'])->name('store
 Route::get('/user/{id}/edit', [CommentController::class, 'edit'])->name('edit');
 Route::get('/documents', [DocumentsController::class, 'documents'])->name('documents');
 Route::post('/tipesaStk', [TinpesaController::class, 'tipesaStk']);
-Route::get('/tipesa/callback', [TinpesaController::class, 'tipesaCallback']);
+Route::get('/tipesa/callback', [TinpesaController::class, 'tipesaCallback']);  
+Route::get('/edit_harambee', [HarambeeController::class, 'edit_harambee']);
+// Routes for editing and deleting harambees
+Route::get('/harambee/edit/{id}', [HarambeeController::class, 'edit'])->name('harambee.edit');
+Route::delete('/harambee/delete/{id}', [HarambeeController::class, 'destroy'])->name('harambee.destroy');
+Route::put('/harambee/update/{id}', [HarambeeController::class, 'update'])->name('harambee.update');
+
+
 
