@@ -42,8 +42,8 @@ class AccountController extends Controller
 	public function upload_harambee(Request $request)
 	{
 		$request->validate([
-			'deposit' => 'required|numeric',
-			'withdrawn' => 'required|numeric',
+			'deposit' => 'nullable|numeric',
+			'withdrawn' => 'nullable|numeric',
 			'harambees' => 'required|numeric',
 			'sent_to' => 'required|string',
 		]);

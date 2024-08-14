@@ -332,48 +332,45 @@
                                 </div>
                                 <a href="{{ route('account') }}" class="text-decoration-none text-success"
                                     style="margin-left:20px">ACCOUNT</a>
-                            </div> <br>
-
-                            <div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card">
-                                            <div class="card-header text-center">
-                                                <h3 class="card-title">Pay Bill: 516 600</h3>
-                                                <h3 class="card-title">Account: 840 518 </h3>
-                                                <p>Name: Zionvalley CBO</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
+
+					<div class="container">
+						<h4>Initiate STK Transaction</h4>
+						<form id="tipesaForm">
+							@csrf
+
+							<div class="form-group">
+								<label for="amount">Amount:</label>
+								<input type="text" id="amount" name="amount" class="form-control" required>
+							</div>
+
+							<div class="form-group">
+								<label for="phonenumber">Phone Number:</label>
+								<input type="text" id="phonenumber" name="phonenumber" class="form-control" required>
+							</div>
+							<button type="submit" class="btn btn-primary">Initiate Transaction</button>
+						</form>
+
+						<div id="responseMessage"></div>
+					</div>
+
+					<div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="card">
+									<div class="card-header text-center">
+										<h3 class="card-title">Pay Bill: 516 600</h3>
+										<h3 class="card-title">Account: 840 518 </h3>
+										<p>Name: Zionvalley CBO</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
                 </div>
-
-                <div class="container">
-                    <h4>Initiate STK Transaction</h4>
-                    <form id="tipesaForm">
-                        @csrf
-
-                        <div class="form-group">
-                            <label for="amount">Amount:</label>
-                            <input type="text" id="amount" name="amount" class="form-control" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phonenumber">Phone Number:</label>
-                            <input type="text" id="phonenumber" name="phonenumber" class="form-control" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Initiate Transaction</button>
-                    </form>
-
-                    <div id="responseMessage"></div>
-                </div>
-
-
-
-            </div>
         </div>
     </div>
     </div>

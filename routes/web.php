@@ -63,7 +63,7 @@ Route::get('/see_list', [TaskController::class, 'see_list'])->name('see_list');
 Route::post('/storeTask', [TaskController::class, 'storeTask'])->name('storeTask');
 Route::get('/task', [TaskController::class, 'task'])->name('task');
 Route::get('/account', [AccountController::class, 'account'])->name('account');
-Route::get('/users', [AdminController::class, 'users'])->name('users');
+Route::get('/fetchData', [AdminController::class, 'fetchData'])->name('fetchData');
 Route::get('/info', [AccountController::class, 'info'])->name('info');
 Route::get('/credit_harambee', [AccountController::class, 'credit_harambee'])->name('credit_harambee');
 Route::post('/upload_harambee', [AccountController::class, 'upload_harambee'])->name('upload_harambee');

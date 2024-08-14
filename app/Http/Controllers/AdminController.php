@@ -9,6 +9,7 @@ use App\Models\Members;
 use Illuminate\Http\Request;
 use App\Models\JobApplication;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Harambee;
 
 class AdminController extends Controller
 {
@@ -18,7 +19,7 @@ class AdminController extends Controller
 	}
 
 
-public function upload(Request $request)
+	public function upload(Request $request)
 	{
 		$members = new members;
 
@@ -39,7 +40,7 @@ public function upload(Request $request)
 
 		return redirect()->back()->with('message', 'Member Added Successfully!');
 	}
-	
+
 	public function involve()
 	{
 		if (auth()->check()) {
@@ -83,12 +84,19 @@ public function upload(Request $request)
 		return redirect('/login');
 	}
 
-	public function users()
+	public function fetchData()
 	{
-
+		// Fetch data from the default connection
 		$users = User::all();
 
+		// Fetch data from the second database
+		$harambees = Harambee::all();
 
-		return view('user.users', ['users' => $users]);
+		// Combine or process the data as needed
+		// Pass the data to the view
+		return view('user.users', [
+			'users' => $users,
+			'harambees' => $harambees,
+		]);
 	}
 }

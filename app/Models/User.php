@@ -100,12 +100,16 @@ class User extends Authenticatable
 	}
 
 	public function profileInformation()
-{
-    return $this->hasOne(ProfileInformation::class);
-}
-public function identify()
-    {
-        return $this->hasOne(Identify::class);
-    }
+	{
+		return $this->hasOne(ProfileInformation::class);
+	}
+	public function identify()
+	{
+		return $this->hasOne(Identify::class);
+	}
 
+	public function harambees()
+	{
+		return $this->hasMany(Harambee::class, 'sent_to');
+	}
 }

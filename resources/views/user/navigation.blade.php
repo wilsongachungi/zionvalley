@@ -84,7 +84,7 @@
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="{{ route('users') }}">
+            <a class="nav-link" href="{{ route('fetchData') }}">
                 <span class="menu-icon">
                     <i class="mdi mdi-contacts"></i>
                 </span>
