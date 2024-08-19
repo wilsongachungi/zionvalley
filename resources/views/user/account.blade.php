@@ -175,7 +175,6 @@
                                             <tr>
                                                 <th style="color:greenyellow">Harambees</th>
                                                 <th style="color:greenyellow">Kshs in</th>
-                                                <th style="color:greenyellow">Kshs out</th>
                                                 <th style="color:greenyellow">Actions</th>
                                             </tr>
                                         </thead>
@@ -183,11 +182,8 @@
                                         <tbody>
                                             @foreach ($harambees as $harambee)
                                             <tr>
-                                                <td>{{ $harambee->total }}</td>
-
-                                                <td>{{ $harambee->deposit }}</td>
-                                                <td>{{ $harambee->withdraw ?? '0.00' }}</td>
-
+                                                <td>{{ $harambee->harambees ?? '0.00'}}</td>
+                                                <td>{{ $harambee->deposit ?? '0.00'}}</td>
                                                 <td>
                                                     <span style="cursor: pointer; color:green" class="details-link"
                                                         onclick="showDetailsPopup({{ $harambee->id }})">Details</span>
@@ -215,7 +211,7 @@
 
                                     </table>
                                     <div class="container d-flex justify-content-center align-items-center">
-										
+
                                         <p class="text-success font-weight-bold">Total Kshs:0.00 <span
                                                 style="color:greenyellow"> </span> </p>
                                     </div>

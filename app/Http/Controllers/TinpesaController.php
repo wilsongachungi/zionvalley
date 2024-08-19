@@ -20,9 +20,9 @@ class TinpesaController extends Controller
 		);
 		$headers = array(
 			'Content-Type: application/x-www-form-urlencoded',
-			'ApiKey: OI6KaSjaVsa' // Replace with your API key
+			'ApiKey: 6THlBjbX0bf' // Replace with your API key
 		);
-		$info = http_build_query($data);
+		$info = http_build_query($data);                                
 		$curl = curl_init();
 		curl_setopt($curl, CURLOPT_URL, $url);
 		curl_setopt($curl, CURLOPT_POST, true);
