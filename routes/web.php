@@ -3,7 +3,9 @@
 use App\Models\Message;
 use Doctrine\DBAL\Schema\View;
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\GenerateToken;
 use App\Http\Controllers\BuyController;
+use App\Http\Controllers\PayController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SellController;
 use App\Http\Controllers\TaskController;
@@ -12,9 +14,9 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\LoginController;
+
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CommentController;
-
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TinpesaController;
@@ -27,10 +29,12 @@ use App\Http\Controllers\payments\MpesaController;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/home', [HomeController::class, 'redirect']);
+
 Route::middleware([
 	'auth:sanctum',
 	config('jetstream.auth_session'),
 	'verified',
+	GenerateToken::class, // Add the middleware class here
 ])->group(function () {
 	Route::get('/dashboard', function () {
 		return view('dashboard');
@@ -99,12 +103,13 @@ Route::post('/identification', [CommentController::class, 'store'])->name('store
 Route::get('/user/{id}/edit', [CommentController::class, 'edit'])->name('edit');
 Route::get('/documents', [DocumentsController::class, 'documents'])->name('documents');
 Route::post('/tipesaStk', [TinpesaController::class, 'tipesaStk']);
-Route::get('/tipesa/callback', [TinpesaController::class, 'tipesaCallback']);  
+Route::get('/tipesa/callback', [TinpesaController::class, 'tipesaCallback']);
 Route::get('/edit_harambee', [HarambeeController::class, 'edit_harambee']);
 // Routes for editing and deleting harambees
 Route::get('/harambee/edit/{id}', [HarambeeController::class, 'edit'])->name('harambee.edit');
 Route::delete('/harambee/delete/{id}', [HarambeeController::class, 'destroy'])->name('harambee.destroy');
 Route::put('/harambee/update/{id}', [HarambeeController::class, 'update'])->name('harambee.update');
+// Route::get('/stk', [PayController::class, 'stk'])->name('stk');
 
 
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Message;
+use App\Models\Harambee;
 use App\Models\Identify;
 use App\Models\AdminComment;
 use Illuminate\Http\Request;
@@ -25,7 +26,9 @@ class ViewController extends Controller
 
 	public function transaction()
 	{
-		return view('user.trasaction');
+		$harambees = Harambee::all();
+
+		return view('user.trasaction', compact('harambees'));
 	}
 
 	public function architect()

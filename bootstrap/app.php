@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Middleware\GenerateToken;
 /*
 |--------------------------------------------------------------------------
 | Create The Application
@@ -25,6 +25,7 @@ $app = new Illuminate\Foundation\Application(
 | incoming requests to this application from both the web and CLI.
 |
 */
+
 
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
