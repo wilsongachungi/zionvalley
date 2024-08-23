@@ -54,8 +54,6 @@ class AccountController extends Controller
 		$total = $existingTotal + $request->harambees;
 
 
-
-
 		$harambee = new Harambee();
 		$harambee->deposit = $request->deposit;
 		$harambee->withdrawn = $request->withdrawn;

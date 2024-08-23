@@ -28,7 +28,9 @@ class ViewController extends Controller
 	{
 		$harambees = Harambee::all();
 
-		return view('user.trasaction', compact('harambees'));
+		$totalHarambees = $harambees->sum('harambees');
+
+		return view('user.trasaction', compact('harambees', 'totalHarambees'));
 	}
 
 	public function architect()

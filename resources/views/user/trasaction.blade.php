@@ -155,10 +155,10 @@
                                         </p>
                                     </div>
                                 </div>
-								@foreach ($harambees as $harambee)
+
                                 <h4 class="text-success" style="margin-left:25px">Harambee Balance: <span
-                                        style="color:greenyellow; margin-left:20px"> {{ $harambee->harambees }} </span> </h4>
-									@endforeach
+                                        style="color:greenyellow; margin-left:20px"> {{ $totalHarambees }}</span> </h4>
+									
                                 <div class="card-body dark-shade">
                                     <div class="table-responsive">
 
