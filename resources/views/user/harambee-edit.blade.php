@@ -4,7 +4,7 @@
         <div class="flex justify-center w-1/2 p-4 rounded bg-gray-800">
             <form class="w-full" action="{{ route('harambee.update', ['id' => $harambee->id]) }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                @method('PUT') <!-- Use PUT for updating the record -->
+                @method('PUT') <!-- Useing PUT for updating the record -->
 
                 <div class="form-group">
                     <label for="harambees">Credit Harambees</label>

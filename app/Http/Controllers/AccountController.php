@@ -48,8 +48,10 @@ class AccountController extends Controller
 			'sent_to' => 'required|string',
 		]);
 
+		$existingTotal = Harambee::sum('harambees');
 
-		$total = $request->deposit - $request->withdrawn;
+		// Add the new 'harambees' value to the existing total
+		$total = $existingTotal + $request->harambees;
 
 
 		$harambee = new Harambee();

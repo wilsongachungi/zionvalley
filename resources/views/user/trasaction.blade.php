@@ -155,13 +155,14 @@
                                         </p>
                                     </div>
                                 </div>
+
                                 <h4 class="text-success" style="margin-left:25px">Harambee Balance: <span
-                                        style="color:greenyellow; margin-left:20px">100,000</span> </h4>
+                                        style="color:greenyellow; margin-left:20px"> {{ $totalHarambees }}</span> </h4>
+									
                                 <div class="card-body dark-shade">
                                     <div class="table-responsive">
 
                                         <table class="table">
-
                                             <thead>
                                                 <tr>
                                                     <th style="color:greenyellow; cursor:pointer">
@@ -284,7 +285,7 @@
                                                                     <?php
                                                                     if (Auth::check()) {
                                                                         $userName = Auth::user()->name;
-                                                                        $amount = 100000;
+                                                                        $amount = 0.00;
                                                                         $rate = 1.69;
                                                                     ?>
                                                                     <p class="text-white">Name: <?php echo $userName; ?></p>
