@@ -1,5 +1,11 @@
 <br><x-admin-layout>
-	<br> <br><br>
+    <!-- Quill's Stylesheet -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+    <!-- Quill's JavaScript -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+    <br> <br><br>
     <div class="flex justify-center w-full">
         <div class="flex justiffy-center w-1/2 p-4 rounded bg-gray-800">
             <form class="w-full" action="{{ route('upload_harambee') }}" method="POST" enctype="multipart/form-data">
@@ -21,8 +27,48 @@
                         @endforeach
                     </select>
                 </div>
+                <div class="form-group">
+                    <label for="editor">Comment</label>
+                    <div id="editor" style="min-height: 50px; max-height: 300px; overflow-y: auto;" class="rounded">
+                    </div>
+                    <input type="hidden" name="content" id="quill-content">
+                </div>
                 <button type="submit" class="btn btn-primary text-lg mt-3">Submit</button>
             </form>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var quill = new Quill('#editor', {
+                theme: 'snow',
+                modules: {
+                    toolbar: [
+                        [{
+                            'header': '1'
+                        }, {
+                            'header': '2'
+                        }],
+                        [{
+                            'list': 'ordered'
+                        }, {
+                            'list': 'bullet'
+                        }],
+                        ['bold', 'italic', 'underline'],
+                        [{
+                            'align': []
+                        }],
+                        ['link', 'image'],
+                        [{
+                            'color': []
+                        }, {
+                            'background': []
+                        }],
+                        ['clean']
+                    ]
+                }
+            });
+        });
+    </script>
+
 </x-admin-layout>

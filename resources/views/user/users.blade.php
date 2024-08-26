@@ -2,7 +2,7 @@
     <br>
     <br> <br>
 
-     @if (session('success'))
+    `	 @if (session('success'))
         <div class="alert alert-success alert-dismissible fade show d-flex justify-content-between align-items-center"
             role="alert">
             <span>{{ session('success') }}</span>
@@ -74,6 +74,8 @@
                                                     Delete
                                                 </button>
                                             </form>
+
+                                            
                                         </div>
                                     </div>
                                 @endforeach

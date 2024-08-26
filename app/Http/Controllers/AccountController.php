@@ -50,7 +50,7 @@ class AccountController extends Controller
 
 		$existingTotal = Harambee::sum('harambees');
 
-		// Add the new 'harambees' value to the existing total
+		
 		$total = $existingTotal + $request->harambees;
 
 
