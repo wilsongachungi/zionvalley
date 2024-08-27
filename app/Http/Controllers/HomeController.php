@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\contact;
+use App\Models\Involve;
 use App\Models\Appointment;
 use Illuminate\Http\Request;
+use App\Models\JobApplication;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
-use App\Models\Involve;
-use App\Models\JobApplication;
 
 class HomeController extends Controller
 {
@@ -271,9 +272,9 @@ class HomeController extends Controller
 	public function show()
 	{
 
-		$involves = Involve::all();
+		$userCount = User::count();
 
 
-		return view('user.dashboard', compact('involves'));
+		return view('user.dashboard', compact('userCount'));
 	}
 }

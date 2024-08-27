@@ -9,6 +9,8 @@ class Harambee extends Model
 {
 	use HasFactory;
 
+	protected $fillable = ['harambees','sent_to','comment'];
+
 	/**
 	 * Get the user that owns the harambee.
 	 */

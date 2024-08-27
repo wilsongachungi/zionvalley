@@ -1,16 +1,9 @@
-<br><x-admin-layout>
-    <!-- Quill's Stylesheet -->
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-
-    <!-- Quill's JavaScript -->
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-
-    <br> <br><br>
+<br> <br> <br> <x-admin-layout>
+    <br><br><br>
     <div class="flex justify-center w-full">
-        <div class="flex justiffy-center w-1/2 p-4 rounded bg-gray-800">
+        <div class="flex justify-center w-1/2 p-4 rounded bg-gray-800">
             <form class="w-full" action="{{ route('upload_harambee') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-
 
                 <div class="form-group">
                     <label for="harambees">Credit Harambees</label>
@@ -27,12 +20,13 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="form-group">
-                    <label for="editor">Comment</label>
-                    <div id="editor" style="min-height: 50px; max-height: 300px; overflow-y: auto;" class="rounded">
-                    </div>
-                    <input type="hidden" name="content" id="quill-content">
-                </div>
+				<div class="form-group">
+					<label for="comment">Comment</label>
+					<textarea class="form-control rounded text-white" id="comment" name="comment"
+						placeholder="Enter your comment" rows="3" style="resize: vertical;" required></textarea>
+				</div>
+
+
                 <button type="submit" class="btn btn-primary text-lg mt-3">Submit</button>
             </form>
         </div>
@@ -58,7 +52,7 @@
                         [{
                             'align': []
                         }],
-                        ['link', 'image'],
+                        // ['link', 'image'],
                         [{
                             'color': []
                         }, {
@@ -68,6 +62,20 @@
                     ]
                 }
             });
+
+            var form = document.querySelector('form');
+            form.onsubmit = function() {
+                var quillContent = document.querySelector('#quill-content');
+                quillContent.value = quill.root.innerHTML;
+
+                // Debugging: Check what is being submitted
+                console.log("Submitting Comment:", quillContent.value);
+
+                if (quillContent.value.trim() === '') {
+                    alert('Comment field cannot be empty.');
+                    return false; // Prevent form submission if the comment is empty
+                }
+            };
         });
     </script>
 
