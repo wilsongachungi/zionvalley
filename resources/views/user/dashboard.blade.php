@@ -13,8 +13,8 @@
 									<div class="row">
 										<div class="col-9">
 											<div class="d-flex align-items-center align-self-start">
-												<h3 class="mb-0">{{ $userCount }}</h3> <!-- Display user count -->
-												<p class="text-success ms-2 mb-0 font-weight-medium">+3.5%</p>
+												<h3 class="mb-0">{{ $userCount }}</h3>
+												{{-- <p class="text-success ms-2 mb-0 font-weight-medium">+3.5%</p> --}}
 											</div>
 										</div>
 										<div class="col-3">
@@ -33,7 +33,7 @@
 									<div class="row">
 										<div class="col-9">
 											<div class="d-flex align-items-center align-self-start">
-												<h3 class="mb-0">$17.34</h3>
+												<h3 class="mb-0">{{ $peopleWithHarambees }}</h3>
 												<p class="text-success ms-2 mb-0 font-weight-medium">+11%</p>
 											</div>
 										</div>
@@ -46,6 +46,7 @@
 									<h6 class="text-muted font-weight-normal">People with Harambees</h6>
 								</div>
 							</div>
+
 						</div>
 						<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
 							<div class="card">

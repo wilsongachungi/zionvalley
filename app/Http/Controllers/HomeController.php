@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\contact;
 use App\Models\Involve;
+use App\Models\Harambee;
 use App\Models\Appointment;
 use Illuminate\Http\Request;
 use App\Models\JobApplication;
@@ -273,8 +274,9 @@ class HomeController extends Controller
 	{
 
 		$userCount = User::count();
+		$peopleWithHarambees = Harambee::distinct('sent_to')->count('sent_to');
 
 
-		return view('user.dashboard', compact('userCount'));
+		return view('user.dashboard', compact('userCount','peopleWithHarambees'));
 	}
 }
