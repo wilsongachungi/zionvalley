@@ -46,11 +46,12 @@ class AccountController extends Controller
 			'withdrawn' => 'nullable|numeric',
 			'harambees' => 'required|numeric',
 			'sent_to' => 'required|string',
+			'comment' => 'required|string',
 		]);
 
 		$existingTotal = Harambee::sum('harambees');
 
-		
+
 		$total = $existingTotal + $request->harambees;
 
 
@@ -59,6 +60,7 @@ class AccountController extends Controller
 		$harambee->withdrawn = $request->withdrawn;
 		$harambee->harambees = $request->harambees;
 		$harambee->sent_to = $request->sent_to;
+		$harambee->comment = $request->comment;
 		$harambee->status = false;
 
 		$harambee->total = $total;
