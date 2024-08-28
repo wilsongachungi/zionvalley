@@ -216,7 +216,7 @@
                                                 style="color:greenyellow"> </span> </p>
                                     </div>
                                 </div>
-                                <a href="{{ route('transaction') }}"
+                                <a href="{{ route('trasaction') }}"
                                     class="text-decoration-none text-success">BUY/SELL</a>
                             </div>
                         </div>
