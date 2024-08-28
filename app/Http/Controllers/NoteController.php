@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Note;
 use Illuminate\Http\Request;
 
 class NoteController extends Controller
@@ -11,7 +12,8 @@ class NoteController extends Controller
      */
     public function index()
     {
-        //
+        $notes = Note::all();
+        return view('user.notes', compact('notes'));
     }
 
     /**
@@ -19,7 +21,7 @@ class NoteController extends Controller
      */
     public function create()
     {
-        //
+       return view('user.create_notes');
     }
 
     /**
@@ -27,24 +29,49 @@ class NoteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+		{
+			// Validate the request data
+			$validatedData = $request->validate([
+				'title' => 'required|string|max:255',
+				'content' => 'required|string',
+			]);
+
+			// Create a new note
+			$note = new Note();
+			$note->title = $validatedData['title'];
+			$note->content = $validatedData['content'];
+			$note->save();
+
+			// Redirect back to a specific page (e.g., notes index)
+			return redirect()->route('notes.index')->with('success', 'Note created successfully.');
+		}
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
-    {
-        //
-    }
+	public function show(string $id)
+	{
+		// Fetch the resource by its ID
+		$note = Note::findOrFail($id);
+
+		// Pass the resource to a view
+		return view('notes.show', compact('note'));
+	}
+
 
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
-    {
-        //
-    }
+{
+    // Find the note by its ID
+    $note = Note::findOrFail($id);
+
+    // Return the edit view with the note data
+    return view('user.notes_edit', compact('note'));
+}
+
 
     /**
      * Update the specified resource in storage.

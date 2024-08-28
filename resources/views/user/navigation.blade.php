@@ -103,21 +103,23 @@
                 <span class="menu-title">Add Downloads</span>
             </a>
         </li>
-        <li class="nav-item menu-items">
-            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+		<li class="nav-item menu-items">
+            <a class="nav-link" href="{{ route('notes.index') }}">
                 <span class="menu-icon">
-                    <i class="mdi mdi-security"></i>
+                    <i class="mdi mdi-contacts"></i>
                 </span>
-                <span class="menu-title">User Pages</span>
-                <i class="menu-arrow"></i>
+                <span class="menu-title">Notes</span>
             </a>
-            <div class="collapse" id="auth">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href=#> 1</a></li>
-                    <li class="nav-item"> <a class="nav-link" href=#>2 </a></li>
-                </ul>
-            </div>
         </li>
+		<li class="nav-item menu-items">
+            <a class="nav-link" href="{{ route('notes.create') }}">
+                <span class="menu-icon">
+                    <i class="mdi mdi-contacts"></i>
+                </span>
+                <span class="menu-title">Create Notes</span>
+            </a>
+        </li>
+
     </ul>
 </nav>
 <!-- partial -->

@@ -1,31 +1,31 @@
-<x-admin-layout>
-    <div class="flex justify-center w-full mt-10">
-        <div class="flex justify-center w-1/2 p-4 rounded bg-gray-800">
-            <form action="{{ route('notes.store') }}" method="POST">
-                @csrf
-                <div class="form-group">
-                    <label for="title" class="text-white ">Title</label>
-                    <input type="text" name="title" class="form-control bg-black text-light" required>
-                </div>
-                <div class="form-group">
-                    <label for="content" class="text-white">Content</label>
-                    <div id="editor" style="height: 200px; background-color: black; text-white"></div>
-                    <input type="hidden" name="content" id="quill-content">
-                </div>
-                <button type="submit" class="btn btn-success mt-4">Save</button>
-            </form>
-        </div>
+@extends('layouts.app')
+
+@section('content')
+    <div class="container">
+        <h1>Edit Note</h1>
+        <form action="{{ route('notes.update', $note->id) }}" method="POST">
+            @csrf
+            @method('PUT')
+
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" class="form-control" value="{{ old('title', $note->title) }}"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="content">Content</label>
+                <div id="editor" style="height: 200px;"></div>
+                <input type="hidden" name="content" id="quill-content" value="{{ old('content', $note->content) }}">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Update Note</button>
+        </form>
     </div>
 
-    <!-- Quill.js CSS -->
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-
-    <!-- Quill.js JavaScript -->
     <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Initialize Quill editor
             var quill = new Quill('#editor', {
                 theme: 'snow',
                 modules: {
@@ -54,6 +54,9 @@
                 }
             });
 
+            // Set initial content
+            quill.root.innerHTML = document.querySelector('#quill-content').value;
+
             // Handle form submission
             var form = document.querySelector('form');
             form.onsubmit = function() {
@@ -67,6 +70,4 @@
             };
         });
     </script>
-</x-admin-layout>
-
-
+@endsection
