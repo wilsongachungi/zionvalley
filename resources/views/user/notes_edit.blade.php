@@ -16,8 +16,8 @@
 </head>
 
 <body>
-    <div class="container mt-4">
-        <h5 class="mb-4">Edit Note</h5>
+    <div class="container mt-4 bg-dark">
+        <h5 class="mb-4 text-primary">Edit Note</h5>
         <form action="{{ route('notes.update', $notes->id) }}" method="POST">
             @csrf
             @method('PUT')
