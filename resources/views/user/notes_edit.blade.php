@@ -32,7 +32,7 @@
                 <!-- Hidden input to store the actual HTML content -->
                 <input type="hidden" name="content" id="content" value="{{ $notes->content }}">
                 <!-- Quill editor container -->
-                <div id="editor" style="min-height: 200px;">{!! $notes->content !!}</div>
+                <div id="editor" style="min-height: 300px;">{!! $notes->content !!}</div>
             </div>
 
             <button type="submit" class="btn btn-warning btn-sm">Save</button>
@@ -47,9 +47,60 @@
     </div>
 
     <script>
-        // Initialize Quill editor
+        // Initialize Quill editor with a custom toolbar
         var quill = new Quill('#editor', {
-            theme: 'snow'
+            theme: 'snow',
+            modules: {
+                toolbar: [
+                    [{
+                        'header': [1, 2, 3, false]
+                    }],
+                    ['bold', 'italic', 'underline', 'strike'], // toggled buttons
+                    ['blockquote', 'code-block'],
+
+                    [{
+                        'list': 'ordered'
+                    }, {
+                        'list': 'bullet'
+                    }],
+                    [{
+                        'script': 'sub'
+                    }, {
+                        'script': 'super'
+                    }], // superscript/subscript
+                    [{
+                        'indent': '-1'
+                    }, {
+                        'indent': '+1'
+                    }], // outdent/indent
+                    [{
+                        'direction': 'rtl'
+                    }], // text direction
+
+                    [{
+                        'size': ['small', false, 'large', 'huge']
+                    }], // custom dropdown
+                    [{
+                        'header': [1, 2, 3, 4, 5, 6, false]
+                    }],
+
+                    [{
+                        'color': []
+                    }, {
+                        'background': []
+                    }], // dropdown with defaults from theme
+                    [{
+                        'font': []
+                    }],
+                    [{
+                        'align': []
+                    }],
+
+                    ['clean'], // remove formatting button
+
+                    ['link', 'image', 'video'] // link and image, video
+                ]
+            }
         });
 
         // Set the content of Quill editor with the existing note content
