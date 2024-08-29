@@ -7,29 +7,31 @@ use Illuminate\Http\Request;
 
 class NoteController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        $notes = Note::all();
-        return view('user.notes', compact('notes'));
-    }
+	/**
+	 * Display a listing of the resource.
+	 */
+	public function index()
+	{
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-       return view('user.create_notes');
-    }
+			$header = 'Notes List';
+			$notes = Note::all(); // Fetch all notes and store in the plural variable
+			return view('user.notes', compact('notes', 'header'));
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-		{
+	}
+
+	/**
+	 * Show the form for creating a new resource.
+	 */
+	public function create()
+	{
+		return view('user.create_notes');
+	}
+
+	/**
+	 * Store a newly created resource in storage.
+	 */
+	public function store(Request $request)
+	{ {
 			// Validate the request data
 			$validatedData = $request->validate([
 				'title' => 'required|string|max:255',
@@ -42,50 +44,68 @@ class NoteController extends Controller
 			$note->content = $validatedData['content'];
 			$note->save();
 
-			// Redirect back to a specific page (e.g., notes index)
+
 			return redirect()->route('notes.index')->with('success', 'Note created successfully.');
 		}
-    }
+	}
 
-    /**
-     * Display the specified resource.
-     */
+	/**
+	 * Display the specified resource.
+	 */
 	public function show(string $id)
 	{
-		// Fetch the resource by its ID
-		$note = Note::findOrFail($id);
 
-		// Pass the resource to a view
-		return view('notes.show', compact('note'));
+		$notes = Note::findOrFail($id);
+
+
+		return view('notes.show', compact('notes'));
 	}
 
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-{
-    // Find the note by its ID
-    $note = Note::findOrFail($id);
+	/**
+	 * Show the form for editing the specified resource.
+	 */
+	public function edit(string $id)
+	{
+		$notes = Note::find($id);
+		if (!$notes) {
+			return redirect()->route('notes.index')->with('error', 'Note not found.');
+		}
+		return view('user.notes_edit', compact('notes'));
+	}
 
-    // Return the edit view with the note data
-    return view('user.notes_edit', compact('note'));
-}
+
+	/**
+	 * Update the specified resource in storage.
+	 */
+	public function update(Request $request, string $id)
+	{
+
+		$request->validate([
+			'title' => 'required|string|max:255',
+			'content' => 'required|string',
+		]);
 
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
+		$note = Note::findOrFail($id);
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
+		// Update the note with the request data
+		$note->title = $request->input('title');
+		$note->content = $request->input('content');
+		$note->save();
+
+		// Redirect to the notes index with a success message
+		return redirect()->route('notes.index')->with('success', 'Note updated successfully.');
+	}
+
+
+	/**
+	 * Remove the specified resource from storage.
+	 */
+	public function destroy(string $id)
+	{
+		$note = Note::findOrFail($id);
+		$note->delete();
+		return redirect()->route('notes.index');
+	}
 }
