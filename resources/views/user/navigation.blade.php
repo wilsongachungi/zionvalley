@@ -111,14 +111,14 @@
                 <span class="menu-title">Notes</span>
             </a>
         </li>
-		<li class="nav-item menu-items">
+		{{-- <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('notes.create') }}">
                 <span class="menu-icon">
                     <i class="mdi mdi-contacts"></i>
                 </span>
                 <span class="menu-title">Create Notes</span>
             </a>
-        </li>
+        </li> --}}
 
     </ul>
 </nav>

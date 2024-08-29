@@ -167,8 +167,8 @@
                             <form method="POST" action="{{ route('identify.store') }}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="identify_data" name="identify_data"
-                                        placeholder="Tell us something about you" required>
+                                    <textarea class="form-control" id="identify_data" name="identify_data" placeholder="Describe yourself, who introduced you and your interest in joining"
+                                        required></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
@@ -177,6 +177,7 @@
                 </div>
             </div>
         @endif
+
     </div>
 
 

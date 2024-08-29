@@ -29,16 +29,16 @@ use App\Http\Controllers\DocumentsController;
 use App\Http\Controllers\payments\MpesaController;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
-Route::get('/home', [HomeController::class, 'redirect']);
+Route::get('home', [HomeController::class, 'redirect']);
 
 Route::middleware([
 	'auth:sanctum',
 	config('jetstream.auth_session'),
 	'verified',
-	GenerateToken::class, // Add the middleware class here
+	GenerateToken::class,
 ])->group(function () {
 	Route::get('/dashboard', function () {
-		return view('dashboard');
+		return view('user.dashboard');
 	})->name('dashboard');
 });
 
@@ -63,7 +63,8 @@ Route::get('/job_application', [AdminController::class, 'job_application'])->nam
 Route::post('/involved', [HomeController::class, 'involved'])->name('involved');
 Route::post('/job', [HomeController::class, 'job'])->name('job');
 Route::post('/contact_us', [HomeController::class, 'contact_us'])->name('contact_us');
-Route::get('/dashboard', [HomeController::class, 'show'])->name('show');
+Route::get('/dashboard', [HomeController::class, 'show'])->middleware('check.usertype')->name('show');
+
 Route::get('/list', [TaskController::class, 'list'])->name('list');
 Route::get('/see_list', [TaskController::class, 'see_list'])->name('see_list');
 Route::post('/storeTask', [TaskController::class, 'storeTask'])->name('storeTask');
