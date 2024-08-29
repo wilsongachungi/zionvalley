@@ -8,10 +8,6 @@
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaVF7srkiW3A6t07q9WwJAPQ44EhlYxSvD/NtzT1gIN8dHkfvFpNVL0NgkD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+7HAuoFY5JYlER44pV79G5C1I1bB8" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
     <title>Edit Note</title>
 </head>
 
@@ -38,14 +34,12 @@
             <button type="submit" class="btn btn-warning btn-sm">Save</button>
         </form>
 
-        <form action="{{ route('notes.destroy', $notes->id) }}" method="POST" style="display:inline;">
-            @csrf
-            @method('DELETE')
-            <button type="submit" class="btn btn-danger btn-sm mt-3"
-                onclick="return confirm('Are you sure you want to delete this note?')">Delete</button>
-        </form>
+        <a href="{{ route('notes.index') }}" class="btn btn-primary mt-3">Back</a>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+7HAuoFY5JYlER44pV79G5C1I1bB8" crossorigin="anonymous"></script>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
     <script>
         // Initialize Quill editor with a custom toolbar
         var quill = new Quill('#editor', {
@@ -57,7 +51,6 @@
                     }],
                     ['bold', 'italic', 'underline', 'strike'], // toggled buttons
                     ['blockquote', 'code-block'],
-
                     [{
                         'list': 'ordered'
                     }, {
@@ -67,38 +60,34 @@
                         'script': 'sub'
                     }, {
                         'script': 'super'
-                    }], // superscript/subscript
+                    }],
                     [{
                         'indent': '-1'
                     }, {
                         'indent': '+1'
-                    }], // outdent/indent
+                    }],
                     [{
                         'direction': 'rtl'
-                    }], // text direction
-
+                    }],
                     [{
                         'size': ['small', false, 'large', 'huge']
-                    }], // custom dropdown
+                    }],
                     [{
                         'header': [1, 2, 3, 4, 5, 6, false]
                     }],
-
                     [{
                         'color': []
                     }, {
                         'background': []
-                    }], // dropdown with defaults from theme
+                    }],
                     [{
                         'font': []
                     }],
                     [{
                         'align': []
                     }],
-
-                    ['clean'], // remove formatting button
-
-                    ['link', 'image', 'video'] // link and image, video
+                    ['clean'],
+                    ['link', 'image', 'video']
                 ]
             }
         });

@@ -272,11 +272,21 @@ class HomeController extends Controller
 
 	public function show()
 	{
+		// Check if the user is authenticated
+		if (auth()->check()) {
+			// Check if the authenticated user's type is '1'
+			if (auth()->user()->usertype != '1') {
+				return redirect()->route('index'); // Redirect to home if the user is not authorized
+			}
 
-		$userCount = User::count();
-		$peopleWithHarambees = Harambee::distinct('sent_to')->count('sent_to');
+			// If the user is authorized, proceed with the following
+			$userCount = User::count();
+			$peopleWithHarambees = Harambee::distinct('sent_to')->count('sent_to');
 
+			return view('user.dashboard', compact('userCount', 'peopleWithHarambees'));
+		}
 
-		return view('user.dashboard', compact('userCount','peopleWithHarambees'));
+		// If the user is not authenticated, redirect to the login page
+		return redirect()->route('login');
 	}
 }
