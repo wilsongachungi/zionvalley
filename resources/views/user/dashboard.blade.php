@@ -14,7 +14,7 @@
 										<div class="col-9">
 											<div class="d-flex align-items-center align-self-start">
 												<h3 class="mb-0">{{ $userCount }}</h3>
-												{{-- <p class="text-success ms-2 mb-0 font-weight-medium">+3.5%</p> --}}
+
 											</div>
 										</div>
 										<div class="col-3">

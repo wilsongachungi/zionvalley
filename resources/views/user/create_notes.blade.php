@@ -1,4 +1,20 @@
-<x-admin-layout>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaVF7srkiW3A6t07q9WwJAPQ44EhlYxSvD/NtzT1gIN8dHkfvFpNVL0NgkD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+7HAuoFY5JYlER44pV79G5C1I1bB8" crossorigin="anonymous">
+    </script>
+    <title>Note</title>
+</head>
+
+<body>
     <div class="flex justify-center w-full mt-10">
         <div class="flex justify-center w-1/2 p-4 rounded bg-gray-800">
             <form action="{{ route('notes.store') }}" method="POST">
@@ -9,16 +25,13 @@
                 </div>
                 <div class="form-group">
                     <label for="content" class="text-white">Content</label>
-                    <div id="editor" style="height: 200px; background-color: black; text-white"></div>
+                    <div id="editor" class="bg-black text-light" style="height: 200px;"></div>
                     <input type="hidden" name="content" id="quill-content">
                 </div>
                 <button type="submit" class="btn btn-success mt-4">Save</button>
             </form>
         </div>
     </div>
-
-    <!-- Quill.js CSS -->
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 
     <!-- Quill.js JavaScript -->
     <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
@@ -67,6 +80,6 @@
             };
         });
     </script>
-</x-admin-layout>
+</body>
 
-
+</html>

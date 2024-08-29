@@ -7,14 +7,15 @@ use App\Http\Middleware\GenerateToken;
 use App\Http\Controllers\BuyController;
 use App\Http\Controllers\PayController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NoteController;
 use App\Http\Controllers\SellController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\ViewController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\ImageController;
-use App\Http\Controllers\LoginController;
 
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\MessageController;
@@ -110,6 +111,8 @@ Route::get('/harambee/edit/{id}', [HarambeeController::class, 'edit'])->name('ha
 Route::delete('/harambee/delete/{id}', [HarambeeController::class, 'destroy'])->name('harambee.destroy');
 Route::put('/harambee/update/{id}', [HarambeeController::class, 'update'])->name('harambee.update');
 // Route::get('/stk', [PayController::class, 'stk'])->name('stk');
+
+Route::resource('notes', NoteController::class);
 
 
 
