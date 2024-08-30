@@ -35,10 +35,10 @@ Route::middleware([
 	'auth:sanctum',
 	config('jetstream.auth_session'),
 	'verified',
-	GenerateToken::class,
+	GenerateToken::class, // Add the middleware class here
 ])->group(function () {
 	Route::get('/dashboard', function () {
-		return view('user.dashboard');
+		return view('dashboard');
 	})->name('dashboard');
 });
 
@@ -63,8 +63,7 @@ Route::get('/job_application', [AdminController::class, 'job_application'])->nam
 Route::post('/involved', [HomeController::class, 'involved'])->name('involved');
 Route::post('/job', [HomeController::class, 'job'])->name('job');
 Route::post('/contact_us', [HomeController::class, 'contact_us'])->name('contact_us');
-Route::get('/dashboard', [HomeController::class, 'show'])->middleware('check.usertype')->name('show');
-
+Route::get('/dashboard', [HomeController::class, 'show'])->name('show');
 Route::get('/list', [TaskController::class, 'list'])->name('list');
 Route::get('/see_list', [TaskController::class, 'see_list'])->name('see_list');
 Route::post('/storeTask', [TaskController::class, 'storeTask'])->name('storeTask');

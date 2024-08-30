@@ -86,11 +86,11 @@ class AdminController extends Controller
 
 	public function fetchData()
 	{
-		// Fetch data from the default connection
-		$users = User::all();
+		// Fetch users ordered by creation date, newest first
+		$users = User::orderBy('created_at', 'desc')->get();
 
-		// Fetch data from the second database
-		$harambees = Harambee::all();
+		// Fetch harambees ordered by creation date, newest first
+		$harambees = Harambee::orderBy('created_at', 'desc')->get();
 
 		// Combine or process the data as needed
 		// Pass the data to the view
