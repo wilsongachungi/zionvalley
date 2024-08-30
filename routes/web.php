@@ -26,6 +26,7 @@ use App\Http\Controllers\HarambeeController;
 use App\Http\Controllers\IdentifyController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\DocumentsController;
+use App\Http\Controllers\HarambeesController;
 use App\Http\Controllers\payments\MpesaController;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
@@ -113,6 +114,7 @@ Route::put('/harambee/update/{id}', [HarambeeController::class, 'update'])->name
 // Route::get('/stk', [PayController::class, 'stk'])->name('stk');
 
 Route::resource('notes', NoteController::class);
+Route::resource('harambees', HarambeesController::class);
 
 
 
