@@ -7,6 +7,7 @@ use App\Models\Harambee;
 use App\Models\Identify;
 use App\Models\AdminComment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ViewController extends Controller
 {
@@ -26,12 +27,16 @@ class ViewController extends Controller
 
 	public function transaction()
 	{
+		$harambeeTotals = Harambee::select('sent_to', DB::raw('SUM(harambees) as total_harambees'))
+        ->groupBy('sent_to')
+        ->with('user') // Ensure to load user data if needed
+        ->get();
 
 		$harambees = Harambee::all();
 
 		$totalHarambees = $harambees->sum('harambees');
 
-		return view('user.trasaction', compact('harambees', 'totalHarambees'));
+		return view('user.trasaction', compact('harambees', 'totalHarambees','harambeeTotals'));
 	}
 
 	public function architect()
