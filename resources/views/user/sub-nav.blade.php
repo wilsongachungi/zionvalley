@@ -50,22 +50,22 @@
                 <span class="menu-title" style="color:greenyellow">Comments</span>
             </a>
         </li> --}}
-        <li class="nav-item menu-items">
+        {{-- <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('assignment') }}">
                 <span class="menu-icon">
                     <i class="mdi mdi-envelope"></i>
                 </span>
                 <span class="menu-title" style="color:greenyellow">Message</span>
             </a>
-        </li>
-        <li class="nav-item menu-items">
+        </li> --}}
+        {{-- <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('documents') }}">
                 <span class="menu-icon">
                     <i class="mdi mdi-download"></i>
                 </span>
                 <span class="menu-title" style="color:greenyellow">Documents</span>
             </a>
-        </li>
+        </li> --}}
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('index') }}">
                 <span class="menu-icon">
