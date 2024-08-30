@@ -27,16 +27,17 @@ class ViewController extends Controller
 
 	public function transaction()
 	{
-		$harambeeTotals = Harambee::select('sent_to', DB::raw('SUM(harambees) as total_harambees'))
-        ->groupBy('sent_to')
-        ->with('user') // Ensure to load user data if needed
-        ->get();
+		$sentTo = auth()->id();
+
+		// Calculate the total harambees for the authenticated user
+		$harambeeTotal = Harambee::where('sent_to', $sentTo)
+			->sum('harambees');
 
 		$harambees = Harambee::all();
 
 		$totalHarambees = $harambees->sum('harambees');
 
-		return view('user.trasaction', compact('harambees', 'totalHarambees','harambeeTotals'));
+		return view('user.trasaction', compact('harambees', 'totalHarambees','harambeeTotal'));
 	}
 
 	public function architect()

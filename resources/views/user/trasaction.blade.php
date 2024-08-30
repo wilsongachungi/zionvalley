@@ -156,25 +156,16 @@
                                     </div>
                                 </div>
 
-									@php
-										// Assuming $sentTo is the authenticated user's identifier (e.g., user ID or email)
-										$sentTo = auth()->id(); // Or use another identifier if needed
 
-										// Fetch the most recent harambee record for the authenticated user
-										$latestHarambee = $harambees
-											->where('sent_to', $sentTo)
-											->sortByDesc('created_at')
-											->first();
-									@endphp
 
-									@foreach ($harambeeTotals as $harambeeTotal)
+						
 									<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
 
 										<td class="px-6 py-4">
-											<p><span style="color: greenyellow">Total Harambees:</span> {{ $harambeeTotal->total_harambees }}</p>
+											<p><span style="color: greenyellow">Total Harambees:</span> {{ $harambeeTotal}}</p>
 										</td>
 									</tr>
-									@endforeach
+
 
 
 
