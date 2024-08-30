@@ -26,6 +26,7 @@ class ViewController extends Controller
 
 	public function transaction()
 	{
+
 		$harambees = Harambee::all();
 
 		$totalHarambees = $harambees->sum('harambees');
@@ -39,14 +40,14 @@ class ViewController extends Controller
 	}
 
 	public function identification()
-    {
-        // Fetch all Identify records
-        $identity = Identify::all();
+	{
+		// Fetch all Identify records
+		$identity = Identify::all();
 
-        // Fetch comments for all users
-        $comments = AdminComment::all()->keyBy('user_id');
+		// Fetch comments for all users
+		$comments = AdminComment::all()->keyBy('user_id');
 
-        // Pass data to the view
-        return view('user.identification', compact('identity', 'comments'));
-    }
+		// Pass data to the view
+		return view('user.identification', compact('identity', 'comments'));
+	}
 }

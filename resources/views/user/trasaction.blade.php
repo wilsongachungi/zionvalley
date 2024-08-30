@@ -156,9 +156,31 @@
                                     </div>
                                 </div>
 
-                                <h4 class="text-success" style="margin-left:25px">Harambee Balance: <span
-                                        style="color:greenyellow; margin-left:20px"> {{ $totalHarambees }}</span> </h4>
-									
+                                @php
+                                    // Assuming $sentTo is the authenticated user's identifier (e.g., user ID or email)
+									$sentTo = auth()->id(); // Or use another identifier if needed
+
+									// Fetch the most recent harambee record for the authenticated user
+									$latestHarambee = $harambees
+										->where('sent_to', $sentTo)
+										->sortByDesc('created_at')
+                                        ->first();
+                                @endphp
+
+                                @if ($latestHarambee)
+                                    <h4 class="text-success" style="margin-left:25px">
+                                        Harambee Balance:
+                                        <span style="color:greenyellow; margin-left:20px">
+                                            {{ $latestHarambee->total }}
+                                        </span>
+                                    </h4>
+                                @else
+                                    <h4 class="text-danger" style="margin-left:25px">
+                                        No Harambee records found.
+                                    </h4>
+                                @endif
+
+
                                 <div class="card-body dark-shade">
                                     <div class="table-responsive">
 
@@ -337,41 +359,42 @@
                         </div>
                     </div>
 
-					<div class="container">
-						<h4>Initiate STK Transaction</h4>
-						<form id="tipesaForm">
-							@csrf
+                    <div class="container">
+                        <h4>Initiate STK Transaction</h4>
+                        <form id="tipesaForm">
+                            @csrf
 
-							<div class="form-group">
-								<label for="amount">Amount:</label>
-								<input type="text" id="amount" name="amount" class="form-control" required>
-							</div>
+                            <div class="form-group">
+                                <label for="amount">Amount:</label>
+                                <input type="text" id="amount" name="amount" class="form-control" required>
+                            </div>
 
-							<div class="form-group">
-								<label for="phonenumber">Phone Number:</label>
-								<input type="text" id="phonenumber" name="phonenumber" class="form-control" required>
-							</div>
-							<button type="submit" class="btn btn-primary">Initiate Transaction</button>
-						</form>
+                            <div class="form-group">
+                                <label for="phonenumber">Phone Number:</label>
+                                <input type="text" id="phonenumber" name="phonenumber" class="form-control"
+                                    required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Initiate Transaction</button>
+                        </form>
 
-						<div id="responseMessage"></div>
-					</div>
+                        <div id="responseMessage"></div>
+                    </div>
 
-					<div>
-						<div class="row">
-							<div class="col-md-12">
-								<div class="card">
-									<div class="card-header text-center">
-										<h3 class="card-title">Pay Bill: 516 600</h3>
-										<h3 class="card-title">Account: 840 518 </h3>
-										<p>Name: Zionvalley CBO</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+                    <div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-header text-center">
+                                        <h3 class="card-title">Pay Bill: 516 600</h3>
+                                        <h3 class="card-title">Account: 840 518 </h3>
+                                        <p>Name: Zionvalley CBO</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
         </div>
     </div>
     </div>

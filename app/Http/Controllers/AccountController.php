@@ -49,10 +49,14 @@ class AccountController extends Controller
 			'comment' => 'required|string',
 		]);
 
+		
+
 		$existingTotal = Harambee::sum('harambees');
 
 
 		$total = $existingTotal + $request->harambees;
+
+
 
 
 		$harambee = new Harambee();

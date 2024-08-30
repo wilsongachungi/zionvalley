@@ -278,12 +278,14 @@ class HomeController extends Controller
 			if (auth()->user()->usertype != '1') {
 				return redirect()->route('index'); // Redirect to home if the user is not authorized
 			}
+			$harambees = Harambee::all();
 
+			$totalHarambees = $harambees->sum('harambees');
 			// If the user is authorized, proceed with the following
 			$userCount = User::count();
 			$peopleWithHarambees = Harambee::distinct('sent_to')->count('sent_to');
 
-			return view('user.dashboard', compact('userCount', 'peopleWithHarambees'));
+			return view('user.dashboard', compact('userCount', 'peopleWithHarambees','totalHarambees'));
 		}
 
 		// If the user is not authenticated, redirect to the login page
