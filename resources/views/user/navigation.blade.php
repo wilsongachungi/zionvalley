@@ -71,14 +71,7 @@
                 <span class="menu-title">See Tasks</span>
             </a>
         </li> --}}
-        <li class="nav-item menu-items">
-            <a class="nav-link" href="{{ route('credit_harambee') }}">
-                <span class="menu-icon">
-                    <i class="mdi mdi-contacts"></i>
-                </span>
-                <span class="menu-title">Credit Harambees</span>
-            </a>
-        </li>
+
         {{-- <li class="nav-item menu-items">
             <a class="nav-link" href="edit_harambee">
                 <span class="menu-icon">
@@ -111,14 +104,22 @@
                 <span class="menu-title">Notes</span>
             </a>
         </li>
-		{{-- <li class="nav-item menu-items">
-            <a class="nav-link" href="{{ route('notes.create') }}">
+		<li class="nav-item menu-items">
+            <a class="nav-link" href="{{ route('harambees.index') }}">
                 <span class="menu-icon">
                     <i class="mdi mdi-contacts"></i>
                 </span>
-                <span class="menu-title">Create Notes</span>
+                <span class="menu-title">Harambees</span>
             </a>
-        </li> --}}
+        </li>
+		<li class="nav-item menu-items">
+            <a class="nav-link" href="{{ route('credit_harambee') }}">
+                <span class="menu-icon">
+                    <i class="mdi mdi-contacts"></i>
+                </span>
+                <span class="menu-title">Credit Harambees</span>
+            </a>
+        </li>
 
     </ul>
 </nav>
