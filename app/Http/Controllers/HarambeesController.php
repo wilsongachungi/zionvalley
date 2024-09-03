@@ -12,7 +12,7 @@ class HarambeesController extends Controller
 	 */
 	public function index()
 	{
-		$harambees = Harambee::with('user')->get();
+		$harambees = Harambee::all();
 		return view('user.Harambees.index', compact('harambees'));
 	}
 
