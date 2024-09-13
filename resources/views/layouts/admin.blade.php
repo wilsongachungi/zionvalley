@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <link rel="shortcut icon" href="admin/assets/images/favicon.png" />
@@ -13,6 +14,9 @@
     <link rel="stylesheet" href="admin/assets/vendors/owl-carousel-2/owl.theme.default.min.css">
     <link rel="stylesheet" href="admin/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/admin.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     @yield('css')
 
@@ -33,7 +37,10 @@
 
     <style>
         /* Custom CSS for increasing page height */
-        html, body, .container-scroller, .main-panel {
+        html,
+        body,
+        .container-scroller,
+        .main-panel {
             height: 120%;
         }
 
@@ -49,6 +56,7 @@
         }
     </style>
 </head>
+
 <body>
     <main class="main-panel p-0">
         <div class="container-scroller">
@@ -82,4 +90,5 @@
         </div>
     </main>
 </body>
+
 </html>
