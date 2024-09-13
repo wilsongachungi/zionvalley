@@ -86,7 +86,7 @@
     </div>
 
     <a href="{{ route('credit_harambee') }}" class="btn btn-primary mt-3 ml-1 text-white">
-        Back
+        Credit Harambee
     </a>
 
 </body>
