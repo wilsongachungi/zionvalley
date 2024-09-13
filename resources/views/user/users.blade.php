@@ -39,6 +39,9 @@
                     <th scope="col" class="px-6 py-3">
                         Name
                     </th>
+					<th scope="col" class="px-6 py-3">
+                        Phone
+                    </th>
                     <th scope="col" class="px-6 py-3">
                         Identity Data
                     </th>
@@ -65,6 +68,10 @@
                             class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                             {{ $user->name }}
                         </th>
+						<th scope="row"
+						class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+						{{ $user->phone }}
+					</th>
                         <td class="px-6 py-4">
                             {{ $user->identify ? $user->identify->identify_data : 'No data' }}
                         </td>
