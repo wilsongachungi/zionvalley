@@ -10,8 +10,6 @@
 </head>
 
 <body>
-
-
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
         <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -30,24 +28,26 @@
                     </th>
                 </tr>
             </thead>
-            @foreach ($harambees as $harambee)
-                <tbody>
+            <tbody>
+                @foreach ($harambees as $userId => $userHarambees)
                     <tr
                         class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <!-- Show the user name once -->
+                        <td class="px-6 py-4" rowspan="{{ count($userHarambees) }}">
+                            {{ $userHarambees->first()->user->name }}
+                        </td>
+
+                        <!-- Show the first Harambee entry -->
                         <td class="px-6 py-4">
-                            {{ $harambee->user->name }}
+                            {{ $userHarambees->first()->harambees }}
                         </td>
                         <td class="px-6 py-4">
-                            {{ $harambee->harambees }}
-                        </td>
-                        <td class="px-6 py-4">
-                            {{ $harambee->created_at }}
+                            {{ $userHarambees->first()->created_at }}
                         </td>
                         <td class="text-secondary ">
-
-                            <a href="{{ route('harambees.edit', $harambee->id) }}"
+                            <a href="{{ route('harambees.edit', $userHarambees->first()->id) }}"
                                 class="btn btn-warning btn-sm">Edit</a>
-                            <form action="{{ route('harambees.destroy', $harambee->id) }}" method="POST"
+                            <form action="{{ route('harambees.destroy', $userHarambees->first()->id) }}" method="POST"
                                 style="display:inline;">
                                 @csrf
                                 @method('DELETE')
@@ -55,14 +55,39 @@
                                     onclick="return confirm('Are you sure you want to delete this harambee?')">Delete</button>
                             </form>
                         </td>
+                    </tr>
 
-                </tbody>
-            @endforeach
+                    <!-- Toggle for remaining Harambee entries -->
+                    @foreach ($userHarambees->slice(1) as $harambee)
+                        <tr
+                            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                            <td class="px-6 py-4">
+                                {{ $harambee->harambees }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $harambee->created_at }}
+                            </td>
+                            <td class="text-secondary ">
+                                <a href="{{ route('harambees.edit', $harambee->id) }}"
+                                    class="btn btn-warning btn-sm">Edit</a>
+                                <form action="{{ route('harambees.destroy', $harambee->id) }}" method="POST"
+                                    style="display:inline;">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger btn-sm"
+                                        onclick="return confirm('Are you sure you want to delete this harambee?')">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                @endforeach
+            </tbody>
         </table>
     </div>
+
     <a href="{{ route('credit_harambee') }}" class="btn btn-primary mt-3 ml-1 text-white">
-		Back
-	</a>
+        Back
+    </a>
 
 </body>
 

@@ -39,7 +39,7 @@ li {
     <h5 class="welcome-text">Connect</h5>
     <br>
     <button style="margin-left: 30px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">
-        Get Connected
+        Social Media
     </button>
 
 
