@@ -85,13 +85,21 @@
 
 
                         <td class="px-6 py-4">
-                            <!-- Modal Trigger (Comment Button) -->
-                            <a href="javascript:void(0)" class="btn btn-secondary btn-sm edit-comment-btn"
-                                data-modal-target="default-modal" data-user-id="{{ $user->id }}"
-                                data-comment-id="{{ $comment->id }}" data-comment="{{ $comment->comment }}">Edit</a>
-                            <a href="javascript:void(0)" class="btn btn-primary btn-sm comment-btn"
-                                data-modal-target="default-modal" data-user-id="{{ $user->id }}">Comment</a>
+                            <!-- Show "Edit Comment" button if a comment exists -->
+                            @if ($user->adminComments->isNotEmpty())
+                                @foreach ($user->adminComments as $comment)
+                                    <a href="javascript:void(0)" class="btn btn-secondary btn-sm edit-comment-btn"
+                                        data-modal-target="default-modal" data-user-id="{{ $user->id }}"
+                                        data-comment-id="{{ $comment->id }}"
+                                        data-comment="{{ $comment->comment }}">Edit</a>
+                                @endforeach
+                            @else
+                                <!-- Show "Add Comment" button if no comment exists -->
+                                <a href="javascript:void(0)" class="btn btn-primary btn-sm comment-btn"
+                                    data-modal-target="default-modal" data-user-id="{{ $user->id }}">Comment</a>
+                            @endif
                         </td>
+
                     </tr>
                 @endforeach
             </tbody>
