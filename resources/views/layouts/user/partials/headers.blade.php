@@ -71,6 +71,9 @@
                     <li style="list-style-type: none;" class="nav-item {{ Request::is('team') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('team') }}">Team</a>
                     </li>
+					<li style="list-style-type: none;" class="nav-item {{ Request::is('team') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('login') }}">login</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -98,9 +101,9 @@
             </div>
             @endauth
             @else
-            <li class="nav-item" id="loginLink" style="list-style-type: none;display:none">
+            {{-- <li class="nav-item" id="loginLink" style="list-style-type: none;display:none">
                 <a style="color: green;" class="nav-link" href="{{ route('login') }}">Login</a>
-            </li>
+            </li> --}}
             @endauth
         </div>
     </nav>

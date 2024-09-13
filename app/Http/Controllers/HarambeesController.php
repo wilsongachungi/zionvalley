@@ -12,10 +12,12 @@ class HarambeesController extends Controller
 	 */
 	public function index()
 	{
-		$harambees = Harambee::with('user')->get();
+		// Group Harambee data by user
+		$harambees = Harambee::with('user')->get()->groupBy('sent_to');
 
 		return view('user.Harambees.index', compact('harambees'));
 	}
+
 
 	/**
 	 * Show the form for creating a new resource.

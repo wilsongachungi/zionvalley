@@ -101,7 +101,7 @@
                 <span class="menu-icon">
                     <i class="mdi mdi-contacts"></i>
                 </span>
-                <span class="menu-title">Notes</span>
+                <span class="menu-title">Tasks</span>
             </a>
         </li>
 		<li class="nav-item menu-items">
