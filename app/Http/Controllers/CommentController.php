@@ -11,28 +11,31 @@ class CommentController extends Controller
 {
 	public function store(Request $request)
 	{
+		// Validate the request
 		$request->validate([
 			'comment' => 'required|string',
 			'user_id' => 'required|exists:users,id',
 		]);
 
-		if ($request->filled('comment_id')) {
-			// Update existing comment
-			$comment = AdminComment::find($request->comment_id);
-			if ($comment) {
-				$comment->comment = $request->comment;
-				$comment->save();
-			}
+		// Check if the admin comment already exists for the user
+		$existingComment = AdminComment::where('user_id', $request->user_id)->first();
+
+		if ($existingComment) {
+			// Update the existing comment
+			$existingComment->update([
+				'comment' => $request->comment,
+			]);
 		} else {
-			// Create new comment
+			// Create a new comment if it doesn't exist
 			AdminComment::create([
 				'user_id' => $request->user_id,
 				'comment' => $request->comment,
 			]);
 		}
 
-		return redirect()->back()->with('success', 'Comment saved successfully.');
+		return redirect()->back()->with('success', 'Comment saved successfully');
 	}
+
 
 
 	public function edit($userId)
