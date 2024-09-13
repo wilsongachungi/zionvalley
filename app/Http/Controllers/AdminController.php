@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Models\JobApplication;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Harambee;
+use App\Models\Identify;
 
 class AdminController extends Controller
 {
@@ -85,18 +86,14 @@ class AdminController extends Controller
 	}
 
 	public function fetchData()
-	{
-		// Fetch users ordered by creation date, newest first
-		$users = User::orderBy('created_at', 'desc')->get();
+{
+    // Fetch users with their associated identities and comments, ordered by creation date, newest first
+    $users = User::with(['identify', 'adminComments'])->orderBy('created_at', 'desc')->get();
 
-		// Fetch harambees ordered by creation date, newest first
-		$harambees = Harambee::orderBy('created_at', 'desc')->get();
+    // Pass the data to the view
+    return view('user.users', [
+        'users' => $users,
+    ]);
+}
 
-		// Combine or process the data as needed
-		// Pass the data to the view
-		return view('user.users', [
-			'users' => $users,
-			'harambees' => $harambees,
-		]);
-	}
 }

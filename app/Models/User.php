@@ -112,4 +112,9 @@ class User extends Authenticatable
 	{
 		return $this->hasMany(Harambee::class, 'sent_to');
 	}
+
+	public function adminComments()
+	{
+		return $this->hasMany(AdminComment::class);
+	}
 }
