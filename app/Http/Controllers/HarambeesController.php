@@ -53,7 +53,7 @@ class HarambeesController extends Controller
 		$harambee = Harambee::findOrFail($id); // This will throw a 404 if the model is not found
 
 		// Step 2: Pass the data to the edit view
-		return view('user.harambees.edit', compact('harambee'));
+		return view('user.Harambees.edit', compact('harambee'));
 	}
 
 	/**
