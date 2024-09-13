@@ -32,12 +32,7 @@
                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
             </div>
 
-            <!-- Date Input -->
-            <div class="mb-4">
-                <label for="date" class="block text-sm font-medium text-gray-700">Date</label>
-                <input type="date" id="date" name="date" value="{{ old('date', $harambee->created_at->format('Y-m-d')) }}"
-                       class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-            </div>
+       
 
             <!-- Submit Button -->
             <div class="flex justify-end">
