@@ -82,12 +82,12 @@ li {
     @endif
 
 
-    <button style="margin-left: 30px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal2">
+    {{-- <button style="margin-left: 30px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal2">
         Get Involved
-    </button>
+    </button> --}}
 
     <!-- Modal 2 -->
-    <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modal2Label" aria-hidden="true">
+    {{-- <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modal2Label" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable" role="document">
             <div class="modal-content">
                 <div class="">
@@ -189,7 +189,7 @@ li {
                                             <p class="alert alert-danger">{{ $message }}</p>
                                     @enderror
                                 </div> --}}
-                                <div class="form-group col-12 col-sm-6">
+                                {{-- <div class="form-group col-12 col-sm-6">
                                     <label style="color: greenyellow" for="selectOption">Category</label>
                                     <select class="form-control" id="selectOption" name="select">
                                         <option value="" selected disabled>--Select--</option>
@@ -198,8 +198,8 @@ li {
                                         <option value="other">Others</option>
                                         <!-- Add more options as needed -->
                                     </select>
-                                </div>
-                        </div>
+                                </div> --}}
+                        {{-- </div> --}}
 
                         <!-- Passport (4th Row) -->
                         {{-- <div class="form-row">
@@ -216,31 +216,29 @@ li {
                 </div> --}}
 
                 <!-- Select Option (5th Row) -->
-                <div class="form-row">
+                {{-- <div class="form-row">
 
                 </div>
                 <!-- Submit Button -->
                 <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div><br>
+            </div> --}}
+        {{-- </div>
+    </div> --}}
 
 
-    <button id="buyHarambeeBtn" style="margin-left: 30px" type="button" class="btn btn-primary" data-toggle="tooltip"
+
+    {{-- <button id="buyHarambeeBtn" style="margin-left: 30px" type="button" class="btn btn-primary" data-toggle="tooltip"
         data-placement="top" data-html="true" @if (!Auth::check()) disabled
         title="<b>Please log in to access this feature</b>" @endif>
         Buy Harambee
-    </button>
+    </button> --}}
 
 
 
 
 
-    <div class="modal fade" id="modal9" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+    {{-- <div class="modal fade" id="modal9" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content" style="height: 100%; width:100%">
                 <div class="">
@@ -263,150 +261,9 @@ li {
                 </div>
             </div>
         </div>
-    </div><br>
+    </div><br> --}}
 
-    <button style="margin-left: 30px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal4">
-        Job applicaton
-    </button>
 
-    <!-- Modal 2 -->
-    <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="modal4Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable" role="document">
-            <div class="modal-content">
-                <div class="">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="row mt-5">
-                        <div class="col-12 wow fadeInLeft">
-                            <form class="modal-form" action="{{ route('job') }}" method="POST"
-                                enctype="multipart/form-data">
-                                @csrf
-
-                                @if ($errors->any())
-                                <div class="alert alert-danger">
-                                    <ul>
-                                        @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                                @endif
-                                <p> </p>
-
-                                <!-- Name and Email Address (1st Row) -->
-                                <div class="form-row">
-                                    <div class="form-group col-12 col-sm-6">
-                                        <label style="color: greenyellow" for="name">Full Name</label>
-                                        <input type="text" class="form-control @error('name') is-invalid @enderror"
-                                            id="name" name="name" placeholder="{{ $user->name ?? 'Full name' }}"
-                                            value="{{ old('name') }}">
-                                        @error('name')
-                                        <p class="alert alert-danger py-0">{{ $message }}</p>
-                                        @enderror
-                                    </div>
-                                    <div class="form-group col-12 col-sm-6">
-                                        <label style="color: greenyellow" for="email">Email Address</label>
-                                        <input type="text" class="form-control @error('email') is-invalid @enderror"
-                                            id="email" name="email"
-                                            placeholder="{{ $user->email ?? 'Email address..' }}"
-                                            value="{{ old('email') }}">
-                                        @error('email')
-                                        <p class="alert alert-danger">{{ $message }}</p>
-                                        @enderror
-                                    </div>
-                                </div>
-
-                                <!-- Phone and Country (2nd Row) -->
-                                <div class="form-row">
-                                    <div class="form-group col-12 col-sm-6">
-                                        <label style="color: greenyellow" for="phone">Phone</label>
-                                        <input type="number" class="form-control @error('phone') is-invalid @enderror"
-                                            id="phone" name="phone" placeholder="Phone.." value="{{ old('phone') }}">
-                                        @error('phone')
-                                        <p class="alert alert-danger">{{ $message }}</p>
-                                        @enderror
-                                    </div>
-                                    <div class="form-group col-12 col-sm-6">
-                                        <label style="color: greenyellow" for="country">Country</label>
-                                        <input type="text" class="form-control @error('country') is-invalid @enderror"
-                                            id="country" name="country" placeholder="Kenya.."
-                                            value="{{ old('country') }}">
-                                        @error('country')
-                                        <p class="alert alert-danger">{{ $message }}</p>
-                                        @enderror
-                                    </div>
-                                </div>
-
-                                <!-- ID Number and Age (3rd Row) -->
-                                <div class="form-row">
-                                    <div class="form-group col-12 col-sm-6">
-                                        <label style="color: greenyellow" for="idNumber">ID/Passport Number</label>
-                                        <input type="text" class="form-control @error('idNumber') is-invalid @enderror"
-                                            id="idNumber" name="idnumber" placeholder="ID/Passport Number.."
-                                            value="{{ old('idNumber') }}">
-                                        @error('idNumber')
-                                        <p class="alert alert-danger">{{ $message }}</p>
-                                        @enderror
-                                    </div>
-                                    <div class="form-group col-12 col-sm-6">
-                                        <label style="color: greenyellow" for="age">Age</label>
-                                        <input type="text" class="form-control @error('age') is-invalid @enderror"
-                                            id="age" name="age" placeholder="Age.." value="{{ old('age') }}">
-                                        @error('age')
-                                        <p class="alert alert-danger">{{ $message }}</p>
-                                        @enderror
-                                    </div>
-                                </div>
-                                {{-- <div class="form-row">
-                                    <div class="form-group col-12 col-sm-6">
-                                        <label style="color: greenyellow" for="passport">ID photo both sides</label>
-                                        <input type="file"
-                                            class="form-control-file @error('passport') is-invalid @enderror"
-                                            id="passport" name="idphoto">
-                                        @error('passport')
-                                            <p class="alert alert-danger">{{ $message }}</p>
-                                @enderror
-                        </div> --}}
-                        <div class="form-group col-12 col-sm-6">
-                            <label style="color: greenyellow" for="selectOption"> Job Category</label>
-                            <select class="form-control" id="selectOption" name="select">
-                                <option value="" selected disabled>--Select--</option>
-                                <option value="Masonry">Masonry</option>
-                                <option value="Carpentry">Carpentry</option>
-                                <option value="Security">Security</option>
-                                <option value="Store Keeping">Store Keeping</option>
-                                <option value="Chef">Chef</option>
-                                <option value="Preservation">Tree Preservation</option>
-                                <!-- Add more options as needed -->
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Passport (4th Row) -->
-                    {{-- <div class="form-row">
-                                    <div class="form-group col-12 col-sm-6">
-                                        <label style="color: greenyellow" for="passport">Passport (Image)</label>
-                                        <input type="file"
-                                            class="form-control-file @error('passport') is-invalid @enderror"
-                                            id="passport_image" name="passport_image">
-                                        @error('passport')
-                                            <p class="alert alert-danger">{{ $message }}</p>
-                    @enderror
-                </div>
-            </div> --}}
-            <div class="form-row">
-            </div>
-            <button type="submit" class="btn btn-primary" style="margin-left: 10px">Submit</button>
-            </form>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div><br>
 
     <button style="margin-left: 30px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal3">
         Contact Us

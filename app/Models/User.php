@@ -117,4 +117,9 @@ class User extends Authenticatable
 	{
 		return $this->hasMany(AdminComment::class);
 	}
+
+	public function phoneInfos()
+	{
+		return $this->hasMany(PhoneInfo::class);
+	}
 }

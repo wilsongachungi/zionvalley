@@ -27,6 +27,7 @@ use App\Http\Controllers\IdentifyController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\DocumentsController;
 use App\Http\Controllers\HarambeesController;
+use App\Http\Controllers\PhoneInfoController;
 use App\Http\Controllers\payments\MpesaController;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
@@ -61,6 +62,7 @@ Route::get('team', [HomeController::class, 'team'])->name('team');
 Route::get('/involve', [AdminController::class, 'involve'])->name('involve');
 Route::get('/contact', [AdminController::class, 'contact'])->name('contact');
 Route::get('/job_application', [AdminController::class, 'job_application'])->name('job_application');
+Route::get('/application', [AdminController::class, 'application'])->name('application');
 Route::post('/involved', [HomeController::class, 'involved'])->name('involved');
 Route::post('/job', [HomeController::class, 'job'])->name('job');
 Route::post('/contact_us', [HomeController::class, 'contact_us'])->name('contact_us');
@@ -113,9 +115,9 @@ Route::get('/harambee/edit/{id}', [HarambeeController::class, 'edit'])->name('ha
 Route::delete('/harambee/delete/{id}', [HarambeeController::class, 'destroy'])->name('harambee.destroy');
 Route::put('/harambee/update/{id}', [HarambeeController::class, 'update'])->name('harambee.update');
 // Route::get('/stk', [PayController::class, 'stk'])->name('stk');
-
 Route::resource('notes', NoteController::class);
 Route::resource('harambees', HarambeesController::class);
+Route::post('/phone-info/store', [PhoneInfoController::class, 'store'])->name('phoneInfo.store');
 
 
 
