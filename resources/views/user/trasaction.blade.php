@@ -159,12 +159,19 @@
 
 
 
-									<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+								<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+									<td class="px-6 py-4">
+										<p><span style="color: greenyellow">Total Harambees:</span> {{ number_format($harambeeTotal, 2) }}</p>
+									</td>
+									<td class="px-6 py-4 text-right">
+										<?php
+										$nights = $harambeeTotal / 12000; // Calculate nights as a decimal
+										?>
+										<p><span style="color: greenyellow">Total Nights:</span> {{ number_format($nights, 2) }}</p>
+									</td>
+								</tr>
 
-										<td class="px-6 py-4">
-											<p><span style="color: greenyellow">Total Harambees:</span>{{ number_format($harambeeTotal, 2)}}</p>
-										</td>
-									</tr>
+
 
 
 
