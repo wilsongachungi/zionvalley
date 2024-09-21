@@ -132,6 +132,25 @@
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>WhatsApp</th>
+                                                    <th>M-Pesa</th>
+                                                    <th>Category</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (Auth::user()->phoneInfos as $phoneInfo)
+                                                    <tr>
+                                                        <td>{{ $phoneInfo->is_whatsapp ? 'Yes' : 'No' }}</td>
+                                                        <td>{{ $phoneInfo->is_mpesa ? 'Yes' : 'No' }}</td>
+                                                        <td>{{ $phoneInfo->category }}</td>
+                                                    </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+
 
                                         <br>
                                         <h4 class="card-title" style="color:greenyellow">Who you said you are</h4>
@@ -167,7 +186,7 @@
                     <!-- Button trigger modal -->
                     <button type="button" class="dark-shade" style="color:greenyellow" data-toggle="modal"
                         data-target="#uploadModal">
-                        Profile not complete.Continue
+                        Profile not complete. Continue
                     </button>
 
                     <!-- Modal -->
@@ -176,10 +195,8 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header" style="background: rgb(0, 49, 0)">
-                                    <h5 class="modal-title" id="exampleModalLabel" style="color:greenyellow">
-                                        Upload
-                                        Form
-                                    </h5>
+                                    <h5 class="modal-title" id="exampleModalLabel" style="color:greenyellow">Upload
+                                        Form</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -188,61 +205,31 @@
                                     <form action="{{ route('upload_profile_image') }}" method="post"
                                         enctype="multipart/form-data">
                                         @csrf
-
                                         <div id="photo-passport-upload" class="row">
                                             <div class="col-md-6">
                                                 <div class="card">
                                                     <div class="card-body dark-shade">
-                                                        <h6 class="card-title" style="color:greenyellow">
-                                                            Upload Facial
+                                                        <h6 class="card-title" style="color:greenyellow">Upload Facial
                                                             Picture</h6>
                                                         <input type="file" name="passport" accept="image/*">
                                                         @if (Session::has('passport_success'))
                                                             <div class="alert alert-success mt-2">
-                                                                {{ Session::get('passport_success') }}</div>
+                                                                {{ Session::get('passport_success') }}
+                                                            </div>
                                                         @endif
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- <div class="col-md-6">
-                                                <div class="card">
-                                                    <div class="card-body dark-shade ">
-                                                        <h6 class="card-title" style="color:greenyellow">Front ID Upload
-                                                        </h6>
-                                                        <input type="file" name="idimage" accept="image/*">
-                                                        @if (Session::has('idimage_success'))
-<div class="alert alert-success mt-2">
-                                                            {{ Session::get('idimage_success') }}</div>
-@endif
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 mt-3">
-                                                <div class="card">
-                                                    <div class="card-body dark-shade">
-                                                        <h6 class="card-title" style="color:greenyellow">Back ID Upload
-                                                        </h6>
-                                                        <input type="file" name="idimageback" accept="image/*">
-                                                        @if (Session::has('idimageback_success'))
-<div class="alert alert-success mt-2">
-                                                            {{ Session::get('idimageback_success') }}</div>
-@endif
-                                                    </div>
-                                                </div>
-                                            </div> -->
                                         </div>
                                         <button type="submit" class="btn btn-primary mt-3">Submit</button>
                                     </form>
-
 
                                     <div class="row mt-3">
                                         <div class="col-md-12">
                                             <div class="card">
                                                 <div class="card-body dark-shade">
-                                                    <h6 class="card-title" style="color:greenyellow">
-                                                        Completing
-                                                        Profile
-                                                        Information</h6>
+                                                    <h6 class="card-title" style="color:greenyellow">Completing
+                                                        Profile Information</h6>
                                                     <form action="{{ route('complete_profile') }}" method="post"
                                                         enctype="multipart/form-data">
                                                         @csrf
@@ -265,8 +252,8 @@
                                                                 value="{{ old('country') }}" required>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label style="color:antiquewhite"
-                                                                for="residence">Residence:</label>
+                                                            <label for="residence"
+                                                                style="color:antiquewhite">Residence:</label>
                                                             <input style="color:antiquewhite" type="text"
                                                                 class="form-control" id="residence" name="residence"
                                                                 value="{{ old('residence') }}" required>
@@ -274,12 +261,69 @@
                                                         <button type="submit" class="btn btn-primary">Update
                                                             Information</button>
                                                     </form>
+
                                                     @if (session('success'))
                                                         <div class="alert alert-success mt-3">
                                                             {{ session('success') }}
                                                         </div>
                                                     @endif
                                                 </div>
+
+                                                <!-- Phone Info Table -->
+                                                <!-- Form inside the modal -->
+                                                <form action="{{ route('phoneInfo.store') }}" method="POST" enctype="multipart/form-data">
+                                                    @csrf
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <p>Choose if the number given is whatsapp / mpesa number and
+                                                                choose category</p>
+                                                            <thead>
+                                                                <tr>
+
+                                                                    <th style="color:greenyellow">WhatsApp</th>
+                                                                    <th style="color:greenyellow">M-Pesa</th>
+                                                                    <th style="color:greenyellow">Category</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+
+                                                                    <td>
+                                                                        <input type="checkbox" name="is_whatsapp"
+                                                                            id="whatsapp">
+                                                                        <label for="whatsapp">WhatsApp</label>
+                                                                    </td>
+
+                                                                    <!-- M-Pesa Checkbox -->
+                                                                    <td>
+                                                                        <input type="checkbox" name="is_mpesa"
+                                                                            id="mpesa">
+                                                                        <label for="mpesa">M-Pesa</label>
+                                                                    </td>
+
+                                                                    <!-- Category Dropdown -->
+                                                                    <td>
+                                                                        <select name="category" id="category"
+                                                                            class="form-control text-light">
+                                                                            <option value="Financial Supporter">
+                                                                                Financial Supporter</option>
+                                                                            <option value="CBO Member">CBO Member
+                                                                            </option>
+                                                                            <option value="CBO Land Owner">CBO Land
+                                                                                Owner</option>
+                                                                            <option value="Employee">Employee</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="text-right">
+                                                        <button type="submit"
+                                                            class="btn btn-primary mt-3">Save</button>
+                                                    </div>
+                                                </form>
+
                                             </div>
                                         </div>
                                     </div>
@@ -287,17 +331,21 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
-
-            <footer class="footer">
-                <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                    <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ©
-                        zionvalleycbo</span>
-                </div>
-            </footer>
-
         </div>
+    </div>
+    </div>
+
+    <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ©
+                zionvalleycbo</span>
+        </div>
+    </footer>
+
+    </div>
     </div>
     </div>
 

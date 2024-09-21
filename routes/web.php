@@ -27,6 +27,7 @@ use App\Http\Controllers\IdentifyController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\DocumentsController;
 use App\Http\Controllers\HarambeesController;
+use App\Http\Controllers\PhoneInfoController;
 use App\Http\Controllers\payments\MpesaController;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
@@ -113,9 +114,9 @@ Route::get('/harambee/edit/{id}', [HarambeeController::class, 'edit'])->name('ha
 Route::delete('/harambee/delete/{id}', [HarambeeController::class, 'destroy'])->name('harambee.destroy');
 Route::put('/harambee/update/{id}', [HarambeeController::class, 'update'])->name('harambee.update');
 // Route::get('/stk', [PayController::class, 'stk'])->name('stk');
-
 Route::resource('notes', NoteController::class);
 Route::resource('harambees', HarambeesController::class);
+Route::post('/phone-info/store', [PhoneInfoController::class, 'store'])->name('phoneInfo.store');
 
 
 
