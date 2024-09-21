@@ -43,11 +43,11 @@
             </a>
         </li>
 		<li class="nav-item menu-items">
-            <a class="nav-link" href="{{ route('transaction') }}">
+            <a class="nav-link" href="{{ route('application') }}">
                 <span class="menu-icon">
                     <i class="mdi mdi-envelope"></i>
                 </span>
-                <span class="menu-title" style="color:greenyellow"></span>
+                <span class="menu-title" style="color:greenyellow">Job Application</span>
             </a>
         </li>
         {{-- <li class="nav-item menu-items">

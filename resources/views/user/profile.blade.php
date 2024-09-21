@@ -186,8 +186,10 @@
                     <!-- Button trigger modal -->
                     <button type="button" class="dark-shade" style="color:greenyellow" data-toggle="modal"
                         data-target="#uploadModal">
-                        Profile not complete. Continue
+                         Add more information or edit
                     </button>
+
+				
 
                     <!-- Modal -->
                     <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog"

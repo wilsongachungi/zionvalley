@@ -6,14 +6,27 @@ use App\Models\User;
 use App\Models\Contact;
 use App\Models\Involve;
 use App\Models\Members;
-use Illuminate\Http\Request;
-use App\Models\JobApplication;
-use Illuminate\Support\Facades\Auth;
 use App\Models\Harambee;
 use App\Models\Identify;
+use Illuminate\Http\Request;
+use App\Models\JobApplication;
+use App\Models\ProfileInformation;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
+	public function application()
+
+	{
+		$jobapplications = JobApplication::all();
+
+		$profileinfo  = ProfileInformation::all();
+
+		$user = auth()->user();
+
+		return view('user.job-application', compact('jobapplications','user','profileinfo'));
+	}
+
 	public function addview()
 	{
 		return view('user.add_member');

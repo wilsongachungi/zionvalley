@@ -62,6 +62,7 @@ Route::get('team', [HomeController::class, 'team'])->name('team');
 Route::get('/involve', [AdminController::class, 'involve'])->name('involve');
 Route::get('/contact', [AdminController::class, 'contact'])->name('contact');
 Route::get('/job_application', [AdminController::class, 'job_application'])->name('job_application');
+Route::get('/application', [AdminController::class, 'application'])->name('application');
 Route::post('/involved', [HomeController::class, 'involved'])->name('involved');
 Route::post('/job', [HomeController::class, 'job'])->name('job');
 Route::post('/contact_us', [HomeController::class, 'contact_us'])->name('contact_us');
