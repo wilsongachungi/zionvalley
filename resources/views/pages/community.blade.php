@@ -163,7 +163,6 @@ li {
     <div class="banner-container"
         style="position: relative; color: antiquewhite;; padding: 20px; text-align: center; margin-top:20px; background-image: url('../assets/img/banner1.jpeg'); background-size: cover; background-position: center; ">
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);">
-            <!-- Adjust the rgba values to change the color and opacity -->
         </div>
         <div class="green-tint" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
         <p class="line-height-1.5" style="font-size: 1.2em;
@@ -176,8 +175,6 @@ li {
             We shall also represent the community in providing solutions to such problems as the lack of a bridge.
         </p>
     </div>
-
-
 
     <div class="container content wow zoomIn slow">
         <div class="accordions">
