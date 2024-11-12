@@ -64,8 +64,6 @@ class HomeController extends Controller
 			$data->user_id = Auth::user()->id;
 		}
 
-
-
 		$data->save();
 
 		return redirect()->back()->with('message', 'Thank you! Message sent sucessfully. Will contact you soon ');
