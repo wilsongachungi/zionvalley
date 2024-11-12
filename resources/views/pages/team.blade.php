@@ -72,7 +72,7 @@ li {
                 <img class="below-team" style="width: 100%; height:30%; " src="../assets/img/unnamed.png" alt="">
                 <div class="team-col">
                     <div class="user d-flex flex-column col">
-                        <img src="../assets/img/cex.jpg" alt="">
+                        <img src="../assets/img/19 slope.jpg" alt="">
                         <div class="user-info site-color text-center">Chief Executive</div>
                     </div>
                     <p class="px-2 line-height-1-5 text-center">
