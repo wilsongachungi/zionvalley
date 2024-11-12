@@ -27,9 +27,14 @@ class AccountController extends Controller
 
 	public function account()
 	{
+		$sentTo = auth()->id();
+
 		$harambees = Harambee::with('user')->where('sent_to', Auth::id())->get();
 
-		return view('user.account', compact('harambees'));
+		$harambeeTotal = Harambee::where('sent_to', $sentTo)
+			->sum('harambees');
+
+		return view('user.account', compact('harambees','harambeeTotal'));
 	}
 
 	public function credit_harambee()
@@ -50,14 +55,9 @@ class AccountController extends Controller
 		]);
 
 
-
 		$existingTotal = Harambee::sum('harambees');
 
-
 		$total = $existingTotal + $request->harambees;
-
-
-
 
 		$harambee = new Harambee();
 		$harambee->deposit = $request->deposit;

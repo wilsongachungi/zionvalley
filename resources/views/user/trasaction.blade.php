@@ -156,9 +156,6 @@
                                     </div>
                                 </div>
 
-
-
-
 								<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
 									<td class="px-6 py-4">
 										<p><span style="color: greenyellow">Total Harambees:</span>&nbsp; {{ number_format($harambeeTotal, 2) }}</p>
@@ -170,11 +167,6 @@
 										<p><span style="color: greenyellow">Total Nights:</span>&nbsp; {{ number_format($nights, 2) }}</p>
 									</td>
 								</tr>
-
-
-
-
-
 
                                 <div class="card-body dark-shade">
                                     <div class="table-responsive">
