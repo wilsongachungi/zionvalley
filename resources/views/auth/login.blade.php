@@ -46,7 +46,7 @@
                 @endif
 
                 <x-button class="ml-4">
-                    {{ __('Log in') }} to account
+                    {{ __('Log in') }}
                 </x-button>
             </div>
         </form>
