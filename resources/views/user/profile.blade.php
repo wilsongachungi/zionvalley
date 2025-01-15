@@ -151,7 +151,6 @@
                                             </tbody>
                                         </table>
 
-
                                         <br>
                                         <h4 class="card-title" style="color:greenyellow">Who you said you are</h4>
                                         <!-- Display Identity Data -->
@@ -188,8 +187,6 @@
                         data-target="#uploadModal">
                          Add more information or edit
                     </button>
-
-				
 
                     <!-- Modal -->
                     <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog"
@@ -271,8 +268,6 @@
                                                     @endif
                                                 </div>
 
-                                                <!-- Phone Info Table -->
-                                                <!-- Form inside the modal -->
                                                 <form action="{{ route('phoneInfo.store') }}" method="POST" enctype="multipart/form-data">
                                                     @csrf
                                                     <div class="table-responsive">
@@ -296,14 +291,12 @@
                                                                         <label for="whatsapp">WhatsApp</label>
                                                                     </td>
 
-                                                                    <!-- M-Pesa Checkbox -->
                                                                     <td>
                                                                         <input type="checkbox" name="is_mpesa"
                                                                             id="mpesa">
                                                                         <label for="mpesa">M-Pesa</label>
                                                                     </td>
 
-                                                                    <!-- Category Dropdown -->
                                                                     <td>
                                                                         <select name="category" id="category"
                                                                             class="form-control text-light">
@@ -325,7 +318,6 @@
                                                             class="btn btn-primary mt-3">Save</button>
                                                     </div>
                                                 </form>
-
                                             </div>
                                         </div>
                                     </div>
@@ -360,7 +352,6 @@
                     const itemId = this.getAttribute('data-item-id');
                     const editForm = document.getElementById(`edit-form-${itemId}`);
 
-                    // Toggle visibility of edit form
                     if (editForm.style.display === 'none') {
                         editForm.style.display = 'block';
                     } else {
@@ -385,5 +376,4 @@
     <script src="admin/assets/js/todolist.js"></script>
     <script src="admin/assets/js/dashboard.js"></script>
 </body>
-
 </html>
