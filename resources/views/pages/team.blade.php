@@ -44,8 +44,8 @@ li {
                         <div class="user-info site-color text-center">Chairman</div>
                     </div>
                     <p class="px-2 line-height-1-5 text-center">
-                        Presiding over CBO meetings and working for the interests of the Zion Valley project,
-                        its land supporters, the Harambee owners and the local community.
+                        {{-- Presiding over CBO meetings and working for the interests of the Zion Valley project,
+                        its land supporters, the Harambee owners and the local community. --}}
                     </p>
                 </div>
                 <div class="team-col">
