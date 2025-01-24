@@ -87,16 +87,16 @@
             @auth
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="userDropdownMenu"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:green">
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: gray">
                     {{ $firstName }}
                 </button>
-                <div class="dropdown-menu" aria-labelledby="userDropdownMenu">
+                <div class="dropdown-menu" style="background-color: rgba(0, 78, 0)" aria-labelledby="userDropdownMenu">
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <button type="submit" class="dropdown-item">Logout</button>
+                        <button type="submit" class="dropdown-item" style="color: gray">Logout</button>
                     </form>
-                    <a href="{{ route('info') }}" class="dropdown-item">Profile</a>
-                    <a href="{{ route('profile.show') }}" class="dropdown-item">Change Password</a>
+                    <a href="{{ route('info') }}" style="color: gray" class="dropdown-item">Profile</a>
+                    <a href="{{ route('profile.show') }}" style="color: gray" class="dropdown-item">Change Password</a>
                 </div>
             </div>
             @endauth

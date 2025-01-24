@@ -36,7 +36,7 @@ li {
     <br>
     <h5 class="welcome-text">Team</h5>
     <section class="my-4">
-        <h4 class="text-center mb-3">Our Team Team</h3>
+        <h4 class="text-center mb-3">Our Team</h3>
             <div class="team-row">
                 <div class="team-col">
                     <div class="user d-flex flex-column col">
