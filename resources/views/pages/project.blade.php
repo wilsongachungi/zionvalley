@@ -200,7 +200,7 @@ li {
             <div class="center">
                 <h4>Current Projects</h4>
             </div>
-            <div id="carouselOngoingProject" class="carousel slide" data-ride="carousel" data-interval="false">
+            <div id="carouselOngoingProject" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselOngoingProject" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselOngoingProject" data-slide-to="1"></li>
@@ -238,7 +238,7 @@ li {
             <div class="center">
                 <h4>Future Projects</h4>
             </div>
-            <div id="carouselInspirationalProjects" class="carousel slide" data-ride="carousel" data-interval="false">
+            <div id="carouselInspirationalProjects" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselInspirationalProjects" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselInspirationalProjects" data-slide-to="1"></li>
@@ -318,7 +318,7 @@ li {
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div class="card-body">
                             <!-- Carousel inside collapsible item 2 -->
-                            <div id="carouselInspirationalProjects2" class="carousel slide" data-ride="carousel"
+                            <div id="carouselInspirationalProjects2" class="carousel slide carousel-fade" data-ride="carousel"
                                 data-interval="false">
                                 <!-- Carousel content -->
                                 <div class="carousel-inner">
@@ -398,7 +398,7 @@ li {
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                         <div class="card-body">
                             <!-- Carousel inside collapsible item 3 -->
-                            <div id="carouselInspirationalProjects3" class="carousel slide" data-ride="carousel"
+                            <div id="carouselInspirationalProjects3" class="carousel slide carousel-fade" data-ride="carousel"
                                 data-interval="false">
                                 <!-- Carousel content -->
                                 <div class="carousel-inner">
@@ -494,7 +494,7 @@ li {
                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
                         <div class="card-body">
                             <!-- Carousel inside collapsible item 2 -->
-                            <div id="carouselInspirationalProjects4" class="carousel slide" data-ride="carousel"
+                            <div id="carouselInspirationalProjects4" class="carousel slide carousel-fade" data-ride="carousel"
                                 data-interval="false">
                                 <!-- Carousel content -->
                                 <div class="carousel-inner">
@@ -593,7 +593,7 @@ li {
                     <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
                         <div class="card-body">
                             <!-- Carousel inside collapsible item 2 -->
-                            <div id="carouselInspirationalProjects5" class="carousel slide" data-ride="carousel"
+                            <div id="carouselInspirationalProjects5" class="carousel slide carousel-fade" data-ride="carousel"
                                 data-interval="false">
                                 <!-- Carousel content -->
                                 <div class="carousel-inner">
@@ -683,7 +683,7 @@ li {
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                         <div class="card-body">
                             <!-- Carousel inside collapsible item 1 -->
-                            <div id="carouselInspirationalProjects1" class="carousel slide" data-ride="carousel"
+                            <div id="carouselInspirationalProjects1" class="carousel slide carousel-fade" data-ride="carousel"
                                 data-interval="false">
                                 <!-- Carousel content -->
                                 <div class="carousel-inner">
