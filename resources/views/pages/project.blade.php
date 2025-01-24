@@ -109,7 +109,7 @@ li {
     <br>
     <h5 class="welcome-text">Projects</h5>
     <div class="homepage">
-        <div id="carouselExample" class="carousel slide bg-warning" data-ride="carousel">
+        <div id="carouselExample" class="carousel slide carousel-fade bg-warning" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
