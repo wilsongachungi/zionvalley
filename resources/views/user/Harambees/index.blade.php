@@ -21,6 +21,9 @@
                         Harambees
                     </th>
                     <th scope="col" class="px-6 py-3">
+                        Comments
+                    </th>
+                    <th scope="col" class="px-6 py-3">
                         Date
                     </th>
                     <th scope="col" class="px-6 py-3">
@@ -40,6 +43,9 @@
                         <!-- Show the first Harambee entry -->
                         <td class="px-6 py-4">
                             {{ $userHarambees->first()->harambees }}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{ $userHarambees->first()->comment ?? N/A }}
                         </td>
                         <td class="px-6 py-4">
                             {{ $userHarambees->first()->created_at }}
@@ -63,6 +69,9 @@
                             class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <td class="px-6 py-4">
                                 {{ $harambee->harambees }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $harambee->comment ?? N/A }}
                             </td>
                             <td class="px-6 py-4">
                                 {{ $harambee->created_at }}
