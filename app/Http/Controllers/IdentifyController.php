@@ -38,7 +38,7 @@ class IdentifyController extends Controller
 		$identity->save();
 
 		// Mark that the user has submitted the data
-		session(['identify_submitted' => true]);
+		session(['identify_exists' => true]);
 
 		return redirect()->back()->with('success', 'Your identify data has been submitted successfully.');
 	}

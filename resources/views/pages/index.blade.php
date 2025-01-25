@@ -136,7 +136,6 @@
             transform: none;
             content: "\00d7";
         }
-
     </style>
 @endsection
 
@@ -225,6 +224,7 @@
                                         placeholder="1.Describe yourself, 2. who introduced you, 3. your interest in joining, 4. skills offered" required></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
+									<p>Ignore if already Submited</p>
                             </form>
                         </div>
                     </div>
@@ -233,7 +233,6 @@
         @endif
 
     </div>
-
     <div class="container content wow zoomIn slow">
         <div>
             <div style="line-height:1.5; test-align:left">
@@ -484,7 +483,8 @@
             <div class="faq-section py-5 mb-200 text-light">
                 <div class="container">
                     <h3 class="text-center mb-4 ">Frequently asked Questions</h3>
-                    <div class="accordion accordion-flush" style="border: none; background:none;" id="accordionFlushExample">
+                    <div class="accordion accordion-flush" style="border: none; background:none;"
+                        id="accordionFlushExample">
                         <div class="accordion-item mb-2">
                             <h2 class="accordion-header" id="flush-headingOne">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -495,10 +495,8 @@
                             </h2>
                             <div id="flush-collapseOne" class="accordion-collapse collapse"
                                 aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">Lorem ipsum, dolor sit amet consectetur adipisicing
-                                    elit. Alias rerum quo veritatis ut, aliquid sunt praesentium repellat dolorum
-                                    corporis dolor corrupti quis soluta impedit dolores ratione quam commodi eaque
-                                    quidem velit. Nam vitae repellendus veritatis ratione, error ducimus eius
+                                <div class="accordion-body"> A Garden of Eden including Rare Tree Arboretum, Botanical Gardens and Seed Banks. <br>
+									A reserve for rare, endangered and medicinal herbs, plants and trees
                                 </div>
                             </div>
                         </div>
@@ -512,10 +510,12 @@
                             </h2>
                             <div id="flush-collapseTwo" class="accordion-collapse collapse"
                                 aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit. Beatae doloremque consequatur eaque inventore ex, illo pariatur repellat
-                                    tempore veritatis esse corrupti nobis totam non nisi veniam molestias nemo
-                                    facilis? Reprehenderit dolorum nemo voluptatem nihil optio dicta, odit ipsum</div>
+                                <div class="accordion-body"> By coming together as a Harambee Village Community - Zion Valley is a living working example to
+									demonstrate that land which is otherwise low value and providing little sustenance to its owners, can
+									now be transformed into an income-generating project that serves the community, the environment, and all
+									its Harambee members.
+									<br>
+									We shall also represent the community in providing solutions to such problems as the lack of a bridge.</div>
                             </div>
                         </div>
                         <div class="accordion-item mb-2">
@@ -545,11 +545,12 @@
                             </h2>
                             <div id="flush-collapseFour" class="accordion-collapse collapse"
                                 aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit. Maxime itaque sint pariatur minima tempora aliquam optio fugit sequi
-                                    inventore, nisi enim. Exercitationem placeat iure sed saepe ex. Esse distinctio,
-                                    vitae sed iure ipsum similique! Ullam minus quo reprehenderit quas explicabo, id
-                                    quod.</div>
+                                <div class="accordion-body">As neighboring land owners and cash supporters - you are invited to join the Zion Valley
+									Harambee Village. <br>
+									To share in both the ownership and project rewards. <br>
+									To also take ownership of romantic
+									accommodation
+									nights.</div>
                             </div>
                         </div>
                     </div>
@@ -615,5 +616,6 @@
                         });
                     });
                 });
+
             </script>
 </x-base-layout>
