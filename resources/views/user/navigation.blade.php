@@ -47,22 +47,22 @@
             </a>
         </li>
 
-        <li class="nav-item menu-items">
+        {{-- <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('reply_message') }}">
                 <span class="menu-icon">
                     <i class="mdi mdi-contacts"></i>
                 </span>
                 <span class="menu-title">Reply Message</span>
             </a>
-        </li>
-        <li class="nav-item menu-items">
+        </li> --}}
+        {{-- <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('list') }}">
                 <span class="menu-icon">
                     <i class="mdi mdi-contacts"></i>
                 </span>
                 <span class="menu-title">Add Tasks</span>
             </a>
-        </li>
+        </li> --}}
         {{-- <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('see_list') }}">
                 <span class="menu-icon">
