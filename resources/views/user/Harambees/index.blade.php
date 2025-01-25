@@ -45,7 +45,7 @@
                             {{ $userHarambees->first()->harambees }}
                         </td>
                         <td class="px-6 py-4">
-                            {{ $userHarambees->first()->comment ?? N/A }}
+                            {{ $userHarambees->first()->comment ?? 'N/A' }}
                         </td>
                         <td class="px-6 py-4">
                             {{ $userHarambees->first()->created_at }}
@@ -71,7 +71,7 @@
                                 {{ $harambee->harambees }}
                             </td>
                             <td class="px-6 py-4">
-                                {{ $harambee->comment ?? N/A }}
+                                {{ $harambee->comment ?? 'N/A' }}
                             </td>
                             <td class="px-6 py-4">
                                 {{ $harambee->created_at }}
