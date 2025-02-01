@@ -5,29 +5,29 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     </head>
     <style>
-    .navbar-nav .nav-item a.nav-link {
-        color: antiquewhite;
+        .navbar-nav .nav-item a.nav-link {
+            color: antiquewhite;
 
-    }
+        }
 
-    .navbar-nav .nav-item.active a.nav-link,
-    .navbar-nav .nav-item a.nav-link:hover {
-        color: greenyellow;
+        .navbar-nav .nav-item.active a.nav-link,
+        .navbar-nav .nav-item a.nav-link:hover {
+            color: greenyellow;
 
-    }
+        }
 
-    .navbar {
-        background-color: rgba(0, 0, 0, 0.5);
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.5);
 
-    }
+        }
 
-    .btn-secondary {
-        background-color: transparent !important;
-        color: inherit;
-        /* Optional: Inherit text color from parent */
-        border-color: inherit;
-        /* Optional: Inherit border color from parent */
-    }
+        .btn-secondary {
+            background-color: transparent !important;
+            color: inherit;
+            /* Optional: Inherit text color from parent */
+            border-color: inherit;
+            /* Optional: Inherit border color from parent */
+        }
     </style>
 
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
@@ -70,37 +70,44 @@
                     <li style="list-style-type: none;" class="nav-item {{ Request::is('team') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('team') }}">Team</a>
                     </li>
-					<li style="list-style-type: none;" class="nav-item {{ Request::is('team') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('login') }}">login</a>
-                    </li>
+                    @auth
+
+                    @else
+                        <li style="list-style-type: none;" class="nav-item {{ Request::is('team') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('login') }}">Login</a>
+                        </li>
+                    @endauth
+
                 </ul>
             </div>
         </div>
         @auth
-        @php
-        $fullName = Auth::user()->name;
-        $firstName = explode(' ', $fullName)[0];
-        @endphp
-        <div class="centered-container "
-            style=" position:absolute;z-index:1000; align-item:center;  justify-content: center; right:40px; length:50px; margin-top:100px; ">
-            @auth
-            <div class="dropdown mr-4" >
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="userDropdownMenu"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: greenyellow; outline:none">
-                    {{ $firstName }}
-                </button>
-                <div class="dropdown-menu" style="background-color: rgba(0, 78, 0); margin-right: 15px; z-index:1" aria-labelledby="userDropdownMenu">
-                    <form method="POST" class="ml-2" action="{{ route('logout') }}">
-                        @csrf
-                        <button type="submit" class="dropdown-item" style="color: greenyellow">Logout</button>
-                    </form>
-                    <a href="{{ route('info') }}" style="color: greenyellow" class="dropdown-item">Profile</a>
-                    <a href="{{ route('profile.show') }}" style="color: greenyellow" class="dropdown-item">Password</a>
-                </div>
-            </div>
-            @endauth
+            @php
+                $fullName = Auth::user()->name;
+                $firstName = explode(' ', $fullName)[0];
+            @endphp
+            <div class="centered-container "
+                style=" position:absolute;z-index:1000; align-item:center;  justify-content: center; right:40px; length:50px; margin-top:100px; ">
+                @auth
+                    <div class="dropdown mr-4">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="userDropdownMenu"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            style="color: greenyellow; outline:none">
+                            {{ $firstName }}
+                        </button>
+                        <div class="dropdown-menu" style="background-color: rgba(0, 78, 0); margin-right: 15px; z-index:1"
+                            aria-labelledby="userDropdownMenu">
+                            <form method="POST" class="ml-2" action="{{ route('logout') }}">
+                                @csrf
+                                <button type="submit" class="dropdown-item" style="color: greenyellow">Logout</button>
+                            </form>
+                            <a href="{{ route('info') }}" style="color: greenyellow" class="dropdown-item">Profile</a>
+                            <a href="{{ route('profile.show') }}" style="color: greenyellow" class="dropdown-item">Password</a>
+                        </div>
+                    </div>
+                @endauth
             @else
-            {{-- <li class="nav-item" id="loginLink" style="list-style-type: none;display:none">
+                {{-- <li class="nav-item" id="loginLink" style="list-style-type: none;display:none">
                 <a style="color: green;" class="nav-link" href="{{ route('login') }}">Login</a>
             </li> --}}
             @endauth
@@ -108,9 +115,9 @@
     </nav>
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             // Toggle login link visibility when navbar is expanded/collapsed
-            $('.navbar-toggler').click(function () {
+            $('.navbar-toggler').click(function() {
                 $('#loginLink').toggle();
             });
         });
