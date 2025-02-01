@@ -82,14 +82,14 @@
         $firstName = explode(' ', $fullName)[0];
         @endphp
         <div class="centered-container "
-            style=" position:absolute;z-index:1000; align-item:center;  justify-content: center; right:20px; margin-top:100px">
+            style=" position:absolute;z-index:1000; align-item:center;  justify-content: center; right:40px; length:50px; margin-top:100px; ">
             @auth
-            <div class="dropdown mr-2" >
+            <div class="dropdown mr-4" >
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="userDropdownMenu"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: greenyellow">
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: greenyellow; outline:none">
                     {{ $firstName }}
                 </button>
-                <div class="dropdown-menu" style="background-color: rgba(0, 78, 0); margin-right: 20;" aria-labelledby="userDropdownMenu">
+                <div class="dropdown-menu" style="background-color: rgba(0, 78, 0); margin-right: 15px; z-index:1" aria-labelledby="userDropdownMenu">
                     <form method="POST" class="ml-2" action="{{ route('logout') }}">
                         @csrf
                         <button type="submit" class="dropdown-item" style="color: greenyellow">Logout</button>
