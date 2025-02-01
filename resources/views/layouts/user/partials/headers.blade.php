@@ -28,6 +28,44 @@
             border-color: inherit;
             /* Optional: Inherit border color from parent */
         }
+		.navbar-toggler {
+        border: 2px solid green !important; /* Green border */
+        outline: 2px solid rgba(0, 78, 0, 0.7) !important; /* Proper outline */
+        padding: 8px; /* Adjust padding to balance icon inside */
+        width: 50px; /* Ensures button size matches the icon */
+        height: 40px; /* Same height to fit the lines */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Custom Green Lines for Toggler */
+    .navbar-toggler-icon {
+        background-image: none !important; /* Remove default Bootstrap icon */
+        width: 30px;
+        height: 3px;
+        background-color: greenyellow; /* Green line color */
+        display: block;
+        position: relative;
+    }
+
+    .navbar-toggler-icon::before,
+    .navbar-toggler-icon::after {
+        content: '';
+        background-color: greenyellow; /* Same color for the top & bottom lines */
+        width: 30px;
+        height: 3px;
+        position: absolute;
+        left: 0;
+    }
+
+    .navbar-toggler-icon::before {
+        top: -8px; /* Top line */
+    }
+
+    .navbar-toggler-icon::after {
+        top: 8px; /* Bottom line */
+    }
     </style>
 
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
@@ -35,9 +73,8 @@
             <a class="navbar-brand" href="{{ route('index') }}"><span class="text-primary">Zion</span>-Valley</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport"
-                aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation"
-                style="border: 2px solid green; outline: 2px solid rgba(0, 78, 0, 0.7);">
-                <span class="navbar-toggler-icon" style="background-color: rgba(0, 78, 0);"></span>
+                aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
 
 
