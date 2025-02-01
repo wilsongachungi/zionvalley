@@ -273,13 +273,16 @@ class HomeController extends Controller
 		return redirect()->back()->with('message', 'Thank you! Message sent successfully.');
 	}
 
-	public function show()
+	public function admin_dashboard()
 	{
 
+		$existingTotal = Harambee::sum('harambees');
+				$userCount = User::count();
+				$peopleWithHarambees = Harambee::distinct('sent_to')->count('sent_to');
 		$userCount = User::count();
 		$peopleWithHarambees = Harambee::distinct('sent_to')->count('sent_to');
 
 
-		return view('user.dashboard', compact('userCount', 'peopleWithHarambees'));
+		return view('user.dashboard', compact('userCount', 'peopleWithHarambees','userCount','existingTotal'));
 	}
 }

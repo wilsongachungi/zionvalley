@@ -97,6 +97,10 @@
     <a href="{{ route('credit_harambee') }}" class="btn btn-primary mt-3 ml-1 text-white">
         Credit Harambee
     </a>
+	<a href="{{ route('admin_dashboard') }}" class="btn btn-primary mt-3 ml-1 text-white">
+        Back
+    </a>
+
 
 </body>
 

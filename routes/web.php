@@ -66,7 +66,7 @@ Route::get('/application', [AdminController::class, 'application'])->name('appli
 Route::post('/involved', [HomeController::class, 'involved'])->name('involved');
 Route::post('/job', [HomeController::class, 'job'])->name('job');
 Route::post('/contact_us', [HomeController::class, 'contact_us'])->name('contact_us');
-Route::get('/dashboard', [HomeController::class, 'show'])->name('show');
+Route::get('/dashboard', [HomeController::class, 'admin_dashboard'])->name('admin_dashboard');
 Route::get('/list', [TaskController::class, 'list'])->name('list');
 Route::get('/see_list', [TaskController::class, 'see_list'])->name('see_list');
 Route::post('/storeTask', [TaskController::class, 'storeTask'])->name('storeTask');
