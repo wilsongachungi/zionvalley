@@ -35,8 +35,9 @@
             <a class="navbar-brand" href="{{ route('index') }}"><span class="text-primary">Zion</span>-Valley</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport"
-                aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
-                <span style="background-color: rgba(0, 78, 0)" class="navbar-toggler-icon"></span>
+                aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation"
+                style="border: 2px solid green; outline: 2px solid rgba(0, 78, 0, 0.7);">
+                <span class="navbar-toggler-icon" style="background-color: rgba(0, 78, 0);"></span>
             </button>
 
 
@@ -71,7 +72,6 @@
                         <a class="nav-link" href="{{ route('team') }}">Team</a>
                     </li>
                     @auth
-
                     @else
                         <li style="list-style-type: none;" class="nav-item {{ Request::is('team') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('login') }}">Login</a>

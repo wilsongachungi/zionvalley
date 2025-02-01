@@ -119,5 +119,9 @@ Route::resource('notes', NoteController::class);
 Route::resource('harambees', HarambeesController::class);
 Route::post('/phone-info/store', [PhoneInfoController::class, 'store'])->name('phoneInfo.store');
 
-
+Route::prefix('documents')->controller(DocumentsController::class)->group(function () {
+    Route::post('/store', 'store')->name('documents.store');
+    Route::get('/', 'index')->name('documents.index');
+    Route::get('/{document}', 'show')->name('documents.show');
+});
 
