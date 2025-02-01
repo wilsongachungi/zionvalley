@@ -81,21 +81,21 @@
         $fullName = Auth::user()->name;
         $firstName = explode(' ', $fullName)[0];
         @endphp
-        <div class="centered-container"
+        <div class="centered-container "
             style=" position:absolute;z-index:1000; align-item:center;  justify-content: center; right:20px; margin-top:100px">
             @auth
-            <div class="dropdown">
+            <div class="dropdown mr-2" >
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="userDropdownMenu"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: gray">
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: greenyellow">
                     {{ $firstName }}
                 </button>
-                <div class="dropdown-menu" style="background-color: rgba(0, 78, 0)" aria-labelledby="userDropdownMenu">
-                    <form method="POST" action="{{ route('logout') }}">
+                <div class="dropdown-menu" style="background-color: rgba(0, 78, 0); margin-right: 20;" aria-labelledby="userDropdownMenu">
+                    <form method="POST" class="ml-2" action="{{ route('logout') }}">
                         @csrf
-                        <button type="submit" class="dropdown-item" style="color: gray">Logout</button>
+                        <button type="submit" class="dropdown-item" style="color: greenyellow">Logout</button>
                     </form>
-                    <a href="{{ route('info') }}" style="color: gray" class="dropdown-item">Profile</a>
-                    <a href="{{ route('profile.show') }}" style="color: gray" class="dropdown-item">Change Password</a>
+                    <a href="{{ route('info') }}" style="color: greenyellow" class="dropdown-item">Profile</a>
+                    <a href="{{ route('profile.show') }}" style="color: greenyellow" class="dropdown-item">Password</a>
                 </div>
             </div>
             @endauth
