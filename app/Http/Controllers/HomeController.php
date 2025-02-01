@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\contact;
 use App\Models\Involve;
+use App\Models\Document;
 use App\Models\Harambee;
 use App\Models\Appointment;
 use Illuminate\Http\Request;
@@ -275,14 +276,14 @@ class HomeController extends Controller
 
 	public function admin_dashboard()
 	{
-
+		$documents = Document::all();
 		$existingTotal = Harambee::sum('harambees');
-				$userCount = User::count();
-				$peopleWithHarambees = Harambee::distinct('sent_to')->count('sent_to');
+		$userCount = User::count();
+		$peopleWithHarambees = Harambee::distinct('sent_to')->count('sent_to');
 		$userCount = User::count();
 		$peopleWithHarambees = Harambee::distinct('sent_to')->count('sent_to');
 
 
-		return view('user.dashboard', compact('userCount', 'peopleWithHarambees','userCount','existingTotal'));
+		return view('user.dashboard', compact('userCount','documents', 'peopleWithHarambees','userCount','existingTotal',));
 	}
 }

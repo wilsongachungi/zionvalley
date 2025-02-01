@@ -25,7 +25,7 @@ use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\HarambeeController;
 use App\Http\Controllers\IdentifyController;
 use App\Http\Controllers\Auth\AuthController;
-use App\Http\Controllers\DocumentsController;
+use App\Http\Controllers\Documents\DocumentsController;
 use App\Http\Controllers\HarambeesController;
 use App\Http\Controllers\PhoneInfoController;
 use App\Http\Controllers\payments\MpesaController;
@@ -121,7 +121,8 @@ Route::post('/phone-info/store', [PhoneInfoController::class, 'store'])->name('p
 
 Route::prefix('documents')->controller(DocumentsController::class)->group(function () {
     Route::post('/store', 'store')->name('documents.store');
-    Route::get('/', 'index')->name('documents.index');
-    Route::get('/{document}', 'show')->name('documents.show');
+	Route::get('/{document}', 'show')->name('documents.show');
+	Route::delete('/{document}', 'destroy')->name('documents.destroy'); 
+
 });
 
