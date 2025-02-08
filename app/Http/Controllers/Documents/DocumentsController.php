@@ -31,6 +31,7 @@ class DocumentsController extends Controller
         return back()->with('success', 'Document uploaded successfully!');
     }
 
+
 	public function index()
 	{
 		$documents = Document::all();
@@ -38,6 +39,22 @@ class DocumentsController extends Controller
 		return view('user.dashboard', compact('documents'));
 	}
 
+	public function download(Document $document, Request $request)
+	{
+		$filePath = storage_path('app/public/' . $document->file_path);
+
+		if (!file_exists($filePath)) {
+			return back()->with('error', 'File not found.');
+		}
+
+		if ($request->query('download') == 'true') {
+			return response()->download($filePath, $document->name);
+		}
+
+		return response()->file($filePath, [
+			'Content-Type' => $document->mime_type,
+		]);
+	}
 		public function show(Document $document)
 	{
 		return view('documents.show', compact('document'));
