@@ -14,11 +14,20 @@
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')"
                     required autofocus autocomplete="name" />
             </div>
-             <div>
-                <x-label for="phone" value="{{ __('phone') }}" />
-                <x-input id="phone" class="block mt-1 w-full" type="number" name="phone" :value="old('phone')"
-                    required autofocus autocomplete="phone" />
-            </div>
+			<div>
+				<x-label for="country_code" value="Select Country Code" />
+				<select id="countryDropdown" name="country_code" class="block mt-1 w-full border-gray-300 rounded-md" onchange="updatePhoneCode()">
+					<!-- Countries will be loaded dynamically -->
+				</select>
+			</div>
+
+			<div class="mt-2">
+				<x-label for="phone" value="Phone Number" />
+				<div class="flex">
+					<span id="selectedCode" class="px-3 py-2 bg-gray-200 border rounded-l-md">+254</span>
+					<input id="phone" class="block w-full border-gray-300 rounded-r-md" type="number" name="phone" placeholder="Enter phone number" required autofocus>
+				</div>
+			</div>
             <!-- <div class="mt-4">
                 <x-label for="email" value="{{ __('Email') }}" />
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')"
@@ -26,8 +35,8 @@
             </div> -->
 
 
-            <!-- 
-           
+            <!--
+
 			<div>
                 <x-label for="country" value="{{ __('Country') }}" />
                 <x-input id="phone" class="block mt-1 w-full" type="text" name="country" :value="old('country')"
@@ -96,4 +105,49 @@
             </div>
         </form>
     </x-authentication-card>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			fetchCountries();
+		});
+
+		function fetchCountries() {
+			fetch('/api/countries')
+				.then(response => response.json())
+				.then(data => {
+					let dropdown = document.getElementById('countryDropdown');
+					dropdown.innerHTML = ''; // Clear existing options
+
+					data.forEach(country => {
+						if (country.code) {
+							let option = document.createElement('option');
+							option.value = country.code;
+							option.textContent = `${country.name} (${country.code})`;
+							dropdown.appendChild(option);
+						}
+					});
+
+					// Set default to Kenya
+					dropdown.value = "+254";
+					document.getElementById("selectedCode").textContent = "+254";
+				})
+				.catch(error => console.error("Error fetching countries:", error));
+		}
+
+		function filterCountries() {
+			let input = document.getElementById('countrySearch').value.toLowerCase();
+			let dropdown = document.getElementById('countryDropdown');
+			let options = dropdown.getElementsByTagName('option');
+
+			for (let i = 0; i < options.length; i++) {
+				let text = options[i].textContent.toLowerCase();
+				options[i].style.display = text.includes(input) ? '' : 'none';
+			}
+		}
+
+		function updatePhoneCode() {
+			let selectedOption = document.getElementById('countryDropdown').value;
+			document.getElementById('selectedCode').textContent = selectedOption;
+		}
+		</script>
 </x-guest-layout>

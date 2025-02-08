@@ -18,6 +18,7 @@ use App\Http\Controllers\ImageController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\CountryController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TinpesaController;
@@ -25,10 +26,10 @@ use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\HarambeeController;
 use App\Http\Controllers\IdentifyController;
 use App\Http\Controllers\Auth\AuthController;
-use App\Http\Controllers\Documents\DocumentsController;
 use App\Http\Controllers\HarambeesController;
 use App\Http\Controllers\PhoneInfoController;
 use App\Http\Controllers\payments\MpesaController;
+use App\Http\Controllers\Documents\DocumentsController;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
@@ -117,4 +118,5 @@ Route::prefix('documents')->controller(DocumentsController::class)->group(functi
 	Route::get('/documents/{document}/download','download')->name('documents.download');
 
 });
+
 
