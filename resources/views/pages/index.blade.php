@@ -210,7 +210,7 @@
         </div>
         <br>
 
-        @if (auth()->check() && !session('identity_exists'))
+        {{-- @if (auth()->check() && !session('identity_exists'))
             <div id="newsletterModal" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static"
                 data-keyboard="false">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -235,7 +235,7 @@
                     </div>
                 </div>
             </div>
-        @endif
+        @endif --}}
 
     </div>
     <div class="container content wow zoomIn slow">
