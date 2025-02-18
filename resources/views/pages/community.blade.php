@@ -102,26 +102,36 @@ li {
             <div class="carousel-inner">
                 <div class="carousel-item active text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text" style="color:greenyellow">A leisure and Nature parc. <br>
+                        <p class="custom-carousel-text" style="color:greenyellow">Green Today, Greener Tomorrow <br>
                             Activity center, and Eco resort.
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0" src="../assets/img/Home 1.jpg" alt="Image 1">
+                    <img class="img1 pb-0 mb-0" src="../assets/img/Tree-planting.jpeg" alt="Image 1">
                 </div>
 
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text" style="color:greenyellow">A leisure and Nature parc. <br>
+                        <p class="custom-carousel-text" style="color:greenyellow">Save Trees, Save Life<br>
                             Activity center, and Eco resort.
 
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 2.JPG" alt="Image 2">
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/tree3.jpeg" alt="Image 2">
                 </div>
 
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text" style="color:greenyellow">A leisure and Nature parc. <br>
+                        <p class="custom-carousel-text" style="color:greenyellow">Be a Friend to Nature, It Will Never Betray You <br>
+                            Activity center, and Eco resort.
+
+                        </p>
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/nursery.JPG" alt="Image 2">
+                </div>
+
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+                        <p class="custom-carousel-text" style="color:greenyellow">Plant a Tree, Breathe for Free! <br>
                             Activity center, and Eco resort.
 
                         </p>

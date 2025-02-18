@@ -1,4 +1,9 @@
 @section('css')
+
+    <head>
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+    </head>
     <style>
         p {
             color: antiquewhite;
@@ -179,7 +184,7 @@
                             Activity center, and Eco resort.
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home Carosel.jpg" alt="Image 5">
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Hm.jpg" alt="Image 5">
                 </div>
             </div>
 
@@ -224,7 +229,7 @@
                                         placeholder="1.Describe yourself, 2. who introduced you, 3. your interest in joining, 4. skills offered" required></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
-									<p>Ignore if already Submited</p>
+                                <p>Ignore if already Submited</p>
                             </form>
                         </div>
                     </div>
@@ -495,8 +500,9 @@
                             </h2>
                             <div id="flush-collapseOne" class="accordion-collapse collapse"
                                 aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body"> A Garden of Eden including Rare Tree Arboretum, Botanical Gardens and Seed Banks. <br>
-									A reserve for rare, endangered and medicinal herbs, plants and trees
+                                <div class="accordion-body"> A Garden of Eden including Rare Tree Arboretum, Botanical
+                                    Gardens and Seed Banks. <br>
+                                    A reserve for rare, endangered and medicinal herbs, plants and trees
                                 </div>
                             </div>
                         </div>
@@ -510,12 +516,17 @@
                             </h2>
                             <div id="flush-collapseTwo" class="accordion-collapse collapse"
                                 aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body"> By coming together as a Harambee Village Community - Zion Valley is a living working example to
-									demonstrate that land which is otherwise low value and providing little sustenance to its owners, can
-									now be transformed into an income-generating project that serves the community, the environment, and all
-									its Harambee members.
-									<br>
-									We shall also represent the community in providing solutions to such problems as the lack of a bridge.</div>
+                                <div class="accordion-body"> By coming together as a Harambee Village Community - Zion
+                                    Valley is a living working example to
+                                    demonstrate that land which is otherwise low value and providing little sustenance
+                                    to its owners, can
+                                    now be transformed into an income-generating project that serves the community, the
+                                    environment, and all
+                                    its Harambee members.
+                                    <br>
+                                    We shall also represent the community in providing solutions to such problems as the
+                                    lack of a bridge.
+                                </div>
                             </div>
                         </div>
                         <div class="accordion-item mb-2">
@@ -545,20 +556,18 @@
                             </h2>
                             <div id="flush-collapseFour" class="accordion-collapse collapse"
                                 aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">As neighboring land owners and cash supporters - you are invited to join the Zion Valley
-									Harambee Village. <br>
-									To share in both the ownership and project rewards. <br>
-									To also take ownership of romantic
-									accommodation
-									nights.</div>
+                                <div class="accordion-body">As neighboring land owners and cash supporters - you are
+                                    invited to join the Zion Valley
+                                    Harambee Village. <br>
+                                    To share in both the ownership and project rewards. <br>
+                                    To also take ownership of romantic
+                                    accommodation
+                                    nights.</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            {{-- <div class="intro-container mt-10" style="height: 200px"></div> --}}
-
 
             <script>
                 function toggleDiv(divId) {
@@ -616,6 +625,5 @@
                         });
                     });
                 });
-
             </script>
 </x-base-layout>
