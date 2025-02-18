@@ -89,33 +89,51 @@
                      </div>
                  </div>
                  <div class="row">
-                     <div class="col-sm-12 grid-margin">
-                         <div class="card">
-                             <div class="card-body">
-                                 <h5 style="color: greenyellow">Office Documents</h5>
-                                 <form method="POST" action="{{ route('documents.store') }}"
-                                     enctype="multipart/form-data">
-                                     @csrf
-                                     <div class="form-group">
-                                         <label for="documentFile">Choose File</label>
-                                         <input type="file" name="file" id="documentFile" class="form-control"
-                                             style="color:antiquewhite" accept=".pdf,.docx,.xls,.jpg,.png" required>
-                                     </div>
-                                     <div class="form-group">
-                                         <label for="documentTitle">Document Title</label>
-                                         <input type="text" name="name" id="documentTitle" class="form-control"
-                                             style="color:antiquewhite" placeholder="Enter Document Title" required>
-                                     </div>
-                                     <div class="form-group">
-                                         <label for="description">Description</label>
-                                         <textarea id="description" name="description" class="form-control" style="color:antiquewhite" rows="4"
-                                             placeholder="Enter Document Description"></textarea>
-                                     </div>
-                                     <button type="submit" class="btn btn-primary mt-3">Upload Document</button>
-                                 </form>
-                             </div>
-                         </div>
-                     </div>
+                    <div class="col-sm-12 grid-margin">
+						<div class="card">
+							<div class="card-body">
+								<h5 style="color: greenyellow">Office Documents</h5>
+								<form method="POST" action="{{ route('documents.store') }}" enctype="multipart/form-data" onsubmit="return validatePassword()">
+									@csrf
+
+									<!-- Document upload section -->
+									<div class="form-group">
+										<label for="documentFile">Choose File</label>
+										<input type="file" name="file" id="documentFile" class="form-control" style="color:antiquewhite" accept=".pdf,.docx,.xls,.jpg,.png" required>
+									</div>
+									<div class="form-group">
+										<label for="documentTitle">Document Title</label>
+										<input type="text" name="name" id="documentTitle" class="form-control" style="color:antiquewhite" placeholder="Enter Document Title" required>
+									</div>
+									<div class="form-group">
+										<label for="description">Description</label>
+										<textarea id="description" name="description" class="form-control" style="color:antiquewhite" rows="4" placeholder="Enter Document Description"></textarea>
+									</div>
+
+										<!-- Password field -->
+										<div class="form-group">
+											<label for="password">Enter Password</label>
+											<input type="password" name="password" id="password" class="form-control" style="color:antiquewhite" placeholder="Enter Password" required>
+										</div>
+									<button type="submit" class="btn btn-primary mt-3">Upload Document</button>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<script>
+						function validatePassword() {
+							const password = document.getElementById("password").value;
+							const correctPassword = "zionadmin"; // Replace with your actual password
+
+							if (password !== correctPassword) {
+								alert("Incorrect password!");
+								return false;  // Prevent form submission
+							}
+							return true;  // Allow form submission
+						}
+					</script>
+
 
                      <div class="col-sm-12 grid-margin">
                          <div class="card">
@@ -133,40 +151,66 @@
                                                  <th>Actions</th>
                                              </tr>
                                          </thead>
-                                         <tbody>
-                                             @foreach ($documents as $document)
-                                                 <tr>
-                                                     <td>{{ $loop->iteration }}</td>
-                                                     <td>{{ $document->name }}</td>
-                                                     <td>{{ $document->description }}</td>
-                                                     <td>{{ $document->mime_type }}</td>
-                                                     <td>{{ $document->created_at }}</td>
-                                                     <td>
-                                                         <a href="{{ route('documents.download', $document->id) }}"
-                                                             target="_blank" class="btn btn-primary btn-sm">
-                                                             View
-                                                         </a>
-                                                         <a href="{{ route('documents.download', ['document' => $document->id, 'download' => 'true']) }}"
-                                                             class="btn btn-success btn-sm">
-                                                             Download
-                                                         </a>
-                                                         <form action="{{ route('documents.destroy', $document->id) }}"
-                                                             method="POST" style="display:inline;">
-                                                             @csrf
-                                                             @method('DELETE')
-                                                             <button type="submit"
-                                                                 class="btn btn-danger btn-sm">Delete</button>
-                                                         </form>
-                                                     </td>
-                                                 </tr>
-                                             @endforeach
+										 <tbody>
+											@foreach ($documents as $document)
+												<tr>
+													<td>{{ $loop->iteration }}</td>
+													<td>{{ $document->name }}</td>
+													<td>{{ $document->description }}</td>
+													<td>{{ $document->mime_type }}</td>
+													<td>{{ $document->created_at }}</td>
+													<td>
+														<!-- View button: Calls confirmAction function -->
+														<button onclick="confirmAction('view', {{ $document->id }})" class="btn btn-primary btn-sm">
+															View
+														</button>
+
+														<!-- Download button: Calls confirmAction function -->
+														<button onclick="confirmAction('download', {{ $document->id }})" class="btn btn-success btn-sm">
+															Download
+														</button>
+
+														<!-- Delete button: Standard form submission -->
+														<form action="{{ route('documents.destroy', $document->id) }}" method="POST" style="display:inline;">
+															@csrf
+															@method('DELETE')
+															<button type="submit" class="btn btn-danger btn-sm">Delete</button>
+														</form>
+													</td>
+												</tr>
+											@endforeach
+										</tbody>
+
                                          </tbody>
                                      </table>
                                  </div> <!-- End of .table-responsive -->
                              </div>
                          </div>
                      </div>
-
                  </div>
              </div>
+
+			 <script>
+				function confirmAction(action, documentId) {
+					const password = prompt("Please enter the password:");
+
+					if (password === "zionadmin") {
+						// Action to open the document (view or download)
+						let url = '';
+
+						if (action === 'view') {
+							// Construct the URL for the view action
+							url = `/${documentId}?password=${password}`;
+							window.open(url, "_blank");
+						} else if (action === 'download') {
+							// Construct the URL for the download action
+							url = `/${documentId}?download=true&password=${password}`;
+							window.location.href = url;
+						}
+					} else {
+						alert("Incorrect password! Please try again.");
+					}
+				}
+			</script>
+
  </x-admin-layout>

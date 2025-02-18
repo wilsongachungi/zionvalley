@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CountryController;
+use App\Http\Controllers\Documents\DocumentsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('/countries', [CountryController::class, 'getCountries']);
+
+Route::post('/validate-password', [DocumentsController::class, 'validatePassword']);
+

@@ -1,5 +1,5 @@
 <footer class="page-footer ">
-	<iframe
+	<iframe class="mb-5"
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d405337.2117837472!2d36.77248172362817!3d-0.2232610254951791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18285f5a3b4416ed%3A0x10362ff80734a77f!2sOutspan%20Medical%20College!5e0!3m2!1sen!2ske!4v1739885510651!5m2!1sen!2ske&layer=c"
     width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
     referrerpolicy="no-referrer-when-downgrade">

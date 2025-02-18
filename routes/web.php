@@ -115,7 +115,7 @@ Route::prefix('documents')->controller(DocumentsController::class)->group(functi
     Route::post('/store', 'store')->name('documents.store');
 	Route::get('/{document}', 'show')->name('documents.show');
 	Route::delete('/{document}', 'destroy')->name('documents.destroy');
-	Route::get('/documents/{document}/download','download')->name('documents.download');
+	Route::get('/{document}/download','download')->name('documents.download');
 
 });
 
