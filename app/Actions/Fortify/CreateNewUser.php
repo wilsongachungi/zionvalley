@@ -23,24 +23,25 @@ class CreateNewUser implements CreatesNewUsers
 			'name' => ['required', 'string', 'max:255'],
 			'email' => ['nullable', 'string', 'email', 'max:255', 'unique:users'],
 			'phone' => ['required', 'string', 'max:255'],
+			'country_code' => ['required', 'string', 'max:10'],
 			'password' => $this->passwordRules(),
 			'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
 			'idimage' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
 			'passport' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
 			'avatar' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
 		])->validate();
-		
-		
-		
-		
-	
+
+
+
+
+
 		$avatarPath = null;
-	
+
 		if (request()->hasFile('avatar')) {
 			$avatar = request()->file('avatar');
-			$avatarPath = $avatar->store('avatars', 'public'); 
+			$avatarPath = $avatar->store('avatars', 'public');
 		}
-		
+
 		$userPhone = $input['phone'] ?? null;
 
 
@@ -54,16 +55,17 @@ class CreateNewUser implements CreatesNewUsers
 			}
 		}
 
-		
-	
+
+
 		$user = User::create([
 			'name' => $input['name'],
-			'phone' => $input['phone'],						
+			'phone' => $input['phone'],
+			'country_code' => $input['country_code'],
 			'password' => Hash::make($input['password']),
 			'avatar' => isset($input['avatar']) ? $input['avatar'] : 'default_avatar.jpg',
 		]);
-		
+
 		return $user;
 	}
-	
+
 }

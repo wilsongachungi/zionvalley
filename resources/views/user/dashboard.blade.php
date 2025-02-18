@@ -1,746 +1,621 @@
-<br> <br> <br> <x-admin-layout>
-    <div class="flex justify-center w-full">
+@section('css')
+    <style>
+        p {
+            color: antiquewhite;
+        }
 
-			<div class="main-panel">
-				<div class="content-wrapper">
-					<div class="row">
+        .intro-container {
+            position: relative;
+            color: antiquewhite;
+        }
 
-					</div>
-					<div class="row">
-						<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<div class="row">
-										<div class="col-9">
-											<div class="d-flex align-items-center align-self-start">
-												<h3 class="mb-0">{{ $userCount }}</h3>
+        .green-tint {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 50, 0, 0.5);
+            /* Green with 50% opacity */
+        }
 
-											</div>
-										</div>
-										<div class="col-3">
-											<div class="icon icon-box-success">
-												<span class="mdi mdi-arrow-top-right icon-item"></span>
-											</div>
-										</div>
-									</div>
-									<h6 class="text-muted font-weight-normal">Number of users</h6>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<div class="row">
-										<div class="col-9">
-											<div class="d-flex align-items-center align-self-start">
-												<h3 class="mb-0">{{ $peopleWithHarambees }}</h3>
-												<p class="text-success ms-2 mb-0 font-weight-medium"></p>
-											</div>
-										</div>
-										<div class="col-3">
-											<div class="icon icon-box-success">
-												<span class="mdi mdi-arrow-top-right icon-item"></span>
-											</div>
-										</div>
-									</div>
-									<h6 class="text-muted font-weight-normal">People with Harambees</h6>
-								</div>
-							</div>
+        @media screen and (max-width: 600px) {
+            h3 {
+                font-size: 13px;
+            }
 
-						</div>
-						<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<div class="row">
-										<div class="col-9">
-											<div class="d-flex align-items-center align-self-start">
-												<h3 class="mb-0">{{ $existingTotal }}</h3>
-												<p class="text-danger ms-2 mb-0 font-weight-medium"></p>
-											</div>
-										</div>
-										<div class="col-3">
-											<div class="icon icon-box-danger">
-												<span class="mdi mdi-arrow-bottom-left icon-item"></span>
-											</div>
-										</div>
-									</div>
-									<h6 class="text-muted font-weight-normal">Internal Harambees</h6>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<div class="row">
-										<div class="col-9">
-											<div class="d-flex align-items-center align-self-start">
-												<h3 class="mb-0">Ksh31.53</h3>
-												<p class="text-success ms-2 mb-0 font-weight-medium"></p>
-											</div>
-										</div>
-										<div class="col-3">
-											<div class="icon icon-box-success ">
-												<span class="mdi mdi-arrow-top-right icon-item"></span>
-											</div>
-										</div>
-									</div>
-									<h6 class="text-muted font-weight-normal">Money Through Paybill</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-4 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">Transaction History</h4>
-									<canvas id="transaction-history" class="transaction-chart"></canvas>
-									<div
-										class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
-										<div class="text-md-center text-xl-left">
-											<h6 class="mb-1">Transfer to Paypal</h6>
-											<p class="text-muted mb-0">07 Jan 2019, 09:12AM</p>
-										</div>
-										<div
-											class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-											<h6 class="font-weight-bold mb-0">$236</h6>
-										</div>
-									</div>
-									<div
-										class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
-										<div class="text-md-center text-xl-left">
-											<h6 class="mb-1">Tranfer to Stripe</h6>
-											<p class="text-muted mb-0">07 Jan 2019, 09:12AM</p>
-										</div>
-										<div
-											class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-											<h6 class="font-weight-bold mb-0">$593</h6>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-8 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<div class="d-flex flex-row justify-content-between">
-										<h4 class="card-title mb-1">Open Projects</h4>
-										<p class="text-muted mb-1">Your data status</p>
-									</div>
-									<div class="row">
-										<div class="col-12">
-											<div class="preview-list">
-												<div class="preview-item border-bottom">
-													<div class="preview-thumbnail">
-														<div class="preview-icon bg-primary">
-															<i class="mdi mdi-file-document"></i>
-														</div>
-													</div>
-													<div class="preview-item-content d-sm-flex flex-grow">
-														<div class="flex-grow">
-															<h6 class="preview-subject">Admin dashboard design
-															</h6>
-															<p class="text-muted mb-0">Broadcast web app mockup
-															</p>
-														</div>
-														<div class="me-auto text-sm-right pt-2 pt-sm-0">
-															<p class="text-muted">15 minutes ago</p>
-															<p class="text-muted mb-0">30 tasks, 5 issues </p>
-														</div>
-													</div>
-												</div>
-												<div class="preview-item border-bottom">
-													<div class="preview-thumbnail">
-														<div class="preview-icon bg-success">
-															<i class="mdi mdi-cloud-download"></i>
-														</div>
-													</div>
-													<div class="preview-item-content d-sm-flex flex-grow">
-														<div class="flex-grow">
-															<h6 class="preview-subject">Wordpress Development
-															</h6>
-															<p class="text-muted mb-0">Upload new design</p>
-														</div>
-														<div class="me-auto text-sm-right pt-2 pt-sm-0">
-															<p class="text-muted">1 hour ago</p>
-															<p class="text-muted mb-0">23 tasks, 5 issues </p>
-														</div>
-													</div>
-												</div>
-												<div class="preview-item border-bottom">
-													<div class="preview-thumbnail">
-														<div class="preview-icon bg-info">
-															<i class="mdi mdi-clock"></i>
-														</div>
-													</div>
-													<div class="preview-item-content d-sm-flex flex-grow">
-														<div class="flex-grow">
-															<h6 class="preview-subject">Project meeting</h6>
-															<p class="text-muted mb-0">New project discussion
-															</p>
-														</div>
-														<div class="me-auto text-sm-right pt-2 pt-sm-0">
-															<p class="text-muted">35 minutes ago</p>
-															<p class="text-muted mb-0">15 tasks, 2 issues</p>
-														</div>
-													</div>
-												</div>
-												<div class="preview-item border-bottom">
-													<div class="preview-thumbnail">
-														<div class="preview-icon bg-danger">
-															<i class="mdi mdi-email-open"></i>
-														</div>
-													</div>
-													<div class="preview-item-content d-sm-flex flex-grow">
-														<div class="flex-grow">
-															<h6 class="preview-subject">Broadcast Mail</h6>
-															<p class="text-muted mb-0">Sent release details to
-																team</p>
-														</div>
-														<div class="me-auto text-sm-right pt-2 pt-sm-0">
-															<p class="text-muted">55 minutes ago</p>
-															<p class="text-muted mb-0">35 tasks, 7 issues </p>
-														</div>
-													</div>
-												</div>
-												<div class="preview-item">
-													<div class="preview-thumbnail">
-														<div class="preview-icon bg-warning">
-															<i class="mdi mdi-chart-pie"></i>
-														</div>
-													</div>
-													<div class="preview-item-content d-sm-flex flex-grow">
-														<div class="flex-grow">
-															<h6 class="preview-subject">UI Design</h6>
-															<p class="text-muted mb-0">New application planning
-															</p>
-														</div>
-														<div class="me-auto text-sm-right pt-2 pt-sm-0">
-															<p class="text-muted">50 minutes ago</p>
-															<p class="text-muted mb-0">27 tasks, 4 issues </p>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-4 grid-margin">
-							<div class="card">
-								<div class="card-body">
-									<h5>Revenue</h5>
-									<div class="row">
-										<div class="col-8 col-sm-12 col-xl-8 my-auto">
-											<div class="d-flex d-sm-block d-md-flex align-items-center">
-												<h2 class="mb-0">$32123</h2>
-												<p class="text-success ms-2 mb-0 font-weight-medium">+3.5%</p>
-											</div>
-											<h6 class="text-muted font-weight-normal">11.38% Since last month
-											</h6>
-										</div>
-										<div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-											<i class="icon-lg mdi mdi-codepen text-primary ms-auto"></i>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-4 grid-margin">
-							<div class="card">
-								<div class="card-body">
-									<h5>Sales</h5>
-									<div class="row">
-										<div class="col-8 col-sm-12 col-xl-8 my-auto">
-											<div class="d-flex d-sm-block d-md-flex align-items-center">
-												<h2 class="mb-0">$45850</h2>
-												<p class="text-success ms-2 mb-0 font-weight-medium">+8.3%</p>
-											</div>
-											<h6 class="text-muted font-weight-normal"> 9.61% Since last month
-											</h6>
-										</div>
-										<div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-											<i class="icon-lg mdi mdi-wallet-travel text-danger ms-auto"></i>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-4 grid-margin">
-							<div class="card">
-								<div class="card-body">
-									<h5>Purchase</h5>
-									<div class="row">
-										<div class="col-8 col-sm-12 col-xl-8 my-auto">
-											<div class="d-flex d-sm-block d-md-flex align-items-center">
-												<h2 class="mb-0">$2039</h2>
-												<p class="text-danger ms-2 mb-0 font-weight-medium">-2.1% </p>
-											</div>
-											<h6 class="text-muted font-weight-normal">2.27% Since last month
-											</h6>
-										</div>
-										<div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-											<i class="icon-lg mdi mdi-monitor text-success ms-auto"></i>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row ">
-						<div class="col-12 grid-margin">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">Status</h4>
-									<div class="table-responsive">
-										<table class="table">
-											<thead>
-												<tr>
-													<th>
-														<div class="form-check form-check-muted m-0">
-															<label class="form-check-label">
-																<input type="checkbox"
-																	class="form-check-input">
-															</label>
-														</div>
-													</th>
-													<th> Member Name </th>
-													<th> ID No </th>
-													<th> Harambees </th>
-													<th> Position </th>
-													<th> Start Date </th>
-													<th> Status </th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>
-														<div class="form-check form-check-muted m-0">
-															<label class="form-check-label">
-																<input type="checkbox"
-																	class="form-check-input">
-															</label>
-														</div>
-													</td>
-													<td>
-														<img src="assets/img/logo1.png"
-															alt="image" />
-														<span class="ps-2">kamau</span>
-													</td>
-													<td> 02312 </td>
-													<td> $14,500 </td>
-													<td> Architect</td>
-													<td> 04 Dec 2019 </td>
-													<td>
-														<div class="badge badge-outline-success">Approved</div>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<div class="form-check form-check-muted m-0">
-															<label class="form-check-label">
-																<input type="checkbox"
-																	class="form-check-input">
-															</label>
-														</div>
-													</td>
-													<td>
-														<img src="assets/img/logo1.png"
-															alt="image" />
-														<span class="ps-2">Wilson</span>
-													</td>
-													<td> 02312 </td>
-													<td> $14,500 </td>
-													<td> Website </td>
-													<td> 04 Dec 2019 </td>
-													<td>
-														<div class="badge badge-outline-warning">Pending</div>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<div class="form-check form-check-muted m-0">
-															<label class="form-check-label">
-																<input type="checkbox"
-																	class="form-check-input">
-															</label>
-														</div>
-													</td>
-													<td>
-														<img src="assets/img/logo1.png"
-															alt="image" />
-														<span class="ps-2">Lucy </span>
-													</td>
-													<td> 02312 </td>
-													<td> $14,500 </td>
-													<td> Secretary</td>
-													<td> 04 Dec 2019 </td>
-													<td>
-														<div class="badge badge-outline-danger">Rejected</div>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<div class="form-check form-check-muted m-0">
-															<label class="form-check-label">
-																<input type="checkbox"
-																	class="form-check-input">
-															</label>
-														</div>
-													</td>
-													<td>
-														<img src="assets/img/logo1.png"
-															alt="image" />
-														<span class="ps-2">Peter</span>
-													</td>
-													<td> 02312 </td>
-													<td> $14,500 </td>
-													<td> Chairman </td>
-													<td> 04 Dec 2019 </td>
-													<td>
-														<div class="badge badge-outline-success">Approved</div>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<div class="form-check form-check-muted m-0">
-															<label class="form-check-label">
-																<input type="checkbox"
-																	class="form-check-input">
-															</label>
-														</div>
-													</td>
-													<td>
-														<img src="assets/img/logo1.png"
-															alt="image" />
-														<span class="ps-2">Sallie</span>
-													</td>
-													<td> 02312 </td>
-													<td> $14,500 </td>
-													<td> Treasurer</td>
-													<td> 04 Dec 2019 </td>
-													<td>
-														<div class="badge badge-outline-success">Approved</div>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-6 col-xl-4 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<div class="d-flex flex-row justify-content-between">
-										<h4 class="card-title">Messages</h4>
-										<p class="text-muted mb-1 small">View all</p>
-									</div>
-									<div class="preview-list">
-										<div class="preview-item border-bottom">
-											<div class="preview-thumbnail">
-												<img src="assets/images/faces/face6.jpg" alt="image"
-													class="rounded-circle" />
-											</div>
-											<div class="preview-item-content d-flex flex-grow">
-												<div class="flex-grow">
-													<div
-														class="d-flex d-md-block d-xl-flex justify-content-between">
-														<h6 class="preview-subject">Leonard</h6>
-														<p class="text-muted text-small">5 minutes ago</p>
-													</div>
-													<p class="text-muted">Well, it seems to be working now.</p>
-												</div>
-											</div>
-										</div>
-										<div class="preview-item border-bottom">
-											<div class="preview-thumbnail">
-												<img src="assets/images/faces/face8.jpg" alt="image"
-													class="rounded-circle" />
-											</div>
-											<div class="preview-item-content d-flex flex-grow">
-												<div class="flex-grow">
-													<div
-														class="d-flex d-md-block d-xl-flex justify-content-between">
-														<h6 class="preview-subject">Luella Mills</h6>
-														<p class="text-muted text-small">10 Minutes Ago</p>
-													</div>
-													<p class="text-muted">Well, it seems to be working now.</p>
-												</div>
-											</div>
-										</div>
-										<div class="preview-item border-bottom">
-											<div class="preview-thumbnail">
-												<img src="assets/images/faces/face9.jpg" alt="image"
-													class="rounded-circle" />
-											</div>
-											<div class="preview-item-content d-flex flex-grow">
-												<div class="flex-grow">
-													<div
-														class="d-flex d-md-block d-xl-flex justify-content-between">
-														<h6 class="preview-subject">Ethel Kelly</h6>
-														<p class="text-muted text-small">2 Hours Ago</p>
-													</div>
-													<p class="text-muted">Please review the tickets</p>
-												</div>
-											</div>
-										</div>
-										<div class="preview-item border-bottom">
-											<div class="preview-thumbnail">
-												<img src="assets/images/faces/face11.jpg" alt="image"
-													class="rounded-circle" />
-											</div>
-											<div class="preview-item-content d-flex flex-grow">
-												<div class="flex-grow">
-													<div
-														class="d-flex d-md-block d-xl-flex justify-content-between">
-														<h6 class="preview-subject">Herman May</h6>
-														<p class="text-muted text-small">4 Hours Ago</p>
-													</div>
-													<p class="text-muted">Thanks a lot. It was easy to fix it .
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 col-xl-4 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">Portfolio Slide</h4>
-									<div class="owl-carousel owl-theme full-width owl-carousel-dash portfolio-carousel"
-										id="owl-carousel-basic">
-										<div class="item">
-											<img src="assets/images/dashboard/Rectangle.jpg" alt="">
-										</div>
-										<div class="item">
-											<img src="assets/images/dashboard/Img_5.jpg" alt="">
-										</div>
-										<div class="item">
-											<img src="assets/images/dashboard/img_6.jpg" alt="">
-										</div>
-									</div>
-									<div class="d-flex py-4">
-										<div class="preview-list w-100">
-											<div class="preview-item p-0">
-												<div class="preview-thumbnail">
-													<img src="assets/images/faces/face12.jpg"
-														class="rounded-circle" alt="">
-												</div>
-												<div class="preview-item-content d-flex flex-grow">
-													<div class="flex-grow">
-														<div
-															class="d-flex d-md-block d-xl-flex justify-content-between">
-															<h6 class="preview-subject">CeeCee Bass</h6>
-															<p class="text-muted text-small">4 Hours Ago</p>
-														</div>
-														<p class="text-muted">Well, it seems to be working now.
-														</p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<p class="text-muted">Well, it seems to be working now. </p>
-									<div class="progress progress-md portfolio-progress">
-										<div class="progress-bar bg-success" role="progressbar"
-											style="width: 50%" aria-valuenow="25" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-12 col-xl-4 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">To do list</h4>
-									<div class="add-items d-flex">
-										<input type="text" class="form-control todo-list-input"
-											placeholder="enter task..">
-										<button class="add btn btn-primary todo-list-add-btn">Add</button>
-									</div>
-									<div class="list-wrapper">
-										<ul
-											class="d-flex flex-column-reverse text-white todo-list todo-list-custom">
-											<li>
-												<div class="form-check form-check-primary">
-													<label class="form-check-label">
-														<input class="checkbox" type="checkbox"> Create
-														invoice </label>
-												</div>
-												<i class="remove mdi mdi-close-box"></i>
-											</li>
-											<li>
-												<div class="form-check form-check-primary">
-													<label class="form-check-label">
-														<input class="checkbox" type="checkbox"> Meeting with
-														Alita </label>
-												</div>
-												<i class="remove mdi mdi-close-box"></i>
-											</li>
-											<li class="completed">
-												<div class="form-check form-check-primary">
-													<label class="form-check-label">
-														<input class="checkbox" type="checkbox" checked>
-														Prepare for presentation </label>
-												</div>
-												<i class="remove mdi mdi-close-box"></i>
-											</li>
-											<li>
-												<div class="form-check form-check-primary">
-													<label class="form-check-label">
-														<input class="checkbox" type="checkbox"> Plan weekend
-														outing </label>
-												</div>
-												<i class="remove mdi mdi-close-box"></i>
-											</li>
-											<li>
-												<div class="form-check form-check-primary">
-													<label class="form-check-label">
-														<input class="checkbox" type="checkbox"> Pick up kids
-														from school </label>
-												</div>
-												<i class="remove mdi mdi-close-box"></i>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-12">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">Visitors by Counties</h4>
-									<div class="row">
-										<div class="col-md-5">
-											<div class="table-responsive">
-												<table class="table">
-													<tbody>
-														<tr>
-															<td>
-																<i class="flag-icon flag-icon-ke"></i>
-															</td>
-															<td>Nyeri</td>
-															<td class="text-right"> 1500 </td>
-															<td class="text-right font-weight-medium"> 56.35%
-															</td>
-														</tr>
-														<tr>
-															<td>
-																<i class="flag-icon flag-icon-ke"></i>
-															</td>
-															<td>Nairobi</td>
-															<td class="text-right"> 800 </td>
-															<td class="text-right font-weight-medium"> 33.25%
-															</td>
-														</tr>
-														<tr>
-															<td>
-																<i class="flag-icon flag-icon-ke"></i>
-															</td>
-															<td>Mombasa</td>
-															<td class="text-right"> 760 </td>
-															<td class="text-right font-weight-medium"> 15.45%
-															</td>
-														</tr>
-														<tr>
-															<td>
-																<i class="flag-icon flag-icon-ke"></i>
-															</td>
-															<td>United Kingdom</td>
-															<td class="text-right"> 450 </td>
-															<td class="text-right font-weight-medium"> 25.00%
-															</td>
-														</tr>
-														<tr>
-															<td>
-																<i class="flag-icon flag-icon-ke"></i>
-															</td>
-															<td>Kiambu</td>
-															<td class="text-right"> 620 </td>
-															<td class="text-right font-weight-medium"> 10.25%
-															</td>
-														</tr>
-														<tr>
-															<td>
-																<i class="flag-icon flag-icon-ke"></i>
-															</td>
-															<td>Laikipia</td>
-															<td class="text-right"> 230 </td>
-															<td class="text-right font-weight-medium"> 75.00%
-															</td>
-														</tr>
-													</tbody>
-												</table>
-											</div>
-										</div>
-										<div class="col-md-7">
-											<div id="audience-map" class="vector-map"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+        }
 
+        .custom-carousel-item {
+            position: absolute;
+            text-align: center;
+            background-color: rgba(3, 79, 3, 0.5);
+            padding: 20px;
+        }
+
+        .custom-carousel-text {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        /* Default styles for .welcome-text */
+        .welcome-text {
+            display: none;
+            color: antiquewhite;
+            text-align: center;
+            position: fixed;
+            top: 20px;
+            left: 59%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+
+
+        @media (max-width: 767px) {
+            .welcome-text {
+                display: block;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .welcome-text {
+                display: none;
+            }
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .faq-section {
+            z-index: 1;
+            position: relative;
+            margin-bottom: 300px;
+        }
+
+        .faq-section h3 {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+        }
+
+        .faq-section button {
+            color: antiquewhite;
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        .faq-section .accordion {
+            --bs-accordion-color: rgba(255, 255, 255, 0.568);
+            --bs-accordion-bg: rgb(45, 45, 45);
+            --bs-accordion-border-color: none;
+            --bs-accordion-border-radius: none;
+
+        }
+
+        .faq-section .accordion-item:first-of-type .accordion-button {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        .faq-section .accordion-button:focus {
+            border: none;
+            box-shadow: none;
+
+        }
+
+        .faq-section .accordion-button:hover {
+            background-color: rgb(65, 65, 65);
+        }
+
+        .faq-section .accordion-button:not(.collapsed) {
+            background-color: rgb(255, 255, 255);
+            color: rgb(25, 25, 25);
+        }
+
+        .faq-section .accordion-button::after {
+            content: "+";
+            background-image: none;
+            position: absolute;
+            height: 30px;
+            font-size: 30px;
+            right: 45px;
+            top: 8px;
+
+        }
+
+        .faq-section .accordion-button:not(.collapsed)::after {
+            background-image: none;
+            transform: none;
+            content: "\00d7";
+        }
+    </style>
+@endsection
+
+<x-base-layout>
+    <br>
+    <h5 class="welcome-text">Welcome to Zion</h5>
+    <div class="homepage">
+
+        <div id="carouselExample" class="carousel slide carousel-fade bg-warning" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL<br>
+                            Activity center, and Eco resort.
+                        </p>
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 1.jpg" alt="Image 1">
+                </div>
+
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL,<br>
+                            Activity center, and Eco resort.
+                        </p>
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/riverchania.JPG" alt="Image 3">
+                </div>
+
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL,<br>
+                            Activity center, and Eco resort.
+                        </p>
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 4.JPG" alt="Image 4">
+                </div>
+
+                <div class="carousel-item text-center">
+                    <div class="custom-carousel-item d-flex align-items-center justify-content-center">
+                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL,<br>
+                            Activity center, and Eco resort.
+                        </p>
+                    </div>
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home Carosel.jpg" alt="Image 5">
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+
+        <div class="intro-container"
+            style="background-image: url('../assets/img/Capture11.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: rgb(235, 234, 236);">
+            <div class="green-tint" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+            <p class="line-height-1.5"
+                style="font-size: 1.2em; margin-bottom: 10px; position: relative; text-align: center;">
+                A Garden of Eden including Rare Tree Arboretum, Botanical Gardens and Seed Banks. <br>
+                A reserve for rare, endangered and medicinal herbs, plants and trees.
+            </p>
+        </div>
+        <br>
+
+        @if (auth()->check() && !session('identity_exists'))
+            <div id="newsletterModal" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static"
+                data-keyboard="false">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <p class="modal-title">Hi! {{ auth()->user()->name }}, Nice to have You..</p>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="POST" action="{{ route('identify.store') }}" enctype="multipart/form-data">
+                                @csrf
+                                <div class="form-group">
+                                    <textarea class="form-control" id="identify_data" name="identify_data"
+                                        placeholder="1.Describe yourself, 2. who introduced you, 3. your interest in joining, 4. skills offered" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+									<p>Ignore if already Submited</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endif
+
+    </div>
+    <div class="container content wow zoomIn slow">
+        <div>
+            <div style="line-height:1.5; test-align:left">
+                <h4 style="text-align: center">OPPORTUNITY - POTENTIAL - SOLUTION</h4>
+                Rivers and Valleys of Mt Kenya and Aberdere are eco-system highways of strategic ecological
+                significance. Eco Interconnections are crucial to supporting biodiversity, flora fauna and clean water
+                delivery systems to towns, villages and urban population centers.
+                Steep valley sides are currently neglected, under valued, and provide very little for human sustenance.
+                We have the perfect opportunity for ecosystem regeneration and to create something special and extremely
+                valuable.
+            </div>
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var quill = new Quill('#editor', {
-                theme: 'snow',
-                modules: {
-                    toolbar: [
-                        [{
-                            'header': '1'
-                        }, {
-                            'header': '2'
-                        }],
-                        [{
-                            'list': 'ordered'
-                        }, {
-                            'list': 'bullet'
-                        }],
-                        ['bold', 'italic', 'underline'],
-                        [{
-                            'align': []
-                        }],
-                        // ['link', 'image'],
-                        [{
-                            'color': []
-                        }, {
-                            'background': []
-                        }],
-                        ['clean']
-                    ]
+    <div class=" container content wow zoomIn slow ">
+        <div class=" line-height-1.5 ">
+            <div class="accordions">
+                <div class="accordion" onclick="toggleDiv('div11')">
+                    <h3 class="float-left text-lg">
+                        EcoHub
+                    </h3>
+                    <i class="text-md float-right">&#9660;</i>
+                </div>
+                <div id="div11" class="line-height-1.5 desc text-center">
+                    <p>
+                        Focal centers to inspire and facilitate Afro Centric innovative solutions to a wide range of
+                        Climate and environmental challenges.
+                    </p>
+
+                    <p>
+
+                        Dynamic and inclusive communities of those like-motivated and passionate about the environment
+                        to network, interact and learn.
+                    </p>
+                    <p>
+                        Eco-regenerated surroundings to inspire and communicate an appreciation and understanding of
+                        what it is we are working for.
+                    </p>
+                    <p>
+                        Formal and organic interactions between environmental organizations, agencies, and communities.
+                        Between climate experts and professionals. stakeholders, practitioners, individuals and
+                        entreprenuers with diverse perspectives and expertise
+                    </p>
+                    <p>
+                    <p>
+                        Workshops to actively exchange ideas and knowledge, to share best practices, potential problems
+                        and solutions.
+                    </p>
+                    <p>
+                        Facilitating interaction between the public and private sectors to address systemic barriers,
+                        policies, and regulations to support progress toward environmental sustainability.
+                    </p>
+                    <p>
+                        Active promotion of entrepreneurial opportunities and potential partnerships in the development
+                        and implementation of transformative solutions.
+                    </p>
+                </div>
+
+                <div class="accordions">
+                    <div class="accordion" onclick="toggleDiv('div13')">
+                        <h4 class="float-left text-lg">
+                            Access to Resources and Support:
+                        </h4>
+                        <i class="text-md float-right">&#9660;</i>
+                    </div>
+                    <div id="div13" class="desc text-center">
+                        <p>
+                            Shared office, equipment, facilities and resources.
+                            Venues for seminars, forums, AGM’s, conferences, and workshops.
+                        </p>
+                        <p>
+                            Exhibition promotion and information space from environmental and member organizations.
+                            Latest projects, innovative technologies, best practice and contact info.
+                        </p>
+                        <p>
+                            Product info on areas such as eco-engineering and construction, Renewable energy,
+                            eco-materials, eco products, and services.
+                        </p>
+                        <p>Information dissemination and access to funding support mechanisms, training, and education.
+                        </p>
+                        <p>
+                            Research, testing, and development of innovative solutions and activities related to
+                            environmental technologies, climate mitigation strategies,
+                        </p>
+                    </div>
+                </div>
+
+                <div class="intro-container"
+                    style="background-image: url('../assets/img/1 Capture9.JPG'); background-size: cover; background-position: center; padding: 20px; position: relative; color: antiquewhite;">
+                    <div class="green-tint" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                    </div>
+                    <p class="line-height-1.5"
+                        style="font-size: 1.2em;margin-bottom: 10px; position: relative; text-align: center; ">
+                        The collective aim being to increase the knowledge capacity, development and implementation of
+                        transformative solutions, and sustainable practices at the expert level.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordions">
+                <div class="accordion" onclick="toggleDiv('div1')">
+                    <h3 class="float-left text-lg">
+                        Attractions and Activities
+                    </h3>
+                    <i class="text-md float-right">&#9660;</i>
+                </div>
+                <div id="div1" class="myDiv"
+                    style="display: none ;transition: opacity 0.6s ease;line-height: 1.5;">
+                    <p>Zion Valley main attractions being the natural beauty of the Valley and its
+                        surroundings.
+                    </p>
+                    <p>
+                        The Chania river, two waterfalls, landscaping, indigenous trees, flowers, and nature
+                        based
+                        structures..
+                    </p>
+                    <p>
+                        Recreational activities to include natural swimming ponds, kiddie play areas, nature
+                        walks,
+                        Zip line’s etc. Music events, bar, restaurant, multiple rental cottages, shops and
+                        more.
+                    </p>
+
+                    <p>
+                        Others
+                        may be at Zion for training and to learn from the countless examples of how one can
+                        create
+                        solutions and value from working with nature.
+                    </p>
+
+
+                    <p>
+                        Surrounded by so many charming cottages nestled amongst huge forest trees, we take a
+                        moment
+                        in our chosen resting place, a romantic and secluded marram soil eco lodge. <br>
+                        We prepare ourselves for the evening ahead.
+                    </p>
+                    <p>
+                        As the sun sets and vibrant bars come alive, we venture out for a night of music,
+                        dancing,
+                        happy people and an unforgettable night filled with experiences.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="container content wow zoomIn slow">
+                <div>
+                    <div style="line-height:1.5; test-align:left">
+                        <h4 style="text-align:center">Eco Parc Local Zion Valley CBO’s</h4>
+                        A Garden of Eden with Botanical Gardens and an Arboretum, a visitor and learning center.
+                        <br>
+                        A permanent Eco Showground Including, nature walks, sauna, Yoga, juice bar Earth Oven Pizzas,
+                        fire
+                        pits, camping and accommodations. <br>
+                        Displays and examples to inspire regular people, regular people who didn’t necessarily come to
+                        be educated on Global ‘Climate’ issues, but who came to Zion for some fun and leisure time. <br>
+                        Workshops and activities with information on what they themselves can do at home and at the
+                        Shamba scale and how.
+
+                    </div>
+
+                </div>
+                <div class="accordions">
+                    <div class="accordion" onclick="toggleDiv('div7')">
+                        <h3 class="float-left text-lg">
+                            African appropriate technologies and focused at the Urban and Shamba scale.
+                        </h3>
+                        <i class="text-md float-right">&#9660;</i>
+                    </div>
+                    <div id="div7" class="myDiv"
+                        style="display: none ;transition: opacity 0.6s ease;line-height: 1.5;">
+                        Smart Farming means feeding the soil and its organisms - Before the soil then feeds the crops.
+                        The role of Fungi, Beetles and Worms etc.
+                        Water absorption and retention, how nature recycles biomass into soil manures
+                        How the River/Riparian, the steep valleys and low-value land can become an environmental wonder,
+                        can support a community and give sustainable benefits to everyone.
+                        How jobs can be created by working with nature Simple shamba scale technologies and information
+                        at the local levels for practical action by the maximum numbers of regular people.
+                    </div>
+                </div>
+
+                <div class="accordions">
+                    <div class="accordion" onclick="toggleDiv('div12')">
+                        <h3 class="float-left text-lg">
+                            Zion Valley Global Foundation
+                        </h3>
+                        <i class="text-md float-right">&#9660;</i>
+                    </div>
+                    <div id="div12" class="myDiv"
+                        style="display: none; transition: opacity 0.6s ease; line-height: 1.5;">
+                        <h3 style="text-align: center">Zion Valley Global Foundation</h3>
+                        <p>The potential exists for the Replication of the EcoHub and EcoParc model to be rolled out to
+                            numerous river valley riparian communities across Kenya and even beyond.</p>
+
+                        <h4>EcoHub’s</h4>
+                        <p>Locally placed networking, educational learning and information dissemination centers.</p>
+                        <p>Focal points for eco-orientated groups, organizations, and individuals to facilitate the
+                            development and implementation of transformative solutions.</p>
+
+                        <h4>EcoParc’s</h4>
+                        <p>Self-sustaining revenue model to attract visitors and impart awareness of the abundant value
+                            of nature and the Environment.</p>
+                        <p>Community-level access to eco-building and renewable energy exhibits, demonstrations,
+                            displays, activities, and workshops to communicate what individuals can do for themselves.
+                        </p>
+
+                        <h4>Target Audiences</h4>
+                        <p><strong>EcoHubs:</strong> Eco-related students, specialists, NGOs, entrepreneurs, and
+                            agencies.</p>
+                        <p><strong>EcoParcs:</strong> Regular people who are to be attracted by the ‘leisure’ offerings,
+                            including those who may not be otherwise aware of the ‘Climate’ issues and solutions.</p>
+
+                        <h4>Mission & Vision</h4>
+                        <p>To propagate the Nyeri climate mitigation EcoHub and EcoParc models to numerous local
+                            communities at multiple locations across Kenya/Africa – even beyond.</p>
+
+                        <h4>Strategy</h4>
+                        <p>Develop the CBO framework for the integration of land use and management teams for EcoHub
+                            implementation at the local group level. The CBOs being the legal framework that can protect
+                            the landowners and at the same time bring the use of lands into one collective project.</p>
+                        <p>Refine ‘Plug and Go’ administration frameworks as required for local ‘Franchise’ replication.
+                        </p>
+                        <p>Coherent rules, regulations, and operation manuals for self-supporting, self-operating
+                            EcoHubs.</p>
+
+                        <h4>Plan</h4>
+                        <p>A. Learn from the process of developing the Nyeri project as the first working model test
+                            bed.</p>
+                        <p>B. Test the replication procedures by setting up a second site before considering rolling out
+                            to multiple potential venues.</p>
+                        <h4>Zion Valley Global - The Foundation Central Administration and Stewardship Team/Office</h4>
+                        <p>1. Identify EcoHub locations and communities suitable for replication.</p>
+                        <p>2. Engage local community, identify commitment, and create the local ‘team’.</p>
+                        <p>3. Conduct local meetings to communicate to the landowners that the steep valley slopes are
+                            environmental capital, and that indigenous trees have more value standing than being cut for
+                            charcoal.</p>
+                        <p>4. Provide process and administer the resources (grants/loans) for each local startup.</p>
+                        <p>5. Ongoing stewardship oversight and supervisory relationships with local CBO ‘Facilitator’
+                            teams.</p>
+
+                        <p>Replication of the EcoHub and EcoParc model for maximum climate change mitigation</p>
+                        <p>Message and solutions communicated to thousands of regular people.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-section py-5 mb-200 text-light">
+                <div class="container">
+                    <h3 class="text-center mb-4 ">Frequently asked Questions</h3>
+                    <div class="accordion accordion-flush" style="border: none; background:none;"
+                        id="accordionFlushExample">
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    What is Zion Valley?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body"> A Garden of Eden including Rare Tree Arboretum, Botanical Gardens and Seed Banks. <br>
+									A reserve for rare, endangered and medicinal herbs, plants and trees
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    How does Zion Valley opperate?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body"> By coming together as a Harambee Village Community - Zion Valley is a living working example to
+									demonstrate that land which is otherwise low value and providing little sustenance to its owners, can
+									now be transformed into an income-generating project that serves the community, the environment, and all
+									its Harambee members.
+									<br>
+									We shall also represent the community in providing solutions to such problems as the lack of a bridge.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    Where can find it?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Maxime itaque sint pariatur minima tempora aliquam optio fugit sequi
+                                    inventore, nisi enim. Exercitationem placeat iure sed saepe ex. Esse distinctio,
+                                    vitae sed iure ipsum similique! Ullam minus quo reprehenderit quas explicabo, id
+                                    quod. </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="flush-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    How can i invest in zion and benefits?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">As neighboring land owners and cash supporters - you are invited to join the Zion Valley
+									Harambee Village. <br>
+									To share in both the ownership and project rewards. <br>
+									To also take ownership of romantic
+									accommodation
+									nights.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- <div class="intro-container mt-10" style="height: 200px"></div> --}}
+
+
+            <script>
+                function toggleDiv(divId) {
+                    var div = document.getElementById(divId);
+                    div.style.display = div.style.display === 'none' ? 'block' : 'none';
                 }
-            });
+            </script>
 
-            var form = document.querySelector('form');
-            form.onsubmit = function() {
-                var quillContent = document.querySelector('#quill-content');
-                quillContent.value = quill.root.innerHTML;
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Automatically show the modal if it's supposed to be visible
+                    // $('#newsletterModal').modal('show');
 
-                // Debugging: Check what is being submitted
-                console.log("Submitting Comment:", quillContent.value);
+                    // Ensure form submission works with the Enter key
+                    document.getElementById('identify_data').addEventListener('keydown', function(event) {
+                        if (event.key === 'Enter') {
+                            event.preventDefault();
+                            this.closest('form').submit();
+                        }
+                    });
 
-                if (quillContent.value.trim() === '') {
-                    alert('Comment field cannot be empty.');
-                    return false; // Prevent form submission if the comment is empty
-                }
-            };
-        });
-    </script>
+                    $(document).ready(function() {
+                        let typingTimer;
+                        const typingInterval = 10000; // 10 seconds
 
-</x-admin-layout>
+                        function showNewsletterModal() {
+                            $('#newsletterModal').modal('show');
+                            typingTimer = setTimeout(function() {
+                                $('#newsletterModal').modal('hide');
+                            }, typingInterval); // 10 seconds
+                        }
+
+                        // Show modal initially if not already submitted
+                        showNewsletterModal();
+
+                        // Reset timer if the user is typing
+                        $('#identify_data').on('input', function() {
+                            resetTimer();
+                        });
+
+                        function resetTimer() {
+                            clearTimeout(typingTimer);
+                            typingTimer = setTimeout(function() {
+                                $('#newsletterModal').modal('hide');
+                            }, typingInterval); // 10 seconds
+                        }
+
+                        // Prevent modal from closing if user is typing
+                        $('#identify_data').on('focus', function() {
+                            clearTimeout(typingTimer);
+                        });
+
+                        $('#identify_data').on('blur', function() {
+                            resetTimer();
+                        });
+                    });
+                });
+
+            </script>
+</x-base-layout>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\contact;
 use App\Models\Involve;
+use App\Models\Document;
 use App\Models\Harambee;
 use App\Models\Appointment;
 use Illuminate\Http\Request;
@@ -15,24 +16,23 @@ use Illuminate\Support\Facades\Validator;
 class HomeController extends Controller
 {
 	public function redirect()
-	{
+{
+    if (Auth::id()) {
+        if (Auth::user()->usertype == '0') {
+            return view('user.dashboard');
+        } else {
+			$documents = Document::all();
+            $existingTotal = Harambee::sum('harambees');
+            $userCount = User::count();
+            $peopleWithHarambees = Harambee::distinct('sent_to')->count('sent_to');
+            $involves = Involve::all();
 
-		if (Auth::id()) {
-			if (Auth::user()->usertype == '0') {
-				return view('pages.index');
-			} else {
-
-				$existingTotal = Harambee::sum('harambees');
-				$userCount = User::count();
-				$peopleWithHarambees = Harambee::distinct('sent_to')->count('sent_to');
-
-				$involves = Involve::all();
-				return view('user.dashboard', compact('involves','peopleWithHarambees','userCount','existingTotal'));
-			}
-		} else {
-			return redirect()->back();
-		}
-	}
+            return view('admin.dashboard', compact('involves', 'peopleWithHarambees', 'userCount', 'existingTotal','documents'));
+        }
+    } else {
+        return redirect()->back();
+    }
+}
 
 	public function index()
 	{
@@ -273,13 +273,14 @@ class HomeController extends Controller
 		return redirect()->back()->with('message', 'Thank you! Message sent successfully.');
 	}
 
-	public function show()
-	{
+	public function admin_dashboard()
+{
+    $documents = Document::all();
+    $existingTotal = Harambee::sum('harambees');
+    $userCount = User::count();
+    $peopleWithHarambees = Harambee::distinct('sent_to')->count('sent_to');
 
-		$userCount = User::count();
-		$peopleWithHarambees = Harambee::distinct('sent_to')->count('sent_to');
+    return view('admin.dashboard', compact('userCount', 'documents', 'peopleWithHarambees', 'existingTotal'));
+}
 
-
-		return view('user.dashboard', compact('userCount', 'peopleWithHarambees'));
-	}
 }

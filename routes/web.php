@@ -18,6 +18,7 @@ use App\Http\Controllers\ImageController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\CountryController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TinpesaController;
@@ -25,25 +26,17 @@ use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\HarambeeController;
 use App\Http\Controllers\IdentifyController;
 use App\Http\Controllers\Auth\AuthController;
-use App\Http\Controllers\DocumentsController;
 use App\Http\Controllers\HarambeesController;
 use App\Http\Controllers\PhoneInfoController;
 use App\Http\Controllers\payments\MpesaController;
+use App\Http\Controllers\Documents\DocumentsController;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
-Route::get('home', [HomeController::class, 'redirect']);
 
-Route::middleware([
-	'auth:sanctum',
-	config('jetstream.auth_session'),
-	'verified',
-	GenerateToken::class, // Add the middleware class here
-])->group(function () {
-	Route::get('/dashboard', function () {
-		return view('dashboard');
-	})->name('dashboard');
-});
+Route::get('/home', [HomeController::class, 'redirect'])->name('dashboard');
 
+
+Route::get('/dashboard', [HomeController::class, 'admin_dashboard'])->name('admin_dashboard');
 Route::get('/add_member_view', [AdminController::class, 'addview']);
 Route::get('/registration_view', [AdminController::class, 'registered']);
 Route::post('/upload_members', [AdminController::class, 'upload']);
@@ -66,7 +59,6 @@ Route::get('/application', [AdminController::class, 'application'])->name('appli
 Route::post('/involved', [HomeController::class, 'involved'])->name('involved');
 Route::post('/job', [HomeController::class, 'job'])->name('job');
 Route::post('/contact_us', [HomeController::class, 'contact_us'])->name('contact_us');
-Route::get('/dashboard', [HomeController::class, 'show'])->name('show');
 Route::get('/list', [TaskController::class, 'list'])->name('list');
 Route::get('/see_list', [TaskController::class, 'see_list'])->name('see_list');
 Route::post('/storeTask', [TaskController::class, 'storeTask'])->name('storeTask');
@@ -119,5 +111,12 @@ Route::resource('notes', NoteController::class);
 Route::resource('harambees', HarambeesController::class);
 Route::post('/phone-info/store', [PhoneInfoController::class, 'store'])->name('phoneInfo.store');
 
+Route::prefix('documents')->controller(DocumentsController::class)->group(function () {
+    Route::post('/store', 'store')->name('documents.store');
+	Route::get('/{document}', 'show')->name('documents.show');
+	Route::delete('/{document}', 'destroy')->name('documents.destroy');
+	Route::get('/documents/{document}/download','download')->name('documents.download');
+
+});
 
 

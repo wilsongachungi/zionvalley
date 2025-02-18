@@ -128,7 +128,7 @@ li {
                 </div>
                 <div class="team-col">
                     <div class="user d-flex flex-column col">
-                        <img src="../assets/img/wilsondev.png" alt="">
+                        <img src="../assets/img/wilsondev.png" alt="wilson">
                         <div class="user-info site-color text-center">IT Developments</div>
                     </div>
                     <p class="px-2 line-height-1-5 text-center">

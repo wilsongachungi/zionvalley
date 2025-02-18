@@ -124,7 +124,9 @@
                                             <tbody>
                                                 <tr>
                                                     <td>{{ Auth::user()->name }}</td>
-                                                    <td>{{ Auth::user()->phone }}</td>
+                                                    <td>
+														{{ Auth::user()->country_code ?? '+N/A' }} - {{ Auth::user()->phone }}
+													</td>
                                                     <td>{{ Auth::user()->profileInformation->email ?? 'N/A' }}</td>
                                                     <td>{{ Auth::user()->profileInformation->country ?? 'N/A' }}</td>
                                                     <td>{{ Auth::user()->profileInformation->residence ?? 'N/A' }}</td>
@@ -151,26 +153,28 @@
                                             </tbody>
                                         </table>
 
-
                                         <br>
                                         <h4 class="card-title" style="color:greenyellow">Who you said you are</h4>
                                         <!-- Display Identity Data -->
                                         @if ($identity)
                                             <div>
                                                 <p>{{ $identity->identify_data }}</p>
-                                                <button class="edit-btn"
+                                                <button class="edit-btn btn-primary mb-3"
                                                     data-item-id="{{ $identity->id }}">Edit</button>
                                                 <div class="edit-form" id="edit-form-{{ $identity->id }}"
                                                     style="display: none;">
-                                                    <form action="{{ route('update.identity', $identity->id) }}"
-                                                        method="POST">
-                                                        @csrf
-                                                        @method('PUT')
-                                                        <label for="identify_data">Edit:</label>
-                                                        <input type="text" id="identify_data" name="identify_data"
-                                                            value="{{ $identity->identify_data }}">
-                                                        <button type="submit" class="btn btn-primary">Update</button>
-                                                    </form>
+													<form action="{{ route('update.identity', $identity->id) }}" method="POST">
+														@csrf
+														@method('PUT')
+
+														<div class="form-group">
+															<label for="identify_data">Edit Identity Data</label>
+															<textarea id="identify_data" name="identify_data" style="color:antiquewhite" class="form-control" rows="3">{{ old('identify_data', $identity->identify_data) }}</textarea>
+														</div>
+
+														<button type="submit" class="btn btn-primary">Update</button>
+													</form>
+
                                                 </div>
                                             </div>
                                         @else
@@ -183,15 +187,11 @@
                         </div>
                     </div>
 
-                    <!-- Button trigger modal -->
                     <button type="button" class="dark-shade" style="color:greenyellow" data-toggle="modal"
                         data-target="#uploadModal">
                          Add more information or edit
                     </button>
 
-				
-
-                    <!-- Modal -->
                     <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog"
                         aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
@@ -239,26 +239,26 @@
                                                             <label for="email">Email:</label>
                                                             <input style="color:antiquewhite" type="email"
                                                                 class="form-control" id="email" name="email"
-                                                                value="{{ old('email') }}">
+																value="{{ old('email', Auth::user()->profileInformation->email ?? '') }}">
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="age">Age:</label>
                                                             <input style="color:antiquewhite" type="number"
                                                                 class="form-control" id="age" name="age"
-                                                                value="{{ old('age') }}" required>
+                                                                value="{{ old('age', Auth::user()->profileInformation->age ?? '' )}}" required>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="country">Country:</label>
                                                             <input style="color:antiquewhite" type="text"
                                                                 class="form-control" id="country" name="country"
-                                                                value="{{ old('country') }}" required>
+																value="{{ old('country', Auth::user()->profileInformation->country ?? '') }}">
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="residence"
                                                                 style="color:antiquewhite">Residence:</label>
                                                             <input style="color:antiquewhite" type="text"
                                                                 class="form-control" id="residence" name="residence"
-                                                                value="{{ old('residence') }}" required>
+																value="{{ old('residence', Auth::user()->profileInformation->residence ?? '') }}">
                                                         </div>
                                                         <button type="submit" class="btn btn-primary">Update
                                                             Information</button>
@@ -271,13 +271,11 @@
                                                     @endif
                                                 </div>
 
-                                                <!-- Phone Info Table -->
-                                                <!-- Form inside the modal -->
                                                 <form action="{{ route('phoneInfo.store') }}" method="POST" enctype="multipart/form-data">
                                                     @csrf
                                                     <div class="table-responsive">
                                                         <table class="table">
-                                                            <p>Choose if the number given is whatsapp / mpesa number and
+                                                            <p class="ml-2">Choose if the number given is whatsapp / mpesa number and
                                                                 choose category</p>
                                                             <thead>
                                                                 <tr>
@@ -296,14 +294,12 @@
                                                                         <label for="whatsapp">WhatsApp</label>
                                                                     </td>
 
-                                                                    <!-- M-Pesa Checkbox -->
                                                                     <td>
                                                                         <input type="checkbox" name="is_mpesa"
                                                                             id="mpesa">
                                                                         <label for="mpesa">M-Pesa</label>
                                                                     </td>
 
-                                                                    <!-- Category Dropdown -->
                                                                     <td>
                                                                         <select name="category" id="category"
                                                                             class="form-control text-light">
@@ -325,7 +321,6 @@
                                                             class="btn btn-primary mt-3">Save</button>
                                                     </div>
                                                 </form>
-
                                             </div>
                                         </div>
                                     </div>
@@ -360,7 +355,6 @@
                     const itemId = this.getAttribute('data-item-id');
                     const editForm = document.getElementById(`edit-form-${itemId}`);
 
-                    // Toggle visibility of edit form
                     if (editForm.style.display === 'none') {
                         editForm.style.display = 'block';
                     } else {
@@ -385,5 +379,4 @@
     <script src="admin/assets/js/todolist.js"></script>
     <script src="admin/assets/js/dashboard.js"></script>
 </body>
-
 </html>

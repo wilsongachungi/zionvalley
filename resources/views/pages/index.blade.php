@@ -63,7 +63,6 @@
             }
         }
 
-
         ul {
             list-style-type: none;
             padding: 0;
@@ -74,6 +73,69 @@
             font-size: 1.2em;
             margin-bottom: 10px;
         }
+
+        .faq-section {
+            z-index: 1;
+            position: relative;
+            margin-bottom: 300px;
+        }
+
+        .faq-section h3 {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+        }
+
+        .faq-section button {
+            color: antiquewhite;
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        .faq-section .accordion {
+            --bs-accordion-color: rgba(255, 255, 255, 0.568);
+            --bs-accordion-bg: rgb(45, 45, 45);
+            --bs-accordion-border-color: none;
+            --bs-accordion-border-radius: none;
+
+        }
+
+        .faq-section .accordion-item:first-of-type .accordion-button {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        .faq-section .accordion-button:focus {
+            border: none;
+            box-shadow: none;
+
+        }
+
+        .faq-section .accordion-button:hover {
+            background-color: rgb(65, 65, 65);
+        }
+
+        .faq-section .accordion-button:not(.collapsed) {
+            background-color: rgb(255, 255, 255);
+            color: rgb(25, 25, 25);
+        }
+
+        .faq-section .accordion-button::after {
+            content: "+";
+            background-image: none;
+            position: absolute;
+            height: 30px;
+            font-size: 30px;
+            right: 45px;
+            top: 8px;
+
+        }
+
+        .faq-section .accordion-button:not(.collapsed)::after {
+            background-image: none;
+            transform: none;
+            content: "\00d7";
+        }
     </style>
 @endsection
 
@@ -82,11 +144,11 @@
     <h5 class="welcome-text">Welcome to Zion</h5>
     <div class="homepage">
 
-        <div id="carouselExample" class="carousel slide bg-warning" data-ride="carousel">
+        <div id="carouselExample" class="carousel slide carousel-fade bg-warning" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL. <br>
+                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL<br>
                             Activity center, and Eco resort.
                         </p>
                     </div>
@@ -95,7 +157,7 @@
 
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL. <br>
+                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL,<br>
                             Activity center, and Eco resort.
                         </p>
                     </div>
@@ -104,7 +166,7 @@
 
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL. <br>
+                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL,<br>
                             Activity center, and Eco resort.
                         </p>
                     </div>
@@ -113,7 +175,7 @@
 
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
-                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL. <br>
+                        <p class="custom-carousel-text" style="color:greenyellow">ENVIRONMENTAL,<br>
                             Activity center, and Eco resort.
                         </p>
                     </div>
@@ -158,10 +220,11 @@
                             <form method="POST" action="{{ route('identify.store') }}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
-                                    <textarea class="form-control" id="identify_data" name="identify_data" placeholder="1.Describe yourself, 2. who introduced you, 3. your interest in joining, 4. skills offered"
-                                        required></textarea>
+                                    <textarea class="form-control" id="identify_data" name="identify_data"
+                                        placeholder="1.Describe yourself, 2. who introduced you, 3. your interest in joining, 4. skills offered" required></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
+									<p>Ignore if already Submited</p>
                             </form>
                         </div>
                     </div>
@@ -170,8 +233,6 @@
         @endif
 
     </div>
-
-
     <div class="container content wow zoomIn slow">
         <div>
             <div style="line-height:1.5; test-align:left">
@@ -185,7 +246,6 @@
             </div>
         </div>
     </div>
-
 
     <div class=" container content wow zoomIn slow ">
         <div class=" line-height-1.5 ">
@@ -404,7 +464,6 @@
                             bed.</p>
                         <p>B. Test the replication procedures by setting up a second site before considering rolling out
                             to multiple potential venues.</p>
-
                         <h4>Zion Valley Global - The Foundation Central Administration and Stewardship Team/Office</h4>
                         <p>1. Identify EcoHub locations and communities suitable for replication.</p>
                         <p>2. Engage local community, identify commitment, and create the local ‘team’.</p>
@@ -419,63 +478,144 @@
                         <p>Message and solutions communicated to thousands of regular people.</p>
                     </div>
                 </div>
+            </div>
 
-                <script>
-                    function toggleDiv(divId) {
-                        var div = document.getElementById(divId);
-                        div.style.display = div.style.display === 'none' ? 'block' : 'none';
-                    }
-                </script>
+            <div class="faq-section py-5 mb-200 text-light">
+                <div class="container">
+                    <h3 class="text-center mb-4 ">Frequently asked Questions</h3>
+                    <div class="accordion accordion-flush" style="border: none; background:none;"
+                        id="accordionFlushExample">
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    What is Zion Valley?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body"> A Garden of Eden including Rare Tree Arboretum, Botanical Gardens and Seed Banks. <br>
+									A reserve for rare, endangered and medicinal herbs, plants and trees
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    How does Zion Valley opperate?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body"> By coming together as a Harambee Village Community - Zion Valley is a living working example to
+									demonstrate that land which is otherwise low value and providing little sustenance to its owners, can
+									now be transformed into an income-generating project that serves the community, the environment, and all
+									its Harambee members.
+									<br>
+									We shall also represent the community in providing solutions to such problems as the lack of a bridge.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    Where can find it?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Maxime itaque sint pariatur minima tempora aliquam optio fugit sequi
+                                    inventore, nisi enim. Exercitationem placeat iure sed saepe ex. Esse distinctio,
+                                    vitae sed iure ipsum similique! Ullam minus quo reprehenderit quas explicabo, id
+                                    quod. </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="flush-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    How can i invest in zion and benefits?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">As neighboring land owners and cash supporters - you are invited to join the Zion Valley
+									Harambee Village. <br>
+									To share in both the ownership and project rewards. <br>
+									To also take ownership of romantic
+									accommodation
+									nights.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-                        // Automatically show the modal if it's supposed to be visible
-                        // $('#newsletterModal').modal('show');
+            {{-- <div class="intro-container mt-10" style="height: 200px"></div> --}}
 
-                        // Ensure form submission works with the Enter key
-                        document.getElementById('identify_data').addEventListener('keydown', function(event) {
-                            if (event.key === 'Enter') {
-                                event.preventDefault();
-                                this.closest('form').submit();
-                            }
+
+            <script>
+                function toggleDiv(divId) {
+                    var div = document.getElementById(divId);
+                    div.style.display = div.style.display === 'none' ? 'block' : 'none';
+                }
+            </script>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Automatically show the modal if it's supposed to be visible
+                    // $('#newsletterModal').modal('show');
+
+                    // Ensure form submission works with the Enter key
+                    document.getElementById('identify_data').addEventListener('keydown', function(event) {
+                        if (event.key === 'Enter') {
+                            event.preventDefault();
+                            this.closest('form').submit();
+                        }
+                    });
+
+                    $(document).ready(function() {
+                        let typingTimer;
+                        const typingInterval = 10000; // 10 seconds
+
+                        function showNewsletterModal() {
+                            $('#newsletterModal').modal('show');
+                            typingTimer = setTimeout(function() {
+                                $('#newsletterModal').modal('hide');
+                            }, typingInterval); // 10 seconds
+                        }
+
+                        // Show modal initially if not already submitted
+                        showNewsletterModal();
+
+                        // Reset timer if the user is typing
+                        $('#identify_data').on('input', function() {
+                            resetTimer();
                         });
 
-                        $(document).ready(function() {
-                            let typingTimer;
-                            const typingInterval = 10000; // 10 seconds
+                        function resetTimer() {
+                            clearTimeout(typingTimer);
+                            typingTimer = setTimeout(function() {
+                                $('#newsletterModal').modal('hide');
+                            }, typingInterval); // 10 seconds
+                        }
 
-                            function showNewsletterModal() {
-                                $('#newsletterModal').modal('show');
-                                typingTimer = setTimeout(function() {
-                                    $('#newsletterModal').modal('hide');
-                                }, typingInterval); // 10 seconds
-                            }
+                        // Prevent modal from closing if user is typing
+                        $('#identify_data').on('focus', function() {
+                            clearTimeout(typingTimer);
+                        });
 
-                            // Show modal initially if not already submitted
-                            showNewsletterModal();
-
-                            // Reset timer if the user is typing
-                            $('#identify_data').on('input', function() {
-                                resetTimer();
-                            });
-
-                            function resetTimer() {
-                                clearTimeout(typingTimer);
-                                typingTimer = setTimeout(function() {
-                                    $('#newsletterModal').modal('hide');
-                                }, typingInterval); // 10 seconds
-                            }
-
-                            // Prevent modal from closing if user is typing
-                            $('#identify_data').on('focus', function() {
-                                clearTimeout(typingTimer);
-                            });
-
-                            $('#identify_data').on('blur', function() {
-                                resetTimer();
-                            });
+                        $('#identify_data').on('blur', function() {
+                            resetTimer();
                         });
                     });
-                </script>
-            </div>
+                });
+
+            </script>
 </x-base-layout>

@@ -21,6 +21,9 @@
                         Harambees
                     </th>
                     <th scope="col" class="px-6 py-3">
+                        Comments
+                    </th>
+                    <th scope="col" class="px-6 py-3">
                         Date
                     </th>
                     <th scope="col" class="px-6 py-3">
@@ -40,6 +43,9 @@
                         <!-- Show the first Harambee entry -->
                         <td class="px-6 py-4">
                             {{ $userHarambees->first()->harambees }}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{ $userHarambees->first()->comment ?? 'N/A' }}
                         </td>
                         <td class="px-6 py-4">
                             {{ $userHarambees->first()->created_at }}
@@ -65,6 +71,9 @@
                                 {{ $harambee->harambees }}
                             </td>
                             <td class="px-6 py-4">
+                                {{ $harambee->comment ?? 'N/A' }}
+                            </td>
+                            <td class="px-6 py-4">
                                 {{ $harambee->created_at }}
                             </td>
                             <td class="text-secondary ">
@@ -88,6 +97,10 @@
     <a href="{{ route('credit_harambee') }}" class="btn btn-primary mt-3 ml-1 text-white">
         Credit Harambee
     </a>
+	<a href="{{ route('admin_dashboard') }}" class="btn btn-primary mt-3 ml-1 text-white">
+        Back
+    </a>
+
 
 </body>
 
