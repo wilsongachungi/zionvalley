@@ -17,6 +17,19 @@
     <!-- Quill Better Table JS -->
     <script src="https://cdn.jsdelivr.net/npm/quill-better-table@1.2.7/dist/quill-better-table.min.js"></script>
     <title>Edit Note</title>
+	<style>
+		body {
+			background-color: #1e1e2f;
+			color: antiquewhite; 
+		}
+
+		.container {
+			background-color: #121214;
+			padding: 20px;
+			border-radius: 8px;
+		}
+	</style>
+
 </head>
 
 
