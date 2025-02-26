@@ -12,7 +12,7 @@
                     <tr>
                         <th>Title</th>
                         <th>Content</th>
-                        <th>Date Created</th>
+                        <th>Date Updated</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -21,7 +21,7 @@
                         <tr>
                             <td class="text-secondary">{{ $note->title }}</td>
                             <td class="text-secondary">{{ Str::limit($note->content, 50) }}</td>
-                            <td class="text-secondary">last updated - {{ $note->updated_at->format('d/m/Y H:i') }}</td>
+                            <td class="text-secondary">{{ $note->updated_at->format('d/m/Y H:i') }}</td>
                             <td class="text-secondary ">
 
                                 <a href="{{ route('notes.edit', $note->id) }}" class="btn btn-warning btn-sm">Edit</a>
