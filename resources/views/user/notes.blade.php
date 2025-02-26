@@ -21,9 +21,9 @@
                         <tr>
                             <td class="text-secondary">{{ $note->title }}</td>
                             <td class="text-secondary">{{ Str::limit($note->content, 50) }}</td>
-                            <td class="text-secondary">{{ $note->created_at->format('d/m/Y H:i') }}</td>
+                            <td class="text-secondary">last updated{{ $note->updated_at->format('d/m/Y H:i') }}</td>
                             <td class="text-secondary ">
-                             
+
                                 <a href="{{ route('notes.edit', $note->id) }}" class="btn btn-warning btn-sm">Edit</a>
                                 <form action="{{ route('notes.destroy', $note->id) }}" method="POST" style="display:inline;">
                                     @csrf
