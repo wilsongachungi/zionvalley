@@ -40,10 +40,16 @@
                 <div id="editor" style="min-height: 300px;">{!! $notes->content !!}</div>
             </div>
 
-            <button type="submit" class="btn btn-warning btn-sm">Save</button>
-        </form>
+			<button type="submit" style="background-color: #f39c12; color: white; padding: 5px 10px; border: none; border-radius: 4px; font-size: 14px;">
+				Save
+			</button>
 
-        <a href="{{ route('notes.index') }}" class="btn btn-primary mt-3">Back</a>
+			<a href="{{ route('notes.index') }}" style="background-color: #007bff; color: white; padding: 5px 10px; text-decoration: none; border-radius: 4px; display: inline-block; margin-top: 10px;">
+				Back
+			</a>
+			</form>
+
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
