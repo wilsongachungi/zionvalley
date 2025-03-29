@@ -94,7 +94,8 @@ li {
                         A member of the Executive office to provide the economic and strategic planning. The direction
                         and
                         designs of the Zion Valley project <br>
-                        <a href="{{ route('architect') }}">Architect CV</a>
+                        <a href="{{ route('architect') }}">Architect CV</a> <br>
+                        <a href="https://tmsthermalstore.com/" target="__blank">Uk website</a>
                     </p>
                 </div>
                 <div class="team-col">
