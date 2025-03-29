@@ -16,11 +16,12 @@
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
     <!-- Quill Better Table JS -->
     <script src="https://cdn.jsdelivr.net/npm/quill-better-table@1.2.7/dist/quill-better-table.min.js"></script>
+
     <title>Edit Note</title>
 	<style>
 		body {
-			background-color: #1e1e2f;
-			color: antiquewhite; 
+			background-color: rgb(1, 46, 1);
+			color: antiquewhite;
 		}
 
 		.container {
@@ -74,53 +75,27 @@
         var quill = new Quill('#editor', {
             theme: 'snow',
             modules: {
-                toolbar: [
-                    [{
-                        'header': [1, 2, 3, false]
-                    }],
-                    ['bold', 'italic', 'underline', 'strike'], // toggled buttons
-                    ['blockquote', 'code-block'],
-                    [{
-                        'list': 'ordered'
-                    }, {
-                        'list': 'bullet'
-                    }],
-                    [{
-                        'script': 'sub'
-                    }, {
-                        'script': 'super'
-                    }],
-                    [{
-                        'indent': '-1'
-                    }, {
-                        'indent': '+1'
-                    }],
-                    [{
-                        'direction': 'rtl'
-                    }],
-                    [{
-                        'size': ['small', false, 'large', 'huge']
-                    }],
-                    [{
-                        'header': [1, 2, 3, 4, 5, 6, false]
-                    }],
-                    [{
-                        'color': []
-                    }, {
-                        'background': []
-                    }],
-                    [{
-                        'font': []
-                    }],
-                    [{
-                        'align': []
-                    }],
-                    ['clean'],
-                    ['link', 'image', 'video'],
-                    ['table'] // Add table button to toolbar
-                ],
-            }
-        });
+				toolbar: [
+                [{ 'header': [1, 2, 3, false] }],
+                ['bold', 'italic', 'underline', 'strike'],
+                ['blockquote', 'code-block'],
+                [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+                [{ 'script': 'sub' }, { 'script': 'super' }],
+                [{ 'indent': '-1' }, { 'indent': '+1' }],
+                [{ 'direction': 'rtl' }],
+                [{ 'size': ['small', false, 'large', 'huge'] }],
+                [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+                [{ 'color': [] }, { 'background': [] }],
+                [{ 'font': [] }],
+                [{ 'align': [] }],
+                ['clean'],
+                ['link', 'image', 'video'],
+                ['table'] // ✅ Add table button
+            ],
+            table: true // ✅ Enable table module
+        }
+    });
+
 
         // Set the content of Quill editor with the existing note content
         quill.clipboard.dangerouslyPasteHTML(document.getElementById('content').value);

@@ -106,7 +106,7 @@ li {
                             Activity center, and Eco resort.
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0  d-block w-100" src="../assets/img/nursery.JPG" alt="Image 1">
+                    <img class="img1 pb-0 mb-0  d-block w-100" src="{{ asset('assets/img/nursery.JPG') }}" alt="Image 1">
                 </div>
 
                 <div class="carousel-item text-center">
@@ -116,7 +116,7 @@ li {
 
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/tree3.jpeg" alt="Image 2">
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="{{ asset('assets/img/tree3.jpeg') }}" alt="Image 2">
                 </div>
 
                 <div class="carousel-item text-center">
@@ -126,7 +126,7 @@ li {
 
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/nursery.JPG" alt="Image 3">
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="{{ asset('assets/img/Harambee.jpg') }}" alt="Image 3">
                 </div>
 
                 <div class="carousel-item text-center">
@@ -136,7 +136,7 @@ li {
 
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 3.jpg" alt="Image 3">
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="{{ asset('assets/img/Home 3.jpg') }}" alt="Image 3">
                 </div>
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">
@@ -145,7 +145,7 @@ li {
 
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 4.JPG" alt="Image 3">
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="{{ asset('assets/img/Home 4.JPG') }}" alt="Image 3">
                 </div>
                 <div class="carousel-item text-center">
                     <div class="custom-carousel-item d-flex align-items-center justify-content-center">

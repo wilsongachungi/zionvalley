@@ -1,9 +1,9 @@
 <footer class="page-footer ">
-	<iframe class="mb-5"
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d405337.2117837472!2d36.77248172362817!3d-0.2232610254951791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18285f5a3b4416ed%3A0x10362ff80734a77f!2sOutspan%20Medical%20College!5e0!3m2!1sen!2ske!4v1739885510651!5m2!1sen!2ske&layer=c"
-    width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-</iframe>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5026.720260187163!2d36.927632091796724!3d-0.42124868363371337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18285f9c9c6b5ed5%3A0x8dab8033d8ec7778!2szion%20valley%20CBO!5e0!3m2!1sen!2ske!4v1740561310453!5m2!1sen!2ske"
+            width="100%" height="500"style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </iframe>
 
     <div class="container">
         <div class="row px-md-3">
@@ -15,7 +15,7 @@
                     <li><a href="/projects">Projects</a></li>
                 </ul>
             </div>
-			<div class="col-sm-6 col-lg-3 py-3">
+            <div class="col-sm-6 col-lg-3 py-3">
                 <h5 style="color: greenyellow">Social Media</h5>
                 <div class="footer-sosmed mt-3">
                     <a href="#" target="_blank"><span class="mai-logo-facebook-f"></span></a>
@@ -45,7 +45,8 @@
 
         <hr>
 
-        <p id="copyright" class="text-center">Copyright &copy; 2023 <a href="#" target="_blank">zionvalley</a>. All
+        <p id="copyright" class="text-center">Copyright &copy; 2023 <a href="#" target="_blank">zionvalley</a>.
+            All
             right reserved</p>
     </div>
 

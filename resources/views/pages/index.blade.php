@@ -157,7 +157,8 @@
                             Activity center, and Eco resort.
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 1.jpg" alt="Image 1">
+					<img class="img1 pb-0 mb-0 d-block w-100" src="{{ asset('assets/img/Home 1.jpg') }}" alt="Image 1">
+
                 </div>
 
                 <div class="carousel-item text-center">
@@ -166,7 +167,7 @@
                             Activity center, and Eco resort.
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/riverchania.JPG" alt="Image 3">
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="{{ asset('assets/img/riverchania.JPG') }}" alt="Image 3">
                 </div>
 
                 <div class="carousel-item text-center">
@@ -175,7 +176,7 @@
                             Activity center, and Eco resort.
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 4.JPG" alt="Image 4">
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="{{ asset('assets/img/Home 4.JPG') }}" alt="Image 4">
                 </div>
 
                 <div class="carousel-item text-center">
@@ -184,7 +185,7 @@
                             Activity center, and Eco resort.
                         </p>
                     </div>
-                    <img class="img1 pb-0 mb-0 d-block w-100" src="../assets/img/Home 2.JPG" alt="Image 5">
+                    <img class="img1 pb-0 mb-0 d-block w-100" src="{{ asset('assets/img/Home 2.JPG') }}" alt="Image 5">
                 </div>
             </div>
 
@@ -210,7 +211,7 @@
         </div>
         <br>
 
-        {{-- @if (auth()->check() && !session('identity_exists'))
+        @if (auth()->check() && !session('identity_exists'))
             <div id="newsletterModal" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static"
                 data-keyboard="false">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -235,7 +236,7 @@
                     </div>
                 </div>
             </div>
-        @endif --}}
+        @endif
 
     </div>
     <div class="container content wow zoomIn slow">
