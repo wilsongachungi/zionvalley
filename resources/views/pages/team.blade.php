@@ -57,6 +57,11 @@ li {
                         Administrative tasks in relation to the CBO and to ensure that all CBO meetings and minutes are
                         well documented and recorde
                     </p>
+                    <p class="px-2 line-height-1-5 text-center">
+                        Contact: +254 723 007 512 
+                        <br>
+                        Email: info@ZionValleyCBO.org
+                    </p>
                 </div>
                 <div class="team-col">
                     <div class="user d-flex flex-column col">

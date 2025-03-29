@@ -39,7 +39,7 @@
                 <p class="footer-link mt-2">Zion Valley CBO No 19 Gatemu Building, Kenyatta road, Nyeri Town - Opposite
                     Toyota</p>
                 <a href="#" class="footer-link">+254 723 007 512</a>
-                <a href="#" class="footer-link">info@zionvalleycbo.co.ke</a>
+                <a href="#" class="footer-link">info@ZionvalleyCBO.org</a>
             </div>
         </div>
 
