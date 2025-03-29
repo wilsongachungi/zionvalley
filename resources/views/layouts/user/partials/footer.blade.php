@@ -27,7 +27,7 @@
                 <h5 style="color: greenyellow">Our partner</h5>
                 <ul class="footer-menu">
                     <li><a href="{{ route('architect') }}">Zionvalley Architects</a></li>
-                    <li><a href="#">Wigitech web</a></li>
+                    <li><a href="www.techspheresytemssolution.co.ke">Techsphere Systems Solution</a></li>
                     <li><a
                             href="https://www.google.com/search?sa=X&sca_esv=28539f6bd3358b60&biw=360&bih=666&sxsrf=ACQVn0-UWo9V8r4xACJEe3w0jfRLsXdocg%3A1712828383767&q=Global%20green%20plants%20centre&ludocid=2189355778132343318&ibp=gwp%3B0%2C7&lsig=AB86z5VTyhD-s7qsmI7htaUEwV2x&kgs=864aefdd3dc2cc5d&shndl=-1&source=sh%2Fx%2Floc%2Fact%2Fm4%2F2#lkt=LocalPoiPhotos&lpg=cid:CgIgAQ%3D%3D">Globalgreen
                             Plant Center</a></li>
@@ -38,8 +38,8 @@
                 <h5 style="color: greenyellow">Contact</h5>
                 <p class="footer-link mt-2">Zion Valley CBO No 19 Gatemu Building, Kenyatta road, Nyeri Town - Opposite
                     Toyota</p>
-                <a href="#" class="footer-link">+254 792 668219</a>
-                <a href="#" class="footer-link">zionvalleykenya@gmail.com</a>
+                <a href="#" class="footer-link">+254 723 007 512</a>
+                <a href="#" class="footer-link">info@zionvalleycbo.co.ke</a>
             </div>
         </div>
 
