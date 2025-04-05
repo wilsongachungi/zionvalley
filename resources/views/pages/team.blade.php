@@ -1,36 +1,37 @@
 @section('css')
-<style>
-@media screen and (max-width:770px) {
-    .below-team img {
-        height: 100%;
-    }
-}
+    <style>
+        @media screen and (max-width:770px) {
+            .below-team img {
+                height: 100%;
+            }
+        }
 
-@media (max-width: 767px) {
-    .welcome-text {
-        display: block;
-        color: antiquewhite;
-        text-align: center;
-    }
-}
+        @media (max-width: 767px) {
+            .welcome-text {
+                display: block;
+                color: antiquewhite;
+                text-align: center;
+            }
+        }
 
 
-@media (min-width: 768px) {
-    .welcome-text {
-        display: none;
-    }
-}
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
+        @media (min-width: 768px) {
+            .welcome-text {
+                display: none;
+            }
+        }
 
-li {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-</style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+    </style>
 @endsection
 <x-base-layout>
     <br>
@@ -58,7 +59,7 @@ li {
                         well documented and recorde
                     </p>
                     <p class="px-2 line-height-1-5 text-center">
-                        Contact: +254 723 007 512 
+                        Contact: +254 723 007 512
                         <br>
                         Email: info@ZionValleyCBO.org
                     </p>
@@ -74,7 +75,8 @@ li {
                         record keeping and reporting.
                     </p>
                 </div>
-                <img class="below-team" style="width: 100%; height:30%; " src="../assets/img/unnamed.png" alt="">
+                <img class="below-team" style="width: 100%; height:30%; " src="../assets/img/unnamed.png"
+                    alt="">
                 <div class="team-col">
                     <div class="user d-flex flex-column col">
                         <img src="../assets/img/19 slope.jpg" alt="">
@@ -143,5 +145,44 @@ li {
                     </p>
                 </div>
             </div>
+    </section>
+    <br>
+    <h5 class="welcome-text">Team</h5>
+    <section class="my-4">
+        <h4 class="text-center mb-3">Affiliates</h3>
+            <div class="team-row">
+                <div class="team-col">
+                    <div class="user d-flex flex-column col">
+                        <img src="../assets/img/gregorymaina.png" alt="">
+                        <div class="user-info site-color text-center"> Gregory Maina </div>
+                    </div>
+                    <p class="px-2 line-height-1-5 text-center">
+                        Indigenous tree and bio diversity partnered expert.
+                        Laikipia environment and bio diversity conservation CBO
+                    </p>
+                </div>
+                <div class="team-col">
+                    <div class="user d-flex flex-column col">
+                        <img src="../assets/img/globalgreen.jpg" alt="">
+                        <div class="user-info site-color text-center">GlobalGreen Plant Center</div>
+                    </div>
+                    <p class="px-2 line-height-1-5 text-center">
+                        GlobalGreen Plant Center offers flowers and indigenous plants, promoting sustainability and
+                        biodiversity. It’s a hub for eco-conscious gardeners and nature lovers seeking native greenery
+                        and expert plant care guidance.
+                    </p>
+                </div>
+                <div class="team-col">
+                    <div class="user d-flex flex-column col">
+                        <img src="" alt="">
+                        <div class="user-info site-color text-center">Techsphere Systems solution</div>
+                    </div>
+                    <p class="px-2 line-height-1-5 text-center">
+                        Techsphere System Solution offers expert system development and website design services,
+                        providing customized digital solutions to enhance business efficiency, online presence, and
+                        growth in today’s dynamic and tech-driven environment.<br>
+                        <a href="https://techspheresystemssolution.co.ke/" target="__blank">Techshere Systems</a>
+                    </p>
+                </div>
     </section>
 </x-base-layout>
