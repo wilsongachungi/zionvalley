@@ -136,7 +136,7 @@
                 </div>
                 <div class="team-col">
                     <div class="user d-flex flex-column col">
-                        <img src="../assets/img/wilsondev.png" alt="">
+                        <img src="../assets/img/wilsondev.png" alt="wilson">
                         <div class="user-info site-color text-center">IT Developments</div>
                     </div>
                     <p class="px-2 line-height-1-5 text-center">
@@ -151,28 +151,28 @@
     <section class="my-4">
         <h4 class="text-center mb-3">Affiliates</h3>
             <div class="team-row">
-                <div class="team-col">
-                    <div class="user d-flex flex-column col">
-                        <img src="{{ url('assets/img/CW.jpg') }}"
-						alt="">
-                        <div class="user-info site-color text-center"> Gregory Maina </div>
-                    </div>
-                    <p class="px-2 line-height-1-5 text-center">
-                        Indigenous tree and bio diversity partnered expert.
-                        Laikipia environment and bio diversity conservation CBO
-                    </p>
-                </div>
-                <div class="team-col">
-                    <div class="user d-flex flex-column col">
-                        <img src="{{ url('assets/img/globalgreen.jpg') }}" alt="GlobalGreen">
-                        <div class="user-info site-color text-center">GlobalGreen Plant Center</div>
-                    </div>
-                    <p class="px-2 line-height-1-5 text-center">
-                        GlobalGreen Plant Center offers flowers and indigenous plants, promoting sustainability and
-                        biodiversity. It’s a hub for eco-conscious gardeners and nature lovers seeking native greenery
-                        and expert plant care guidance.
-                    </p>
-                </div>
+				<div class="team-col">
+					<div class="user d-flex flex-column col">
+						<img src="{{ asset('assets/img/gregorymaina.png') }}" alt="Gregory">
+						<div class="user-info site-color text-center">Gregory Maina</div>
+					</div>
+					<p class="px-2 line-height-1-5 text-center">
+						Indigenous tree and bio diversity partnered expert.
+						Laikipia environment and bio diversity conservation CBO
+					</p>
+				</div>
+				<div class="team-col">
+					<div class="user d-flex flex-column col">
+						<img src="{{ asset('assets/img/globalgreen.jpg') }}" alt="GlobalGreen">
+						<div class="user-info site-color text-center">GlobalGreen Plant Center</div>
+					</div>
+					<p class="px-2 line-height-1-5 text-center">
+						GlobalGreen Plant Center offers flowers and indigenous plants, promoting sustainability and
+						biodiversity. It’s a hub for eco-conscious gardeners and nature lovers seeking native greenery
+						and expert plant care guidance.
+					</p>
+				</div>
+
                 <div class="team-col">
                     <div class="user d-flex flex-column col">
                         <img src="" alt="">
