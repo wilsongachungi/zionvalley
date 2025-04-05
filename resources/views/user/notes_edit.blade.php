@@ -46,13 +46,14 @@
                 <input type="text" name="title" id="title" value="{{ $notes->title }}" class="form-control">
             </div>
 
-            <div class="mb-3">
-                <label for="content" class="form-label">Content</label>
-                <!-- Hidden input to store the actual HTML content -->
-                <input type="hidden" name="content" id="content" value="{{ $notes->content }}">
-                <!-- Quill editor container -->
-                <div id="editor" style="min-height: 300px;">{!! $notes->content !!}</div>
-            </div>
+			<div class="mb-3">
+				<label for="content" class="form-label">Content</label>
+				<!-- Hidden input to store the actual HTML content -->
+				<input type="hidden" name="content" id="content" value="{{ $notes->content }}">
+				<!-- Quill editor container (leave it empty initially) -->
+				<div id="editor" style="min-height: 300px;"></div>
+			</div>
+
 
 			<button type="submit" style="background-color: #f39c12; color: white; padding: 5px 10px; border: none; border-radius: 4px; font-size: 14px;">
 				Save
@@ -66,46 +67,46 @@
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+7HAuoFY5JYlER44pV79G5C1I1bB8" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-    <script>
-        // Initialize Quill editor with a custom toolbar and table functionality
-        var quill = new Quill('#editor', {
-            theme: 'snow',
-            modules: {
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+7HAuoFY5JYlER44pV79G5C1I1bB8" crossorigin="anonymous">
+</script>
+
+<!-- JavaScript to initialize Quill and handle content update -->
+<script>
+	window.onload = function () {
+		// Initialize Quill editor
+		var quill = new Quill('#editor', {
+			theme: 'snow',
+			modules: {
 				toolbar: [
-                [{ 'header': [1, 2, 3, false] }],
-                ['bold', 'italic', 'underline', 'strike'],
-                ['blockquote', 'code-block'],
-                [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-                [{ 'script': 'sub' }, { 'script': 'super' }],
-                [{ 'indent': '-1' }, { 'indent': '+1' }],
-                [{ 'direction': 'rtl' }],
-                [{ 'size': ['small', false, 'large', 'huge'] }],
-                [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-                [{ 'color': [] }, { 'background': [] }],
-                [{ 'font': [] }],
-                [{ 'align': [] }],
-                ['clean'],
-                ['link', 'image', 'video'],
-                ['table'] // ✅ Add table button
-            ],
-            table: true // ✅ Enable table module
-        }
-    });
+					[{ 'header': [1, 2, 3, false] }],
+					['bold', 'italic', 'underline', 'strike'],
+					['blockquote', 'code-block'],
+					[{ 'list': 'ordered' }, { 'list': 'bullet' }],
+					[{ 'script': 'sub' }, { 'script': 'super' }],
+					[{ 'indent': '-1' }, { 'indent': '+1' }],
+					[{ 'direction': 'rtl' }],
+					[{ 'size': ['small', false, 'large', 'huge'] }],
+					['clean'],
+					['link', 'image', 'video']
+				]
+			}
+		});
 
+		// Get the content from the hidden input field
+		var content = document.getElementById('content').value;
 
-        // Set the content of Quill editor with the existing note content
-        quill.clipboard.dangerouslyPasteHTML(document.getElementById('content').value);
+		// If content exists, load it into the Quill editor
+		if (content) {
+			quill.clipboard.dangerouslyPasteHTML(content);
+		}
 
-        // On form submit, update the hidden input with the Quill editor content
-        document.querySelector('form').onsubmit = function() {
-            document.getElementById('content').value = quill.root.innerHTML;
-        };
-    </script>
-
+		// On form submit, update the hidden input with the Quill editor content
+		document.querySelector('form').onsubmit = function () {
+			document.getElementById('content').value = quill.root.innerHTML;
+		};
+	};
+</script>
 </body>
 
 </html>
