@@ -185,5 +185,15 @@
                         <a href="https://techspheresystemssolution.co.ke/" target="__blank">Techshere Systems</a>
                     </p>
                 </div>
+
+				<div class="team-col">
+                    <div class="user d-flex flex-column col">
+                        <img src="../assets/img/Petterson2.jpg" alt="">
+                        <div class="user-info site-color text-center">Petterson MEA</div>
+                    </div>
+                    <p class="px-2 line-height-1-5 text-center">
+						millennial Entrepreneurs Alliance. Media and GeoSpacial mapping
+                    </p>
+                </div>
     </section>
 </x-base-layout>
