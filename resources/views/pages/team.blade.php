@@ -153,7 +153,7 @@
             <div class="team-row">
 				<div class="team-col">
 					<div class="user d-flex flex-column col">
-						<img src="../assets/img/gregorymaina.png" alt="Gregory">
+						<img src="{{ asset('assets/img/gregorymaina.png') }}" alt="Gregory">
 						<div class="user-info site-color text-center">Gregory Maina</div>
 					</div>
 					<p class="px-2 line-height-1-5 text-center">
@@ -188,7 +188,7 @@
 
 				<div class="team-col">
                     <div class="user d-flex flex-column col">
-                        <img src="../assets/img/Petterson2.jpg" alt="">
+                        <img src="{{ asset('assets/img/Petterson2.jpg') }}" alt="">
                         <div class="user-info site-color text-center">Petterson MEA</div>
                     </div>
                     <p class="px-2 line-height-1-5 text-center">
