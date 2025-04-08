@@ -153,7 +153,7 @@
             <div class="team-row">
 				<div class="team-col">
 					<div class="user d-flex flex-column col">
-						<img src="{{ asset('assets/img/future jungle.png') }}" alt="Gregory">
+						<img src="{{ asset('assets/img/future jungle.png') }}" alt="">
 						<div class="user-info site-color text-center">Gregory Maina</div>
 					</div>
 					<p class="px-2 line-height-1-5 text-center">
@@ -163,7 +163,7 @@
 				</div>
 				<div class="team-col">
 					<div class="user d-flex flex-column col">
-						<img src="../assets/img/globalgreen.jpg" alt="GlobalGreen">
+						<img src="../assets/img/globalgreen.jpg" alt="">
 						<div class="user-info site-color text-center">GlobalGreen Plant Center</div>
 					</div>
 					<p class="px-2 line-height-1-5 text-center">
