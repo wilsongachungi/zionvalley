@@ -127,7 +127,6 @@ li {
                         </p>
                     </div>
                     <img class="img1 pb-0 mb-0 d-block w-100" src="{{ asset('assets/img/Harambee.jpg') }}" alt="Image 3">
-					<img src="{{ asset('admin/assets/images/Peterson2.jpg') }}" alt="Peterson2">
                 </div>
 
                 <div class="carousel-item text-center">
@@ -202,6 +201,7 @@ li {
                     We can preserve and enhance the natural environment and at the same time eliminate the
                     temptation to destroy by cutting trees etc.<br>
                 </p>
+				<img src="{{ asset('admin/assets/images/Peterson2.jpg') }}" alt="Peterson2">
                 <p>
                     We do this by rewarding land owners for the value added by making the environment attractive
                     to customers due to its enhanced natural beauty value.<br>
