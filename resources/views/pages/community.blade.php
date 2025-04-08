@@ -127,6 +127,7 @@ li {
                         </p>
                     </div>
                     <img class="img1 pb-0 mb-0 d-block w-100" src="{{ asset('assets/img/Harambee.jpg') }}" alt="Image 3">
+					<img src="{{ asset('admin/assets/images/Peterson2.jpg') }}" alt="Peterson2">
                 </div>
 
                 <div class="carousel-item text-center">
