@@ -201,7 +201,6 @@ li {
                     We can preserve and enhance the natural environment and at the same time eliminate the
                     temptation to destroy by cutting trees etc.<br>
                 </p>
-				<img src="{{ asset('admin/assets/images/Peterson2.jpg') }}" alt="Peterson2">
                 <p>
                     We do this by rewarding land owners for the value added by making the environment attractive
                     to customers due to its enhanced natural beauty value.<br>
